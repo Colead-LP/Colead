@@ -8,15 +8,19 @@
     z-index: 999;
   &-bg {
     background: #fff;
+    padding: .08rem 0;
   }
   &-inner {
     display: flex;
-    
+    align-items: center;
   }
   &-logo {
     width: 1.21rem;
-    
   }
   &-txt {
+    font-weight: bold;
+    font-size: .14rem;
+    line-height: 1.4285;
+    margin: 0 0 0 .2rem;
   }
 }

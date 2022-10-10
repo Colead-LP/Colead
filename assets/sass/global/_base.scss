@@ -24,6 +24,19 @@ iframe{
   vertical-align: middle;
 }
 
+.sp-br{
+  @include v.mq(sp) {
+    &::after{
+      content: "\A";
+      white-space: pre;
+    }
+  }
+}
+
+.txt__strong{
+  color: v.$color-txt-strong;
+}
+
 /*=====================================================
 # form
 =====================================================*/
