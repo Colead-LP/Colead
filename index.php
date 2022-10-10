@@ -29,7 +29,8 @@
             </header><!-- /.header -->
             <div class="mv-inner inner">
                 <div class="mv-txt">
-                    <p class="txt txt01">最短<span class="txt__strong"><span class="txt__large">1</span>週間</span>でお振り込みが可能
+                    <p class="txt txt01">最短<span class="txt__strong txt__midium"><span
+                                class="txt__large">1</span>週間</span>でお振り込みが可能
                     </p>
                     <p class="txt txt02">太陽光発電所の</p>
                     <p class="txt txt03">スピード買取</p>
@@ -44,7 +45,6 @@
             </div>
         </div>
     </div>
-
 </body>
 
 </html>
