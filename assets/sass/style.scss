@@ -1,4 +1,5 @@
-@use "init" as v;
+@use "variable" as v;
+@use "base" as b;
 
 .body{
     color: v.$color-default;
