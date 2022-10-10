@@ -1,2 +1,30 @@
 @use "../global/variable" as v;
 @use "../global/base" as b;
+
+/*=====================================================
+# footer
+=====================================================*/
+.footer{
+    color: #fff;
+    &-bg{
+        background: $color-bg-footer;
+    }
+    &-ttl{
+        width: 1.12rem;
+        margin: 0 auto;
+    }
+    &-txt{
+        .txt{
+            font-weight: Medium;
+            font-size: 1.4rem;
+            line-height: 1;
+            margin: .25rem 0 0;
+            &:nth-child(1){
+                margin: .05rem 0 0;
+            }
+        }
+    }
+    .copyright{
+        
+    }
+}
