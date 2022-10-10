@@ -1,0 +1,8 @@
+@use "init" as v;
+
+.body{
+    color: v.$color-default;
+    @include v.mq(sp) {
+        font-size: 0.12rem;
+    }
+}
