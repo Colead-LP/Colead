@@ -1,0 +1,22 @@
+@use "../global/variable" as v;
+@use "../global/base" as b;
+
+/*=====================================================
+# header
+=====================================================*/
+.header {
+    z-index: 999;
+  &-bg {
+    background: #fff;
+  }
+  &-inner {
+    display: flex;
+    
+  }
+  &-logo {
+    width: 1.21rem;
+    
+  }
+  &-txt {
+  }
+}

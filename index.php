@@ -15,17 +15,19 @@
     <div class="mv">
         <div class="mv-bg">
             <header class="header">
-                <div class="header-inner">
-                    <h1 class="header-logo">
-                        <img src="./assets/img/logo.svg" alt="">
-                    </h1>
-                    <p class="header-txt">
-                        太陽光発電所の<span class="sp-br"></span>
-                        スピード買取ならコリード
-                    </p>
+                <div class="header-bg">
+                    <div class="header-inner inner">
+                        <h1 class="header-logo">
+                            <img src="./assets/img/logo.svg" alt="">
+                        </h1>
+                        <p class="header-txt">
+                            太陽光発電所の<span class="sp-br"></span>
+                            スピード買取ならコリード
+                        </p>
+                    </div>
                 </div>
             </header><!-- /.header -->
-            <div class="mv-inner">
+            <div class="mv-inner inner">
                 <div class="mv-txt">
                     <p class="txt txt01">最短<span class="txt__strong"><span class="txt__large">1</span>週間</span>でお振り込みが可能
                     </p>
