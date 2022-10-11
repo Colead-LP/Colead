@@ -217,13 +217,14 @@ iframe {
 }
 .footer-txt .txt {
   font-weight: Medium;
-  font-size: 1.4rem;
+  font-size: 0.14rem;
   line-height: 1;
   margin: 0.25rem 0 0;
 }
 .footer-txt .txt:nth-child(1) {
   margin: 0.05rem 0 0;
 }
+
 /*=====================================================
 # mv
 =====================================================*/
