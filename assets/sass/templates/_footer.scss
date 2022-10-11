@@ -7,7 +7,7 @@
 .footer{
     color: #fff;
     &-bg{
-        background: $color-bg-footer;
+        background: v.$color-bg-footer;
     }
     &-ttl{
         width: 1.12rem;
@@ -25,6 +25,5 @@
         }
     }
     .copyright{
-        
     }
 }
