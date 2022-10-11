@@ -1,0 +1,178 @@
+@use "variable" as v;
+
+/*=====================================================
+# base
+=====================================================*/
+html {
+  @include v.mq(sp) {
+    font-size: 26.6666667vw;
+  }
+}
+
+body{
+  color: v.$color-txt-default;
+  font-family: v.$font-default;
+  @include v.mq(sp) {
+      font-size: .1rem;
+  }
+}
+
+img,
+iframe{
+  width: 100%;
+  height: auto;
+  vertical-align: middle;
+}
+
+.sp-br{
+  @include v.mq(sp) {
+    &::after{
+      content: "\A";
+      white-space: pre;
+    }
+  }
+}
+
+.txt__strong{
+  color: v.$color-txt-strong;
+}
+
+/*=====================================================
+# form
+=====================================================*/
+.type-text {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  padding: 0.4em 0.8em;
+  appearance: none;
+  width: 100%;
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.type-textarea {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  background-color: transparent;
+  background-image: none;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  appearance: none;
+  width: 100%;
+  height: 100px;
+  padding: 0.4em 0.8em;
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.type-radio {
+  display: none;
+  & + span {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+    margin: 0 0.2em 0;
+    padding: 0 0 0 1.2em;
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      background: rgba(0, 0, 0, 0.32);
+      border: 1px solid transparent;
+      border-radius: 50%;
+      opacity: 0;
+      width: 8px;
+      height: 8px;
+      top: 50%;
+      left: 4px;
+      transform: translateY(-50%);
+      padding: 2px;
+      transition: all 0.3s ease 0s;
+    }
+  }
+  &:checked {
+    & + span {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+}
+
+.type-select {
+  color: inherit;
+  font-family: inherit;
+  font-size: 1em;
+  background: transparent
+    url(https://haniwaman.com/cms/wp-content/uploads/2018/12/form-css-arrow.png)
+    no-repeat center right 8px/16px 16px;
+  border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0;
+  appearance: none;
+  cursor: pointer;
+  width: 100%;
+  padding: 0.4em 0.8em;
+  &::-ms-expand {
+    display: none;
+  }
+  &:focus {
+    border: 1px solid rgba(0, 0, 0, 0.32);
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.type-submit {
+  display: inline-block;
+  color: #fff;
+  font-size: 1em;
+  background-color: rgba(0, 0, 0, 0.32);
+  background-image: none;
+  border: none;
+  border-radius: 0;
+  text-decoration: none;
+  cursor: pointer;
+  margin: 0 0 1em;
+  padding: 0.6em 2em;
+  &:hover,
+  &:focus {
+    outline: none;
+  }
+  &::-moz-focus-inner {
+    border: none;
+    padding: 0;
+  }
+}
+
+/*=====================================================
+# layout
+=====================================================*/
+.inner{
+  box-sizing: border-box;
+  padding: 0 .2rem;
+  margin: 0 auto;
+}
