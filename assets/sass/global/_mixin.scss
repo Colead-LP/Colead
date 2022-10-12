@@ -1,0 +1,8 @@
+@mixin to_simulation ($top){
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: $top;
+  .btn {
+    display: inline-block;
+  }
+}

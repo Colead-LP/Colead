@@ -1,7 +1,9 @@
 @use "../global/variable" as v;
 @use "../global/base" as b;
+@use "../global/mixin" as m;
 @use "../templates/header";
 @use "../templates/footer";
+@use "../templates/cta";
 
 /*=====================================================
 # mv
@@ -60,10 +62,6 @@
     }
   }
   &-btn{
-    margin: 1.2rem 0 0 calc(-50vw + 50%);
-    width: 100vw;
-    .btn{
-      display: inline-block;
-    }
+    @include m.to_simulation(1.2rem);
   }
 }
