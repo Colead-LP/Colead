@@ -31,8 +31,7 @@
             <!-- mv -->
             <div class="mv-inner inner">
                 <div class="mv-txt">
-                    <p class="txt txt01">最短<span class="txt__strong txt__midium"><span
-                                class="txt__large">1</span>週間</span>でお振り込みが可能</p>
+                    <p class="txt txt01">最短<span class="txt__strong txt__midium"><span class="txt__large">1</span>週間</span>でお振り込みが可能</p>
                     <p class="txt txt02">太陽光発電所の</p>
                     <p class="txt txt03">スピード買取</p>
                 </div>
@@ -41,9 +40,7 @@
                     <p class="label label02">買取実績多数</p>
                 </div>
                 <div class="mv-btn">
-                    <a href="#" class="btn"><img
-                            src="<?php echo get_template_directory_uri(); ?>/assets/img/btn.to-simulation.png"
-                            alt="無料金額シミュレーションボタン"></a>
+                    <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
                 </div>
             </div>
         </div>
@@ -55,7 +52,22 @@
     </section><!-- /.solve -->
 
     <!-- cta -->
-    <div class="cta"></div><!-- /.cta -->
+    <div class="cta">
+        <div class="cta-bg">
+            <div class="cta-inner inner">
+                <div class="cta-txt">
+                    <p class="txt">相談だけでもOK<span class="txt__21">！</span></p>
+                    <p class="txt">太陽光発電所<span class="txt__17">の</span>スピード買取<span class="txt__15">なら</span></p>
+                </div>
+                <div class="cta-logo">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cta-logo.png" alt="">
+                </div>
+                <div class="cta-btn">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/btn.to-simulation.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div><!-- /.cta -->
 
     <!-- reason -->
     <section class="reason">
