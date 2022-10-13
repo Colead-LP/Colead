@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@use "./global/base" as b;
+@use "./global/variable" as v;
+@use "./templates/header";
+@use "./templates/footer";
+
+
+.main{
+    height: 11.93rem;
+    background-color: #EAF3FA;
+    padding-top: 0.37rem;
+    &-title{
+        font-size: 0.28rem;
+        margin: 0 0.89rem 0.36rem 0.90rem;
+    }
+    &-textbox{
+        height: 10.32rem;
+        width: 3.35rem;
+        background-color: white;
+        border-top-left-radius: 0.3rem;
+        margin: 0 0.2rem 0.605rem 0.2rem;
+    }
+}
