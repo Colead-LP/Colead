@@ -210,25 +210,82 @@ iframe {
 }
 .footer-bg {
   background: rgb(51, 51, 51);
+  padding: 0.3rem 0 0.2rem;
 }
 .footer-ttl {
   width: 1.12rem;
   margin: 0 auto;
 }
+.footer-txt {
+  margin: 0.257rem 0 0;
+}
 .footer-txt .txt {
   font-weight: Medium;
-  font-size: 1.4rem;
+  font-size: 0.14rem;
   line-height: 1;
   margin: 0.25rem 0 0;
 }
-.footer-txt .txt:nth-child(1) {
-  margin: 0.05rem 0 0;
+.footer-txt .txt:nth-child(2) {
+  margin: 0.14rem 0 0;
 }
+.footer-txt .copyright {
+  text-align: center;
+  margin: 0.4rem 0 0;
+}
+
+/*=====================================================
+# cta
+=====================================================*/
+.cta-bg {
+  background: url(../img/cta/sp/cta-bg.jpg) no-repeat center/cover;
+  width: 100%;
+  height: 2.73rem;
+  padding: 0.32rem 0 0.28rem;
+}
+.cta-txt {
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 0.18rem;
+  text-align: center;
+}
+.cta-txt .txt {
+  line-height: 1;
+}
+.cta-txt .txt:nth-child(1) {
+  font-size: 0.18rem;
+}
+.cta-txt .txt:nth-child(2) {
+  font-size: 0.19rem;
+  margin: 0.08rem;
+}
+.cta-txt .txt__15 {
+  font-size: 0.15rem;
+}
+.cta-txt .txt__17 {
+  font-size: 0.17rem;
+}
+.cta-txt .txt__21 {
+  font-size: 0.21rem;
+}
+.cta-logo {
+  width: 1.54rem;
+  margin: 0.23rem auto 0;
+}
+.cta-btn {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 0.11rem;
+}
+.cta-btn .btn {
+  display: inline-block;
+}
+
 /*=====================================================
 # mv
 =====================================================*/
 .mv-bg {
-  background: url(../img/mv-bg.jpg) no-repeat center/cover;
+  background: url(../img/mv/sp/mv-bg.jpg) no-repeat center/cover;
   width: 100%;
   height: 6.67rem;
 }
@@ -267,7 +324,7 @@ iframe {
 }
 .mv-label .label {
   color: #E51A3F;
-  background: url(../img/mv-label.png) no-repeat center/cover;
+  background: url(../img/mv/sp/mv-label.png) no-repeat center/cover;
   font-weight: bold;
   font-size: 0.16rem;
   letter-spacing: 0.04em;
@@ -278,11 +335,105 @@ iframe {
   height: 0.4rem;
 }
 .mv-btn {
-  margin: 1.2rem 0 0 calc(-50vw + 50%);
   width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-top: 1.2rem;
 }
 .mv-btn .btn {
   display: inline-block;
+}
+
+/*=====================================================
+# solve
+=====================================================*/
+.solve-header-bg {
+  background: url(../img/solve/sp/solve-header-bg.png) no-repeat center/cover;
+  width: 100%;
+  height: 5.72rem;
+}
+.solve-header-inner {
+  padding: 0.4rem 0.19rem 0;
+}
+.solve-header-ttl {
+  color: #E51A3F;
+  font-weight: bold;
+  font-size: 0.24rem;
+  line-height: 1;
+}
+.solve-header-txt {
+  font-weight: bold;
+  font-size: 0.2rem;
+  line-height: 1.45;
+  text-align: center;
+  margin: 0.14rem 0 0;
+}
+.solve-header-list {
+  display: grid;
+  row-gap: 0.19rem;
+  margin: 0.27rem 0 0;
+}
+.solve-header-item-txt {
+  position: relative;
+  font-weight: 500;
+  font-size: 0.18rem;
+  line-height: 1.6111;
+  padding: 0 0 0 0.31rem;
+}
+.solve-header-item-txt::before {
+  content: "";
+  position: absolute;
+  background: url(../img/solve/sp/solve-header-txtParts.png) no-repeat center/cover;
+  width: 0.18rem;
+  height: 0.18rem;
+  top: 0.06rem;
+  left: 0;
+}
+.solve-header-img {
+  width: 2.19rem;
+  margin: 0.31rem auto;
+}
+.solve-footer-bg {
+  position: relative;
+}
+.solve-footer-bg::after {
+  content: "";
+  position: absolute;
+  background: url(../img/solve/sp/solve-footer-bg.png) no-repeat center/cover;
+  top: 1.56rem;
+  left: 0;
+  width: 100%;
+  height: 0.99rem;
+  z-index: -1;
+}
+.solve-footer-inner {
+  padding: 0.23rem 0.19rem 0.6rem;
+}
+.solve-footer-ttl {
+  font-weight: bold;
+  font-size: 0.3rem;
+  line-height: 1;
+  text-align: center;
+}
+.solve-footer-ttl .txt__45 {
+  font-size: 0.45rem;
+}
+.solve-footer-txt:nth-of-type(1) {
+  font-weight: bold;
+  font-size: 0.18rem;
+  line-height: 1;
+  margin: 0.14rem 0 0;
+  text-align: center;
+}
+.solve-footer-txt:nth-of-type(2) {
+  font-size: 0.16rem;
+  line-height: 1.8125;
+  margin: 0.2rem 0 0;
+}
+.solve-footer-txt:nth-of-type(2) rt {
+  font-size: 0.12rem;
+}
+.solve-footer-graph {
+  margin: 0.3rem 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */
