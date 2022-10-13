@@ -228,7 +228,7 @@ iframe {
 .footer-txt .txt:nth-child(2) {
   margin: 0.14rem 0 0;
 }
-.footer .copyright {
+.footer-txt .copyright {
   text-align: center;
   margin: 0.4rem 0 0;
 }
