@@ -18,7 +18,7 @@
                 <div class="header-bg">
                     <div class="header-inner inner">
                         <h1 class="header-logo">
-                            <img src="./assets/img/logo.svg" alt="">
+                            <img src="./assets/img/common/sp/logo.svg" alt="">
                         </h1>
                         <p class="header-txt">
                             太陽光発電所の<span class="sp-br"></span>
@@ -55,10 +55,10 @@
                 <p>配線図</p>
             </div>
             <div class='main-textbox_content'>
-                <p>遠隔監視システムの導入</p>
+                <p>遠隔監視システム<br>の導入</p>
             </div>
             <div class='main-textbox_content'>
-                <p>直近1年でのメンテナンス</p>
+                <p>直近1年での<br>メンテナンス</p>
             </div>
             <div class='main-textbox_content'>
                 <p>パネルメーカー</p>
@@ -67,12 +67,14 @@
                 <p>PCSメーカー</p>
             </div>
             <div class='checkbox'>
-                <input type="checkbox" id='agree' name='agree'>
-                <label for="agree">プライバシーポリシーに同意する。</label>
+                <label class='checkbox-content'>
+                    <input class='checkbox-content_btn' type="checkbox" name='agree'>
+                    <div class='checkbox-content_txt'>プライバシーポリシーに同意する。</div>
+                </label>
             </div>
-            <a href="./thanks.php" class='confirm-button'>
+            <a href="./thanks.php" class='comfirm-button'>
                 <button type="button">
-                    <img src="./assets/img/btn.to-simulation.png" alt="">
+                    <img src="./assets/img/common/sp/submit_btn.png" alt="" class='comfirm-button_img'>
                 </button>
             </a>
         </div>

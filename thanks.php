@@ -18,7 +18,7 @@
                 <div class="header-bg">
                     <div class="header-inner inner">
                         <h1 class="header-logo">
-                            <img src="./assets/img/logo.svg" alt="">
+                            <img src="./assets/img/common/sp/logo.svg" alt="">
                         </h1>
                         <p class="header-txt">
                             太陽光発電所の<span class="sp-br"></span>
