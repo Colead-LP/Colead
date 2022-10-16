@@ -37,18 +37,13 @@
         cursor: pointer;
         display: flex;
         &_btn {
-        }
-        &_txt {
-          margin-top: 0.2rem;
-          margin-left: 0.1rem;
-          font-size: 0.14rem;
-          position: relative;
           &::before {
             content: "";
             position: absolute;
             width: 0.18rem;
             height: 0.18rem;
             border: 0.015rem solid rgba(0, 0, 0, 0.16);
+            border-radius: 0.02rem;
           }
           &:checked {
             & + ::before {
@@ -69,13 +64,19 @@
             }
           }
         }
+        &_txt {
+          margin-top: 0.2rem;
+          margin-left: 0.1rem;
+          font-size: 0.14rem;
+          position: relative;
+        }
       }
     }
-    .comfirm-button {
-      &_img {
-        width: 2.95rem;
-        height: 0.6rem;
-      }
+  }
+  .comfirm-button {
+    &_img {
+      width: 2.95rem;
+      height: 0.6rem;
     }
   }
 }
