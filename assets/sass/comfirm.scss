@@ -5,95 +5,77 @@
 @use "./templates/header";
 @use "./templates/footer";
 
-
-.main{
-    height: 11.93rem;
-    background-color: #EAF3FA;
-    padding-top: 0.37rem;
-    &-title{
-        font-size: 0.28rem;
-        margin: 0 0.89rem 0.36rem 0.90rem;
+.main {
+  height: 11.93rem;
+  background-color: #eaf3fa;
+  padding-top: 0.37rem;
+  &-title {
+    font-size: 0.28rem;
+    margin: 0 0.89rem 0.36rem 0.9rem;
+  }
+  &-textbox {
+    height: 10.32rem;
+    width: 3.35rem;
+    background-color: white;
+    border-top-left-radius: 0.3rem;
+    margin: 0 0.2rem 0.605rem 0.2rem;
+    padding: 0.35rem 0.2rem 0.4rem;
+    font-size: 0.16rem;
+    &_content {
+      border-bottom: 0.01rem solid #e2e3e5;
+      p {
+        margin-bottom: 0.18rem;
+        font-weight: bold;
+      }
+      &:not(:first-child) {
+        margin-top: 0.21rem;
+      }
     }
-    &-textbox{
-        height: 10.32rem;
-        width: 3.35rem;
-        background-color: white;
-        border-top-left-radius: 0.3rem;
-        margin: 0 0.2rem 0.605rem 0.2rem;
-        padding: 0.35rem 0.2rem 0.4rem;
-        font-size: 0.16rem;
-        &_content{
-            border-bottom: 0.01rem solid #E2E3E5;
-            p{
-                margin-bottom: 0.18rem;
-                font-weight: bold;
-            }
-            &:not(:first-child){
-                margin-top: 0.21rem;
-            }
+    .checkbox {
+      padding: 0 0.2rem 0.41rem 0.2rem;
+      &-content {
+        cursor: pointer;
+        display: flex;
+        &_btn {
         }
-        .checkbox{
-            padding: 0 0.2rem 0.41rem 0.2rem;
-            &-content{
-            cursor: pointer;
-            display: flex;
-                &_btn{ //all:revert;でcheckbox表示される、どっちを使うか茂田に確認中
-                    border: 0.015rem solid rgba(0, 0, 0, 0.16);
-                    height: 0.18rem;
-                    width: 0.18rem;
-                    border-radius: 0.02rem;
-                    margin-top: 0.21rem;
-
-                    //ブラウザから引っ張ってきた、動作不良で動かない
-                    //https://haniwaman.com/form-css/#index_id4
-                    &::before {
-                        -webkit-transform: translateY(-50%);
-                        background: #fff;
-                        border: 1px solid rgba(0, 0, 0, 0.16);
-                        border-radius: 2px;
-                        content: "";
-                        display: block;
-                        height: 1em;
-                        left: 0;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%);
-                        width: 1em;
-                    }
-
-                    &::after {
-                        -webkit-transform: translateY(-50%) rotate(-45deg);
-                        border-bottom: 0.03rem solid rgba(0, 0, 0, 0.32);
-                        border-left: 0.03rem solid rgba(0, 0, 0, 0.32);
-                        content: "";
-                        display: block;
-                        height: 0.6em;
-                        left: 0;
-                        margin-top: -0.2em;
-                        opacity: 0;
-                        position: absolute;
-                        top: 50%;
-                        transform: translateY(-50%) rotate(-45deg);
-                        transition: all 0.3s ease 0s;
-                        width: 1em;
-                    }
-                    
-                    &:checked{
-                        opacity: 1;
-                    }
-                }
-                &_txt{
-                    margin-top: 0.2rem;
-                    margin-left: 0.1rem;
-                    font-size: 0.14rem;
-                }
+        &_txt {
+          margin-top: 0.2rem;
+          margin-left: 0.1rem;
+          font-size: 0.14rem;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            width: 0.18rem;
+            height: 0.18rem;
+            border: 0.015rem solid rgba(0, 0, 0, 0.16);
+          }
+          &:checked {
+            & + ::before {
+              content: "";
+              position: absolute;
+              width: 0.18rem;
+              height: 0.18rem;
+              border: 0.015rem solid rgba(0, 0, 0, 0.16);
             }
-        }
-        .comfirm-button{
-            &_img{
-                width: 2.95rem;
-                height: 0.6rem;
+            & + ::after {
+              content: "";
+              position: absolute;
+              width: 0.1rem;
+              height: 0.05rem;
+              border-left: 0.02rem solid #000;
+              border-bottom: 0.02rem solid #000;
+              transform: rotate(-45deg);
             }
+          }
         }
+      }
     }
+    .comfirm-button {
+      &_img {
+        width: 2.95rem;
+        height: 0.6rem;
+      }
+    }
+  }
 }
