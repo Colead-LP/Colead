@@ -17,10 +17,11 @@
         <div class="header-bg">
             <div class="header-inner inner">
                 <h1 class="header-logo">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/logo.svg" alt="Colead">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/logo.svg" alt="Colead">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/logo.svg" alt="Colead">
                 </h1>
                 <p class="header-txt">
-                    太陽光発電所の<span class="sp-br"></span>
+                    太陽光発電所の<br>
                     スピード買取ならコリード
                 </p>
             </div>
@@ -31,16 +32,19 @@
         <div class="mv-bg">
             <div class="mv-inner inner">
                 <div class="mv-txt">
-                    <p class="txt txt01">最短<span class="txt__strong txt__midium"><span class="txt__large">1</span>週間</span>でお振り込みが可能</p>
-                    <p class="txt txt02">太陽光発電所の</p>
-                    <p class="txt txt03">スピード買取</p>
+                    <p class="txt">最短<span class="txt__strong txt__midium"><span class="txt__large">1</span>週間</span>でお振り込みが可能</p>
+                    <p class="txt">太陽光発電所<span class="txt__small">の</span></p>
+                    <p class="txt">スピード買取</p>
                 </div>
                 <div class="mv-label">
-                    <p class="label label01">手数料無料</p>
-                    <p class="label label02">買取実績多数</p>
+                    <p class="label">手数料無料</p>
+                    <p class="label">買取実績多数</p>
                 </div>
-                <div class="mv-btn">
+                <div class="mv-btn sp">
                     <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                </div>
+                <div class="mv-btn pc">
+                    <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
                 </div>
             </div>
         </div>

@@ -16,10 +16,20 @@
     font-size: 26.6666667vw;
   }
 }
+@media screen and (min-width: 1025px) {
+  html {
+    font-size: 6.94444444vw;
+  }
+}
 
 body {
   color: #333;
   font-family: "Noto Sans JP", sans-serif;
+}
+@media screen and (max-width: 767px) {
+  body {
+    font-size: 0.1rem;
+  }
 }
 @media screen and (max-width: 767px) {
   body {
@@ -34,8 +44,27 @@ iframe {
   vertical-align: middle;
 }
 
+@media screen and (min-width: 1025px) {
+  .sp {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .pc {
+    display: none;
+  }
+}
+
 @media screen and (max-width: 767px) {
   .sp-br::after {
+    content: "\a";
+    white-space: pre;
+  }
+}
+
+@media screen and (min-width: 1025px) {
+  .pc-br::after {
     content: "\a";
     white-space: pre;
   }
@@ -174,8 +203,17 @@ iframe {
 =====================================================*/
 .inner {
   box-sizing: border-box;
-  padding: 0 0.2rem;
   margin: 0 auto;
+}
+@media screen and (max-width: 767px) {
+  .inner {
+    padding: 0 0.2rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .inner {
+    padding: 0 2.2rem;
+  }
 }
 
 /*=====================================================
@@ -184,22 +222,59 @@ iframe {
 .header {
   z-index: 999;
 }
+@media screen and (max-width: 767px) {
+  .header {
+    height: 0.6rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header {
+    height: 0.8rem;
+  }
+}
 .header-bg {
   background: #fff;
-  padding: 0.08rem 0;
+}
+@media screen and (max-width: 767px) {
+  .header-bg {
+    padding: 0.08rem 0;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header-bg {
+    padding: 0.1rem 0;
+  }
 }
 .header-inner {
   display: flex;
   align-items: center;
 }
-.header-logo {
-  width: 1.21rem;
+@media screen and (max-width: 767px) {
+  .header-logo {
+    width: 1.21rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header-logo {
+    width: 1.9025rem;
+  }
 }
 .header-txt {
   font-weight: bold;
-  font-size: 0.14rem;
-  line-height: 1.4285;
-  margin: 0 0 0 0.2rem;
+}
+@media screen and (max-width: 767px) {
+  .header-txt {
+    font-size: 0.14rem;
+    line-height: 1.4285;
+    margin: 0 0 0 0.2rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .header-txt {
+    font-size: 0.2rem;
+    line-height: 1.5;
+    margin: 0 0 0 0.25rem;
+  }
 }
 
 /*=====================================================
