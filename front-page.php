@@ -186,7 +186,10 @@
 
     <!-- form -->
     <section class="form">
-
+        <?php
+        //echo do_shortcode('[mwform_formkey key="9"]');
+        ?>
+        <?php // echo do_shortcode('[mwform_formkey key="24"]'); ?>
     </section><!-- /.form -->
 
     <!-- footer -->
