@@ -13,7 +13,6 @@
 <body>
     <!-- header -->
     <div class="mv">
-        <?php echo do_shortcode('[mwform_formkey key="12"]'); ?>
         <div class="mv-bg">
             <header class="header">
                 <div class="header-bg">
@@ -28,7 +27,7 @@
                     </div>
                 </div>
             </header><!-- /.header -->
-        </div>>
+        </div>
     </div>
 
     <main class='main'>

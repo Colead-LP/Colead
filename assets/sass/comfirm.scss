@@ -32,51 +32,31 @@
       }
     }
     .checkbox {
-      padding: 0 0.2rem 0.41rem 0.2rem;
+      padding: 0.2rem 0.2rem 0.46rem 0.2rem;
       &-content {
-        cursor: pointer;
-        display: flex;
         &_btn {
+        }
+        &_txt {
+          font-size: 0.14rem;
+          cursor: pointer;
+          position: relative;
           &::before {
             content: "";
             position: absolute;
             width: 0.18rem;
             height: 0.18rem;
-            border: 0.015rem solid rgba(0, 0, 0, 0.16);
-            border-radius: 0.02rem;
+            display: block;
+            border: 0.1rem solid #000;
+            border-radius: 0.03rem;
           }
-          &:checked {
-            & + ::before {
-              content: "";
-              position: absolute;
-              width: 0.18rem;
-              height: 0.18rem;
-              border: 0.015rem solid rgba(0, 0, 0, 0.16);
-            }
-            & + ::after {
-              content: "";
-              position: absolute;
-              width: 0.1rem;
-              height: 0.05rem;
-              border-left: 0.02rem solid #000;
-              border-bottom: 0.02rem solid #000;
-              transform: rotate(-45deg);
-            }
-          }
-        }
-        &_txt {
-          margin-top: 0.2rem;
-          margin-left: 0.1rem;
-          font-size: 0.14rem;
-          position: relative;
         }
       }
     }
-  }
-  .comfirm-button {
-    &_img {
-      width: 2.95rem;
-      height: 0.6rem;
+    .comfirm-button {
+      &_img {
+        width: 2.95rem;
+        height: 0.6rem;
+      }
     }
   }
 }

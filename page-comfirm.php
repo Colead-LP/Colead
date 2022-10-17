@@ -67,12 +67,12 @@
                 <p>PCSメーカー</p>
             </div>
             <div class='checkbox'>
-                <label class='checkbox-content'>
-                    <input class='checkbox-content_btn' type="checkbox" name='agree'>
-                    <p class='checkbox-content_txt'>プライバシーポリシーに同意する。</p>
-                </label>
+                <div class='checkbox-content'>
+                    <input id='agree' type="checkbox" class='checkbox-content_btn' name='agree'>
+                    <label for='agree' class='checkbox-content_txt'>プライバシーポリシーに同意する。</label>
+                </div>
             </div>
-            <a href="./thanks.php" class='comfirm-button'>
+            <a href="./page-thanks.php" class='comfirm-button'>
                 <button type="button">
                     <img src="./assets/img/common/sp/submit_btn.png" alt="" class='comfirm-button_img'>
                 </button>
