@@ -5,28 +5,62 @@
 @use "./templates/header";
 @use "./templates/footer";
 
-.main{
-  height: 3.77rem;
-  background-color: #EAF3FA;
-  padding: 0.4rem 0.2rem 0.605rem 0.2rem;
-  &-inner{
-    height: 2.77rem;
-    width: 3.35rem;
-    background-color: white;
-    border-top-left-radius: 0.3rem;
-    padding: 0.37rem 0.23rem 0.25rem 0.24rem;
-    &_title{
-      font-size: 0.24rem;
-      width: 2.88rem;
-      text-align: center;
-      margin-bottom: 0.25rem;
-      font-weight: bold;
-    }
-    &_txt{
-      font-size: 0.16rem;
-      width: 2.95rem;
+@media screen and (max-width: 480px) {
+  .main {
+    height: 3.77rem;
+    background-color: #eaf3fa;
+    padding: 0.4rem 0.2rem 0.605rem 0.2rem;
+    &-inner {
+      height: 2.77rem;
+      background-color: white;
+      border-top-left-radius: 0.3rem;
+      padding: 0.37rem 0.23rem 0.25rem 0.24rem;
+      &_title {
+        font-size: 0.24rem;
+        text-align: center;
+        margin-bottom: 0.25rem;
+        font-weight: bold;
+        .media-br {
+          display: block;
+        }
+      }
+      &_txt {
+        font-size: 0.16rem;
+        .PC-br {
+          display: none;
+        }
+      }
     }
   }
 }
 
-
+// PC幅のcss
+@media screen and (min-width: 481px) {
+  .main {
+    height: 25.375rem;
+    background-color: #eaf3fa;
+    padding: 5rem 20rem;
+    &-inner {
+      height: 15.375rem;
+      border-top-left-radius: 3rem;
+      background-color: white;
+      padding: 2.9375rem 2.5rem 3.125rem;
+      &_title {
+        text-align: center;
+        font-size: 1.75rem;
+        margin-bottom: 2.25rem;
+        font-weight: bold;
+        .media-br {
+          display: none;
+        }
+      }
+      &_txt {
+        font-size: 1rem;
+        text-align: center;
+        .PC-br {
+          display: block;
+        }
+      }
+    }
+  }
+}
