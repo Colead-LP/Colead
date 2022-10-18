@@ -6,21 +6,44 @@
 =====================================================*/
 .header {
     z-index: 999;
+    @include v.mq(sp) {
+      height: .6rem;
+    }
+    @include v.mq(pc) {
+      height: .8rem;
+    }
   &-bg {
     background: #fff;
-    padding: .08rem 0;
+    @include v.mq(sp) {
+      padding: .08rem 0;
+    }
+    @include v.mq(pc) {
+      padding: .1rem 0;
+    }
   }
   &-inner {
     display: flex;
     align-items: center;
   }
   &-logo {
-    width: 1.21rem;
+    @include v.mq(sp) {
+      width: 1.21rem;
+    }
+    @include v.mq(pc) {
+      width: 1.9025rem;
+    }
   }
   &-txt {
     font-weight: bold;
-    font-size: .14rem;
-    line-height: 1.4285;
-    margin: 0 0 0 .2rem;
+    @include v.mq(sp) {
+      font-size: .14rem;
+      line-height: 1.4285;
+      margin: 0 0 0 .2rem;
+    }
+    @include v.mq(pc) {
+      font-size: .2rem;
+      line-height: 1.5;
+      margin: 0 0 0 .25rem;
+    }
   }
 }
