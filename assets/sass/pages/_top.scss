@@ -25,6 +25,7 @@
       padding: 0.69rem 0.2rem 0.89rem;
     }
     @include v.mq(pc) {
+      padding: 0 2.1rem;
     }
   }
   &-txt {
@@ -32,80 +33,74 @@
     font-weight: bold;
     line-height: 1;
     text-align: center;
+    @include v.mq(pc) {
+      padding: .6rem 0 0;
+    }
     .txt {
-      &:nth-child(1) {
+      &.txt01 {
         @include v.mq(sp) {
-          font-size: 0.23rem;
+          line-height: 1;
+          width: 3.35rem;
+          margin: 0 auto;
         }
         @include v.mq(pc) {
-          font-size: 0.38rem;
-        }
-        .txt__midium {
-          @include v.mq(sp) {
-            font-size: 0.29rem;
-          }
-          @include v.mq(pc) {
-            font-size: 0.48rem;
-          }
-        }
-        .txt__large {
-          display: inline;
-          vertical-align: text-top;
-          @include v.mq(sp) {
-            font-size: 0.4rem;
-          }
-          @include v.mq(pc) {
-            font-size: 0.65rem;
-          }
+          line-height: 1;
+          width: 5.48rem;
+          margin: 0 auto;
         }
       }
-      &:nth-child(2) {
+      &.txt02{
         @include v.mq(sp) {
-          font-size: 0.4rem;
-          margin: 0.16rem 0 0;
+          width: 3.3rem;
+          margin: 0 auto;
         }
         @include v.mq(pc) {
-          display: inline;
-          font-size: 0.69rem;
-          margin: 0.1rem 0 0;
-        }
-        .txt__small {
-          @include v.mq(pc) {
-            font-size: 0.61rem;
-          }
-        }
-      }
-      &:nth-child(3) {
-        @include v.mq(sp) {
-          font-size: 0.55rem;
-          margin: 0.14rem 0 0;
-        }
-        @include v.mq(pc) {
-          display: inline;
-          font-size: 0.85rem;
+          width: 9.91rem;
+          margin: -0.22rem auto 0;
         }
       }
     }
   }
   &-label {
     display: flex;
-    justify-content: space-between;
-    margin: 0.3rem 0 0;
+    @include v.mq(sp) {
+      justify-content: space-between;
+      margin: 0.3rem 0 0;
+    }
+    @include v.mq(pc) {
+      justify-content: center;
+      gap: .6rem;
+      margin: 0.26rem 0 0;
+    }
     .label {
       color: v.$color-txt-strong;
-      background: url(../img/mv/sp/mv-label.png) no-repeat center / cover;
       font-weight: bold;
-      font-size: 0.16rem;
       letter-spacing: 0.04em;
-      line-height: 1.4;
       text-align: center;
-      padding: 0.08rem 0;
-      width: 1.6rem;
-      height: 0.4rem;
+      @include v.mq(sp) {
+        background: url(../img/mv/sp/mv-label.png) no-repeat center / cover;
+        font-size: 0.16rem;
+        line-height: 1.4;
+        padding: 0.08rem 0;
+        width: 1.6rem;
+        height: 0.4rem;
+      }
+      @include v.mq(pc) {
+        background: url(../img/mv/pc/mv-label.png) no-repeat center / cover;
+        font-size: .2rem;
+        line-height: 2.6;
+        width: 2.7rem;
+        height: .56rem;
+      }
     }
   }
   &-btn {
-    @include m.to_simulation(1.2rem);
+    @include v.mq(sp) {
+      @include m.to_simulation(1.2rem);
+    }
+    @include v.mq(pc) {
+      @include m.to_simulation(1.3rem);
+    }
   }
 }
 

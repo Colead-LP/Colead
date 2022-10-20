@@ -6,9 +6,10 @@ get_header();
     <div class="mv-bg">
         <div class="mv-inner inner">
             <div class="mv-txt">
-                <p class="txt">最短<span class="txt__strong txt__midium"><span class="txt__large">1</span>週間</span>でお振り込みが可能</p>
-                <p class="txt">太陽光発電所<span class="txt__small">の</span></p>
-                <p class="txt">スピード買取</p>
+                <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/sp/mv-ttl01.png" alt=""></p>
+                <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/pc/mv-ttl01.png" alt=""></p>
+                <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/sp/mv-ttl02.png" alt=""></p>
+                <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/pc/mv-ttl02.png" alt=""></p>
             </div>
             <div class="mv-label">
                 <p class="label">手数料無料</p>
