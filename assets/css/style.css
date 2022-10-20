@@ -71,7 +71,7 @@ iframe {
 }
 
 .txt__strong {
-  color: #E51A3F;
+  color: #e51a3f;
 }
 
 /*=====================================================
@@ -455,7 +455,7 @@ iframe {
   margin: 0.3rem 0 0;
 }
 .mv-label .label {
-  color: #E51A3F;
+  color: #e51a3f;
   background: url(../img/mv/sp/mv-label.png) no-repeat center/cover;
   font-weight: bold;
   font-size: 0.16rem;
@@ -487,7 +487,7 @@ iframe {
   padding: 0.4rem 0.19rem 0;
 }
 .solve-header-ttl {
-  color: #E51A3F;
+  color: #e51a3f;
   font-weight: bold;
   font-size: 0.24rem;
   line-height: 1;
