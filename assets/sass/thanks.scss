@@ -5,7 +5,7 @@
 @use "./templates/header";
 @use "./templates/footer";
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 4759px) {
   .main {
     height: 3.77rem;
     background-color: #eaf3fa;
@@ -35,7 +35,7 @@
 }
 
 // PC幅のcss
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .main {
     height: 4.06rem;
     background-color: #eaf3fa;
