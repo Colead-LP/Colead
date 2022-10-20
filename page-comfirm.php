@@ -1,3 +1,7 @@
+<!--
+Template Name: comfirm
+-->
+
 <!DOCTYPE html>
 <html lang="ja">
     
@@ -5,8 +9,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./assets/css/reset.css">
-    <link rel="stylesheet" href="./assets/css/comfirm.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/reset.css">
+    <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/comfirm.css">
     <title>Colead LP_COMFIRM</title>
 </head>
 
@@ -18,7 +22,7 @@
                 <div class="header-bg">
                     <div class="header-inner inner">
                         <h1 class="header-logo">
-                            <img src="./assets/img/common/sp/logo.svg" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/logo.svg" alt="">
                         </h1>
                         <p class="header-txt">
                             太陽光発電所の<span class="sp-br"></span>
@@ -67,14 +71,16 @@
                 <p>PCSメーカー</p>
             </div>
             <div class='checkbox'>
-                <label class='checkbox-content'>
-                    <input class='checkbox-content_btn' type="checkbox" name='agree'>
-                    <p class='checkbox-content_txt'>プライバシーポリシーに同意する。</p>
-                </label>
+                <div class='checkbox-content'>
+                    <input id='agree' type="checkbox" class='checkbox-content_btn' name='agree'>
+                    <label for='agree' class='checkbox-content_txt'>
+                        <span class='checkmark'>プライバシーポリシーに同意する。</span>
+                    </label>
+                </div>
             </div>
-            <a href="./thanks.php" class='comfirm-button'>
+            <a href="<?php echo get_template_directory_uri(); ?>/page-thanks.php" class='comfirm-button'>
                 <button type="button">
-                    <img src="./assets/img/common/sp/submit_btn.png" alt="" class='comfirm-button_img'>
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/submit_btn.png" alt="" class='comfirm-button_img'>
                 </button>
             </a>
         </div>
@@ -83,7 +89,7 @@
     <footer class="footer">
         <div class="footer-bg">
             <div class="footer-inner inner">
-                <h2 class="footer-ttl"><img src="./assets/img/common/sp/footer-logo.png" alt=""></h2>
+                <h2 class="footer-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/footer-logo.png" alt=""></h2>
                 <div class="footer-txt">
                     <p class="txt">株式会社Colead</p>
                     <p class="txt">東京都千代田区平河町1-8-2</p>
