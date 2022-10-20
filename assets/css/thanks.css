@@ -308,7 +308,7 @@ iframe {
   margin: 0.4rem 0 0;
 }
 
-@media screen and (max-width: 4759px) {
+@media screen and (max-width: 759px) {
   .main {
     height: 3.77rem;
     background-color: #eaf3fa;
