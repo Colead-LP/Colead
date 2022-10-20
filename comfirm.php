@@ -69,7 +69,7 @@
             <div class='checkbox'>
                 <label class='checkbox-content'>
                     <input class='checkbox-content_btn' type="checkbox" name='agree'>
-                    <div class='checkbox-content_txt'>プライバシーポリシーに同意する。</div>
+                    <p class='checkbox-content_txt'>プライバシーポリシーに同意する。</p>
                 </label>
             </div>
             <a href="./thanks.php" class='comfirm-button'>
@@ -83,7 +83,7 @@
     <footer class="footer">
         <div class="footer-bg">
             <div class="footer-inner inner">
-                <h2 class="footer-ttl"><img src="./assets/img/footer-logo.png" alt=""></h2>
+                <h2 class="footer-ttl"><img src="./assets/img/common/sp/footer-logo.png" alt=""></h2>
                 <div class="footer-txt">
                     <p class="txt">株式会社Colead</p>
                     <p class="txt">東京都千代田区平河町1-8-2</p>
