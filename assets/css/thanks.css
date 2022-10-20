@@ -308,7 +308,7 @@ iframe {
   margin: 0.4rem 0 0;
 }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-width: 4759px) {
   .main {
     height: 3.77rem;
     background-color: #eaf3fa;
@@ -336,7 +336,7 @@ iframe {
     display: none;
   }
 }
-@media screen and (min-width: 481px) {
+@media screen and (min-width: 768px) {
   .main {
     height: 4.06rem;
     background-color: #eaf3fa;
