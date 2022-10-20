@@ -2,9 +2,17 @@
 @use "variable" as v;
 
 @mixin to_simulation ($top){
+  @include v.mq(sp) {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-top: $top;
+  }
+  @include v.mq(pc) {
+    width: 4.8rem;
+    margin-top: $top;
+    margin-right: auto;
+    margin-left: auto;
+  }
   .btn {
     display: inline-block;
   }
