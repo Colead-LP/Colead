@@ -3,6 +3,6 @@ package.json
 package-lock.json
 .vscode
 document
-style.css.map
-comfirm.css.map
-thanks.css.map
+/css/style.css.map
+/css/comfirm.css.map
+/css/thanks.css.map
