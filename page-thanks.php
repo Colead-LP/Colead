@@ -15,6 +15,7 @@ Template Name: thanks
 </head>
 
 <body>
+    <?php include("header.php"); ?>
 
     <main class='main'>
         <div class='main-inner'>
@@ -23,5 +24,7 @@ Template Name: thanks
         </div>
     </main>
 
+    <?php include("footer.php"); ?>
 </body>
 </html>
+

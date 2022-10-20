@@ -25,7 +25,6 @@
       padding: 0.69rem 0.2rem 0.89rem;
     }
     @include v.mq(pc) {
-      
     }
   }
   &-txt {
@@ -83,7 +82,7 @@
         }
         @include v.mq(pc) {
           display: inline;
-          font-size: .85rem;
+          font-size: 0.85rem;
         }
       }
     }
