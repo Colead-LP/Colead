@@ -8,9 +8,9 @@ function add_my_files()
     if (is_front_page()) {
         wp_enqueue_style('top', get_template_directory_uri() . '/assets/css/style.css');
     } elseif (is_page('confirm')) {
-        wp_enqueue_style('confirm', get_template_directory_uri() . '/assets/css/style.css');
+        wp_enqueue_style('confirm', get_template_directory_uri() . '/assets/css/confirm.css');
     } elseif (is_page('thanks')) {
-        wp_enqueue_style('thanks', get_template_directory_uri() . '/assets/css/style.css');
+        wp_enqueue_style('thanks', get_template_directory_uri() . '/assets/css/thanks.css');
     }
 
     //JavaScript
