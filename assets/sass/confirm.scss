@@ -1,0 +1,181 @@
+@charset "UTF-8";
+
+@use "./global/base" as b;
+@use "./global/variable" as v;
+@use "./templates/header";
+@use "./templates/footer";
+
+.main {
+  background-color: #eaf3fa;
+  @include v.mq(sp) {
+    height: 11.93rem;
+    padding-top: 0.37rem;
+  }
+  @include v.mq(pc) {
+    height: 12.16rem;
+    padding-top: 0.67rem;
+  }
+  &-title {
+    font-size: 0.28rem;
+    @include v.mq(sp) {
+      margin: 0 0.89rem 0.36rem 0.9rem;
+    }
+    @include v.mq(pc) {
+      margin: 0 6.22rem 0.36rem;
+    }
+  }
+  &-textbox {
+    background-color: white;
+    @include v.mq(sp) {
+      height: 10.32rem;
+      width: 3.35rem;
+      margin: 0 0.2rem 0.605rem 0.2rem;
+      padding: 0.35rem 0.2rem 0.4rem;
+      border-top-left-radius: 0.3rem;
+    }
+    @include v.mq(pc) {
+      height: 9.85rem;
+      width: 8rem;
+      margin: 0 3.2rem 1rem;
+      padding: 0.51rem 0.395rem 0.5rem 0.405rem;
+      border-top-left-radius: 0.4rem;
+    }
+    &_content {
+      border-bottom: 0.01rem solid #e2e3e5;
+      @include v.mq(sp) {
+        font-size: 0.16rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.18rem;
+      }
+      p {
+        @include v.mq(sp) {
+          margin-bottom: 0.18rem;
+          font-weight: bold;
+        }
+        @include v.mq(pc) {
+          margin-bottom: 0.165rem;
+        }
+      }
+      &:not(:first-child) {
+        @include v.mq(sp) {
+          margin-top: 0.21rem;
+        }
+        @include v.mq(pc) {
+          margin-top: 0.225rem;
+        }
+      }
+    }
+    .checkbox {
+      &-content {
+        &_btn {
+          &:checked + .checkbox-content_txt {
+            &::before {
+              opacity: 1;
+            }
+            &::after {
+              opacity: 1;
+            }
+          }
+        }
+        &_txt {
+          cursor: pointer;
+          position: relative;
+          display: inline-block;
+          @include v.mq(sp) {
+            margin: 0 0.2rem 0.46rem 0.48rem;
+            font-size: 0.14rem;
+          }
+          @include v.mq(pc) {
+            // margin: 0.2rem 2.7rem 0.48rem 2.75rem;
+          }
+          &::before {
+            content: "";
+            position: absolute;
+            display: block;
+            opacity: 0;
+            transform: rotate(40deg);
+            background-color: #000;
+            @include v.mq(sp) {
+              top: 0.132rem;
+              left: -0.276rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.07rem;
+            }
+            @include v.mq(pc) {
+              top: 0.358rem;
+              left: 2.04rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.07rem;
+            }
+          }
+          &::after {
+            content: "";
+            position: absolute;
+            display: block;
+            opacity: 0;
+            transform: rotate(-45deg);
+            background-color: #000;
+            @include v.mq(sp) {
+              top: 0.12rem;
+              left: -0.243rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.1rem;
+            }
+            @include v.mq(pc) {
+              top: 0.35rem;
+              left: 2.08rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.1rem;
+            }
+          }
+          .checkmark {
+            position: relative;
+            @include v.mq(sp) {
+            }
+            @include v.mq(pc) {
+              font-size: 0.16rem;
+            }
+            &::before {
+              content: "";
+              position: absolute;
+              display: block;
+              @include v.mq(sp) {
+                width: 0.18rem;
+                height: 0.18rem;
+                border: 0.012rem solid #b5b9be;
+                border-radius: 0.03rem;
+                top: 0.05rem;
+                left: -0.3rem;
+              }
+              @include v.mq(pc) {
+                width: 0.2rem;
+                height: 0.2rem;
+                border: 0.012rem solid #b5b9be;
+                border-radius: 0.03rem;
+                top: 0.05rem;
+                left: -0.3rem;
+              }
+            }
+          }
+        }
+      }
+    }
+    .comfirm-button {
+      &_img {
+        @include v.mq(sp) {
+          width: 2.95rem;
+          height: 0.6rem;
+        }
+        @include v.mq(pc) {
+          width: 3.65rem;
+          height: 0.75rem;
+        }
+      }
+    }
+  }
+}
