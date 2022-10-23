@@ -5,61 +5,61 @@
 @use "./templates/header";
 @use "./templates/footer";
 
-@media screen and (max-width: 759px) {
-  .main {
+.main {
+  background-color: #eaf3fa;
+  @include v.mq(sp) {
     height: 3.77rem;
-    background-color: #eaf3fa;
     padding: 0.4rem 0.2rem 0.605rem 0.2rem;
-    &-inner {
+  }
+  @include v.mq(pc) {
+    height: 4.06rem;
+    padding: 0.8rem 3.2rem;
+  }
+  &-inner {
+    background-color: white;
+
+    @include v.mq(sp) {
       height: 2.77rem;
-      background-color: white;
       border-top-left-radius: 0.3rem;
       padding: 0.37rem 0.23rem 0.25rem 0.24rem;
-      &_title {
-        font-size: 0.24rem;
-        text-align: center;
+    }
+    @include v.mq(pc) {
+      height: 2.46rem;
+      border-top-left-radius: 0.4rem;
+      padding-top: 0.47rem;
+    }
+    &_title {
+      text-align: center;
+      font-weight: bold;
+      @include v.mq(sp) {
         margin-bottom: 0.25rem;
-        font-weight: bold;
-        .media-br {
+        font-size: 0.24rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.28rem;
+        margin-bottom: 0.5rem;
+      }
+      .media-br {
+        @include v.mq(sp) {
           display: block;
         }
-      }
-      &_txt {
-        font-size: 0.16rem;
-        .PC-br {
+        @include v.mq(pc) {
           display: none;
         }
       }
     }
-  }
-}
-
-// PC幅のcss
-@media screen and (min-width: 768px) {
-  .main {
-    height: 4.06rem;
-    background-color: #eaf3fa;
-    padding: 0.8rem 3.2rem;
-    &-inner {
-      height: 2.46rem;
-      border-top-left-radius: 0.4rem;
-      background-color: white;
-      padding-top: 0.47rem;
-      // padding: 0.47rem 1.48rem 0.36rem;
-      &_title {
-        text-align: center;
-        font-size: 0.28rem;
-        margin-bottom: 0.5rem;
-        width: auto;
-        font-weight: bold;
-        .media-br {
+    &_txt {
+      @include v.mq(sp) {
+        font-size: 0.16rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.16rem;
+      }
+      .PC-br {
+        @include v.mq(sp) {
           display: none;
         }
-      }
-      &_txt {
-        font-size: 0.16rem;
-        text-align: center;
-        .PC-br {
+        @include v.mq(pc) {
           display: block;
         }
       }

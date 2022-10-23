@@ -62,7 +62,6 @@ iframe {
     white-space: pre;
   }
 }
-
 @media screen and (min-width: 768px) {
   .pc-br::after {
     content: "\a";
@@ -309,32 +308,87 @@ iframe {
 }
 
 .main {
-  height: 11.93rem;
   background-color: #eaf3fa;
-  padding-top: 0.37rem;
+}
+@media screen and (max-width: 767px) {
+  .main {
+    height: 11.93rem;
+    padding-top: 0.37rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main {
+    height: 12.16rem;
+    padding-top: 0.67rem;
+  }
 }
 .main-title {
   font-size: 0.28rem;
-  margin: 0 0.89rem 0.36rem 0.9rem;
+}
+@media screen and (max-width: 767px) {
+  .main-title {
+    margin: 0 0.89rem 0.36rem 0.9rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-title {
+    margin: 0 6.22rem 0.36rem;
+  }
 }
 .main-textbox {
-  height: 10.32rem;
-  width: 3.35rem;
   background-color: white;
-  border-top-left-radius: 0.3rem;
-  margin: 0 0.2rem 0.605rem 0.2rem;
-  padding: 0.35rem 0.2rem 0.4rem;
-  font-size: 0.16rem;
+}
+@media screen and (max-width: 767px) {
+  .main-textbox {
+    height: 10.32rem;
+    width: 3.35rem;
+    margin: 0 0.2rem 0.605rem 0.2rem;
+    padding: 0.35rem 0.2rem 0.4rem;
+    border-top-left-radius: 0.3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox {
+    height: 9.85rem;
+    width: 8rem;
+    margin: 0 3.2rem 1rem;
+    padding: 0.51rem 0.395rem 0.5rem 0.405rem;
+    border-top-left-radius: 0.4rem;
+  }
 }
 .main-textbox_content {
   border-bottom: 0.01rem solid #e2e3e5;
 }
-.main-textbox_content p {
-  margin-bottom: 0.18rem;
-  font-weight: bold;
+@media screen and (max-width: 767px) {
+  .main-textbox_content {
+    font-size: 0.16rem;
+  }
 }
-.main-textbox_content:not(:first-child) {
-  margin-top: 0.21rem;
+@media screen and (min-width: 1025px) {
+  .main-textbox_content {
+    font-size: 0.18rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-textbox_content p {
+    margin-bottom: 0.18rem;
+    font-weight: bold;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox_content p {
+    margin-bottom: 0.165rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-textbox_content:not(:first-child) {
+    margin-top: 0.21rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox_content:not(:first-child) {
+    margin-top: 0.225rem;
+  }
 }
 .main-textbox .checkbox-content_btn:checked + .checkbox-content_txt::before {
   opacity: 1;
@@ -343,55 +397,112 @@ iframe {
   opacity: 1;
 }
 .main-textbox .checkbox-content_txt {
-  font-size: 0.14rem;
   cursor: pointer;
   position: relative;
   display: inline-block;
-  margin: 0 0.2rem 0.46rem 0.48rem;
+}
+@media screen and (max-width: 767px) {
+  .main-textbox .checkbox-content_txt {
+    margin: 0 0.2rem 0.46rem 0.48rem;
+    font-size: 0.14rem;
+  }
 }
 .main-textbox .checkbox-content_txt::before {
   content: "";
   position: absolute;
   display: block;
   opacity: 0;
-  top: 0.132rem;
-  left: -0.276rem;
-  border: 0.01rem solid #000;
-  border-radius: 0.2rem;
   transform: rotate(40deg);
-  width: 0.07rem;
   background-color: #000;
+}
+@media screen and (max-width: 767px) {
+  .main-textbox .checkbox-content_txt::before {
+    top: 0.132rem;
+    left: -0.276rem;
+    border: 0.01rem solid #000;
+    border-radius: 0.2rem;
+    width: 0.07rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox .checkbox-content_txt::before {
+    top: 0.358rem;
+    left: 2.04rem;
+    border: 0.01rem solid #000;
+    border-radius: 0.2rem;
+    width: 0.07rem;
+  }
 }
 .main-textbox .checkbox-content_txt::after {
   content: "";
   position: absolute;
   display: block;
   opacity: 0;
-  top: 0.12rem;
-  left: -0.243rem;
-  border: 0.01rem solid #000;
-  border-radius: 0.2rem;
   transform: rotate(-45deg);
-  width: 0.1rem;
   background-color: #000;
+}
+@media screen and (max-width: 767px) {
+  .main-textbox .checkbox-content_txt::after {
+    top: 0.12rem;
+    left: -0.243rem;
+    border: 0.01rem solid #000;
+    border-radius: 0.2rem;
+    width: 0.1rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox .checkbox-content_txt::after {
+    top: 0.35rem;
+    left: 2.08rem;
+    border: 0.01rem solid #000;
+    border-radius: 0.2rem;
+    width: 0.1rem;
+  }
 }
 .main-textbox .checkbox-content_txt .checkmark {
   position: relative;
 }
+@media screen and (min-width: 1025px) {
+  .main-textbox .checkbox-content_txt .checkmark {
+    font-size: 0.16rem;
+  }
+}
 .main-textbox .checkbox-content_txt .checkmark::before {
   content: "";
   position: absolute;
-  width: 0.18rem;
-  height: 0.18rem;
   display: block;
-  border: 0.012rem solid #b5b9be;
-  border-radius: 0.03rem;
-  top: 0.05rem;
-  left: -0.3rem;
 }
-.main-textbox .comfirm-button_img {
-  width: 2.95rem;
-  height: 0.6rem;
+@media screen and (max-width: 767px) {
+  .main-textbox .checkbox-content_txt .checkmark::before {
+    width: 0.18rem;
+    height: 0.18rem;
+    border: 0.012rem solid #b5b9be;
+    border-radius: 0.03rem;
+    top: 0.05rem;
+    left: -0.3rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox .checkbox-content_txt .checkmark::before {
+    width: 0.2rem;
+    height: 0.2rem;
+    border: 0.012rem solid #b5b9be;
+    border-radius: 0.03rem;
+    top: 0.05rem;
+    left: -0.3rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .main-textbox .comfirm-button_img {
+    width: 2.95rem;
+    height: 0.6rem;
+  }
+}
+@media screen and (min-width: 1025px) {
+  .main-textbox .comfirm-button_img {
+    width: 3.65rem;
+    height: 0.75rem;
+  }
 }
 
 /*# sourceMappingURL=confirm.css.map */
