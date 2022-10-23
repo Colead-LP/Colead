@@ -16,7 +16,7 @@
     font-size: 26.6666667vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 6.94444444vw;
   }
@@ -44,7 +44,7 @@ iframe {
   vertical-align: middle;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .sp {
     display: none;
   }
@@ -62,8 +62,7 @@ iframe {
     white-space: pre;
   }
 }
-
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .pc-br::after {
     content: "\a";
     white-space: pre;
@@ -210,7 +209,7 @@ iframe {
     padding: 0 0.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .inner {
     padding: 0 2.2rem;
   }
@@ -227,7 +226,7 @@ iframe {
     height: 0.6rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header {
     height: 0.8rem;
   }
@@ -240,7 +239,7 @@ iframe {
     padding: 0.08rem 0;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-bg {
     padding: 0.1rem 0;
   }
@@ -254,7 +253,7 @@ iframe {
     width: 1.21rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-logo {
     width: 1.9025rem;
   }
@@ -269,7 +268,7 @@ iframe {
     margin: 0 0 0 0.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-txt {
     font-size: 0.2rem;
     line-height: 1.5;

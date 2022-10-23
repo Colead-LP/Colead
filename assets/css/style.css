@@ -16,7 +16,7 @@
     font-size: 26.6666667vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 6.94444444vw;
   }
@@ -44,7 +44,7 @@ iframe {
   vertical-align: middle;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .sp {
     display: none;
   }
@@ -63,7 +63,7 @@ iframe {
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .pc-br::after {
     content: "\a";
     white-space: pre;
@@ -210,7 +210,7 @@ iframe {
     padding: 0 0.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .inner {
     padding: 0 2.2rem;
   }
@@ -227,7 +227,7 @@ iframe {
     height: 0.6rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header {
     height: 0.8rem;
   }
@@ -240,7 +240,7 @@ iframe {
     padding: 0.08rem 0;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-bg {
     padding: 0.1rem 0;
   }
@@ -254,7 +254,7 @@ iframe {
     width: 1.21rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-logo {
     width: 1.9025rem;
   }
@@ -269,7 +269,7 @@ iframe {
     margin: 0 0 0 0.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-txt {
     font-size: 0.2rem;
     line-height: 1.5;
@@ -347,10 +347,20 @@ iframe {
   width: 1.54rem;
   margin: 0.23rem auto 0;
 }
-.cta-btn {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-top: 0.11rem;
+@media screen and (max-width: 767px) {
+  .cta-btn {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 0.11rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .cta-btn {
+    width: 4.8rem;
+    margin-top: 0.11rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 .cta-btn .btn {
   display: inline-block;
@@ -368,7 +378,7 @@ iframe {
     height: 6.67rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .mv-bg {
     background: url(../img/mv/pc/mv-bg.jpg) no-repeat center/cover;
     height: 7.09rem;
@@ -379,100 +389,128 @@ iframe {
     padding: 0.69rem 0.2rem 0.89rem;
   }
 }
+@media screen and (min-width: 768px) {
+  .mv-inner {
+    padding: 0 2.1rem;
+  }
+}
 .mv-txt {
   color: #fff;
   font-weight: bold;
   line-height: 1;
   text-align: center;
 }
-@media screen and (max-width: 767px) {
-  .mv-txt .txt:nth-child(1) {
-    font-size: 0.23rem;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .mv-txt .txt:nth-child(1) {
-    font-size: 0.38rem;
+@media screen and (min-width: 768px) {
+  .mv-txt {
+    padding: 0.6rem 0 0;
   }
 }
 @media screen and (max-width: 767px) {
-  .mv-txt .txt:nth-child(1) .txt__midium {
-    font-size: 0.29rem;
+  .mv-txt .txt.txt01 {
+    line-height: 1;
+    width: 3.35rem;
+    margin: 0 auto;
   }
 }
-@media screen and (min-width: 1025px) {
-  .mv-txt .txt:nth-child(1) .txt__midium {
-    font-size: 0.48rem;
-  }
-}
-.mv-txt .txt:nth-child(1) .txt__large {
-  display: inline;
-  vertical-align: text-top;
-}
-@media screen and (max-width: 767px) {
-  .mv-txt .txt:nth-child(1) .txt__large {
-    font-size: 0.4rem;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .mv-txt .txt:nth-child(1) .txt__large {
-    font-size: 0.65rem;
+@media screen and (min-width: 768px) {
+  .mv-txt .txt.txt01 {
+    line-height: 1;
+    width: 5.48rem;
+    margin: 0 auto;
   }
 }
 @media screen and (max-width: 767px) {
-  .mv-txt .txt:nth-child(2) {
-    font-size: 0.4rem;
-    margin: 0.16rem 0 0;
+  .mv-txt .txt.txt02 {
+    width: 3.3rem;
+    margin: 0 auto;
   }
 }
-@media screen and (min-width: 1025px) {
-  .mv-txt .txt:nth-child(2) {
-    display: inline;
-    font-size: 0.69rem;
-    margin: 0.1rem 0 0;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .mv-txt .txt:nth-child(2) .txt__small {
-    font-size: 0.61rem;
-  }
-}
-@media screen and (max-width: 767px) {
-  .mv-txt .txt:nth-child(3) {
-    font-size: 0.55rem;
-    margin: 0.14rem 0 0;
-  }
-}
-@media screen and (min-width: 1025px) {
-  .mv-txt .txt:nth-child(3) {
-    display: inline;
-    font-size: 0.85rem;
+@media screen and (min-width: 768px) {
+  .mv-txt .txt.txt02 {
+    width: 9.91rem;
+    margin: -0.22rem auto 0;
   }
 }
 .mv-label {
   display: flex;
-  justify-content: space-between;
-  margin: 0.3rem 0 0;
+}
+@media screen and (max-width: 767px) {
+  .mv-label {
+    justify-content: space-between;
+    margin: 0.3rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mv-label {
+    justify-content: center;
+    gap: 0.6rem;
+    margin: 0.26rem 0 0;
+  }
 }
 .mv-label .label {
   color: #e51a3f;
-  background: url(../img/mv/sp/mv-label.png) no-repeat center/cover;
   font-weight: bold;
-  font-size: 0.16rem;
   letter-spacing: 0.04em;
-  line-height: 1.4;
   text-align: center;
-  padding: 0.08rem 0;
-  width: 1.6rem;
-  height: 0.4rem;
 }
-.mv-btn {
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  margin-top: 1.2rem;
+@media screen and (max-width: 767px) {
+  .mv-label .label {
+    background: url(../img/mv/sp/mv-label.png) no-repeat center/cover;
+    font-size: 0.16rem;
+    line-height: 1.4;
+    padding: 0.08rem 0;
+    width: 1.6rem;
+    height: 0.4rem;
+  }
 }
-.mv-btn .btn {
-  display: inline-block;
+@media screen and (min-width: 768px) {
+  .mv-label .label {
+    background: url(../img/mv/pc/mv-label.png) no-repeat center/cover;
+    font-size: 0.2rem;
+    line-height: 2.6;
+    width: 2.7rem;
+    height: 0.56rem;
+  }
+}
+@media screen and (max-width: 767px) and (max-width: 767px) {
+  .mv-btn {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 1.2rem;
+  }
+}
+@media screen and (max-width: 767px) and (min-width: 768px) {
+  .mv-btn {
+    width: 4.8rem;
+    margin-top: 1.2rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (max-width: 767px) {
+  .mv-btn .btn {
+    display: inline-block;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 767px) {
+  .mv-btn {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-top: 1.3rem;
+  }
+}
+@media screen and (min-width: 768px) and (min-width: 768px) {
+  .mv-btn {
+    width: 4.8rem;
+    margin-top: 1.3rem;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mv-btn .btn {
+    display: inline-block;
+  }
 }
 
 /*=====================================================
