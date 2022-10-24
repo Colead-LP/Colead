@@ -275,21 +275,12 @@
           width: 8rem;
           margin: 0.32rem auto 0;
         }
-        [data-ruby] {
-          position: relative;
-          &::before {
-            content: attr(data-ruby);
-            position: absolute;
-            top: -1.6em;
-            left: 0.05rem;
-            right: 0;
-            margin: auto;
-            @include v.mq(sp) {
-              font-size: 0.12rem;
-            }
-            @include v.mq(pc) {
-              font-size: 0.14rem;
-            }
+        rt{
+          @include v.mq(sp) {
+            font-size: .12rem;
+          }
+          @include v.mq(pc) {
+            font-size: .14rem;
           }
         }
       }
