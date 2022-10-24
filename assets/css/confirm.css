@@ -56,6 +56,11 @@ iframe {
   }
 }
 
+.br::after {
+  content: "\a";
+  white-space: pre;
+}
+
 @media screen and (max-width: 767px) {
   .sp-br::after {
     content: "\a";

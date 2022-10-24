@@ -33,21 +33,24 @@ get_header();
                 <h2 class="solve-header-ttl">太陽光発電所をすぐに売りたい</h2>
                 <p class="solve-header-txt">そのようなお悩みを抱えている方は<span class="sp-br"></span>
                     ご相談ください。</p>
-                <ul class="solve-header-list">
-                    <li class="solve-header-item">
-                        <p class="solve-header-item-txt">資金が必要になり<span class="sp-br"></span>
-                            なるべく早く現金化したい。</p>
-                    </li>
-                    <li class="solve-header-item">
-                        <p class="solve-header-item-txt">管理が手間。度重なる制度改正にも<span class="sp-br"></span>
-                            ついていけないので手放したい。</p>
-                    </li>
-                    <li class="solve-header-item">
-                        <p class="solve-header-item-txt">他社に依頼したがなかなか売れない。</p>
-                    </li>
-                </ul>
-                <div class="solve-header-img">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/solve-header-img.png" alt="">
+                <div class="solve-header-content">
+                    <ul class="solve-header-list">
+                        <li class="solve-header-item">
+                            <p class="solve-header-item-txt">資金が必要になり<span class="sp-br"></span>
+                                なるべく早く現金化したい。</p>
+                        </li>
+                        <li class="solve-header-item">
+                            <p class="solve-header-item-txt">管理が手間。度重なる制度改正にも<span class="br"></span>
+                                ついていけないので手放したい。</p>
+                        </li>
+                        <li class="solve-header-item">
+                            <p class="solve-header-item-txt">他社に依頼したがなかなか売れない。</p>
+                        </li>
+                    </ul>
+                    <div class="solve-header-img">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/header-img.png" alt="">
+                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/header-img.png" alt="">
+                    </div>
                 </div>
             </div>
         </div>
@@ -55,11 +58,15 @@ get_header();
     <div class="solve-footer">
         <div class="solve-footer-bg">
             <div class="solve-footer-inner inner">
-                <h3 class="solve-footer-ttl"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/footer-ttl.png" alt=""></h3>
+                <h3 class="solve-footer-ttl">
+                <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/footer-ttl.png" alt="">
+                <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/footer-ttl.png" alt="">
+                </h3>
                 <p class="solve-footer-txt">スムーズな売却でストレスフリー。</p>
-                <p class="solve-footer-txt">太陽光発電の買取なら<ruby>Colead<rt>コリード</rt></ruby>にご相談ください。自社で買い取るのでスピーディ。太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
+                <p class="solve-footer-txt">太陽光発電の買取なら<span data-ruby="コリード">Colead</span>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
                 <div class="solve-footer-graph">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/solve-footer-graph.png" alt="">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/footer-graph.png" alt="">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/footer-graph.png" alt="">
                 </div>
             </div>
         </div>
