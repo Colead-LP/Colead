@@ -16,7 +16,7 @@
     font-size: 26.6666667vw;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   html {
     font-size: 6.94444444vw;
   }
@@ -44,7 +44,7 @@ iframe {
   vertical-align: middle;
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .sp {
     display: none;
   }
@@ -56,6 +56,11 @@ iframe {
   }
 }
 
+.br::after {
+  content: "\a";
+  white-space: pre;
+}
+
 @media screen and (max-width: 767px) {
   .sp-br::after {
     content: "\a";
@@ -63,7 +68,7 @@ iframe {
   }
 }
 
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .pc-br::after {
     content: "\a";
     white-space: pre;
@@ -71,7 +76,7 @@ iframe {
 }
 
 .txt__strong {
-  color: #E51A3F;
+  color: #e51a3f;
 }
 
 /*=====================================================
@@ -210,7 +215,7 @@ iframe {
     padding: 0 0.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .inner {
     padding: 0 2.2rem;
   }
@@ -227,7 +232,7 @@ iframe {
     height: 0.6rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header {
     height: 0.8rem;
   }
@@ -240,7 +245,7 @@ iframe {
     padding: 0.08rem 0;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-bg {
     padding: 0.1rem 0;
   }
@@ -254,7 +259,7 @@ iframe {
     width: 1.21rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-logo {
     width: 1.9025rem;
   }
@@ -269,7 +274,7 @@ iframe {
     margin: 0 0 0 0.2rem;
   }
 }
-@media screen and (min-width: 1025px) {
+@media screen and (min-width: 768px) {
   .header-txt {
     font-size: 0.2rem;
     line-height: 1.5;
@@ -308,59 +313,80 @@ iframe {
   margin: 0.4rem 0 0;
 }
 
-@media screen and (max-width: 480px) {
+.main {
+  background-color: #eaf3fa;
+}
+@media screen and (max-width: 767px) {
   .main {
     height: 3.77rem;
-    background-color: #eaf3fa;
     padding: 0.4rem 0.2rem 0.605rem 0.2rem;
   }
+}
+@media screen and (min-width: 768px) {
+  .main {
+    height: 4.06rem;
+    padding: 0.8rem 3.2rem;
+  }
+}
+.main-inner {
+  background-color: white;
+}
+@media screen and (max-width: 767px) {
   .main-inner {
     height: 2.77rem;
-    background-color: white;
     border-top-left-radius: 0.3rem;
     padding: 0.37rem 0.23rem 0.25rem 0.24rem;
   }
-  .main-inner_title {
-    font-size: 0.24rem;
-    text-align: center;
-    margin-bottom: 0.25rem;
-    font-weight: bold;
+}
+@media screen and (min-width: 768px) {
+  .main-inner {
+    height: 2.46rem;
+    border-top-left-radius: 0.4rem;
+    padding-top: 0.47rem;
   }
+}
+.main-inner_title {
+  text-align: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .main-inner_title {
+    margin-bottom: 0.25rem;
+    font-size: 0.24rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-inner_title {
+    font-size: 0.28rem;
+    margin-bottom: 0.5rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .main-inner_title .media-br {
     display: block;
   }
+}
+@media screen and (min-width: 768px) {
+  .main-inner_title .media-br {
+    display: none;
+  }
+}
+@media screen and (max-width: 767px) {
   .main-inner_txt {
     font-size: 0.16rem;
   }
+}
+@media screen and (min-width: 768px) {
+  .main-inner_txt {
+    font-size: 0.16rem;
+  }
+}
+@media screen and (max-width: 767px) {
   .main-inner_txt .PC-br {
     display: none;
   }
 }
-@media screen and (min-width: 481px) {
-  .main {
-    height: 25.375rem;
-    background-color: #eaf3fa;
-    padding: 5rem 20rem;
-  }
-  .main-inner {
-    height: 15.375rem;
-    border-top-left-radius: 3rem;
-    background-color: white;
-    padding: 2.9375rem 2.5rem 3.125rem;
-  }
-  .main-inner_title {
-    text-align: center;
-    font-size: 1.75rem;
-    margin-bottom: 2.25rem;
-    font-weight: bold;
-  }
-  .main-inner_title .media-br {
-    display: none;
-  }
-  .main-inner_txt {
-    font-size: 1rem;
-    text-align: center;
-  }
+@media screen and (min-width: 768px) {
   .main-inner_txt .PC-br {
     display: block;
   }
