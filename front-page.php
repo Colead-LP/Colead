@@ -63,7 +63,7 @@ get_header();
                 <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/footer-ttl.png" alt="">
                 </h3>
                 <p class="solve-footer-txt">スムーズな売却でストレスフリー。</p>
-                <p class="solve-footer-txt">太陽光発電の買取なら<span data-ruby="コリード">Colead</span>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
+                <p class="solve-footer-txt">太陽光発電の買取なら<ruby>Colead<rt>コリード</rt></ruby>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
                 <div class="solve-footer-graph">
                     <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/footer-graph.png" alt="">
                     <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/footer-graph.png" alt="">
@@ -74,22 +74,8 @@ get_header();
 </section><!-- /.solve -->
 
 <!-- cta -->
-<div class="cta">
-    <div class="cta-bg">
-        <div class="cta-inner inner">
-            <div class="cta-txt">
-                <p class="txt">相談だけでもOK<span class="txt__21">！</span></p>
-                <p class="txt">太陽光発電所<span class="txt__17">の</span>スピード買取<span class="txt__15">なら</span></p>
-            </div>
-            <div class="cta-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cta/sp/cta-logo.png" alt="">
-            </div>
-            <div class="cta-btn">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="">
-            </div>
-        </div>
-    </div>
-</div><!-- /.cta -->
+<?php include 'templates/cta.php'; ?>
+<!-- /.cta -->
 
 <!-- reason -->
 <section class="reason">
@@ -129,22 +115,8 @@ get_header();
 </section><!-- /.reason -->
 
 <!-- cta -->
-<div class="cta">
-    <div class="cta-bg">
-        <div class="cta-inner inner">
-            <div class="cta-txt">
-                <p class="txt">相談だけでもOK<span class="txt__21">！</span></p>
-                <p class="txt">太陽光発電所<span class="txt__17">の</span>スピード買取<span class="txt__15">なら</span></p>
-            </div>
-            <div class="cta-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cta/sp/cta-logo.png" alt="">
-            </div>
-            <div class="cta-btn">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="">
-            </div>
-        </div>
-    </div>
-</div><!-- /.cta -->
+<?php include 'templates/cta.php'; ?>
+<!-- /.cta -->
 
 <!-- flow -->
 <section class="flow"></section><!-- /.flow -->
@@ -153,22 +125,8 @@ get_header();
 <section class="faq"></section><!-- faq -->
 
 <!-- cta -->
-<div class="cta">
-    <div class="cta-bg">
-        <div class="cta-inner inner">
-            <div class="cta-txt">
-                <p class="txt">相談だけでもOK<span class="txt__21">！</span></p>
-                <p class="txt">太陽光発電所<span class="txt__17">の</span>スピード買取<span class="txt__15">なら</span></p>
-            </div>
-            <div class="cta-logo">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/cta/sp/cta-logo.png" alt="">
-            </div>
-            <div class="cta-btn">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="">
-            </div>
-        </div>
-    </div>
-</div><!-- /.cta -->
+<?php include 'templates/cta.php'; ?>
+<!-- /.cta -->
 
 <!-- form -->
 <section class="form">
