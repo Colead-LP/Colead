@@ -16,11 +16,13 @@
     padding-top: 0.67rem;
   }
   &-title {
-    font-size: 0.28rem;
+    font-weight: bold;
     @include v.mq(sp) {
+      font-size: 0.28rem;
       margin: 0 0.89rem 0.36rem 0.9rem;
     }
     @include v.mq(pc) {
+      font-size: 0.28rem;
       margin: 0 6.22rem 0.36rem;
     }
   }
@@ -29,14 +31,14 @@
     @include v.mq(sp) {
       height: 10.32rem;
       width: 3.35rem;
+      border-top-left-radius: 0.3rem;
       margin: 0 0.2rem 0.605rem 0.2rem;
       padding: 0.35rem 0.2rem 0.4rem;
-      border-top-left-radius: 0.3rem;
     }
     @include v.mq(pc) {
       height: 9.85rem;
       width: 8rem;
-      margin: 0 3.2rem 1rem;
+      margin: 0 3.2rem;
       padding: 0.51rem 0.395rem 0.5rem 0.405rem;
       border-top-left-radius: 0.4rem;
     }
@@ -48,13 +50,22 @@
       @include v.mq(pc) {
         font-size: 0.18rem;
       }
-      p {
+      .pc-br {
         @include v.mq(sp) {
-          margin-bottom: 0.18rem;
-          font-weight: bold;
+          display: block;
         }
         @include v.mq(pc) {
-          margin-bottom: 0.165rem;
+          display: none;
+        }
+      }
+      p {
+        @include v.mq(sp) {
+          font-weight: bold;
+          margin-bottom: 0.18rem;
+        }
+        @include v.mq(pc) {
+          font-weight: normal;
+          margin-bottom: 0.16rem;
         }
       }
       &:not(:first-child) {
@@ -62,7 +73,13 @@
           margin-top: 0.21rem;
         }
         @include v.mq(pc) {
-          margin-top: 0.225rem;
+          margin-top: 0.2rem;
+        }
+      }
+      &:not(:last-child) {
+        @include v.mq(sp) {
+        }
+        @include v.mq(pc) {
         }
       }
     }
@@ -83,12 +100,16 @@
           position: relative;
           display: inline-block;
           @include v.mq(sp) {
-            margin: 0 0.2rem 0.46rem 0.48rem;
             font-size: 0.14rem;
+            margin: 0 0.2rem 0.46rem 0.48rem;
           }
           @include v.mq(pc) {
-            // margin: 0.2rem 2.7rem 0.48rem 2.75rem;
+            font-size: 0.16rem;
           }
+
+          /*=====================================================
+          # チェックマーク右
+          =====================================================*/
           &::before {
             content: "";
             position: absolute;
@@ -104,13 +125,17 @@
               width: 0.07rem;
             }
             @include v.mq(pc) {
-              top: 0.358rem;
-              left: 2.04rem;
+              top: -0.7rem;
+              left: 2.03rem;
               border: 0.01rem solid #000;
               border-radius: 0.2rem;
               width: 0.07rem;
             }
           }
+
+          /*=====================================================
+          # チェックマーク左
+          =====================================================*/
           &::after {
             content: "";
             position: absolute;
@@ -126,20 +151,18 @@
               width: 0.1rem;
             }
             @include v.mq(pc) {
-              top: 0.35rem;
-              left: 2.08rem;
+              top: -0.7rem;
+              left: 2.07rem;
               border: 0.01rem solid #000;
               border-radius: 0.2rem;
               width: 0.1rem;
             }
           }
+
+          /*=====================================================
+          # チェックボックス
+          =====================================================*/
           .checkmark {
-            position: relative;
-            @include v.mq(sp) {
-            }
-            @include v.mq(pc) {
-              font-size: 0.16rem;
-            }
             &::before {
               content: "";
               position: absolute;
@@ -157,8 +180,8 @@
                 height: 0.2rem;
                 border: 0.012rem solid #b5b9be;
                 border-radius: 0.03rem;
-                top: 0.05rem;
-                left: -0.3rem;
+                top: -0.8rem;
+                left: 2rem;
               }
             }
           }
@@ -174,6 +197,7 @@
         @include v.mq(pc) {
           width: 3.65rem;
           height: 0.75rem;
+          margin: 0 1.775rem 0;
         }
       }
     }

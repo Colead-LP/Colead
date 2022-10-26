@@ -379,6 +379,7 @@ iframe {
 @media screen and (min-width: 768px) {
   .main-inner_txt {
     font-size: 0.16rem;
+    text-align: center;
   }
 }
 @media screen and (max-width: 767px) {
