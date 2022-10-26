@@ -13,7 +13,7 @@
   }
   @include v.mq(pc) {
     height: 12.16rem;
-    padding-top: 0.67rem;
+    padding: 0.67rem 3.2rem 1rem;
   }
   &-title {
     font-weight: bold;
@@ -23,7 +23,8 @@
     }
     @include v.mq(pc) {
       font-size: 0.28rem;
-      margin: 0 6.22rem 0.36rem;
+      padding: 0 0 0.36rem;
+      text-align: center;
     }
   }
   &-textbox {
@@ -38,7 +39,7 @@
     @include v.mq(pc) {
       height: 9.85rem;
       width: 8rem;
-      margin: 0 3.2rem;
+      // margin: 0 3.2rem;
       padding: 0.51rem 0.395rem 0.5rem 0.405rem;
       border-top-left-radius: 0.4rem;
     }
@@ -65,7 +66,8 @@
         }
         @include v.mq(pc) {
           font-weight: normal;
-          margin-bottom: 0.16rem;
+          // margin-bottom: 0.16rem;
+          padding: 0.205rem 0 0.16rem;
         }
       }
       &:not(:first-child) {
@@ -73,7 +75,7 @@
           margin-top: 0.21rem;
         }
         @include v.mq(pc) {
-          margin-top: 0.2rem;
+          // margin-top: 0.2rem;
         }
       }
       &:not(:last-child) {
@@ -98,7 +100,7 @@
         &_txt {
           cursor: pointer;
           position: relative;
-          display: inline-block;
+          // display: inline-block;
           @include v.mq(sp) {
             font-size: 0.14rem;
             margin: 0 0.2rem 0.46rem 0.48rem;
@@ -125,11 +127,13 @@
               width: 0.07rem;
             }
             @include v.mq(pc) {
-              top: -0.7rem;
-              left: 2.03rem;
+              // top: -0.7rem;
+              // left: 2.03rem;
               border: 0.01rem solid #000;
               border-radius: 0.2rem;
               width: 0.07rem;
+              top: -0.606rem;
+              left: 1.936rem;
             }
           }
 
@@ -151,11 +155,13 @@
               width: 0.1rem;
             }
             @include v.mq(pc) {
-              top: -0.7rem;
-              left: 2.07rem;
+              // top: -0.7rem;
+              // left: 2.07rem;
               border: 0.01rem solid #000;
               border-radius: 0.2rem;
               width: 0.1rem;
+              top: -0.62rem;
+              left: 1.97rem;
             }
           }
 
@@ -163,6 +169,12 @@
           # チェックボックス
           =====================================================*/
           .checkmark {
+            @include v.mq(pc) {
+              position: absolute;
+              min-width: max-content;
+              margin-top: 0.2rem;
+              left: 2.2rem;
+            }
             &::before {
               content: "";
               position: absolute;
@@ -180,8 +192,10 @@
                 height: 0.2rem;
                 border: 0.012rem solid #b5b9be;
                 border-radius: 0.03rem;
-                top: -0.8rem;
-                left: 2rem;
+                // top: -0.8rem;
+                // left: 2rem;
+                top: 0.08rem;
+                left: -0.3rem;
               }
             }
           }
@@ -195,9 +209,10 @@
           height: 0.6rem;
         }
         @include v.mq(pc) {
+          display: block;
           width: 3.65rem;
           height: 0.75rem;
-          margin: 0 1.775rem 0;
+          margin: 0.42rem 1.775rem 0;
         }
       }
     }

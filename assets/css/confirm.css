@@ -1,5 +1,4 @@
 @charset "UTF-8";
-@charset "UTF-8";
 /*=====================================================
 # font
 =====================================================*/
@@ -56,6 +55,11 @@ iframe {
   .pc {
     display: none;
   }
+}
+
+.br::after {
+  content: "\a";
+  white-space: pre;
 }
 
 @media screen and (max-width: 767px) {
@@ -162,9 +166,7 @@ iframe {
   color: inherit;
   font-family: inherit;
   font-size: 1em;
-  background: transparent
-    url(https://haniwaman.com/cms/wp-content/uploads/2018/12/form-css-arrow.png)
-    no-repeat center right 8px/16px 16px;
+  background: transparent url(https://haniwaman.com/cms/wp-content/uploads/2018/12/form-css-arrow.png) no-repeat center right 8px/16px 16px;
   border: 1px solid rgba(0, 0, 0, 0.16);
   border-radius: 0;
   appearance: none;
@@ -194,8 +196,7 @@ iframe {
   margin: 0 0 1em;
   padding: 0.6em 2em;
 }
-.type-submit:hover,
-.type-submit:focus {
+.type-submit:hover, .type-submit:focus {
   outline: none;
 }
 .type-submit::-moz-focus-inner {
@@ -325,7 +326,7 @@ iframe {
 @media screen and (min-width: 768px) {
   .main {
     height: 12.16rem;
-    padding-top: 0.67rem;
+    padding: 0.67rem 3.2rem 1rem;
   }
 }
 .main-title {
@@ -340,7 +341,8 @@ iframe {
 @media screen and (min-width: 768px) {
   .main-title {
     font-size: 0.28rem;
-    margin: 0 6.22rem 0.36rem;
+    padding: 0 0 0.36rem;
+    text-align: center;
   }
 }
 .main-textbox {
@@ -359,7 +361,6 @@ iframe {
   .main-textbox {
     height: 9.85rem;
     width: 8rem;
-    margin: 0 3.2rem;
     padding: 0.51rem 0.395rem 0.5rem 0.405rem;
     border-top-left-radius: 0.4rem;
   }
@@ -396,17 +397,12 @@ iframe {
 @media screen and (min-width: 768px) {
   .main-textbox_content p {
     font-weight: normal;
-    margin-bottom: 0.16rem;
+    padding: 0.205rem 0 0.16rem;
   }
 }
 @media screen and (max-width: 767px) {
   .main-textbox_content:not(:first-child) {
     margin-top: 0.21rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .main-textbox_content:not(:first-child) {
-    margin-top: 0.2rem;
   }
 }
 .main-textbox .checkbox-content_btn:checked + .checkbox-content_txt::before {
@@ -418,7 +414,6 @@ iframe {
 .main-textbox .checkbox-content_txt {
   cursor: pointer;
   position: relative;
-  display: inline-block;
   /*=====================================================
   # チェックマーク右
   =====================================================*/
@@ -459,11 +454,11 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .main-textbox .checkbox-content_txt::before {
-    top: -0.7rem;
-    left: 2.03rem;
     border: 0.01rem solid #000;
     border-radius: 0.2rem;
     width: 0.07rem;
+    top: -0.606rem;
+    left: 1.936rem;
   }
 }
 .main-textbox .checkbox-content_txt::after {
@@ -485,11 +480,19 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .main-textbox .checkbox-content_txt::after {
-    top: -0.7rem;
-    left: 2.07rem;
     border: 0.01rem solid #000;
     border-radius: 0.2rem;
     width: 0.1rem;
+    top: -0.62rem;
+    left: 1.97rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .main-textbox .checkbox-content_txt .checkmark {
+    position: absolute;
+    min-width: max-content;
+    margin-top: 0.2rem;
+    left: 2.2rem;
   }
 }
 .main-textbox .checkbox-content_txt .checkmark::before {
@@ -513,8 +516,8 @@ iframe {
     height: 0.2rem;
     border: 0.012rem solid #b5b9be;
     border-radius: 0.03rem;
-    top: -0.8rem;
-    left: 2rem;
+    top: 0.08rem;
+    left: -0.3rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -525,9 +528,10 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .main-textbox .comfirm-button_img {
+    display: block;
     width: 3.65rem;
     height: 0.75rem;
-    margin: 0 1.775rem 0;
+    margin: 0.42rem 1.775rem 0;
   }
 }
 
