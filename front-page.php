@@ -1,7 +1,6 @@
-<?php
-get_header();
-?>
-<!-- mv -->
+<!-- .header -->
+<?php get_header();?><!-- /.header -->
+<!-- .mv -->
 <div class="mv">
     <div class="mv-bg">
         <div class="mv-inner inner">
@@ -24,8 +23,7 @@ get_header();
         </div>
     </div>
 </div><!-- /.mv -->
-
-<!-- solve -->
+<!-- .solve -->
 <section class="solve">
     <div class="solve-header">
         <div class="solve-header-bg">
@@ -72,12 +70,9 @@ get_header();
         </div>
     </div>
 </section><!-- /.solve -->
-
-<!-- cta -->
-<?php include 'templates/cta.php'; ?>
-<!-- /.cta -->
-
-<!-- reason -->
+<!-- .cta -->
+<?php include 'templates/cta.php'; ?><!-- /.cta -->
+<!-- .reason -->
 <section class="reason">
     <div class="reason-bg">
         <div class="reason-inner inner">
@@ -113,29 +108,21 @@ get_header();
         </div>
     </div>
 </section><!-- /.reason -->
-
-<!-- cta -->
-<?php include 'templates/cta.php'; ?>
-<!-- /.cta -->
-
-<!-- flow -->
+<!-- .cta -->
+<?php include 'templates/cta.php'; ?><!-- /.cta -->
+<!-- .flow -->
 <section class="flow"></section><!-- /.flow -->
-
-<!-- faq -->
-<section class="faq"></section><!-- faq -->
-
-<!-- cta -->
-<?php include 'templates/cta.php'; ?>
-<!-- /.cta -->
-
-<!-- form -->
+<!-- .faq -->
+<section class="faq"></section><!-- /.faq -->
+<!-- .cta -->
+<?php include 'templates/cta.php'; ?><!-- /.cta -->
+<!-- .form -->
 <section class="form">
     <?php
     //echo do_shortcode('[mwform_formkey key="9"]');
     ?>
-    <?php // echo do_shortcode('[mwform_formkey key="24"]'); 
+    <?php // echo do_shortcode('[mwform_formkey key="24"]');
     ?>
 </section><!-- /.form -->
-
-<?php
-get_footer();
+<!-- .footer -->
+<?php get_footer();
