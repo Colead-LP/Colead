@@ -17,7 +17,6 @@
   }
   &-inner {
     background-color: white;
-
     @include v.mq(sp) {
       height: 2.77rem;
       border-top-left-radius: 0.3rem;
@@ -54,6 +53,7 @@
       }
       @include v.mq(pc) {
         font-size: 0.16rem;
+        text-align: center;
       }
       .PC-br {
         @include v.mq(sp) {

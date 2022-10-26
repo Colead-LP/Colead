@@ -31,10 +31,10 @@ get_header();
                 <p>配線図</p>
             </div>
             <div class='main-textbox_content'>
-                <p>遠隔監視システム<br>の導入</p>
+                <p>遠隔監視システム<br class='pc-br'>の導入</p>
             </div>
             <div class='main-textbox_content'>
-                <p>直近1年での<br>メンテナンス</p>
+                <p>直近1年での<br class='pc-br'>メンテナンス</p>
             </div>
             <div class='main-textbox_content'>
                 <p>パネルメーカー</p>

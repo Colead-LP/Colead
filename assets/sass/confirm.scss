@@ -6,29 +6,81 @@
 @use "./templates/footer";
 
 .main {
-  height: 11.93rem;
   background-color: #eaf3fa;
-  padding-top: 0.37rem;
+  @include v.mq(sp) {
+    height: 11.93rem;
+    padding-top: 0.37rem;
+  }
+  @include v.mq(pc) {
+    height: 12.16rem;
+    padding-top: 0.67rem;
+  }
   &-title {
-    font-size: 0.28rem;
-    margin: 0 0.89rem 0.36rem 0.9rem;
+    font-weight: bold;
+    @include v.mq(sp) {
+      font-size: 0.28rem;
+      margin: 0 0.89rem 0.36rem 0.9rem;
+    }
+    @include v.mq(pc) {
+      font-size: 0.28rem;
+      margin: 0 6.22rem 0.36rem;
+    }
   }
   &-textbox {
-    height: 10.32rem;
-    width: 3.35rem;
     background-color: white;
-    border-top-left-radius: 0.3rem;
-    margin: 0 0.2rem 0.605rem 0.2rem;
-    padding: 0.35rem 0.2rem 0.4rem;
-    font-size: 0.16rem;
+    @include v.mq(sp) {
+      height: 10.32rem;
+      width: 3.35rem;
+      border-top-left-radius: 0.3rem;
+      margin: 0 0.2rem 0.605rem 0.2rem;
+      padding: 0.35rem 0.2rem 0.4rem;
+    }
+    @include v.mq(pc) {
+      height: 9.85rem;
+      width: 8rem;
+      margin: 0 3.2rem;
+      padding: 0.51rem 0.395rem 0.5rem 0.405rem;
+      border-top-left-radius: 0.4rem;
+    }
     &_content {
       border-bottom: 0.01rem solid #e2e3e5;
+      @include v.mq(sp) {
+        font-size: 0.16rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.18rem;
+      }
+      .pc-br {
+        @include v.mq(sp) {
+          display: block;
+        }
+        @include v.mq(pc) {
+          display: none;
+        }
+      }
       p {
-        margin-bottom: 0.18rem;
-        font-weight: bold;
+        @include v.mq(sp) {
+          font-weight: bold;
+          margin-bottom: 0.18rem;
+        }
+        @include v.mq(pc) {
+          font-weight: normal;
+          margin-bottom: 0.16rem;
+        }
       }
       &:not(:first-child) {
-        margin-top: 0.21rem;
+        @include v.mq(sp) {
+          margin-top: 0.21rem;
+        }
+        @include v.mq(pc) {
+          margin-top: 0.2rem;
+        }
+      }
+      &:not(:last-child) {
+        @include v.mq(sp) {
+        }
+        @include v.mq(pc) {
+        }
       }
     }
     .checkbox {
@@ -44,49 +96,93 @@
           }
         }
         &_txt {
-          font-size: 0.14rem;
           cursor: pointer;
           position: relative;
           display: inline-block;
-          margin: 0 0.2rem 0.46rem 0.48rem;
+          @include v.mq(sp) {
+            font-size: 0.14rem;
+            margin: 0 0.2rem 0.46rem 0.48rem;
+          }
+          @include v.mq(pc) {
+            font-size: 0.16rem;
+          }
+
+          /*=====================================================
+          # チェックマーク右
+          =====================================================*/
           &::before {
             content: "";
             position: absolute;
             display: block;
             opacity: 0;
-            top: 0.132rem;
-            left: -0.276rem;
-            border: 0.01rem solid #000;
-            border-radius: 0.2rem;
             transform: rotate(40deg);
-            width: 0.07rem;
             background-color: #000;
+            @include v.mq(sp) {
+              top: 0.132rem;
+              left: -0.276rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.07rem;
+            }
+            @include v.mq(pc) {
+              top: -0.7rem;
+              left: 2.03rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.07rem;
+            }
           }
+
+          /*=====================================================
+          # チェックマーク左
+          =====================================================*/
           &::after {
             content: "";
             position: absolute;
             display: block;
             opacity: 0;
-            top: 0.12rem;
-            left: -0.243rem;
-            border: 0.01rem solid #000;
-            border-radius: 0.2rem;
             transform: rotate(-45deg);
-            width: 0.1rem;
             background-color: #000;
+            @include v.mq(sp) {
+              top: 0.12rem;
+              left: -0.243rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.1rem;
+            }
+            @include v.mq(pc) {
+              top: -0.7rem;
+              left: 2.07rem;
+              border: 0.01rem solid #000;
+              border-radius: 0.2rem;
+              width: 0.1rem;
+            }
           }
+
+          /*=====================================================
+          # チェックボックス
+          =====================================================*/
           .checkmark {
-            position: relative;
             &::before {
               content: "";
               position: absolute;
-              width: 0.18rem;
-              height: 0.18rem;
               display: block;
-              border: 0.012rem solid #b5b9be;
-              border-radius: 0.03rem;
-              top: 0.05rem;
-              left: -0.3rem;
+              @include v.mq(sp) {
+                width: 0.18rem;
+                height: 0.18rem;
+                border: 0.012rem solid #b5b9be;
+                border-radius: 0.03rem;
+                top: 0.05rem;
+                left: -0.3rem;
+              }
+              @include v.mq(pc) {
+                width: 0.2rem;
+                height: 0.2rem;
+                border: 0.012rem solid #b5b9be;
+                border-radius: 0.03rem;
+                top: -0.8rem;
+                left: 2rem;
+              }
             }
           }
         }
@@ -94,12 +190,16 @@
     }
     .comfirm-button {
       &_img {
-        width: 2.95rem;
-        height: 0.6rem;
+        @include v.mq(sp) {
+          width: 2.95rem;
+          height: 0.6rem;
+        }
+        @include v.mq(pc) {
+          width: 3.65rem;
+          height: 0.75rem;
+          margin: 0 1.775rem 0;
+        }
       }
     }
   }
-}
-
-@media screen and (min-width: 767px) {
 }
