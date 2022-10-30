@@ -85,36 +85,36 @@
             <ul class="reason-list">
                 <li class="reason-item">
                     <div class="reason-item-img">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item-img01.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item01-img.png" alt="">
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item01-img.png" alt="">
                     </div>
-                    <h3 class="reason-item-ttl">直接買取だから現金化までがスピーディ。<span class="br"></span>
+                    <h3 class="reason-item-ttl">直接買取だから現金化までが<span class="sp-br"></span>スピーディ。<span class="pc-br"></span>
                         手数料も0円</h3>
                     <p class="reason-item-txt">弊社は仲介業者ではなく、太陽光発電事業者として自社買取を行います。
                         そのため、<span class="txt__underline">発電所の購入完了までの時間が非常に短い</span>ことが大きな特徴です。</p>
                 </li>
                 <li class="reason-item">
                 <div class="reason-item-img">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item-img02.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item02-img.png" alt=""i>
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item02-img.png" alt="">
                     </div>
-                    <h3 class="reason-item-ttl">太陽光投資のプロがワンストップで対応。<span class="br"></span>
+                    <h3 class="reason-item-ttl">太陽光投資のプロがワンストップ<span class="sp-br"></span>で対応。<span class="pc-br"></span>
                         手続きもスムーズ</h3>
                     <p class="reason-item-txt">弊社では開発に関与した太陽光発電所が合計10MWを超える実務実績を保有しております。<span class="txt__underline"> 発電所売買に関するノウハウを基に担当者が即断即決で進めるため、意思決定が速いこと</span>が特徴です。
                         初めて発電所を売却される方も丁寧にリードいたします。</p>
                 </li>
                 <li class="reason-item">
                 <div class="reason-item-img">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item-img03.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item03-img.png" alt="">
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item03-img.png" alt="">
                     </div>
-                    <h3 class="reason-item-ttl">低圧から高圧まで即時購入可能な<span class="br"></span>
+                    <h3 class="reason-item-ttl">低圧から高圧まで即時購入可能<span class="sp-br"></span>な<span class="pc-br"></span>
                         豊富な資金を保有</h3>
                     <p class="reason-item-txt">弊社では<span class="txt__underline">基本的に現金にて発電所を購入</span>いたします。銀行融資の進捗状況によって購入が遅れるといった事態はございません。</p>
                 </li>
                 <li class="reason-item">
                 <div class="reason-item-img">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item-img04.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item04-img.png" alt="">
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item04-img.png" alt="">
                     </div>
                     <h3 class="reason-item-ttl">全国の発電所が買取対象。<span class="br"></span>
