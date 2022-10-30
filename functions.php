@@ -11,7 +11,9 @@ function add_my_files()
         wp_enqueue_style('confirm', get_template_directory_uri() . '/assets/css/confirm.css');
     } elseif (is_page('thanks')) {
         wp_enqueue_style('thanks', get_template_directory_uri() . '/assets/css/thanks.css');
-    }
+    } elseif (is_page('form')) {
+        wp_enqueue_style('form', get_template_directory_uri() . '/assets/css/form.css');
+    } 
 
     //JavaScript
     // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
