@@ -11,9 +11,13 @@ get_header();
         <div class='main-textbox'>
             <div class='main-textbox_content'>
                 <p>お名前</p>
+                <?php
+                echo $_POST["name"];
+                ?>
             </div>
             <div class='main-textbox_content'>
                 <p>メールアドレス</p>
+                <?php echo $_POST["mail"]; ?>
             </div>
             <div class='main-textbox_content'>
                 <p>発電所住所</p>
