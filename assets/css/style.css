@@ -995,6 +995,10 @@ iframe {
 /*=====================================================
 # flow
 =====================================================*/
+.flow-bg {
+  padding: 0.9rem 0;
+  height: 11.2rem;
+}
 .flow-ttl-txt {
   font-weight: bold;
   text-align: center;
@@ -1009,6 +1013,7 @@ iframe {
   .flow-ttl-bg {
     position: relative;
     width: 4.7rem;
+    top: -0.35rem;
     margin: 0 auto;
     z-index: -1;
   }
@@ -1018,6 +1023,8 @@ iframe {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    row-gap: 0.6rem;
+    margin: -0.32rem 0 0;
   }
 }
 .flow-item {
@@ -1029,28 +1036,43 @@ iframe {
   }
 }
 .flow-item:nth-child(1), .flow-item:nth-child(2), .flow-item:nth-child(4) {
-  margin-right: 0.375rem;
+  margin-right: 0.42rem;
 }
 .flow-item:nth-child(2), .flow-item:nth-child(3), .flow-item:nth-child(5) {
-  margin-left: 0.375rem;
+  margin-left: 0.42rem;
+}
+.flow-item:nth-child(2)::before, .flow-item:nth-child(3)::before, .flow-item:nth-child(5)::before {
+  content: "";
+  position: absolute;
+  background: url(../img/flow/pc/item-shape.png) no-repeat center/cover;
+  width: 0.08rem;
+  height: 3.54rem;
+  top: 0.1rem;
+  left: -0.5rem;
 }
 .flow-item-step {
   position: absolute;
   width: 0.46rem;
-  top: 0;
+  top: -0.55rem;
   left: 0;
 }
 .flow-item-img {
   width: 1.3rem;
   margin: 0 auto;
 }
+.flow-item-img img {
+  vertical-align: baseline;
+}
 .flow-item-ttl {
   font-weight: bold;
   font-size: 0.2rem;
   text-align: center;
+  line-height: 1;
 }
 .flow-item-txt {
   font-size: 0.16rem;
+  line-height: 1.8125;
+  margin: 0.12rem 0 0;
 }
 
 /*# sourceMappingURL=style.css.map */
