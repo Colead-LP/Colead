@@ -445,3 +445,94 @@
     }
   }
 }
+
+/*=====================================================
+# flow
+=====================================================*/
+.flow {
+  &-bg {
+    padding: 0.9rem 0;
+    height: 11.2rem;
+  }
+  &-ttl {
+    &-txt {
+      font-weight: bold;
+      text-align: center;
+      line-height: 1;
+      @include v.mq(pc) {
+        font-size: 0.55rem;
+      }
+    }
+    &-bg {
+      @include v.mq(pc) {
+        position: relative;
+        width: 4.7rem;
+        top: -0.35rem;
+        margin: 0 auto;
+        z-index: -1;
+      }
+    }
+  }
+  &-list {
+    @include v.mq(pc) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      row-gap: .6rem;
+      margin: -.32rem 0 0;
+    }
+  }
+  &-item {
+    position: relative;
+    @include v.mq(pc) {
+      width: 2.7rem;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(4) {
+      margin-right: 0.42rem;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5) {
+      margin-left: 0.42rem;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5) {
+      &::before {
+        content: "";
+        position: absolute;
+        background: url(../img/flow/pc/item-shape.png) no-repeat center / cover;
+        width: .08rem;
+        height: 3.54rem;
+        top: .1rem;
+        left: -.5rem;
+      }
+    }
+    &-step {
+      position: absolute;
+      width: 0.46rem;
+      top: -.55rem;
+      left: 0;
+    }
+    &-img {
+      width: 1.3rem;
+      margin: 0 auto;
+      img{
+        vertical-align: baseline;
+      }
+    }
+    &-ttl {
+      font-weight: bold;
+      font-size: 0.2rem;
+      text-align: center;
+      line-height: 1;
+    }
+    &-txt {
+      font-size: 0.16rem;
+      line-height: 1.8125;
+      margin: .12rem 0 0;
+    }
+  }
+}
