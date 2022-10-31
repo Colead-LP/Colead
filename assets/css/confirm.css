@@ -315,7 +315,7 @@ iframe {
 }
 
 .main {
-  background-color: #eaf3fa;
+  background-color: #000;
 }
 @media screen and (max-width: 767px) {
   .main {
