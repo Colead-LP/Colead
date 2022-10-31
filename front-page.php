@@ -130,7 +130,13 @@
 <?php include 'templates/cta.php'; ?>
 <!-- /.cta -->
 <!-- .flow -->
-<section class="flow"></section><!-- /.flow -->
+<section class="flow">
+    <div class="flow-bg">
+        <div class="flow-inner inner">
+            
+        </div>
+    </div>
+</section><!-- /.flow -->
 <!-- .faq -->
 <section class="faq"></section><!-- /.faq -->
 <!-- .cta -->
