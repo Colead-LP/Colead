@@ -992,4 +992,65 @@ iframe {
   }
 }
 
+/*=====================================================
+# flow
+=====================================================*/
+.flow-ttl-txt {
+  font-weight: bold;
+  text-align: center;
+  line-height: 1;
+}
+@media screen and (min-width: 768px) {
+  .flow-ttl-txt {
+    font-size: 0.55rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flow-ttl-bg {
+    position: relative;
+    width: 4.7rem;
+    margin: 0 auto;
+    z-index: -1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .flow-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+.flow-item {
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .flow-item {
+    width: 2.7rem;
+  }
+}
+.flow-item:nth-child(1), .flow-item:nth-child(2), .flow-item:nth-child(4) {
+  margin-right: 0.375rem;
+}
+.flow-item:nth-child(2), .flow-item:nth-child(3), .flow-item:nth-child(5) {
+  margin-left: 0.375rem;
+}
+.flow-item-step {
+  position: absolute;
+  width: 0.46rem;
+  top: 0;
+  left: 0;
+}
+.flow-item-img {
+  width: 1.3rem;
+  margin: 0 auto;
+}
+.flow-item-ttl {
+  font-weight: bold;
+  font-size: 0.2rem;
+  text-align: center;
+}
+.flow-item-txt {
+  font-size: 0.16rem;
+}
+
 /*# sourceMappingURL=style.css.map */

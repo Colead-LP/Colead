@@ -445,3 +445,72 @@
     }
   }
 }
+
+/*=====================================================
+# flow
+=====================================================*/
+.flow {
+  &-bg {
+  }
+  &-inner {
+  }
+  &-ttl {
+    &-txt {
+      font-weight: bold;
+      text-align: center;
+      line-height: 1;
+      @include v.mq(pc) {
+        font-size: 0.55rem;
+      }
+    }
+    &-bg {
+      @include v.mq(pc) {
+        position: relative;
+        width: 4.7rem;
+        margin: 0 auto;
+        z-index: -1;
+      }
+    }
+  }
+  &-list {
+    @include v.mq(pc) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+  &-item {
+    position: relative;
+    @include v.mq(pc) {
+      width: 2.7rem;
+    }
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(4){
+      margin-right: .375rem;
+    }
+    &:nth-child(2),
+    &:nth-child(3),
+    &:nth-child(5){
+      margin-left: .375rem;
+    }
+    &-step{
+      position: absolute;
+      width: 0.46rem;
+      top: 0;
+      left: 0;
+    }
+    &-img {
+      width: 1.3rem;
+      margin: 0 auto;
+    }
+    &-ttl {
+      font-weight: bold;
+      font-size: .2rem;
+      text-align: center;
+    }
+    &-txt {
+      font-size: .16rem;
+    }
+  }
+}
