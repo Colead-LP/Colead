@@ -135,45 +135,46 @@
         <div class="flow-inner inner">
             <div class="flow-ttl">
                 <h2 class="flow-ttl-txt">買取までの流れ</h2>
-                <p class="flow-ttl-bg"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/bg.png" alt=""></p>
+                <p class="flow-ttl-bg sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/sp/bg.png" alt=""></p>
+                <p class="flow-ttl-bg pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/bg.png" alt=""></p>
             </div>
             <ul class="flow-list">
                 <li class="flow-item">
-                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item01.png" alt=""></div>
+                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item01.png" alt=""></div>
                     <div class="flow-item-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item01-img.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item01-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">簡易査定</h3>
                     <p class="flow-item-txt">まずは<span id="to-calc" class="to-calc">簡易査定</span>。30秒で概算の査定額が分かります。</p>
                 </li>
                 <li class="flow-item">
-                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item02.png" alt=""></div>
+                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item02.png" alt=""></div>
                     <div class="flow-item-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item02-img.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item02-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">お問い合わせ</h3>
                     <p class="flow-item-txt">価格の目線が合う方はお問い合わせください。追加の資料を頂くことでより精緻な金額を査定させていただきます。過去の売電金額によっては初期査定額よりも価格が上がることも。</p>
                 </li>
                 <li class="flow-item">
-                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item03.png" alt=""></div>
+                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item03.png" alt=""></div>
                     <div class="flow-item-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item03-img.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item03-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">現地調査</h3>
                     <p class="flow-item-txt">最短日程にて現地調査。担当者が現地訪問し、発電所の状況を確認+売主及び地主とご面談させていただきます。</p>
                 </li>
                 <li class="flow-item">
-                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item04.png" alt=""></div>
+                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item04.png" alt=""></div>
                     <div class="flow-item-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item04-img.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item04-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">売買金額のご提示</h3>
                     <p class="flow-item-txt">合意次第、契約書の確認＆締結。その後、ID・電力会社契約・土地所有権/地上権の名義変更に必要な書類をやり取りします。</p>
                 </li>
                 <li class="flow-item">
-                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item05.png" alt=""></div>
+                    <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item05.png" alt=""></div>
                     <div class="flow-item-img">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/item05-img.png" alt="">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item05-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">決済</h3>
                     <p class="flow-item-txt">司法書士による土地に関する登記申請時に決済いたします。</p>
