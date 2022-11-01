@@ -134,9 +134,9 @@
     <div class="flow-bg">
         <div class="flow-inner inner">
             <div class="flow-ttl">
-                <h2 class="flow-ttl-txt">買取までの流れ</h2>
-                <p class="flow-ttl-bg sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/sp/bg.png" alt=""></p>
-                <p class="flow-ttl-bg pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/bg.png" alt=""></p>
+                <h2 class="flow-ttl__ja">買取までの流れ</h2>
+                <p class="flow-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/sp/bg.png" alt=""></p>
+                <p class="flow-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/bg.png" alt=""></p>
             </div>
             <ul class="flow-list">
                 <li class="flow-item">
@@ -184,7 +184,35 @@
     </div>
 </section><!-- /.flow -->
 <!-- .faq -->
-<section class="faq"></section><!-- /.faq -->
+<section class="faq">
+    <div class="faq-bg">
+        <div class="faq-inner">
+            <div class="faq-ttl">
+                <h2 class="faq-ttl__ja">よくあるご質問</h2>
+                <p class="faq-ttl__en"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/faq/pc/ttl__en.png" alt=""></p>
+            </div>
+            <ul class="faq-list">
+                <li class="faq-item">
+                    <p class="faq-item-q">査定は費用がかかりますか？</p>
+                    <p class="faq-item-a">査定は無料です。お気軽にご相談ください。</p>
+                </li>
+                <li class="faq-item">
+                    <p class="faq-item-q">発電所の土地が賃貸でも売却可能でしょうか？</p>
+                    <p class="faq-item-a">土地の契約形態が地上権設定契約であれば買取可能です。</p>
+                </li>
+                <li class="faq-item">
+                    <p class="faq-item-q">保守管理やメンテナンス、フェンスの設置等の改正FIT法を遵守していない発電所も
+                        売却可能でしょうか？</p>
+                    <p class="faq-item-a">価格の調整が入る可能性がありますが、買取可能です。</p>
+                </li>
+                <li class="faq-item">
+                    <p class="faq-item-q">メンテナンス業者が決められいる場合においても売却可能でしょうか？</p>
+                    <p class="faq-item-a">価格の調整が入る可能性がありますが、買取可能です。</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section><!-- /.faq -->
 <!-- .cta -->
 <?php include 'templates/cta.php'; ?>
 <!-- /.cta -->
