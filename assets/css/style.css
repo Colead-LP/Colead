@@ -1011,34 +1011,34 @@ iframe {
     padding: 0 0.19rem;
   }
 }
-.flow-ttl-txt {
+.flow-ttl__ja {
   font-weight: bold;
   text-align: center;
   line-height: 1;
 }
 @media screen and (max-width: 767px) {
-  .flow-ttl-txt {
+  .flow-ttl__ja {
     font-size: 0.3rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .flow-ttl-txt {
+  .flow-ttl__ja {
     font-size: 0.55rem;
   }
 }
-.flow-ttl-bg {
+.flow-ttl__en {
   position: relative;
   margin: 0 auto;
   z-index: -1;
 }
 @media screen and (max-width: 767px) {
-  .flow-ttl-bg {
+  .flow-ttl__en {
     width: 2.53rem;
     top: -0.18rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .flow-ttl-bg {
+  .flow-ttl__en {
     width: 4.7rem;
     top: -0.35rem;
   }
@@ -1151,6 +1151,91 @@ iframe {
   .flow-item-txt {
     margin: 0.12rem 0 0;
   }
+}
+
+/*=====================================================
+# faq
+=====================================================*/
+.faq-bg {
+  background: rgb(248, 248, 248);
+}
+@media screen and (min-width: 768px) {
+  .faq-bg {
+    height: 8.9rem;
+    padding: 0.92rem 0 1.01rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .faq-inner {
+    padding: 0 3.2rem;
+  }
+}
+.faq-ttl__ja {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .faq-ttl__ja {
+    font-weight: bold;
+    font-size: 0.5rem;
+    line-height: 1;
+  }
+}
+.faq-ttl__en {
+  position: relative;
+  margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .faq-ttl__en {
+    top: -0.31rem;
+    width: 3.14rem;
+  }
+}
+.faq-list {
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .faq-list {
+    row-gap: 0.4rem;
+    margin: -0.05rem 0 0;
+  }
+}
+.faq-item-q, .faq-item-a {
+  position: relative;
+  padding-left: 0.44rem;
+  line-height: 1.6;
+}
+.faq-item-q::before, .faq-item-q::after, .faq-item-a::before, .faq-item-a::after {
+  content: "";
+  position: absolute;
+}
+.faq-item-q {
+  font-weight: bold;
+  font-size: 0.2rem;
+}
+.faq-item-q::before {
+  background: url(../img/faq/common/q.png) no-repeat center/cover;
+  width: 0.25rem;
+  height: 0.3rem;
+  top: 0.05rem;
+  left: 0.09rem;
+}
+.faq-item-a {
+  font-size: 0.16rem;
+  margin: 0.315rem 0 0;
+}
+.faq-item-a::before {
+  background: url(../img/faq/common/a.png) no-repeat center/cover;
+  width: 0.25rem;
+  height: 0.29rem;
+  top: 0.02rem;
+  left: 0.09rem;
+}
+.faq-item-a::after {
+  background: #CED2D8;
+  width: 100%;
+  height: 0.01rem;
+  top: -0.155rem;
+  left: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
