@@ -6,7 +6,7 @@
 @use "./templates/footer";
 
 .main {
-  background-color: #eaf3fa;
+  background-color: #000;
   @include v.mq(sp) {
     height: 11.93rem;
     padding-top: 0.37rem;
