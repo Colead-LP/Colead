@@ -212,6 +212,6 @@ iframe{
     padding: 0 .2rem;
   }
   @include v.mq(pc) {
-    padding: 0 2.2rem;
+    max-width: 10rem;
   }
 }

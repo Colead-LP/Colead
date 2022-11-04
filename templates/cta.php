@@ -9,10 +9,10 @@
                 <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/cta/sp/logo.png" alt="">
                 <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/cta/pc/logo.png" alt="">
             </div>
-            <div class="cta-btn">
+            <a href="#contact" class="cta-btn btn">
                 <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="">
                 <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="">
-            </div>
+            </a>
         </div>
     </div>
 </div>

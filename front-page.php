@@ -16,10 +16,10 @@
                 <p class="label">買取実績多数</p>
             </div>
             <div class="mv-btn sp">
-                <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
             </div>
             <div class="mv-btn pc">
-                <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
             </div>
         </div>
     </div>
@@ -145,7 +145,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item01-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">簡易査定</h3>
-                    <p class="flow-item-txt">まずは<span id="to-calc" class="to-calc">簡易査定</span>。30秒で概算の査定額が分かります。</p>
+                    <p class="flow-item-txt">まずは<a class="to-calc" href="#contact">簡易査定</a>。30秒で概算の査定額が分かります。</p>
                 </li>
                 <li class="flow-item">
                     <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item02.png" alt=""></div>
@@ -186,10 +186,11 @@
 <!-- .faq -->
 <section class="faq">
     <div class="faq-bg">
-        <div class="faq-inner">
+        <div class="faq-inner inner">
             <div class="faq-ttl">
                 <h2 class="faq-ttl__ja">よくあるご質問</h2>
-                <p class="faq-ttl__en"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/faq/pc/ttl__en.png" alt=""></p>
+                <p class="faq-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/faq/sp/ttl__en.png" alt=""></p>
+                <p class="faq-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/faq/pc/ttl__en.png" alt=""></p>
             </div>
             <ul class="faq-list">
                 <li class="faq-item">
@@ -198,11 +199,10 @@
                 </li>
                 <li class="faq-item">
                     <p class="faq-item-q">発電所の土地が賃貸でも売却可能でしょうか？</p>
-                    <p class="faq-item-a">土地の契約形態が地上権設定契約であれば買取可能です。</p>
+                    <p class="faq-item-a">土地の契約形態が地上権設定契約で<span class="sp-br"></span>あれば買取可能です。</p>
                 </li>
                 <li class="faq-item">
-                    <p class="faq-item-q">保守管理やメンテナンス、フェンスの設置等の改正FIT法を遵守していない発電所も
-                        売却可能でしょうか？</p>
+                    <p class="faq-item-q">保守管理やメンテナンス、フェンスの設置等の改正FIT法を遵守していない発電所も売却可能でしょうか？</p>
                     <p class="faq-item-a">価格の調整が入る可能性がありますが、買取可能です。</p>
                 </li>
                 <li class="faq-item">
@@ -216,13 +216,25 @@
 <!-- .cta -->
 <?php include 'templates/cta.php'; ?>
 <!-- /.cta -->
-<!-- .form -->
-<section class="form">
-    <?php
-    //echo do_shortcode('[mwform_formkey key="9"]');
-    ?>
+<!-- .contact -->
+<section id="contact" class="contact">
+    <div class="contact-bg">
+        <div class="contact-inner inner">
+            <h3 class="contact-ttl">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
+            </h3>
+            <!-- .calc -->
+            <div class="calc">
+
+            </div><!-- /.calc -->
+            <!-- .form -->
+            <div class="form">
+
+            </div><!-- /.form -->
+        </div>
+    </div>
     <?php // echo do_shortcode('[mwform_formkey key="24"]');
     ?>
-</section><!-- /.form -->
+</section><!-- /.contact -->
 <!-- .footer -->
 <?php get_footer();
