@@ -252,13 +252,39 @@
                 </div>
                 <div class="calc-answer">
                     <p class="calc-answer-txt">あなたの太陽光発電所の売却金額はこちら</p>
-                    <p class="calc-answer-txt">概算売却額</p><p class="calc-answer-number">22,220,000</p><p class="calc-answer-unit">円</p>
+                    <p class="calc-answer-txt">概算売却額</p>
+                    <p class="calc-answer-number">22,220,000</p>
+                    <p class="calc-answer-unit">円</p>
                 </div>
             </div><!-- /.calc -->
             <!-- .form -->
             <div class="form">
-            <?php  echo do_shortcode('[mwform_formkey key="24"]');?>
+                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
             </div><!-- /.form -->
+
+
+<div class="form form-input form-confirm">
+    <div class="form-bg">
+        <p class="form-confirm-txt confirm">入力内容の確認</p>
+        <div class="form-inner">
+            <ul class="form-list">
+                <li class="form-item">
+                    <p class="form-item-ttl">
+                        お名前<span class="require">必須</span>
+                    </p>
+                    <input type="text" class="form-item-input input-text input-name">
+                </li>
+                <li class="form-item">
+                    <p class="form-item-ttl">
+                        メールアドレス<span class="require">必須</span>
+                    </p>
+                    <input type="email" class="form-item-input input-email input-email">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
         </div>
     </div>
 </section><!-- /.contact -->

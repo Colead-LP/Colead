@@ -1349,6 +1349,9 @@ iframe {
   width: 100%;
   height: 15.99rem;
 }
+.form .confirm {
+  display: none;
+}
 
 /*=====================================================
 # input
