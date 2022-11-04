@@ -2,22 +2,20 @@
 Template Name: confirm
 -->
 
+
 <?php
 get_header();
 ?>
+
 
     <main class='main'>
         <h2 class='main-title'>入力内容の確認</h2>
         <div class='main-textbox'>
             <div class='main-textbox_content'>
                 <p>お名前</p>
-                <?php
-                echo $_POST["mail"];
-                ?>
             </div>
             <div class='main-textbox_content'>
                 <p>メールアドレス</p>
-                <input type="hidden" name="mail" value="<?php echo $_POST["mail"]; ?>">
             </div>
             <div class='main-textbox_content'>
                 <p>発電所住所</p>
@@ -46,14 +44,15 @@ get_header();
             <div class='main-textbox_content'>
                 <p>PCSメーカー</p>
             </div>
-            <!-- <div class='checkbox'> -->
-                <!-- <div class='checkbox-content'> -->
+        
+            <div class='checkbox'>
+                <div class='checkbox-content'>
                     <input id='agree' type="checkbox" class='checkbox-content_btn' name='agree'>
                     <label for='agree' class='checkbox-content_txt'>
                         <span class='checkmark'>プライバシーポリシーに同意する。</span>
                     </label>
-                <!-- </div> -->
-            <!-- </div> -->
+                </div>
+            </div> 
             <a href="<?php echo get_template_directory_uri(); ?>/page-thanks.php" class='comfirm-button'>
                 <button type="button">
                     <img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/submit_btn.png" alt="" class='comfirm-button_img'>
@@ -61,6 +60,8 @@ get_header();
             </a>
         </div>
     </main>
+
+    
 
 <?php
 get_footer();
