@@ -7,8 +7,8 @@ Template Name: confirm
 get_header();
 ?>
 
-
-    <main class='main'>
+<?php  echo do_shortcode('[mwform_formkey key="24"]');?>
+    <!-- <main class='main'>
         <h2 class='main-title'>入力内容の確認</h2>
         <div class='main-textbox'>
             <div class='main-textbox_content'>
@@ -59,7 +59,7 @@ get_header();
                 </button>
             </a>
         </div>
-    </main>
+    </main> -->
 
     
 

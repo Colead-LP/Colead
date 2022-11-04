@@ -257,12 +257,10 @@
             </div><!-- /.calc -->
             <!-- .form -->
             <div class="form">
-                
+            <?php  echo do_shortcode('[mwform_formkey key="24"]');?>
             </div><!-- /.form -->
         </div>
     </div>
-    <?php // echo do_shortcode('[mwform_formkey key="24"]');
-    ?>
 </section><!-- /.contact -->
 <!-- .footer -->
 <?php get_footer();
