@@ -85,6 +85,7 @@
         }
         @include v.mq(pc) {
             @include m.to_simulation(-.23rem);
+            display: block;
         }
     }
 }

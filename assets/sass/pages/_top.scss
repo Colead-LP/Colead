@@ -24,9 +24,6 @@
     @include v.mq(sp) {
       padding: 0.69rem 0.2rem 0.89rem;
     }
-    @include v.mq(pc) {
-      padding: 0 2.1rem;
-    }
   }
   &-txt {
     color: #fff;
@@ -125,7 +122,7 @@
         padding: 0.4rem 0.19rem 0;
       }
       @include v.mq(pc) {
-        padding: 0.67rem 2.2rem 0;
+        padding: .67rem 0 0;
       }
     }
     &-ttl {
@@ -238,7 +235,7 @@
         padding: 0.23rem 0.19rem 0.6rem;
       }
       @include v.mq(pc) {
-        padding: 0.45rem 2.2rem 0.6rem;
+        padding: .45rem 0 .6rem;
       }
     }
     &-ttl {
@@ -593,6 +590,10 @@
       @include v.mq(pc) {
         margin: 0.12rem 0 0;
       }
+      .to-calc{
+        display: inline;
+        color: #3895FF;
+      }
     }
   }
 }
@@ -610,12 +611,6 @@
     @include v.mq(pc) {
       height: 8.9rem;
       padding: .92rem 0 1.01rem;
-    }
-  }
-
-  &-inner {
-    @include v.mq(pc) {
-      padding: 0 3.2rem;
     }
   }
 
@@ -726,4 +721,30 @@
       }
     }
   }
+}
+
+/*=====================================================
+# contact
+=====================================================*/
+.contact{
+  &-bg{
+    background: rgba(234,243,250, 1);
+    height: 29.17rem;
+  }
+
+  &-inner{
+    max-width: 8rem;
+  }
+}
+
+.calc{
+  background: url(../img/contact/pc/calc_bg.png) no-repeat center / cover;
+  width: 100%;
+  height: 7.4rem;
+}
+
+.form{
+  background: url(../img/contact/pc/form_bg.png) no-repeat center / cover;
+  width: 100%;
+  height: 15.99rem;
 }

@@ -1,5 +1,6 @@
 <!-- .header -->
-<?php get_header(); ?><!-- /.header -->
+<?php get_header(); ?>
+<!-- /.header -->
 <!-- .mv -->
 <div class="mv">
     <div class="mv-bg">
@@ -15,10 +16,10 @@
                 <p class="label">買取実績多数</p>
             </div>
             <div class="mv-btn sp">
-                <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
             </div>
             <div class="mv-btn pc">
-                <a href="#" class="btn"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
             </div>
         </div>
     </div>
@@ -71,7 +72,8 @@
     </div>
 </section><!-- /.solve -->
 <!-- .cta -->
-<?php include 'templates/cta.php'; ?><!-- /.cta -->
+<?php include 'templates/cta.php'; ?>
+<!-- /.cta -->
 <!-- .reason -->
 <section class="reason">
     <div class="reason-bg">
@@ -125,7 +127,8 @@
     </div>
 </section><!-- /.reason -->
 <!-- .cta -->
-<?php include 'templates/cta.php'; ?><!-- /.cta -->
+<?php include 'templates/cta.php'; ?>
+<!-- /.cta -->
 <!-- .flow -->
 <section class="flow">
     <div class="flow-bg">
@@ -142,7 +145,7 @@
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item01-img.png" alt="">
                     </div>
                     <h3 class="flow-item-ttl">簡易査定</h3>
-                    <p class="flow-item-txt">まずは<span id="to-calc" class="to-calc">簡易査定</span>。30秒で概算の査定額が分かります。</p>
+                    <p class="flow-item-txt">まずは<a class="to-calc" href="#contact">簡易査定</a>。30秒で概算の査定額が分かります。</p>
                 </li>
                 <li class="flow-item">
                     <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item02.png" alt=""></div>
@@ -211,18 +214,25 @@
     </div>
 </section><!-- /.faq -->
 <!-- .cta -->
-<?php include 'templates/cta.php'; ?><!-- /.cta -->
+<?php include 'templates/cta.php'; ?>
+<!-- /.cta -->
 <!-- .contact -->
-<section class="contact">
-    <!-- .calc -->
-    <div class="calc">
+<section id="contact" class="contact">
+    <div class="contact-bg">
+        <div class="contact-inner inner">
+            <h3 class="contact-ttl">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
+            </h3>
+            <!-- .calc -->
+            <div class="calc">
 
-    </div><!-- /.calc -->
-    <!-- .form -->
-    <div class="form">
+            </div><!-- /.calc -->
+            <!-- .form -->
+            <div class="form">
 
-    </div><!-- /.form -->
-
+            </div><!-- /.form -->
+        </div>
+    </div>
     <?php // echo do_shortcode('[mwform_formkey key="24"]');
     ?>
 </section><!-- /.contact -->
