@@ -15,8 +15,17 @@ function add_my_files()
         wp_enqueue_style('form', get_template_directory_uri() . '/assets/css/form.css');
     } 
 
-    //JavaScript
-    // wp_enqueue_script( $handle, $src, $deps, $ver, $in_footer );
+    function custom_print_scripts() {
+        if (!is_admin()) {
+            //デフォルトjquery削除
+            wp_deregister_script('jquery');
+    
+            //GoogleCDNから読み込む
+            wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
+            wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js');
+        }
+    }
+    add_action('wp_print_scripts', 'custom_print_scripts');
 }
 //アクションフック（wp_enqueue_scripts）への登録
 add_action('wp_enqueue_scripts', 'add_my_files');

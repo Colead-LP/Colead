@@ -24,6 +24,9 @@
   &-inner {
     display: flex;
     align-items: center;
+    @include v.mq(pc) {
+      max-width: 10rem;
+    }
   }
   &-logo {
     @include v.mq(sp) {
