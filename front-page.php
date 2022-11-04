@@ -225,11 +225,39 @@
             </h3>
             <!-- .calc -->
             <div class="calc">
-
+                <ul class="calc-list">
+                    <li class="calc-item">
+                        <label class="calc-item-label">
+                            直近1年の売電金額（税込）<span class="require">必須</span>
+                            <input type="number" name="" class="input-number"><span class="unit">万円</span>
+                        </label>
+                    </li>
+                    <li class="calc-item">
+                        <label class="calc-item-label">
+                            <span class="require">必須</span>
+                            土地賃料<input type="number" name="" class="input-number"><span class="unit">万円</span>
+                        </label>
+                    </li>
+                    <li class="calc-item">
+                        <label class="calc-item-label">
+                            稼働開始年月<span class="require">必須</span>
+                            <input type="number" name="" class="input-number">
+                        </label>
+                    </li>
+                </ul>
+                <div class="calc-start">
+                    <button id="calc_start" class="calc-start-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="">
+                    </button>
+                </div>
+                <div class="calc-answer">
+                    <p class="calc-answer-txt">あなたの太陽光発電所の売却金額はこちら</p>
+                    <p class="calc-answer-txt">概算売却額</p><p class="calc-answer-number">22,220,000</p><p class="calc-answer-unit">円</p>
+                </div>
             </div><!-- /.calc -->
             <!-- .form -->
             <div class="form">
-
+                
             </div><!-- /.form -->
         </div>
     </div>
