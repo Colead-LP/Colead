@@ -321,24 +321,16 @@ iframe {
 /*=====================================================
 # form-confirm
 =====================================================*/
-.top {
-  display: none;
-}
-
+/*=====================================================
+# form-confirm
+=====================================================*/
 .form-confirm {
-  background: rgb(234, 243, 250);
-  margin: 0.3rem auto;
-}
-.form-confirm .form-bg {
   background: url(../img/contact/pc/form_bg.png) no-repeat center/cover;
-  width: 8rem;
+  width: 100%;
+  padding: 0.3rem 0;
 }
-.form-confirm .form-item {
-  font-size: 0.16rem;
-}
-.form-confirm .form-item-ttl {
-  font-weight: bold;
-  font-size: 0.18rem;
+.form-confirm .top {
+  display: none;
 }
 
 /*# sourceMappingURL=confirm.css.map */

@@ -8,29 +8,16 @@
 /*=====================================================
 # form-confirm
 =====================================================*/
-.top{
-  display: none;
-}
-
-.form-confirm{
-  background: rgba(234,243,250,1);
-  margin: .3rem auto;
-    .form-bg{
-    background: url(../img/contact/pc/form_bg.png) no-repeat center / cover;
-    width: 8rem;
+/*=====================================================
+# form-confirm
+=====================================================*/
+.form-confirm {
+  .top {
+    display: none;
   }
-
-  .form-inner{
-
-  }
-
-  .form-item{
-    font-size: .16rem;
-    &-ttl{
-      font-weight: bold;
-      font-size: .18rem;
-    }
-  }
+  background: url(../img/contact/pc/form_bg.png) no-repeat center / cover;
+  width: 100%;
+  padding: 0.3rem 0;
 }
 
 // .main {
