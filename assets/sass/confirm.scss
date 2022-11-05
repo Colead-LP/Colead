@@ -1,220 +1,235 @@
 @charset "UTF-8";
-
-@use "./global/base" as b;
 @use "./global/variable" as v;
+@use "./global/base" as b;
+@use "./global/mixin" as m;
 @use "./templates/header";
 @use "./templates/footer";
 
-.main {
-  background-color: #000;
-  @include v.mq(sp) {
-    height: 11.93rem;
-    padding-top: 0.37rem;
+/*=====================================================
+# form-confirm
+=====================================================*/
+/*=====================================================
+# form-confirm
+=====================================================*/
+.form-confirm {
+  .top {
+    display: none;
   }
-  @include v.mq(pc) {
-    height: 12.16rem;
-    padding: 0.67rem 3.2rem 1rem;
-  }
-  &-title {
-    font-weight: bold;
-    @include v.mq(sp) {
-      font-size: 0.28rem;
-      margin: 0 0.89rem 0.36rem 0.9rem;
-    }
-    @include v.mq(pc) {
-      font-size: 0.28rem;
-      padding: 0 0 0.36rem;
-      text-align: center;
-    }
-  }
-  &-textbox {
-    background-color: white;
-    @include v.mq(sp) {
-      height: 10.32rem;
-      width: 3.35rem;
-      border-top-left-radius: 0.3rem;
-      margin: 0 0.2rem 0.605rem 0.2rem;
-      padding: 0.35rem 0.2rem 0.4rem;
-    }
-    @include v.mq(pc) {
-      height: 9.85rem;
-      width: 8rem;
-      // margin: 0 3.2rem;
-      padding: 0.51rem 0.395rem 0.5rem 0.405rem;
-      border-top-left-radius: 0.4rem;
-    }
-    &_content {
-      border-bottom: 0.01rem solid #e2e3e5;
-      @include v.mq(sp) {
-        font-size: 0.16rem;
-      }
-      @include v.mq(pc) {
-        font-size: 0.18rem;
-      }
-      .pc-br {
-        @include v.mq(sp) {
-          display: block;
-        }
-        @include v.mq(pc) {
-          display: none;
-        }
-      }
-      p {
-        @include v.mq(sp) {
-          font-weight: bold;
-          margin-bottom: 0.18rem;
-        }
-        @include v.mq(pc) {
-          font-weight: normal;
-          // margin-bottom: 0.16rem;
-          padding: 0.205rem 0 0.16rem;
-        }
-      }
-      &:not(:first-child) {
-        @include v.mq(sp) {
-          margin-top: 0.21rem;
-        }
-        @include v.mq(pc) {
-          // margin-top: 0.2rem;
-        }
-      }
-      &:not(:last-child) {
-        @include v.mq(sp) {
-        }
-        @include v.mq(pc) {
-        }
-      }
-    }
-    .checkbox {
-      &-content {
-        &_btn {
-          &:checked + .checkbox-content_txt {
-            &::before {
-              opacity: 1;
-            }
-            &::after {
-              opacity: 1;
-            }
-          }
-        }
-        &_txt {
-          cursor: pointer;
-          position: relative;
-          // display: inline-block;
-          @include v.mq(sp) {
-            font-size: 0.14rem;
-            margin: 0 0.2rem 0.46rem 0.48rem;
-          }
-          @include v.mq(pc) {
-            font-size: 0.16rem;
-          }
-
-          /*=====================================================
-          # チェックマーク右
-          =====================================================*/
-          &::before {
-            content: "";
-            position: absolute;
-            display: block;
-            opacity: 0;
-            transform: rotate(40deg);
-            background-color: #000;
-            @include v.mq(sp) {
-              top: 0.132rem;
-              left: -0.276rem;
-              border: 0.01rem solid #000;
-              border-radius: 0.2rem;
-              width: 0.07rem;
-            }
-            @include v.mq(pc) {
-              // top: -0.7rem;
-              // left: 2.03rem;
-              border: 0.01rem solid #000;
-              border-radius: 0.2rem;
-              width: 0.07rem;
-              top: -0.606rem;
-              left: 1.936rem;
-            }
-          }
-
-          /*=====================================================
-          # チェックマーク左
-          =====================================================*/
-          &::after {
-            content: "";
-            position: absolute;
-            display: block;
-            opacity: 0;
-            transform: rotate(-45deg);
-            background-color: #000;
-            @include v.mq(sp) {
-              top: 0.12rem;
-              left: -0.243rem;
-              border: 0.01rem solid #000;
-              border-radius: 0.2rem;
-              width: 0.1rem;
-            }
-            @include v.mq(pc) {
-              // top: -0.7rem;
-              // left: 2.07rem;
-              border: 0.01rem solid #000;
-              border-radius: 0.2rem;
-              width: 0.1rem;
-              top: -0.62rem;
-              left: 1.97rem;
-            }
-          }
-
-          /*=====================================================
-          # チェックボックス
-          =====================================================*/
-          .checkmark {
-            @include v.mq(pc) {
-              position: absolute;
-              min-width: max-content;
-              margin-top: 0.2rem;
-              left: 2.2rem;
-            }
-            &::before {
-              content: "";
-              position: absolute;
-              display: block;
-              @include v.mq(sp) {
-                width: 0.18rem;
-                height: 0.18rem;
-                border: 0.012rem solid #b5b9be;
-                border-radius: 0.03rem;
-                top: 0.05rem;
-                left: -0.3rem;
-              }
-              @include v.mq(pc) {
-                width: 0.2rem;
-                height: 0.2rem;
-                border: 0.012rem solid #b5b9be;
-                border-radius: 0.03rem;
-                // top: -0.8rem;
-                // left: 2rem;
-                top: 0.08rem;
-                left: -0.3rem;
-              }
-            }
-          }
-        }
-      }
-    }
-    .comfirm-button {
-      &_img {
-        @include v.mq(sp) {
-          width: 2.95rem;
-          height: 0.6rem;
-        }
-        @include v.mq(pc) {
-          display: block;
-          width: 3.65rem;
-          height: 0.75rem;
-          margin: 0.42rem 1.775rem 0;
-        }
-      }
-    }
-  }
+  background: url(../img/contact/pc/form_bg.png) no-repeat center / cover;
+  width: 100%;
+  padding: 0.3rem 0;
 }
+
+// .main {
+//   background-color: #000;
+//   @include v.mq(sp) {
+//     height: 11.93rem;
+//     padding-top: 0.37rem;
+//   }
+//   @include v.mq(pc) {
+//     height: 12.16rem;
+//     padding: 0.67rem 3.2rem 1rem;
+//   }
+//   &-title {
+//     font-weight: bold;
+//     @include v.mq(sp) {
+//       font-size: 0.28rem;
+//       margin: 0 0.89rem 0.36rem 0.9rem;
+//     }
+//     @include v.mq(pc) {
+//       font-size: 0.28rem;
+//       padding: 0 0 0.36rem;
+//       text-align: center;
+//     }
+//   }
+//   &-textbox {
+//     background-color: white;
+//     @include v.mq(sp) {
+//       height: 10.32rem;
+//       width: 3.35rem;
+//       border-top-left-radius: 0.3rem;
+//       margin: 0 0.2rem 0.605rem 0.2rem;
+//       padding: 0.35rem 0.2rem 0.4rem;
+//     }
+//     @include v.mq(pc) {
+//       height: 9.85rem;
+//       width: 8rem;
+//       // margin: 0 3.2rem;
+//       padding: 0.51rem 0.395rem 0.5rem 0.405rem;
+//       border-top-left-radius: 0.4rem;
+//     }
+//     &_content {
+//       border-bottom: 0.01rem solid #e2e3e5;
+//       @include v.mq(sp) {
+//         font-size: 0.16rem;
+//       }
+//       @include v.mq(pc) {
+//         font-size: 0.18rem;
+//       }
+//       .pc-br {
+//         @include v.mq(sp) {
+//           display: block;
+//         }
+//         @include v.mq(pc) {
+//           display: none;
+//         }
+//       }
+//       p {
+//         @include v.mq(sp) {
+//           font-weight: bold;
+//           margin-bottom: 0.18rem;
+//         }
+//         @include v.mq(pc) {
+//           font-weight: normal;
+//           // margin-bottom: 0.16rem;
+//           padding: 0.205rem 0 0.16rem;
+//         }
+//       }
+//       &:not(:first-child) {
+//         @include v.mq(sp) {
+//           margin-top: 0.21rem;
+//         }
+//         @include v.mq(pc) {
+//           // margin-top: 0.2rem;
+//         }
+//       }
+//       &:not(:last-child) {
+//         @include v.mq(sp) {
+//         }
+//         @include v.mq(pc) {
+//         }
+//       }
+//     }
+//     .checkbox {
+//       &-content {
+//         &_btn {
+//           &:checked + .checkbox-content_txt {
+//             &::before {
+//               opacity: 1;
+//             }
+//             &::after {
+//               opacity: 1;
+//             }
+//           }
+//         }
+//         &_txt {
+//           cursor: pointer;
+//           position: relative;
+//           // display: inline-block;
+//           @include v.mq(sp) {
+//             font-size: 0.14rem;
+//             margin: 0 0.2rem 0.46rem 0.48rem;
+//           }
+//           @include v.mq(pc) {
+//             font-size: 0.16rem;
+//           }
+
+//           /*=====================================================
+//           # チェックマーク右
+//           =====================================================*/
+//           &::before {
+//             content: "";
+//             position: absolute;
+//             display: block;
+//             opacity: 0;
+//             transform: rotate(40deg);
+//             background-color: #000;
+//             @include v.mq(sp) {
+//               top: 0.132rem;
+//               left: -0.276rem;
+//               border: 0.01rem solid #000;
+//               border-radius: 0.2rem;
+//               width: 0.07rem;
+//             }
+//             @include v.mq(pc) {
+//               // top: -0.7rem;
+//               // left: 2.03rem;
+//               border: 0.01rem solid #000;
+//               border-radius: 0.2rem;
+//               width: 0.07rem;
+//               top: -0.606rem;
+//               left: 1.936rem;
+//             }
+//           }
+
+//           /*=====================================================
+//           # チェックマーク左
+//           =====================================================*/
+//           &::after {
+//             content: "";
+//             position: absolute;
+//             display: block;
+//             opacity: 0;
+//             transform: rotate(-45deg);
+//             background-color: #000;
+//             @include v.mq(sp) {
+//               top: 0.12rem;
+//               left: -0.243rem;
+//               border: 0.01rem solid #000;
+//               border-radius: 0.2rem;
+//               width: 0.1rem;
+//             }
+//             @include v.mq(pc) {
+//               // top: -0.7rem;
+//               // left: 2.07rem;
+//               border: 0.01rem solid #000;
+//               border-radius: 0.2rem;
+//               width: 0.1rem;
+//               top: -0.62rem;
+//               left: 1.97rem;
+//             }
+//           }
+
+//           /*=====================================================
+//           # チェックボックス
+//           =====================================================*/
+//           .checkmark {
+//             @include v.mq(pc) {
+//               position: absolute;
+//               min-width: max-content;
+//               margin-top: 0.2rem;
+//               left: 2.2rem;
+//             }
+//             &::before {
+//               content: "";
+//               position: absolute;
+//               display: block;
+//               @include v.mq(sp) {
+//                 width: 0.18rem;
+//                 height: 0.18rem;
+//                 border: 0.012rem solid #b5b9be;
+//                 border-radius: 0.03rem;
+//                 top: 0.05rem;
+//                 left: -0.3rem;
+//               }
+//               @include v.mq(pc) {
+//                 width: 0.2rem;
+//                 height: 0.2rem;
+//                 border: 0.012rem solid #b5b9be;
+//                 border-radius: 0.03rem;
+//                 // top: -0.8rem;
+//                 // left: 2rem;
+//                 top: 0.08rem;
+//                 left: -0.3rem;
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//     .comfirm-button {
+//       &_img {
+//         @include v.mq(sp) {
+//           width: 2.95rem;
+//           height: 0.6rem;
+//         }
+//         @include v.mq(pc) {
+//           display: block;
+//           width: 3.65rem;
+//           height: 0.75rem;
+//           margin: 0.42rem 1.775rem 0;
+//         }
+//       }
+//     }
+//   }
+// }

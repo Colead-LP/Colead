@@ -1344,15 +1344,23 @@ iframe {
   font-size: 0.2rem;
 }
 
-.form {
-  background: url(../img/contact/pc/form_bg.png) no-repeat center/cover;
-  width: 100%;
-  height: 15.99rem;
+/*=====================================================
+# form-top
+=====================================================*/
+.form-top .confirm {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .form-top {
+    background: url(../img/contact/pc/form_bg.png) no-repeat center/cover;
+    width: 100%;
+    height: 15.99rem;
+  }
 }
 
 /*=====================================================
-# input
-=====================================================*/
+  # input
+  =====================================================*/
 .input-number {
   border: 1px solid #333333;
 }
