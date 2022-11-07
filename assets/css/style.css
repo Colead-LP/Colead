@@ -235,6 +235,13 @@ iframe {
   width: 100%;
 }
 
+.select {
+  font-size: 0.14rem;
+  border: 1px solid #b5b9be;
+  height: 0.5rem;
+  padding: 0.12rem;
+}
+
 .input-number {
   border: 1px solid #333333;
 }
@@ -1421,6 +1428,18 @@ iframe {
 .form-top .form-item-input {
   font-size: 0.16rem;
 }
+.form-top .type-email,
+.form-top .type-number,
+.form-top .input-munic,
+.form-top .input-address,
+.form-top .input-panel,
+.form-top .input-pcs {
+  width: 3.6rem;
+}
+.form-top .input-pref,
+.form-top .input-fit {
+  width: 2.4rem;
+}
 .form-top .name .form-item-input {
   display: grid;
   justify-content: space-between;
@@ -1431,14 +1450,10 @@ iframe {
   display: flex;
   column-gap: 0.1rem;
 }
-.form-top .name .form-item-label .label-text {
+.form-top .name .form-item-label .label-txt {
   display: block;
   font-size: 0.16rem;
   line-height: 0.5rem;
-}
-.form-top .type-email,
-.form-top .type-number {
-  width: 3.6rem;
 }
 
 /*# sourceMappingURL=style.css.map */

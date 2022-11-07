@@ -838,6 +838,20 @@
     font-size: .16rem;
   }
 
+    .type-email,
+    .type-number,
+    .input-munic,
+    .input-address,
+    .input-panel,
+    .input-pcs{
+      width: 3.6rem;
+    }
+
+    .input-pref,
+    .input-fit{
+      width: 2.4rem;
+    }
+
   .name{
     .form-item-input{
       display: grid;
@@ -848,16 +862,11 @@
     .form-item-label{
       display: flex;
       column-gap: .1rem;
-      .label-text{
+      .label-txt{
         display: block;
         font-size: .16rem;
         line-height: .5rem;
       }
     }
-  }
-
-  .type-email,
-  .type-number{
-    width: 3.6rem;
   }
 }

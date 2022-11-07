@@ -235,6 +235,13 @@ iframe {
   width: 100%;
 }
 
+.select {
+  font-size: 0.14rem;
+  border: 1px solid #b5b9be;
+  height: 0.5rem;
+  padding: 0.12rem;
+}
+
 .input-number {
   border: 1px solid #333333;
 }

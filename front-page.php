@@ -276,12 +276,12 @@
                                     </p>
                                     <div class="form-item-input">
                                         <label class="form-item-label">
-                                            <span class="label-text top">姓</span>
+                                            <span class="label-txt top">姓</span>
                                             <input class="type-text input-name-first" type="text">
                                             <!-- [mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"] -->
                                         </label class="form-item-label">
                                         <label class="form-item-label">
-                                            <span class="label-text top">名</span>
+                                            <span class="label-txt top">名</span>
                                             <input class="type-text input-name-first" type="text">
                                             <!-- [mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"] -->
                                         </label>
@@ -310,7 +310,95 @@
                                     <p class="form-item-ttl">郵便番号</p>
                                     <input class="type-number post" type="number">
                                 </li>
+                                <li class="form-item pref">
+                                    <p class="form-item-ttl">都道府県</p>
+                                    <select name="" id="" class="select input-pref">
+                                        <option value="選択してください"></option>
+                                        <option value="選択してください">東京都</option>
+                                        <option value="選択してください">名古屋</option>
+                                        <option value="選択してください">大阪府</option>
+                                        <option value="選択してください">京都府</option>
+                                    </select>
+                                </li>
+                                <li class="form-item munic">
+                                    <p class="form-item-ttl">市区町村</p>
+                                    <input type="text" class="type-text input-munic">
+                                </li>
+                                <li class="form-item address">
+                                    <p class="form-item-ttl">番地</p>
+                                    <input type="text" class="type-text input-address">
+                                </li>
+                                <li class="form-item fit">
+                                    <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
+                                    <select name="" id="" class="select input-fit">
+                                        <option value="選択してください">1</option>
+                                        <option value="選択してください">2</option>
+                                        <option value="選択してください">3</option>
+                                        <option value="選択してください">4</option>
+                                        <option value="選択してください">5</option>
+                                    </select>
+                                </li>
+                                <li class="form-item dc">
+                                    <p class="form-item-ttl">DC容量<span class="require top">必須</span></p>
+                                    <input type="number" name="" id="" class="type-number input-dc">
+                                </li>
+                                <li class="form-item wiring">
+                                    <p class="form-item-ttl">配線図</p>
+                                    <label class="form-item-label">
+                                        <input type="radio" name="" id="" class="type-radio input-wiring">
+                                        <span class="label-txt">有</span>
+                                    </label>
+                                    <label class="form-item-label">
+                                        <input type="radio" name="" id="" class="type-radio input-wiring">
+                                        <span class="label-txt">無</span>
+                                    </label>
+                                </li>
+                                <li class="form-item system">
+                                    <p class="form-item-ttl">遠隔監視システムの導入</p>
+                                    <label class="form-item-label">
+                                        <input type="radio" name="" id="" class="type-radio input-wiring">
+                                        <span class="label-txt">有</span>
+                                    </label>
+                                    <label class="form-item-label">
+                                        <input type="radio" name="" id="" class="type-radio input-wiring">
+                                        <span class="label-txt">無</span>
+                                    </label>
+                                </li>
+                                <li class="form-item maint">
+                                    <p class="form-item-ttl">直近1年でのメンテナンス</p>
+                                    <label class="form-item-label">
+                                        <input type="radio" name="" id="" class="type-radio input-wiring">
+                                        <span class="label-txt">有</span>
+                                    </label>
+                                    <label class="form-item-label">
+                                        <input type="radio" name="" id="" class="type-radio input-wiring">
+                                        <span class="label-txt">無</span>
+                                    </label>
+                                </li>
+                                <li class="form-item panel">
+                                    <p class="form-item-ttl">パネルメーカー</p>
+                                    <input type="text" name="" id="" class="type-text input-panel">
+                                </li>
+                                <li class="form-item pcs">
+                                    <p class="form-item-ttl">PCSメーカー</p>
+                                    <input type="text" name="" id="" class="type-text input-pcs">
+                                </li>
                             </ul>
+                            <div class="privacy">
+                                <p class="privacy-txt">
+                                    ご入力いただいたお客さまの個人情報は、プライバシーポリシーに基づき適正に取り扱います。
+                                    必ずお読みになり、同意の上お問い合わせください。
+                                </p>
+                                <label>
+                                    <span class="checkbox"></span><input type="checkbox" name="" id="">
+                                    <span class="label-txt">プライバシーポリシーに同意する。</span>
+                                </label>
+                            </div>
+                            <div class="submit">
+                                <label class="submit-label">
+                                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/to.confirm.png" alt="">
+                                </label>
+                            </div>
                         </div><!-- form-powerPlant -->
                     </div>
                 </div>
