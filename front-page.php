@@ -303,7 +303,7 @@
                                 発電所情報
                             </h3>
                             <ul class="form-list__powerPlant">
-                                <li class="form-item">
+                                <li class="form-item address">
                                     <p class="form-item-ttl">住所<span class="require top">必須</span></p>
                                 </li>
                                 <li class="form-item post">
@@ -324,7 +324,7 @@
                                     <p class="form-item-ttl">市区町村</p>
                                     <input type="text" class="type-text input-munic">
                                 </li>
-                                <li class="form-item address">
+                                <li class="form-item houseNumber">
                                     <p class="form-item-ttl">番地</p>
                                     <input type="text" class="type-text input-address">
                                 </li>
@@ -389,9 +389,10 @@
                                     ご入力いただいたお客さまの個人情報は、プライバシーポリシーに基づき適正に取り扱います。
                                     必ずお読みになり、同意の上お問い合わせください。
                                 </p>
-                                <label>
-                                    <span class="checkbox"></span><input type="checkbox" name="" id="">
-                                    <span class="label-txt">プライバシーポリシーに同意する。</span>
+                                <label class="privacy-label">
+                                    <span class="checkbox"></span>
+                                    <input type="checkbox" name="" id="">
+                                    <p class="privacy-label-txt">プライバシーポリシーに同意する。</p>
                                 </label>
                             </div>
                             <div class="submit">
