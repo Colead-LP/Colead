@@ -262,10 +262,10 @@
 
 
             <!-- mw -->
-            <div class="form form-top form-confirm">
+            <!-- <div class="form form-top form-confirm">
                 <div class="form-bg">
                     <div class="form-inner">
-                        <!-- form-user -->
+                        
                         <div class="form-user">
                             <ul class="form-list__user">
                                 <li class="form-item">
@@ -291,16 +291,15 @@
                                 </li>
                                 [mwform_submitButton name="to_confirm" class="to_confirm" confirm_value="確認画面へ" submit_value="送信する"]
                             </ul>
-                        </div><!-- /.form-user -->
-                        <!-- form-powerPlant -->
+                        </div>
+                        
                         <div class="form-powerPlant">
 
                             <ul class="form-list__powerPlant"></ul>
-                        </div><!-- form-powerPlant -->
+                        
                     </div>
                 </div>
-            </div><!-- mw -->
-
+            </div> -->
 
         </div>
     </div>
