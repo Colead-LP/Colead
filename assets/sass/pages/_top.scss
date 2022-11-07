@@ -856,9 +856,8 @@
     }
   }
 
-  .email{
-    .input-email{
-      width: 3.6rem;
-    }
+  .type-email,
+  .type-number{
+    width: 3.6rem;
   }
 }

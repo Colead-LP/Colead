@@ -277,12 +277,12 @@
                                     <div class="form-item-input">
                                         <label class="form-item-label">
                                             <span class="label-text top">姓</span>
-                                            <input class="input-text input-name-first" type="text">
+                                            <input class="type-text input-name-first" type="text">
                                             <!-- [mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"] -->
                                         </label class="form-item-label">
                                         <label class="form-item-label">
                                             <span class="label-text top">名</span>
-                                            <input class="input-text input-name-first" type="text">
+                                            <input class="type-text input-name-first" type="text">
                                             <!-- [mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"] -->
                                         </label>
                                     </div>
@@ -291,7 +291,7 @@
                                     <p class="form-item-ttl">
                                         メールアドレス<span class="require top">必須</span>
                                     </p>
-                                    <input class="input-email" type="email">
+                                    <input class="type-email" type="email">
                                     <!-- [mwform_text name="email" id="email" class="input-email" size="60" placeholder="お名前入れてください"] -->
                                 </li>
                                 <!-- [mwform_submitButton name="to_confirm" class="to_confirm" confirm_value="確認画面へ" submit_value="送信する"] -->
@@ -304,7 +304,11 @@
                             </h3>
                             <ul class="form-list__powerPlant">
                                 <li class="form-item">
-                                    
+                                    <p class="form-item-ttl">住所<span class="require top">必須</span></p>
+                                </li>
+                                <li class="form-item post">
+                                    <p class="form-item-ttl">郵便番号</p>
+                                    <input class="type-number post" type="number">
                                 </li>
                             </ul>
                         </div><!-- form-powerPlant -->

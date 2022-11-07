@@ -82,7 +82,7 @@ iframe {
 /*=====================================================
 # form
 =====================================================*/
-.type-text {
+.type-text .type-email .type-number {
   color: inherit;
   font-family: inherit;
   font-size: 1em;
@@ -94,7 +94,7 @@ iframe {
   appearance: none;
   width: 100%;
 }
-.type-text:focus {
+.type-text .type-email .type-number:focus {
   border: 1px solid rgba(0, 0, 0, 0.32);
   box-shadow: none;
   outline: none;
@@ -224,8 +224,9 @@ iframe {
 /*=====================================================
 # input
 =====================================================*/
-.input-text,
-.input-email {
+.type-text,
+.type-email,
+.type-number {
   font-size: 0.14rem;
   border: 1px solid #b5b9be;
   border-radius: 0.03rem;
@@ -1435,7 +1436,8 @@ iframe {
   font-size: 0.16rem;
   line-height: 0.5rem;
 }
-.form-top .email .input-email {
+.form-top .type-email,
+.form-top .type-number {
   width: 3.6rem;
 }
 
