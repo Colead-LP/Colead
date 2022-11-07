@@ -220,9 +220,9 @@
 <section id="contact" class="contact">
     <div class="contact-bg">
         <div class="contact-inner inner">
-            <h3 class="contact-ttl">
+            <h2 class="contact-ttl">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
-            </h3>
+            </h2>
             <!-- .calc -->
             <div class="calc">
                 <ul class="calc-list">
@@ -258,44 +258,55 @@
                 </div>
             </div><!-- /.calc -->
             <!-- .form -->
-                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?><!-- /.form -->
-
+            <? php // echo do_shortcode('[mwform_formkey key="24"]'); 
+            ?>
+            <!-- /.form -->
 
             <!-- mw -->
             <div class="form form-top form-confirm">
+                <h3 class="form-confirm-ttl confirm">入力内容の確認</h3>
                 <div class="form-bg">
                     <div class="form-inner">
                         <!-- form-user -->
                         <div class="form-user">
                             <ul class="form-list__user">
-                                <li class="form-item">
+                                <li class="form-item name">
                                     <p class="form-item-ttl">
-                                        お名前<span class="require">必須</span>
+                                        お名前<span class="require top">必須</span>
                                     </p>
                                     <div class="form-item-input">
                                         <label class="form-item-label">
-                                            姓[mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"]
-                                        </label>
+                                            <span class="label-text top">姓</span>
+                                            <input class="input-text input-name-first" type="text">
+                                            <!-- [mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"] -->
+                                        </label class="form-item-label">
                                         <label class="form-item-label">
-                                            姓 input-text input-name-last
+                                            <span class="label-text top">名</span>
+                                            <input class="input-text input-name-first" type="text">
+                                            <!-- [mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"] -->
                                         </label>
                                     </div>
                                 </li>
-                                <li class="form-item">
+                                <li class="form-item email">
                                     <p class="form-item-ttl">
-                                        メールアドレス<span class="require">必須</span>
+                                        メールアドレス<span class="require top">必須</span>
                                     </p>
-                                    <label class="form-item-label">
-                                        [mwform_text name="email" id="email" class="input-email" size="60" placeholder="お名前入れてください"]
-                                    </label>
+                                    <input class="input-email" type="email">
+                                    <!-- [mwform_text name="email" id="email" class="input-email" size="60" placeholder="お名前入れてください"] -->
                                 </li>
-                                [mwform_submitButton name="to_confirm" class="to_confirm" confirm_value="確認画面へ" submit_value="送信する"]
+                                <!-- [mwform_submitButton name="to_confirm" class="to_confirm" confirm_value="確認画面へ" submit_value="送信する"] -->
                             </ul>
                         </div><!-- /.form-user -->
                         <!-- form-powerPlant -->
                         <div class="form-powerPlant">
-
-                            <ul class="form-list__powerPlant"></ul>
+                            <h3 class="form-powerPlant-ttl top">
+                                発電所情報
+                            </h3>
+                            <ul class="form-list__powerPlant">
+                                <li class="form-item">
+                                    
+                                </li>
+                            </ul>
                         </div><!-- form-powerPlant -->
                     </div>
                 </div>

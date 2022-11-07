@@ -222,6 +222,23 @@ iframe {
 }
 
 /*=====================================================
+# input
+=====================================================*/
+.input-text,
+.input-email {
+  font-size: 0.14rem;
+  border: 1px solid #b5b9be;
+  border-radius: 0.03rem;
+  height: 0.5rem;
+  padding: 0.12rem;
+  width: 100%;
+}
+
+.input-number {
+  border: 1px solid #333333;
+}
+
+/*=====================================================
 # header
 =====================================================*/
 .header {
@@ -325,12 +342,55 @@ iframe {
 # form-confirm
 =====================================================*/
 .form-confirm {
-  background: url(../img/contact/pc/form_bg.png) no-repeat center/cover;
-  width: 100%;
-  padding: 0.3rem 0;
+  background: #EAF3FA;
 }
 .form-confirm .top {
   display: none;
+}
+.form-confirm-ttl {
+  color: #333333;
+  font-weight: bold;
+  font-size: 0.28rem;
+  text-align: center;
+  line-height: 1;
+}
+.form-confirm .form-bg {
+  background: url(../img/contact/pc/form_bg.png) no-repeat center/cover;
+  width: 8rem;
+  padding: 0.6rem 0 1rem;
+  margin: 0.31rem auto 0;
+}
+.form-confirm .form-inner {
+  background: #ffffff;
+  padding: 0.44rem 0.4rem 0.5rem;
+}
+.form-confirm .form-item {
+  display: flex;
+  align-items: center;
+}
+.form-confirm .form-item.name {
+  position: relative;
+  padding-bottom: 0.185rem;
+}
+.form-confirm .form-item.name::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #E2E3E5;
+  width: 100%;
+  height: 1px;
+}
+.form-confirm .form-item.email {
+  margin-top: 0.205rem;
+}
+.form-confirm .form-item-ttl {
+  font-size: 0.18rem;
+  width: 3.6rem;
+}
+.form-confirm .name .form-item-input {
+  display: flex;
+  font-size: 0.16rem;
 }
 
 /*# sourceMappingURL=confirm.css.map */
