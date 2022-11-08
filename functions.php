@@ -13,13 +13,14 @@ function add_my_files()
         wp_enqueue_style('thanks', get_template_directory_uri() . '/assets/css/thanks.css');
     } elseif (is_page('form')) {
         wp_enqueue_style('form', get_template_directory_uri() . '/assets/css/form.css');
-    } 
+    }
 
-    function custom_print_scripts() {
+    function custom_print_scripts()
+    {
         if (!is_admin()) {
             //デフォルトjquery削除
             wp_deregister_script('jquery');
-    
+
             //GoogleCDNから読み込む
             wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
             wp_enqueue_script( 'ajaxzip3', get_stylesheet_directory_uri() . '/js/ajaxzip3.js', array(), '0.51', true );
@@ -31,6 +32,20 @@ function add_my_files()
 }
 //アクションフック（wp_enqueue_scripts）への登録
 add_action('wp_enqueue_scripts', 'add_my_files');
+
+
+function mvwpform_autop_filter()
+{
+    if (class_exists('MW_WP_Form_Admin')) {
+        $mw_wp_form_admin = new MW_WP_Form_Admin();
+        $forms = $mw_wp_form_admin->get_forms();
+        foreach ($forms as $form) {
+            add_filter('mwform_content_wpautop_mw-wp-form-' . $form->ID, '__return_false');
+        }
+    }
+}
+mvwpform_autop_filter();
+
 
 
 
