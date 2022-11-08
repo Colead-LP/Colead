@@ -220,9 +220,9 @@
 <section id="contact" class="contact">
     <div class="contact-bg">
         <div class="contact-inner inner">
-            <h3 class="contact-ttl">
+            <h2 class="contact-ttl">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
-            </h3>
+            </h2>
             <!-- .calc -->
             <div class="calc">
                 <ul class="calc-list">
@@ -258,49 +258,8 @@
                 </div>
             </div><!-- /.calc -->
             <!-- .form -->
-                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?><!-- /.form -->
-
-
-            <!-- mw -->
-            <!-- <div class="form form-top form-confirm">
-                <div class="form-bg">
-                    <div class="form-inner">
-                        
-                        <div class="form-user">
-                            <ul class="form-list__user">
-                                <li class="form-item">
-                                    <p class="form-item-ttl">
-                                        お名前<span class="require">必須</span>
-                                    </p>
-                                    <div class="form-item-input">
-                                        <label class="form-item-label">
-                                            姓[mwform_text name="name_first" id="name_first" class="input-text input-name-first" size="60" placeholder="ファーストネーム"]
-                                        </label>
-                                        <label class="form-item-label">
-                                            姓 input-text input-name-last
-                                        </label>
-                                    </div>
-                                </li>
-                                <li class="form-item">
-                                    <p class="form-item-ttl">
-                                        メールアドレス<span class="require">必須</span>
-                                    </p>
-                                    <label class="form-item-label">
-                                        [mwform_text name="email" id="email" class="input-email" size="60" placeholder="お名前入れてください"]
-                                    </label>
-                                </li>
-                                [mwform_submitButton name="to_confirm" class="to_confirm" confirm_value="確認画面へ" submit_value="送信する"]
-                            </ul>
-                        </div>
-                        
-                        <div class="form-powerPlant">
-
-                            <ul class="form-list__powerPlant"></ul>
-                        
-                    </div>
-                </div>
-            </div> -->
-
+            <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+            <!-- /.form -->
         </div>
     </div>
 </section><!-- /.contact -->
