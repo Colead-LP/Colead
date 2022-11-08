@@ -862,7 +862,7 @@
 
     .require {
       position: relative;
-      top: -0.03rem;
+      top: -0.02rem;
       display: inline-block;
       color: #ffffff;
       background: #c41736;
@@ -927,25 +927,57 @@
       }
     }
 
+    &.dc{
+      .unit{
+        font-size: .16rem;
+        align-self: end;
+        margin: 0 0 0 auto;
+      }
+
+      .input-dc{
+        width: 3.1rem;
+      }
+    }
+
     &.wiring,
     &.system,
     &.maint {
+      .radio-wrap{
+        display: flex;
+        gap: .6rem;
+      }
+      .form-item-label{
+        display: contents;
+      }
       .label-txt {
         color: #333333;
         font-size: 0.18rem;
       }
     }
-
-    &.privacy {
-      .privacy-txt {
-        font-size: 0.14rem;
-        text-align: center;
-      }
-
-      .privacy-label-txt{
-        display: block;
-        font-size: 0.16rem;
-      }
+  }
+  .privacy {
+    margin: .2rem 0 0;
+    .privacy-txt {
+      display: block;
+      font-size: 0.14rem;
+      line-height: 1.4;
+      text-align: center;
     }
+
+    .privacy-link{
+      color: #3895FF;
+    }
+
+    .privacy-label-txt {
+      display: block;
+      font-size: 0.16rem;
+      text-align: center;
+    }
+
+  }
+
+  .submit{
+    width: 3.65rem;
+    margin: .3rem auto 0;
   }
 }

@@ -1426,7 +1426,7 @@ iframe {
 }
 .form-top .form-item-ttl .require {
   position: relative;
-  top: -0.03rem;
+  top: -0.02rem;
   display: inline-block;
   color: #ffffff;
   background: #c41736;
@@ -1478,17 +1478,45 @@ iframe {
   font-size: 0.16rem;
   line-height: 0.5rem;
 }
+.form-top .form-item.dc .unit {
+  font-size: 0.16rem;
+  align-self: end;
+  margin: 0 0 0 auto;
+}
+.form-top .form-item.dc .input-dc {
+  width: 3.1rem;
+}
+.form-top .form-item.wiring .radio-wrap, .form-top .form-item.system .radio-wrap, .form-top .form-item.maint .radio-wrap {
+  display: flex;
+  gap: 0.6rem;
+}
+.form-top .form-item.wiring .form-item-label, .form-top .form-item.system .form-item-label, .form-top .form-item.maint .form-item-label {
+  display: contents;
+}
 .form-top .form-item.wiring .label-txt, .form-top .form-item.system .label-txt, .form-top .form-item.maint .label-txt {
   color: #333333;
   font-size: 0.18rem;
 }
-.form-top .form-item.privacy .privacy-txt {
+.form-top .privacy {
+  margin: 0.2rem 0 0;
+}
+.form-top .privacy .privacy-txt {
+  display: block;
   font-size: 0.14rem;
+  line-height: 1.4;
   text-align: center;
 }
-.form-top .form-item.privacy .privacy-label-txt {
+.form-top .privacy .privacy-link {
+  color: #3895FF;
+}
+.form-top .privacy .privacy-label-txt {
   display: block;
   font-size: 0.16rem;
+  text-align: center;
+}
+.form-top .submit {
+  width: 3.65rem;
+  margin: 0.3rem auto 0;
 }
 
 /*# sourceMappingURL=style.css.map */
