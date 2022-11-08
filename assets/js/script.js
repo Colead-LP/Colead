@@ -1,20 +1,3 @@
-// const smoothScrollTrigger = document.querySelectorAll('a[href^="#"]');
-// for (let i = 0; i < smoothScrollTrigger.length; i++) {
-//   smoothScrollTrigger[i].addEventListener("click", (e) => {
-//     e.preventDefault();
-//     let href = smoothScrollTrigger[i].getAttribute("href");
-//     let targetElement = document.getElementById(href.replace("#", ""));
-//     const rect = targetElement.getBoundingClientRect().top;
-//     const offset = window.pageYOffset;
-//     const gap = 60;
-//     const target = rect + offset - gap;
-//     window.scrollTo({
-//       top: target,
-//       behavior: "smooth",
-//     });
-//   });
-// }
-
 $(function () {
   // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない）
   $('a[href^="#"]').click(function () {
@@ -32,4 +15,9 @@ $(function () {
     $("body,html").animate({ scrollTop: position }, speed, "swing");
     return false;
   });
+});
+
+// 住所自動入力
+jQuery("#zip").keyup(function () {
+  AjaxZip3.zip2addr(this, "", "prefecture", "address");
 });
