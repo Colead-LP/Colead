@@ -257,11 +257,9 @@
                     <p class="calc-answer-unit">円</p>
                 </div>
             </div><!-- /.calc -->
-
             <!-- .form -->
             <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
             <!-- /.form -->
-
         </div>
     </div>
 </section><!-- /.contact -->
