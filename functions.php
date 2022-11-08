@@ -23,8 +23,8 @@ function add_my_files()
 
             //GoogleCDNから読み込む
             wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
-            wp_enqueue_script( 'ajaxzip3', get_stylesheet_directory_uri() . '/js/ajaxzip3.js', array(), '0.51', true );
             wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js');
+            wp_enqueue_script('yubinbango','https://yubinbango.github.io/yubinbango/yubinbango.js',array(),false,true );
 
         }
     }
@@ -32,6 +32,16 @@ function add_my_files()
 }
 //アクションフック（wp_enqueue_scripts）への登録
 add_action('wp_enqueue_scripts', 'add_my_files');
+
+// 住所自動入力
+function add_yubinbango_class(){
+    echo <<<EOC
+  <script>
+    jQuery('.mw_wp_form form').addClass('h-adr');
+  </script>
+  EOC;
+  }
+  add_action( 'wp_print_footer_scripts', 'add_yubinbango_class' );
 
 
 function mvwpform_autop_filter()
