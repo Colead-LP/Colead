@@ -22,8 +22,10 @@ function add_my_files()
             wp_deregister_script('jquery');
 
             //GoogleCDNから読み込む
-            wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js');
+            wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
+            wp_enqueue_script( 'ajaxzip3', get_stylesheet_directory_uri() . '/js/ajaxzip3.js', array(), '0.51', true );
             wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js');
+
         }
     }
     add_action('wp_print_scripts', 'custom_print_scripts');
