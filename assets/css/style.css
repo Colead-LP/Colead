@@ -82,7 +82,7 @@ iframe {
 /*=====================================================
 # form
 =====================================================*/
-.type-text {
+.type-text .type-email .type-number {
   color: inherit;
   font-family: inherit;
   font-size: 1em;
@@ -94,7 +94,7 @@ iframe {
   appearance: none;
   width: 100%;
 }
-.type-text:focus {
+.type-text .type-email .type-number:focus {
   border: 1px solid rgba(0, 0, 0, 0.32);
   box-shadow: none;
   outline: none;
@@ -219,6 +219,31 @@ iframe {
   .inner {
     max-width: 10rem;
   }
+}
+
+/*=====================================================
+# input
+=====================================================*/
+.type-text,
+.type-email,
+.type-number {
+  font-size: 0.14rem;
+  border: 1px solid #b5b9be;
+  border-radius: 0.03rem;
+  height: 0.5rem;
+  padding: 0.12rem;
+  width: 100%;
+}
+
+.select {
+  font-size: 0.14rem;
+  border: 1px solid #b5b9be;
+  height: 0.5rem;
+  padding: 0.12rem;
+}
+
+.input-number {
+  border: 1px solid #333333;
 }
 
 /*=====================================================
@@ -1159,7 +1184,7 @@ iframe {
 }
 .flow-item-txt .to-calc {
   display: inline;
-  color: #3895FF;
+  color: #3895ff;
 }
 
 /*=====================================================
@@ -1305,7 +1330,7 @@ iframe {
   }
 }
 .faq-item-a::after {
-  background: #CED2D8;
+  background: #ced2d8;
   width: 100%;
   height: 0.01rem;
   top: -0.155rem;
@@ -1355,14 +1380,143 @@ iframe {
     background: url(../img/contact/pc/form_bg.png) no-repeat center/cover;
     width: 100%;
     height: 15.99rem;
+    padding: 0.32rem 0.4rem 0.5rem;
+    margin-top: 0.33rem;
   }
 }
-
-/*=====================================================
-  # input
-  =====================================================*/
-.input-number {
-  border: 1px solid #333333;
+.form-top .form-item {
+  display: flex;
+  align-items: center;
+}
+.form-top .form-item.name, .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  position: relative;
+  padding-bottom: 0.185rem;
+}
+.form-top .form-item.name::after, .form-top .form-item.houseNumber::after, .form-top .form-item.fit::after, .form-top .form-item.dc::after, .form-top .form-item.wiring::after, .form-top .form-item.system::after, .form-top .form-item.maint::after, .form-top .form-item.panel::after, .form-top .form-item.pcs::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  background: #e2e3e5;
+  width: 100%;
+  height: 1px;
+}
+.form-top .form-item.email {
+  margin-top: 0.205rem;
+}
+.form-top .form-item.address {
+  margin-top: 0.3rem;
+}
+.form-top .form-item.post {
+  margin-top: 0.16rem;
+}
+.form-top .form-item.pref, .form-top .form-item.munic, .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  margin-top: 0.2rem;
+}
+.form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  padding-bottom: 0.205rem;
+}
+.form-top .form-item-ttl,
+.form-top .form-item-input {
+  color: #333333;
+}
+.form-top .form-item-ttl {
+  font-size: 0.18rem;
+  width: 3.6rem;
+}
+.form-top .form-item-ttl .require {
+  position: relative;
+  top: -0.02rem;
+  display: inline-block;
+  color: #ffffff;
+  background: #c41736;
+  font-size: 0.1rem;
+  line-height: 0.16rem;
+  text-align: center;
+  width: 0.42rem;
+  height: 0.16rem;
+  margin-left: 0.305rem;
+}
+.form-top .form-item-input {
+  font-size: 0.16rem;
+}
+.form-top .type-email,
+.form-top .type-number,
+.form-top .input-munic,
+.form-top .input-address,
+.form-top .input-panel,
+.form-top .input-pcs {
+  width: 3.6rem;
+}
+.form-top .input-pref,
+.form-top .input-fit {
+  width: 2.4rem;
+}
+.form-top .form-powerPlant-ttl {
+  color: #333333;
+  background: #eaeaea;
+  font-weight: bold;
+  font-size: 0.2rem;
+  line-height: 0.6rem;
+  height: 0.6rem;
+  width: calc(100% + 0.8rem);
+  margin: 0.3rem -0.4rem 0;
+  padding-left: 0.4rem;
+}
+.form-top .form-item.name .form-item-input {
+  display: grid;
+  justify-content: space-between;
+  grid-template-columns: 1.66rem 1.66rem;
+  column-gap: 0.285rem;
+}
+.form-top .form-item.name .form-item-label {
+  display: flex;
+  column-gap: 0.1rem;
+}
+.form-top .form-item.name .form-item-label .label-txt {
+  display: block;
+  font-size: 0.16rem;
+  line-height: 0.5rem;
+}
+.form-top .form-item.dc .unit {
+  font-size: 0.16rem;
+  align-self: end;
+  margin: 0 0 0 auto;
+}
+.form-top .form-item.dc .input-dc {
+  width: 3.1rem;
+}
+.form-top .form-item.wiring .radio-wrap, .form-top .form-item.system .radio-wrap, .form-top .form-item.maint .radio-wrap {
+  display: flex;
+  gap: 0.6rem;
+}
+.form-top .form-item.wiring .form-item-label, .form-top .form-item.system .form-item-label, .form-top .form-item.maint .form-item-label {
+  display: contents;
+}
+.form-top .form-item.wiring .label-txt, .form-top .form-item.system .label-txt, .form-top .form-item.maint .label-txt {
+  color: #333333;
+  font-size: 0.18rem;
+}
+.form-top .privacy {
+  margin: 0.2rem 0 0;
+}
+.form-top .privacy .privacy-txt {
+  display: block;
+  font-size: 0.14rem;
+  line-height: 1.4;
+  text-align: center;
+}
+.form-top .privacy .privacy-link {
+  color: #3895FF;
+}
+.form-top .privacy .privacy-label-txt {
+  display: block;
+  font-size: 0.16rem;
+  text-align: center;
+}
+.form-top .submit {
+  width: 3.65rem;
+  margin: 0.3rem auto 0;
 }
 
 /*# sourceMappingURL=style.css.map */

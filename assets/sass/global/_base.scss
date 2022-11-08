@@ -12,69 +12,71 @@ html {
   }
 }
 
-body{
+body {
   color: v.$color-txt-default;
   font-family: v.$font-default;
   @include v.mq(sp) {
-      font-size: .1rem;
+    font-size: 0.1rem;
   }
   @include v.mq(sp) {
-    font-size: .1rem;
+    font-size: 0.1rem;
   }
 }
 
 img,
-iframe{
+iframe {
   width: 100%;
   height: auto;
   vertical-align: middle;
 }
 
-.sp{
+.sp {
   @include v.mq(pc) {
     display: none;
   }
 }
 
-.pc{
+.pc {
   @include v.mq(sp) {
     display: none;
   }
 }
 
-.br{
-  &::after{
+.br {
+  &::after {
     content: "\A";
     white-space: pre;
   }
 }
 
-.sp-br{
+.sp-br {
   @include v.mq(sp) {
-    &::after{
+    &::after {
       content: "\A";
       white-space: pre;
     }
   }
 }
 
-.pc-br{
+.pc-br {
   @include v.mq(pc) {
-    &::after{
+    &::after {
       content: "\A";
       white-space: pre;
     }
   }
 }
 
-.txt__strong{
+.txt__strong {
   color: v.$color-txt-strong;
 }
 
 /*=====================================================
 # form
 =====================================================*/
-.type-text {
+.type-text
+.type-email
+.type-number {
   color: inherit;
   font-family: inherit;
   font-size: 1em;
@@ -205,13 +207,38 @@ iframe{
 /*=====================================================
 # layout
 =====================================================*/
-.inner{
+.inner {
   box-sizing: border-box;
   margin: 0 auto;
   @include v.mq(sp) {
-    padding: 0 .2rem;
+    padding: 0 0.2rem;
   }
   @include v.mq(pc) {
     max-width: 10rem;
   }
+}
+
+/*=====================================================
+# input
+=====================================================*/
+.type-text,
+.type-email,
+.type-number {
+  font-size: 0.14rem;
+  border: 1px solid #b5b9be;
+  border-radius: 0.03rem;
+  height: 0.5rem;
+  padding: 0.12rem;
+  width: 100%;
+}
+
+.select{
+  font-size: .14rem;
+  border: 1px solid #b5b9be;
+  height: .5rem;
+  padding: 0.12rem;
+}
+
+.input-number {
+  border: 1px solid #333333;
 }

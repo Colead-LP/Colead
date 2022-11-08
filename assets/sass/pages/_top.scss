@@ -122,7 +122,7 @@
         padding: 0.4rem 0.19rem 0;
       }
       @include v.mq(pc) {
-        padding: .67rem 0 0;
+        padding: 0.67rem 0 0;
       }
     }
     &-ttl {
@@ -235,7 +235,7 @@
         padding: 0.23rem 0.19rem 0.6rem;
       }
       @include v.mq(pc) {
-        padding: .45rem 0 .6rem;
+        padding: 0.45rem 0 0.6rem;
       }
     }
     &-ttl {
@@ -590,9 +590,9 @@
       @include v.mq(pc) {
         margin: 0.12rem 0 0;
       }
-      .to-calc{
+      .to-calc {
         display: inline;
-        color: #3895FF;
+        color: #3895ff;
       }
     }
   }
@@ -606,11 +606,11 @@
     background: rgba(248, 248, 248, 1);
     @include v.mq(sp) {
       height: 8.64rem;
-      padding: .55rem 0 .6rem;
+      padding: 0.55rem 0 0.6rem;
     }
     @include v.mq(pc) {
       height: 8.9rem;
-      padding: .92rem 0 1.01rem;
+      padding: 0.92rem 0 1.01rem;
     }
   }
 
@@ -620,7 +620,7 @@
       font-weight: bold;
       line-height: 1;
       @include v.mq(sp) {
-        font-size: .3rem;
+        font-size: 0.3rem;
       }
       @include v.mq(pc) {
         font-size: 0.5rem;
@@ -630,7 +630,7 @@
       position: relative;
       margin: 0 auto;
       @include v.mq(sp) {
-        top: -.16rem;
+        top: -0.16rem;
         width: 1.76rem;
       }
       @include v.mq(pc) {
@@ -643,12 +643,12 @@
   &-list {
     display: grid;
     @include v.mq(sp) {
-      row-gap: .39rem;
-      margin: -.22rem 0 0;
+      row-gap: 0.39rem;
+      margin: -0.22rem 0 0;
     }
     @include v.mq(pc) {
       row-gap: 0.4rem;
-      margin: -.05rem 0 0;
+      margin: -0.05rem 0 0;
     }
   }
 
@@ -658,7 +658,7 @@
       position: relative;
       line-height: 1.6;
       @include v.mq(sp) {
-        padding-left: .33rem;
+        padding-left: 0.33rem;
       }
       @include v.mq(pc) {
         padding-left: 0.44rem;
@@ -672,7 +672,7 @@
     &-q {
       font-weight: bold;
       @include v.mq(sp) {
-        font-size: .18rem;
+        font-size: 0.18rem;
       }
       @include v.mq(pc) {
         font-size: 0.2rem;
@@ -683,7 +683,7 @@
         height: 0.3rem;
         @include v.mq(sp) {
           left: 0;
-          top: .02rem;
+          top: 0.02rem;
         }
         @include v.mq(pc) {
           top: 0.05rem;
@@ -704,19 +704,19 @@
         width: 0.25rem;
         height: 0.29rem;
         @include v.mq(sp) {
-          top: .035rem;
+          top: 0.035rem;
           left: 0;
         }
         @include v.mq(pc) {
-          top: .02rem;
+          top: 0.02rem;
           left: 0.09rem;
         }
       }
-      &::after{
-        background: #CED2D8;
+      &::after {
+        background: #ced2d8;
         width: 100%;
-        height: .01rem;
-        top: -.155rem;
+        height: 0.01rem;
+        top: -0.155rem;
         left: 0;
       }
     }
@@ -726,46 +726,46 @@
 /*=====================================================
 # contact
 =====================================================*/
-.contact{
-  &-bg{
-    background: rgba(234,243,250, 1);
+.contact {
+  &-bg {
+    background: rgba(234, 243, 250, 1);
     height: 29.17rem;
   }
 
-  &-inner{
+  &-inner {
     max-width: 8rem;
   }
 }
 
-.calc{
+.calc {
   background: url(../img/contact/pc/calc_bg.png) no-repeat center / cover;
   width: 100%;
   height: 7.4rem;
 
-  &-list{
+  &-list {
   }
 
-  &-item{
-    font-size: .18rem;
-    &-label{
+  &-item {
+    font-size: 0.18rem;
+    &-label {
     }
   }
 
-  &-start{
+  &-start {
     display: block;
     text-align: center;
-    &-btn{
+    &-btn {
       display: inline-block;
       cursor: pointer;
       width: 3.65rem;
     }
   }
 
-  &-answer{
+  &-answer {
     &-txt,
     &-number,
-    &-unit{
-      font-size: .2rem;
+    &-unit {
+      font-size: 0.2rem;
     }
   }
 }
@@ -778,20 +778,206 @@
   .confirm {
     display: none;
   }
+
   @include v.mq(pc) {
     background: url(../img/contact/pc/form_bg.png) no-repeat center / cover;
     width: 100%;
     height: 15.99rem;
-  }
-}
-
-/*=====================================================
-  # input
-  =====================================================*/
-  .input-text{
-    
+    padding: 0.32rem 0.4rem 0.5rem;
+    margin-top: 0.33rem;
   }
 
-.input-number {
-  border: 1px solid #333333;
+  .form-item {
+    // layout
+    display: flex;
+    align-items: center;
+
+    &.name,
+    &.houseNumber,
+    &.fit,
+    &.dc,
+    &.wiring,
+    &.system,
+    &.maint,
+    &.panel,
+    &.pcs {
+      position: relative;
+      padding-bottom: 0.185rem;
+      &::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background: #e2e3e5;
+        width: 100%;
+        height: 1px;
+      }
+    }
+
+    &.email {
+      margin-top: 0.205rem;
+    }
+
+    &.address {
+      margin-top: 0.3rem;
+    }
+
+    &.post {
+      margin-top: 0.16rem;
+    }
+
+    &.pref,
+    &.munic,
+    &.houseNumber,
+    &.fit,
+    &.dc,
+    &.wiring,
+    &.system,
+    &.maint,
+    &.panel,
+    &.pcs {
+      margin-top: 0.2rem;
+    }
+
+    &.houseNumber,
+    &.fit,
+    &.dc,
+    &.wiring,
+    &.system,
+    &.maint,
+    &.panel,
+    &.pcs {
+      padding-bottom: 0.205rem;
+    }
+  }
+
+  .form-item-ttl,
+  .form-item-input {
+    color: #333333;
+  }
+
+  .form-item-ttl {
+    font-size: 0.18rem;
+    width: 3.6rem;
+
+    .require {
+      position: relative;
+      top: -0.02rem;
+      display: inline-block;
+      color: #ffffff;
+      background: #c41736;
+      font-size: 0.1rem;
+      line-height: 0.16rem;
+      text-align: center;
+      width: 0.42rem;
+      height: 0.16rem;
+      margin-left: 0.305rem;
+    }
+  }
+
+  .form-item-input {
+    font-size: 0.16rem;
+  }
+
+  .type-email,
+  .type-number,
+  .input-munic,
+  .input-address,
+  .input-panel,
+  .input-pcs {
+    width: 3.6rem;
+  }
+
+  .input-pref,
+  .input-fit {
+    width: 2.4rem;
+  }
+
+  .form-powerPlant {
+    &-ttl {
+      color: #333333;
+      background: #eaeaea;
+      font-weight: bold;
+      font-size: 0.2rem;
+      line-height: 0.6rem;
+      height: 0.6rem;
+      width: calc(100% + 0.8rem);
+      margin: 0.3rem -0.4rem 0;
+      padding-left: 0.4rem;
+    }
+  }
+
+  .form-item {
+    // block
+    &.name {
+      .form-item-input {
+        display: grid;
+        justify-content: space-between;
+        grid-template-columns: 1.66rem 1.66rem;
+        column-gap: 0.285rem;
+      }
+      .form-item-label {
+        display: flex;
+        column-gap: 0.1rem;
+        .label-txt {
+          display: block;
+          font-size: 0.16rem;
+          line-height: 0.5rem;
+        }
+      }
+    }
+
+    &.dc{
+      .unit{
+        font-size: .16rem;
+        align-self: end;
+        margin: 0 0 0 auto;
+      }
+
+      .input-dc{
+        width: 3.1rem;
+      }
+    }
+
+    &.wiring,
+    &.system,
+    &.maint {
+      .radio-wrap{
+        display: flex;
+        gap: .6rem;
+      }
+      .form-item-label{
+        display: contents;
+      }
+      .label-txt {
+        color: #333333;
+        font-size: 0.18rem;
+      }
+    }
+  }
+  .privacy {
+    margin: .2rem 0 0;
+    .privacy-txt {
+      display: block;
+      font-size: 0.14rem;
+      line-height: 1.4;
+      text-align: center;
+    }
+
+    .privacy-link{
+      color: #3895FF;
+    }
+
+    .privacy-label-txt {
+      display: block;
+      font-size: 0.16rem;
+      text-align: center;
+    }
+
+  }
+
+  .submit{
+    width: 3.65rem;
+    margin: .3rem auto 0;
+  }
 }
