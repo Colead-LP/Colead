@@ -45,7 +45,7 @@ Template Name: calcurate
           //input欄が空白の時の処理を書く
         }
         
-        function EnteredOrNot($post){ //入力されたかどうかをtrue,falseで返す
+        function EnteredOrNot($post){ //input欄全て入力されたかどうかをtrue,falseで返す
           if( ($post['year_fee'] != "") && ($post['rent'] != "") && ($post['operation_period'] != "")){
             return True;
           }else{
@@ -54,15 +54,17 @@ Template Name: calcurate
         }
 
         function GetApproximateCost($year_fee , $rent , $operation_period){ //概算売却額計算関数
-          //  =年間売電金額-土地賃料 ÷ 7%+12/ 240ヵ月- 本日の日付-稼働開始年月
+          //  =(年間売電金額-土地賃料) ÷ {7%+[12/(240ヵ月- 本日の日付-稼働開始年月)]}
 
           //本日の日付と稼働開始年月の差分取得
           $today =date("Y-m"); //本日の日付
+
           $end_month = date('Y', strtotime($today)) * 12 + date('m', strtotime($today)); //日付のフォーマットを揃え、年数に12かけて月ベースを算出する
           $start_month = date('Y', strtotime($operation_period)) * 12 + date('m', strtotime($operation_period));
-          $progress_month = (int)($end_month - $start_month);
+
+          $progress_month = (int)($end_month - $start_month); //経過月数
           $serviceLife = 240; //耐用年数240ヶ月
-          $remainingMouths = $serviceLife - $progress_month; //残存月数
+          $remainingMouths = $serviceLife - $progress_month; //耐用年数-経過月数=残存月数
 
           $yield = 0.07; //利回り
           $grossYield = round($yield + (12/$remainingMouths) , 3); //表面利回り算出、roundで小数点第四位を四捨五入
