@@ -227,7 +227,7 @@
             </h2>
             <!-- .calc -->
             <form class="calc" action="" method="post">
-                <div class="calc-ttl">お持ちの発電所の情報を教えてください。</div>
+                <div class="calc-ttl">お持ちの発電所の情報を<br class="sp-br">教えてください。</div>
                 <ul class="calc-list">
                     <li class="calc-item">
                         <p class="calc-item-label">
@@ -262,7 +262,7 @@
 
                 <!-- ここから計算後に表示される -->
                 <div class="calc-answer">
-                    <p class="calc-answer-ttl">あなたの太陽光発電所の売却金額はこちら</p>
+                    <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
                     <!-- <div class="border"> -->
                         <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
                     <!-- </div> -->
