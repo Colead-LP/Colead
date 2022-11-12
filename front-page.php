@@ -248,7 +248,7 @@
                             稼働開始年月<span class="require">必須</span>
                         </p>
                         <!-- <select name="operation_period" class="input-number" value="お選びください"> -->
-                        <?php 
+                        <?php
                         echo GetDateSelecter();
                         ?>
                         <!-- </select> -->
@@ -264,7 +264,7 @@
                 <div class="calc-answer">
                     <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
                     <!-- <div class="border"> -->
-                        <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
+                    <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
                     <!-- </div> -->
                     <div class="calc-box">
                         <p class="calc-box-txt">概算売却額</p>
