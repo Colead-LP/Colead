@@ -159,6 +159,13 @@ pcsメーカー
 <input type="hidden" name="__children[privacy][]" value="{&quot;\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc\u306b\u540c\u610f\u3059\u308b\u3002&quot;:&quot;\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc\u306b\u540c\u610f\u3059\u308b\u3002&quot;}">
 
 </div>
+
+<div class="privacy confirm">
+    <label>
+    <input type="checkbox" name="" id="" class="type-checkbox"><span></span>
+    プライバシーポリシーに同意する。
+    </label>
+</div>
 <div class="submit">
 <label class="submit-label">
 

@@ -260,6 +260,314 @@
             <!-- .form -->
             <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
             <!-- /.form -->
+
+            <div class="form form-top form-confirm">
+<h3 class="form-confirm-ttl confirm">入力内容の確認</h3>
+<div class="form-bg">
+<div class="form-inner">
+<!-- form-user -->
+<div class="form-user">
+<ul class="form-list__user">
+
+<li class="form-item name">
+<p class="form-item-ttl">
+お名前<span class="require top">必須</span>
+</p>
+<div class="form-item-input">
+<label class="form-item-label">
+<span class="label-txt top">姓</span>
+
+<input type="text" name="name_first" id="name_first" class="type-text input-name-first" size="60" value="">
+
+</label>
+<label class="form-item-label">
+<span class="label-txt top">名</span>
+
+<input type="text" name="name_last" id="name_last" class="type-text input-name-last" size="60" value="">
+
+</label>
+</div>
+</li>
+
+<li class="form-item email">
+<p class="form-item-ttl">
+メールアドレス<span class="require top">必須</span>
+</p>
+
+<input type="email" name="email" id="email" class="type-email" size="60" value="" data-conv-half-alphanumeric="true">
+
+</li>
+
+</ul>
+</div><!-- /.form-user -->
+<!-- form-powerPlant -->
+<div class="form-powerPlant">
+<h3 class="form-powerPlant-ttl top">
+発電所情報
+</h3>
+<ul class="form-list__powerPlant">
+
+<li class="form-item address">
+<p class="form-item-ttl">住所<span class="require top">必須</span></p>
+</li>
+
+<li class="form-item post top">
+<p class="form-item-ttl">郵便番号</p>
+
+<input type="text" name="zip" id="zip" class="type-number p-postal-code" size="60" value="">
+
+</li>
+
+<li class="form-item pref">
+<p class="form-item-ttl">都道府県</p>
+
+<select name="pref" id="pref" class="p-region-id select input-pref">
+			<option value="1">
+			北海道		</option>
+			<option value="2">
+			青森県		</option>
+			<option value="3">
+			岩手県		</option>
+			<option value="4">
+			宮城県		</option>
+			<option value="5">
+			秋田県		</option>
+			<option value="6">
+			山形県		</option>
+			<option value="7">
+			福島県		</option>
+			<option value="8">
+			茨城県		</option>
+			<option value="9">
+			栃木県		</option>
+			<option value="10">
+			群馬県		</option>
+			<option value="11">
+			埼玉県		</option>
+			<option value="12">
+			千葉県		</option>
+			<option value="13">
+			東京都		</option>
+			<option value="14">
+			神奈川県		</option>
+			<option value="15">
+			新潟県		</option>
+			<option value="16">
+			富山県		</option>
+			<option value="17">
+			石川県		</option>
+			<option value="18">
+			福井県		</option>
+			<option value="19">
+			山梨県		</option>
+			<option value="20">
+			長野県		</option>
+			<option value="21">
+			岐阜県		</option>
+			<option value="22">
+			静岡県		</option>
+			<option value="23">
+			愛知県		</option>
+			<option value="24">
+			三重県		</option>
+			<option value="25">
+			滋賀県		</option>
+			<option value="26">
+			京都府		</option>
+			<option value="27">
+			大阪府		</option>
+			<option value="28">
+			兵庫県		</option>
+			<option value="29">
+			奈良県		</option>
+			<option value="30">
+			和歌山県		</option>
+			<option value="31">
+			鳥取県		</option>
+			<option value="32">
+			島根県		</option>
+			<option value="33">
+			岡山県		</option>
+			<option value="34">
+			広島県		</option>
+			<option value="35">
+			山口県		</option>
+			<option value="36">
+			徳島県		</option>
+			<option value="37">
+			香川県		</option>
+			<option value="38">
+			愛媛県		</option>
+			<option value="39">
+			高知県		</option>
+			<option value="40">
+			福岡県		</option>
+			<option value="41">
+			佐賀県		</option>
+			<option value="42">
+			長崎県		</option>
+			<option value="43">
+			熊本県		</option>
+			<option value="44">
+			大分県		</option>
+			<option value="45">
+			宮崎県		</option>
+			<option value="46">
+			鹿児島県		</option>
+			<option value="47">
+			沖縄県		</option>
+	</select>
+
+<input type="hidden" name="__children[pref][]" value="{&quot;1&quot;:&quot;\u5317\u6d77\u9053&quot;,&quot;2&quot;:&quot;\u9752\u68ee\u770c&quot;,&quot;3&quot;:&quot;\u5ca9\u624b\u770c&quot;,&quot;4&quot;:&quot;\u5bae\u57ce\u770c&quot;,&quot;5&quot;:&quot;\u79cb\u7530\u770c&quot;,&quot;6&quot;:&quot;\u5c71\u5f62\u770c&quot;,&quot;7&quot;:&quot;\u798f\u5cf6\u770c&quot;,&quot;8&quot;:&quot;\u8328\u57ce\u770c&quot;,&quot;9&quot;:&quot;\u6803\u6728\u770c&quot;,&quot;10&quot;:&quot;\u7fa4\u99ac\u770c&quot;,&quot;11&quot;:&quot;\u57fc\u7389\u770c&quot;,&quot;12&quot;:&quot;\u5343\u8449\u770c&quot;,&quot;13&quot;:&quot;\u6771\u4eac\u90fd&quot;,&quot;14&quot;:&quot;\u795e\u5948\u5ddd\u770c&quot;,&quot;15&quot;:&quot;\u65b0\u6f5f\u770c&quot;,&quot;16&quot;:&quot;\u5bcc\u5c71\u770c&quot;,&quot;17&quot;:&quot;\u77f3\u5ddd\u770c&quot;,&quot;18&quot;:&quot;\u798f\u4e95\u770c&quot;,&quot;19&quot;:&quot;\u5c71\u68a8\u770c&quot;,&quot;20&quot;:&quot;\u9577\u91ce\u770c&quot;,&quot;21&quot;:&quot;\u5c90\u961c\u770c&quot;,&quot;22&quot;:&quot;\u9759\u5ca1\u770c&quot;,&quot;23&quot;:&quot;\u611b\u77e5\u770c&quot;,&quot;24&quot;:&quot;\u4e09\u91cd\u770c&quot;,&quot;25&quot;:&quot;\u6ecb\u8cc0\u770c&quot;,&quot;26&quot;:&quot;\u4eac\u90fd\u5e9c&quot;,&quot;27&quot;:&quot;\u5927\u962a\u5e9c&quot;,&quot;28&quot;:&quot;\u5175\u5eab\u770c&quot;,&quot;29&quot;:&quot;\u5948\u826f\u770c&quot;,&quot;30&quot;:&quot;\u548c\u6b4c\u5c71\u770c&quot;,&quot;31&quot;:&quot;\u9ce5\u53d6\u770c&quot;,&quot;32&quot;:&quot;\u5cf6\u6839\u770c&quot;,&quot;33&quot;:&quot;\u5ca1\u5c71\u770c&quot;,&quot;34&quot;:&quot;\u5e83\u5cf6\u770c&quot;,&quot;35&quot;:&quot;\u5c71\u53e3\u770c&quot;,&quot;36&quot;:&quot;\u5fb3\u5cf6\u770c&quot;,&quot;37&quot;:&quot;\u9999\u5ddd\u770c&quot;,&quot;38&quot;:&quot;\u611b\u5a9b\u770c&quot;,&quot;39&quot;:&quot;\u9ad8\u77e5\u770c&quot;,&quot;40&quot;:&quot;\u798f\u5ca1\u770c&quot;,&quot;41&quot;:&quot;\u4f50\u8cc0\u770c&quot;,&quot;42&quot;:&quot;\u9577\u5d0e\u770c&quot;,&quot;43&quot;:&quot;\u718a\u672c\u770c&quot;,&quot;44&quot;:&quot;\u5927\u5206\u770c&quot;,&quot;45&quot;:&quot;\u5bae\u5d0e\u770c&quot;,&quot;46&quot;:&quot;\u9e7f\u5150\u5cf6\u770c&quot;,&quot;47&quot;:&quot;\u6c96\u7e04\u770c&quot;}">
+
+</li>
+
+<li class="form-item munic">
+<p class="form-item-ttl">市区町村</p>
+
+<input type="text" name="city" id="city" class="type-text input-munic p-locality p-street-address" size="60" value="">
+
+</li>
+
+<li class="form-item houseNumber">
+<p class="form-item-ttl">番地</p>
+
+<input type="text" name="area" id="area" class="type-text input-address" size="60" value="">
+
+</li>
+
+<li class="form-item fit">
+<p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
+
+<select name="fit" id="fit" class="select input-fit">
+			<option value="1" selected="selected">
+			1		</option>
+			<option value="2">
+			2		</option>
+			<option value="3">
+			3		</option>
+	</select>
+
+</li>
+
+<li class="form-item dc">
+<p class="form-item-ttl">DC容量<span class="require top">必須</span></p>
+
+<input type="text" name="dc" id="dc" class="type-number input-dc" size="60" value="" data-conv-half-alphanumeric="true">
+<span class="unit">KW</span>
+</li>
+
+<li class="form-item wiring">
+<p class="form-item-ttl">配線図</p>
+<div class="radio-wrap">
+	<span class="mwform-radio-field horizontal-item">
+		<label for="wiring-1">
+			<input type="radio" name="wiring" value="有" checked="checked" id="wiring-1" class="type-radio input-wiring">
+			<span class="mwform-radio-field-text">有</span>
+		</label>
+	</span>
+	<span class="mwform-radio-field horizontal-item">
+		<label for="wiring-2">
+			<input type="radio" name="wiring" value="無" id="wiring-2" class="type-radio input-wiring">
+			<span class="mwform-radio-field-text">無</span>
+		</label>
+	</span>
+
+</div>
+</li>
+
+<li class="form-item system">
+<p class="form-item-ttl">遠隔監視システムの導入</p>
+<div class="radio-wrap">
+	<span class="mwform-radio-field horizontal-item">
+		<label for="system-1">
+			<input type="radio" name="system" value="有" checked="checked" id="system-1" class="type-radio input-system">
+			<span class="mwform-radio-field-text">有</span>
+		</label>
+	</span>
+	<span class="mwform-radio-field horizontal-item">
+		<label for="system-2">
+			<input type="radio" name="system" value="無" id="system-2" class="type-radio input-system">
+			<span class="mwform-radio-field-text">無</span>
+		</label>
+	</span>
+
+</div>
+</li>
+
+<li class="form-item maint">
+<p class="form-item-ttl">直近1年でのメンテナンス</p>
+<div class="radio-wrap">
+	<span class="mwform-radio-field horizontal-item">
+		<label for="maint-1">
+			<input type="radio" name="maint" value="有" checked="checked" id="maint-1" class="type-radio input-maint">
+			<span class="mwform-radio-field-text">有</span>
+		</label>
+	</span>
+	<span class="mwform-radio-field horizontal-item">
+		<label for="maint-2">
+			<input type="radio" name="maint" value="無" id="maint-2" class="type-radio input-maint">
+			<span class="mwform-radio-field-text">無</span>
+		</label>
+	</span>
+
+</div>
+</li>
+
+<li class="form-item panel">
+<p class="form-item-ttl">パネルメーカー</p>
+
+<input type="text" name="panel" id="panel" class="type-text input-panel" size="60" value="">
+
+</li>
+
+<li class="form-item pcs">
+<p class="form-item-ttl">PCSメーカー</p>
+
+<input type="text" name="pcs" id="pcs" class="type-text input-pcs" size="60" value="">
+
+</li>
+
+</ul>
+
+<div class="top privacy">
+<p class="privacy-txt">
+ご入力いただいたお客さまの個人情報は、<a href="" class="privacy-link js-pravacy">プライバシーポリシー</a>に基づき適正に取り扱います。<span class="pc-br"></span>
+必ずお読みになり、同意の上お問い合わせください。
+</p>
+
+	<span class="mwform-checkbox-field horizontal-item">
+		<label for="privacy-1">
+			<input type="checkbox" name="privacy[data][]" value="プライバシーポリシーに同意する。" id="privacy-1" class="privacy-check type-checkbox">
+			<span class="mwform-checkbox-field-text">プライバシーポリシーに同意する。</span>
+		</label>
+	</span>
+
+<input type="hidden" name="privacy[separator]" value=",">
+
+<input type="hidden" name="__children[privacy][]" value="{&quot;\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc\u306b\u540c\u610f\u3059\u308b\u3002&quot;:&quot;\u30d7\u30e9\u30a4\u30d0\u30b7\u30fc\u30dd\u30ea\u30b7\u30fc\u306b\u540c\u610f\u3059\u308b\u3002&quot;}">
+
+</div>
+
+<div class="confirm privacy">
+<label>
+<input type="checkbox" name="" id="privacyConfirm" class="type-checkbox"><span></span>プライバシーポリシーに同意する。
+</label>
+</div>
+
+<div class="submit">
+<label class="submit-label">
+
+<input type="submit" name="submitConfirm" value="確認する" class="to-confirm">
+
+</label>
+</div>
+
+</div><!-- form-powerPlant -->
+</div>
+</div>
+</div>
+
         </div>
     </div>
 </section><!-- /.contact -->
