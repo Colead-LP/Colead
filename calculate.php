@@ -67,7 +67,7 @@ function GetDateSelecter(){
   }
 
   foreach ($select_list as $sl){; //リスト形式でセレクターを取得
-    $result .= '<option value="'. $sl[0] ."-". $sl[1] .'">'.$sl[0]."月".$sl[1]."日</option>";
+    $result .= '<option value="'. $sl[0] ."-". $sl[1] .'">'.$sl[0]."年".$sl[1]."月</option>";
   }
   return '<select name="operation_period" class="input-number"><option value="" selected disable>お選びください</option>'.$result.'</select>';
 }
