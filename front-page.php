@@ -254,7 +254,7 @@
                     </li>
                 </ul>
                 <div class="calc-start">
-                    <button type=submit id="calc_start" class="calc-start-btn">
+                    <button type=submit id="calc_start" class="calc-start-btn js-switch">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
                     </button>
                 </div>
@@ -272,12 +272,18 @@
                     </div>
                 </div>
             </form><!-- /.calc -->
-            <div class="contact-inner-img">
-                <img class="square-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+            <div class="js-slideToggle">
+                <div class="contact-inner-img">
+                    <img class="square-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+                </div>
+                <p class="addForm">
+                    より正確な金額を知りたい方、売却の相談をご希望の方は
+                    以下よりお問い合わせください
+                </p>
+                <!-- .form -->
+                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+                <!-- /.form -->
             </div>
-            <!-- .form -->
-            <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
-            <!-- /.form -->
 
         </div>
     </div>

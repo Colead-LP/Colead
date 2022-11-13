@@ -1419,7 +1419,7 @@ iframe {
   height: 0.27rem;
   position: absolute;
   left: 50%;
-  top: 100.6%;
+  bottom: 0.9rem;
   transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 767px) {
@@ -2148,6 +2148,22 @@ iframe {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+.addForm {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .addForm {
+    font-weight: bold;
+    font-size: 0.26rem;
+    line-height: 1.7;
+    margin-top: 0.32rem;
+  }
+}
+
+.js-slideToggle {
+  display: none;
 }
 
 /*=====================================================
