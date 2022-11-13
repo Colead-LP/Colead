@@ -753,7 +753,7 @@
         height: 0.27rem;
         position: absolute;
         left: 50%;
-        top: 100.6%;
+        bottom: 0.9rem;
         transform: translate(-50%, -50%);
       }
     }
@@ -1478,6 +1478,20 @@
   }
 }
 
+.addForm {
+  text-align: center;
+  @include v.mq(pc) {
+    font-weight: bold;
+    font-size: 0.26rem;
+    line-height: 1.7;
+    margin-top: 0.32rem;
+  }
+}
+
+.js-slideToggle{
+  display: none;
+}
+
 /*=====================================================
 # modal
 =====================================================*/
@@ -1517,36 +1531,35 @@
     width: 90%;
   }
   @include v.mq(pc) {
-    
   }
 }
 
-.modal-inner{
+.modal-inner {
   @include v.mq(sp) {
-    padding: .32rem .2rem;
+    padding: 0.32rem 0.2rem;
   }
   @include v.mq(pc) {
-    padding: .4rem;
+    padding: 0.4rem;
   }
 }
 
-.modal-ttl{
+.modal-ttl {
   font-weight: bold;
-  font-size: .18rem;
+  font-size: 0.18rem;
 }
 
 .modal-txt {
   font-size: 0.14rem;
   line-height: 1.5;
-  margin-top: .2rem;
+  margin-top: 0.2rem;
 
-  .txt__bold{
+  .txt__bold {
     display: block;
     font-weight: bold;
   }
 }
 
-.modal-item{
-  font-size: .14rem;
+.modal-item {
+  font-size: 0.14rem;
   line-height: 1.5;
 }
