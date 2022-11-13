@@ -1392,13 +1392,13 @@ iframe {
 }
 @media screen and (max-width: 767px) {
   .contact-bg {
-    height: 33.22rem;
     padding-top: 0.49rem;
   }
 }
 @media screen and (min-width: 768px) {
   .contact-bg {
     padding-top: 0.79rem;
+    padding-bottom: 1rem;
   }
 }
 .contact-inner {
@@ -2177,11 +2177,18 @@ iframe {
 }
 
 .addForm {
+  font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .addForm {
+    font-size: 0.22rem;
+    line-height: 1.6333;
+    margin-top: 0.26rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .addForm {
-    font-weight: bold;
     font-size: 0.26rem;
     line-height: 1.7;
     margin-top: 0.28rem;
