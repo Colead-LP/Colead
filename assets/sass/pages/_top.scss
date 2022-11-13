@@ -748,16 +748,6 @@
     @include v.mq(pc) {
       max-width: 8rem;
     }
-    &-img {
-      .square-img {
-        width: 0.6rem;
-        height: 0.27rem;
-        position: absolute;
-        left: 50%;
-        bottom: 0.9rem;
-        transform: translate(-50%, -50%);
-      }
-    }
   }
 
   &-ttl {
@@ -770,7 +760,26 @@
   }
 }
 
+.contact-arrow{
+  display: none;
+  position: absolute;
+  width: 0.6rem;
+  height: 0.27rem;
+  bottom: -.16rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+
+  &.active{
+    display: block;
+  }
+  img{
+    vertical-align: top;
+  }
+}
+
 .calc {
+  position: relative;
   background: url(../img/contact/pc/calc_bg.png) no-repeat center / cover;
   width: 100%;
   border-top-left-radius: 0.4rem;
@@ -870,7 +879,7 @@
       }
       @include v.mq(pc) {
         width: 3.1rem;
-        margin-right: 0.18rem;
+        margin-right: 0.16rem;
       }
     }
     .unit {
@@ -978,6 +987,24 @@
     &-unit {
       font-size: 0.16rem;
       align-self: end;
+    }
+  }
+
+  &-arrow{
+    display: none;
+    position: absolute;
+    width: 0.6rem;
+    height: 0.27rem;
+    bottom: -.16rem;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 100;
+  
+    &.active{
+      display: block;
+    }
+    img{
+      vertical-align: top;
     }
   }
 }
@@ -1485,7 +1512,7 @@
     font-weight: bold;
     font-size: 0.26rem;
     line-height: 1.7;
-    margin-top: 0.32rem;
+    margin-top: 0.28rem;
   }
 }
 
