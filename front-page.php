@@ -110,8 +110,7 @@
                         <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item03-img.png" alt="">
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item03-img.png" alt="">
                     </div>
-                    <h3 class="reason-item-ttl">低圧から高圧まで即時購入可能<span class="sp-br"></span>な<span class="pc-br"></span>
-                        豊富な資金を保有</h3>
+                    <h3 class="reason-item-ttl">低圧から高圧まで即時購入可能<span class="sp-br"></span>な<span class="pc-br"></span>豊富な資金を保有</h3>
                     <p class="reason-item-txt">弊社では<span class="txt__underline">基本的に現金にて発電所を購入</span>いたします。銀行融資の進捗状況によって購入が遅れるといった事態はございません。</p>
                 </li>
                 <li class="reason-item">
@@ -255,7 +254,7 @@
                     </li>
                 </ul>
                 <div class="calc-start">
-                    <button type=submit id="calc_start" class="calc-start-btn">
+                    <button type=submit id="calc_start" class="calc-start-btn js-switch">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
                     </button>
                 </div>
@@ -273,12 +272,18 @@
                     </div>
                 </div>
             </form><!-- /.calc -->
-            <div class="contact-inner-img">
-                <img class="square-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+            <div class="js-slideToggle">
+                <div class="contact-inner-img">
+                    <img class="square-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+                </div>
+                <p class="addForm">
+                    より正確な金額を知りたい方、売却の相談をご希望の方は
+                    以下よりお問い合わせください
+                </p>
+                <!-- .form -->
+                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+                <!-- /.form -->
             </div>
-            <!-- .form -->
-            <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
-            <!-- /.form -->
 
         </div>
     </div>

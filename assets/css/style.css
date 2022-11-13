@@ -321,27 +321,72 @@ iframe {
 }
 .footer-bg {
   background: rgb(51, 51, 51);
-  padding: 0.3rem 0 0.2rem;
+}
+@media screen and (max-width: 767px) {
+  .footer-bg {
+    padding: 0.3rem 0 0.21rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-bg {
+    padding: 0.47rem 0 0.31rem;
+  }
 }
 .footer-ttl {
-  width: 1.12rem;
   margin: 0 auto;
 }
-.footer-txt {
-  margin: 0.257rem 0 0;
+@media screen and (max-width: 767px) {
+  .footer-ttl {
+    width: 1.1209rem;
+    height: 0.2821rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-ttl {
+    width: 1.9rem;
+    height: 0.4788rem;
+  }
 }
 .footer-txt .txt {
   font-weight: Medium;
-  font-size: 0.14rem;
-  line-height: 1;
-  margin: 0.25rem 0 0;
 }
-.footer-txt .txt:nth-child(2) {
-  margin: 0.14rem 0 0;
+@media screen and (max-width: 767px) {
+  .footer-txt .txt {
+    font-size: 0.14rem;
+    line-height: 0.15rem;
+    margin: 0.298rem 0 0;
+  }
 }
-.footer-txt .copyright {
+@media screen and (min-width: 768px) {
+  .footer-txt .txt {
+    font-size: 0.16rem;
+    line-height: 0.18rem;
+    margin: 0.25rem 0 0;
+  }
+}
+@media screen and (max-width: 767px) {
+  .footer-txt .txt:nth-child(2) {
+    margin: 0.1rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer-txt .txt:nth-child(2) {
+    margin: 0.06rem 0 0;
+  }
+}
+.footer .copyright {
   text-align: center;
-  margin: 0.4rem 0 0;
+  font-size: 0.1rem;
+}
+@media screen and (max-width: 767px) {
+  .footer .copyright {
+    margin: 0.42rem 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer .copyright {
+    margin: 0.35rem 0 0;
+  }
 }
 
 /*=====================================================
@@ -705,7 +750,7 @@ iframe {
 }
 .solve-header-item-txt {
   position: relative;
-  font-weight: 500;
+  font-weight: 400;
 }
 @media screen and (max-width: 767px) {
   .solve-header-item-txt {
@@ -1186,6 +1231,7 @@ iframe {
 .flow-item-txt .to-calc {
   display: inline;
   color: #3895ff;
+  font-weight: bold;
 }
 
 /*=====================================================
@@ -1352,7 +1398,6 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .contact-bg {
-    height: 29.17rem;
     padding-top: 0.79rem;
   }
 }
@@ -1374,7 +1419,7 @@ iframe {
   height: 0.27rem;
   position: absolute;
   left: 50%;
-  top: 100.6%;
+  bottom: 0.9rem;
   transform: translate(-50%, -50%);
 }
 @media screen and (max-width: 767px) {
@@ -1648,6 +1693,11 @@ iframe {
 /*=====================================================
 # form-top
 =====================================================*/
+.form-top {
+  /*=====================================================
+  # add css
+  =====================================================*/
+}
 .form-top .confirm {
   display: none;
 }
@@ -1809,11 +1859,6 @@ iframe {
     padding-left: 0.4rem;
   }
 }
-.form-top .form-item {
-  /*=====================================================
-  # add css
-  =====================================================*/
-}
 .form-top .form-item.name .form-item-input {
   display: grid;
   justify-content: space-between;
@@ -1885,6 +1930,9 @@ iframe {
     width: 3.1rem;
   }
 }
+.form-top .form-item.dc .radio-wrap {
+  display: flex;
+}
 .form-top .form-item.dc.wiring .form-item-ttl, .form-top .form-item.dc.system .form-item-ttl, .form-top .form-item.dc.maint .form-item-ttl {
   margin-bottom: 0.14rem;
 }
@@ -1913,67 +1961,67 @@ iframe {
     font-size: 0.14rem;
   }
 }
-.form-top .form-item .privacy {
+.form-top .privacy {
   margin: 0.2rem 0 0;
 }
-.form-top .form-item .privacy .privacy-txt {
+.form-top .privacy .privacy-txt {
   display: block;
   font-size: 0.14rem;
   line-height: 1.4;
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .privacy .privacy-txt {
+  .form-top .privacy .privacy-txt {
     text-align: center;
     margin-bottom: 0.12rem;
   }
 }
-.form-top .form-item .privacy .privacy-link {
+.form-top .privacy .privacy-link {
   color: #3895ff;
 }
-.form-top .form-item .privacy .privacy-label-txt {
+.form-top .privacy .privacy-label-txt {
   display: block;
   font-size: 0.16rem;
   text-align: center;
 }
-.form-top .form-item .submit {
+.form-top .submit {
   margin: 0.3rem auto 0;
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .submit {
+  .form-top .submit {
     width: 3.65rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item .mwform-radio-field-text {
+  .form-top .mwform-radio-field-text {
     font-size: 0.16rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .mwform-radio-field-text {
+  .form-top .mwform-radio-field-text {
     font-size: 0.18rem;
   }
 }
-.form-top .form-item .form-item.pref .select,
-.form-top .form-item .form-item.fit .select {
+.form-top .form-item.pref .select,
+.form-top .form-item.fit .select {
   line-height: 0.5rem;
   padding: 0 0.12rem;
 }
-.form-top .form-item .form-item.wiring label,
-.form-top .form-item .form-item.system label,
-.form-top .form-item .form-item.maint label {
+.form-top .form-item.wiring label,
+.form-top .form-item.system label,
+.form-top .form-item.maint label {
   display: flex;
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item .type-radio + span {
+  .form-top .type-radio + span {
     padding-left: 0.4rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .type-radio + span {
+  .form-top .type-radio + span {
     padding: 0 0 0 2.2em;
   }
 }
-.form-top .form-item .type-radio + span::before {
+.form-top .type-radio + span::before {
   content: "";
   position: absolute;
   display: block;
@@ -1986,7 +2034,7 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
 }
-.form-top .form-item .type-radio + span::after {
+.form-top .type-radio + span::after {
   content: "";
   position: absolute;
   background: #3895ff;
@@ -2001,45 +2049,45 @@ iframe {
   padding: 2px;
   transition: all 0.3s ease 0s;
 }
-.form-top .form-item .type-radio:checked + span::after {
+.form-top .type-radio:checked + span::after {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .privacy label {
+  .form-top .privacy label {
     display: flex;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .mwform-checkbox-field label,
-.form-top .form-item .mwform-radio-field label {
+  .form-top .mwform-checkbox-field label,
+.form-top .mwform-radio-field label {
     font-weight: normal;
     display: flex;
     margin-bottom: 0;
     justify-content: center;
   }
 }
-.form-top .form-item .privacy .mwform-checkbox-field-text {
+.form-top .privacy .mwform-checkbox-field-text {
   position: relative;
   display: inline-block;
 }
-.form-top .form-item .privacy .mwform-checkbox-field-text {
+.form-top .privacy .mwform-checkbox-field-text {
   font-size: 0.16rem;
   padding-left: 0.3rem;
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item .privacy .mwform-checkbox-field-text {
+  .form-top .privacy .mwform-checkbox-field-text {
     margin-top: 0.1rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .privacy .mwform-checkbox-field-text {
+  .form-top .privacy .mwform-checkbox-field-text {
     text-align: center;
   }
 }
-.form-top .form-item .mwform-checkbox-field input {
+.form-top .mwform-checkbox-field input {
   margin-right: 0;
 }
-.form-top .form-item .type-checkbox + span::before {
+.form-top .type-checkbox + span::before {
   content: "";
   position: absolute;
   display: block;
@@ -2051,7 +2099,7 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
 }
-.form-top .form-item .type-checkbox + span::after {
+.form-top .type-checkbox + span::after {
   content: "";
   position: absolute;
   background: #3895ff;
@@ -2065,16 +2113,16 @@ iframe {
   padding: 2px;
   transition: all 0.3s ease 0s;
 }
-.form-top .form-item .type-checkbox:checked + span::after {
+.form-top .type-checkbox:checked + span::after {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .submit .submit-label {
+  .form-top .submit .submit-label {
     display: flex;
     justify-content: center;
   }
 }
-.form-top .form-item .submit .to-confirm {
+.form-top .submit .to-confirm {
   display: inline-block;
   color: #ffffff;
   background: #f73f61;
@@ -2082,7 +2130,7 @@ iframe {
   text-align: center;
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item .submit .to-confirm {
+  .form-top .submit .to-confirm {
     font-size: 0.18rem;
     line-height: 0.6rem;
     border-radius: 0.52rem;
@@ -2091,7 +2139,7 @@ iframe {
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item .submit .to-confirm {
+  .form-top .submit .to-confirm {
     font-size: 0.22rem;
     line-height: 0.75rem;
     border-radius: 0.38rem;
@@ -2100,6 +2148,94 @@ iframe {
     margin-right: auto;
     margin-left: auto;
   }
+}
+
+.addForm {
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .addForm {
+    font-weight: bold;
+    font-size: 0.26rem;
+    line-height: 1.7;
+    margin-top: 0.32rem;
+  }
+}
+
+.js-slideToggle {
+  display: none;
+}
+
+/*=====================================================
+# modal
+=====================================================*/
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.modal {
+  position: fixed;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 3rem;
+  z-index: 999;
+  overflow: scroll;
+}
+@media screen and (max-width: 767px) {
+  .modal {
+    width: 90%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .modal-inner {
+    padding: 0.32rem 0.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .modal-inner {
+    padding: 0.4rem;
+  }
+}
+
+.modal-ttl {
+  font-weight: bold;
+  font-size: 0.18rem;
+}
+
+.modal-txt {
+  font-size: 0.14rem;
+  line-height: 1.5;
+  margin-top: 0.2rem;
+}
+.modal-txt .txt__bold {
+  display: block;
+  font-weight: bold;
+}
+
+.modal-item {
+  font-size: 0.14rem;
+  line-height: 1.5;
 }
 
 /*# sourceMappingURL=style.css.map */
