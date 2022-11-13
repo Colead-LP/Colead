@@ -3,10 +3,12 @@
 if(EnteredOrNot($_POST)==TRUE){
   //input欄に全て入力済みの処理を書く
   //変数の定義
+  $data = json_decode($_POST['data']);
   $year_fee = (int)$_POST['year_fee'];
   $rent = (int)$_POST['rent'];
   $operation_period = $_POST['operation_period'];
   //概算売却額の計算関数
+  $data = json_decode($_POST['data']);
   $amount = GetApproximateCost($year_fee,$rent,$operation_period);
 }else{
   //input欄が空白の時の処理を書く
@@ -44,8 +46,6 @@ function GetApproximateCost($year_fee , $rent , $operation_period){ //概算売�
 ?>
 
 
-
-<!-- 日付のセレクトを追加するphp -->
 <?php
 function GetDateSelecter(){
   $today_year = date("Y"); //本日の年
@@ -67,7 +67,7 @@ function GetDateSelecter(){
   }
 
   foreach ($select_list as $sl){; //リスト形式でセレクターを取得
-    $result .= '<option value="'. $sl[0] ."-". $sl[1] .'">'.$sl[0]."年".$sl[1]."月</option>";
+    $result .= '<option class="operation_period" value="'. $sl[0] ."-". $sl[1] .'">'.$sl[0]."月".$sl[1]."日</option>";
   }
   return '<select name="operation_period" class="input-number"><option value="" selected disable>お選びください</option>'.$result.'</select>';
 }
