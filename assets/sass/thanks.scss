@@ -20,7 +20,7 @@
     @include v.mq(sp) {
       height: 2.77rem;
       border-top-left-radius: 0.3rem;
-      padding: 0.37rem 0.23rem 0.25rem 0.24rem;
+      padding: 0.37rem 0.23rem 0.4rem 0.24rem;
     }
     @include v.mq(pc) {
       height: 2.46rem;
@@ -33,10 +33,11 @@
       @include v.mq(sp) {
         margin-bottom: 0.25rem;
         font-size: 0.24rem;
+        line-height: 0.3rem;
       }
       @include v.mq(pc) {
         font-size: 0.28rem;
-        margin-bottom: 0.5rem;
+        margin-bottom: 0.36rem;
       }
       .media-br {
         @include v.mq(sp) {
@@ -48,6 +49,7 @@
       }
     }
     &_txt {
+      line-height: 0.29rem;
       @include v.mq(sp) {
         font-size: 0.16rem;
       }
