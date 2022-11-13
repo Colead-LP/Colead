@@ -4,6 +4,7 @@
 @use "../templates/header";
 @use "../templates/footer";
 @use "../templates/cta";
+@use "../templates/calculate";
 
 /*=====================================================
 # mv
@@ -729,43 +730,254 @@
 .contact {
   &-bg {
     background: rgba(234, 243, 250, 1);
-    height: 29.17rem;
+    @include v.mq(sp) {
+      height: 33.22rem;
+      padding-top: 0.49rem;
+    }
+    @include v.mq(pc) {
+      height: 29.17rem;
+      padding-top: 0.79rem;
+    }
   }
 
   &-inner {
-    max-width: 8rem;
+    position: relative;
+    @include v.mq(sp) {
+      max-width: 8.58rem;
+    }
+    @include v.mq(pc) {
+      max-width: 8rem;
+    }
+    &-img {
+      .square-img {
+        width: 0.6rem;
+        height: 0.27rem;
+        position: absolute;
+        left: 50%;
+        top: 100.6%;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
+  &-ttl {
+    @include v.mq(sp) {
+      margin-bottom: 0.36rem;
+    }
+    @include v.mq(sp) {
+      margin-bottom: 0.786rem;
+    }
   }
 }
 
 .calc {
   background: url(../img/contact/pc/calc_bg.png) no-repeat center / cover;
   width: 100%;
-  height: 7.4rem;
+  border-top-left-radius: 0.4rem;
+  @include v.mq(sp) {
+    padding: 0.4rem 0.2rem 0.5rem;
+    height: 8.58rem;
+    margin-top: 0.36rem;
+  }
+  @include v.mq(pc) {
+    padding: 0.47rem 0.395rem 0.6rem 0.405rem;
+    height: 7.4rem;
+    margin-top: 0.786rem;
+  }
 
-  &-list {
+  &-ttl {
+    text-align: center;
+    font-weight: bold;
+    @include v.mq(sp) {
+      line-height: 0.295rem;
+      font-size: 0.2rem;
+      margin-bottom: 0.14rem;
+    }
+    @include v.mq(pc) {
+      line-height: 0.24rem;
+      font-size: 0.24rem;
+      margin-bottom: 0.25rem;
+    }
+    .sp-br {
+      @include v.mq(sp) {
+        display: block;
+      }
+      @include v.mq(pc) {
+        display: none;
+      }
+    }
   }
 
   &-item {
-    font-size: 0.18rem;
+    display: flex;
+    align-items: center;
+    padding-bottom: 0.2rem;
+    @include v.mq(sp) {
+      padding-top: 0.25rem;
+      width: auto;
+      flex-wrap: wrap;
+      &:not(:last-child) {
+        border-bottom: 0.01rem solid #e2e3e5;
+      }
+    }
+    @include v.mq(pc) {
+      padding-top: 0.2rem;
+      border-bottom: 0.01rem solid #e2e3e5;
+    }
+
     &-label {
+      @include v.mq(sp) {
+        font-size: 0.16rem;
+        width: 2.57rem;
+        line-height: 0.16rem;
+        margin-bottom: 0.11rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.18rem;
+        width: 3.6rem;
+      }
+      .require {
+        position: relative;
+        display: inline-block;
+        color: #ffffff;
+        background: #c41736;
+        font-size: 0.1rem;
+        line-height: 0.16rem;
+        text-align: center;
+        width: 0.42rem;
+        height: 0.16rem;
+        @include v.mq(sp) {
+          top: -0.02rem;
+          margin-left: 0.12rem;
+        }
+        @include v.mq(pc) {
+          top: -0.02rem;
+          margin-left: 0.305rem;
+        }
+      }
+    }
+    .input-number {
+      border: 0.01rem solid #b5b9be;
+      border-radius: 0.03rem;
+      text-align: center;
+      align-items: center;
+      font-size: 0.14rem;
+      color: #707070;
+      height: 0.5rem;
+      @include v.mq(sp) {
+        width: 2.48rem;
+        margin-right: 0.15rem;
+      }
+      @include v.mq(pc) {
+        width: 3.1rem;
+        margin-right: 0.18rem;
+      }
+    }
+    .unit {
+      align-self: end;
+      font-size: 0.16rem;
     }
   }
 
   &-start {
-    display: block;
-    text-align: center;
+    @include v.mq(sp) {
+      padding: 0.1rem 0 0.57rem;
+    }
+    @include v.mq(pc) {
+      padding: 0.39rem 1.775rem 0.57rem;
+    }
     &-btn {
-      display: inline-block;
       cursor: pointer;
-      width: 3.65rem;
+      display: block;
+      .img {
+        display: block;
+        @include v.mq(pc) {
+          width: 3.65rem;
+        }
+      }
     }
   }
 
   &-answer {
-    &-txt,
-    &-number,
+    @include v.mq(sp) {
+      line-height: 0.275rem;
+      font-size: 0.22rem;
+    }
+    @include v.mq(pc) {
+      line-height: 0.28rem;
+      font-size: 0.28rem;
+    }
+    .border {
+      &-img {
+        display: block;
+        @include v.mq(sp) {
+          margin: 0.245rem 0 0.355rem;
+        }
+        @include v.mq(pc) {
+          margin: 0.265rem 0 0.305rem;
+        }
+      }
+    }
+    &-ttl {
+      font-weight: bold;
+      text-align: center;
+      @include v.mq(sp) {
+        font-size: 0.22rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.28rem;
+      }
+      .sp-br2 {
+        @include v.mq(sp) {
+          display: block;
+        }
+        @include v.mq(pc) {
+          display: none;
+        }
+      }
+    }
+  }
+  &-box {
+    display: flex;
+    @include v.mq(sp) {
+      flex-wrap: wrap;
+      width: 100%;
+    }
+    @include v.mq(pc) {
+      align-items: center;
+    }
+    &-txt {
+      font-weight: bold;
+      @include v.mq(sp) {
+        font-size: 0.2rem;
+        margin-bottom: 0.14rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.22rem;
+        width: 1.54rem;
+      }
+    }
+    &-number {
+      height: 0.5rem;
+      background-color: #fff5f7;
+      border: 0.01rem solid #b5b9be;
+      border-radius: 0.03rem;
+      text-align: center;
+      align-items: center;
+      font-size: 0.22rem;
+      font-weight: bold;
+      @include v.mq(sp) {
+        width: 2.63rem;
+        margin-right: 0.15rem;
+      }
+      @include v.mq(pc) {
+        width: 5.16rem;
+        margin-right: 0.35rem;
+      }
+    }
     &-unit {
-      font-size: 0.2rem;
+      font-size: 0.16rem;
+      align-self: end;
     }
   }
 }
@@ -994,7 +1206,7 @@
       }
     }
 
-    &.fit{
+    &.fit {
       .input-fit {
         @include v.mq(sp) {
           width: 2.48rem;
@@ -1002,8 +1214,8 @@
       }
     }
 
-    &.pref{
-      .input-pref{
+    &.pref {
+      .input-pref {
         @include v.mq(sp) {
           width: 2.48rem;
         }
@@ -1032,233 +1244,233 @@
           width: 3.1rem;
         }
       }
+
+      &.wiring,
+      &.system,
+      &.maint {
+        .form-item-ttl {
+          margin-bottom: 0.14rem;
+        }
+        .radio-wrap {
+          display: flex;
+          @include v.mq(sp) {
+            gap: 0.8rem;
+          }
+          @include v.mq(pc) {
+            gap: 0.6rem;
+          }
+        }
+        .form-item-label {
+          display: contents;
+        }
+        .label-txt {
+          color: #333333;
+          font-size: 0.18rem;
+        }
+      }
+
+      &.post,
+      &.pref,
+      &.munic,
+      &.houseNumber {
+        .form-item-ttl {
+          @include v.mq(sp) {
+            font-size: 0.14rem;
+          }
+        }
+      }
+    }
+    .privacy {
+      margin: 0.2rem 0 0;
+      .privacy-txt {
+        display: block;
+        font-size: 0.14rem;
+        line-height: 1.4;
+        @include v.mq(pc) {
+          text-align: center;
+          margin-bottom: 0.12rem;
+        }
+      }
+
+      .privacy-link {
+        color: #3895ff;
+      }
+
+      .privacy-label-txt {
+        display: block;
+        font-size: 0.16rem;
+        text-align: center;
+      }
     }
 
-    &.wiring,
-    &.system,
-    &.maint {
-      .form-item-ttl {
-        margin-bottom: 0.14rem;
+    .submit {
+      margin: 0.3rem auto 0;
+      @include v.mq(pc) {
+        width: 3.65rem;
       }
-      .radio-wrap {
-        display: flex;
-        @include v.mq(sp) {
-          gap: 0.8rem;
-        }
-        @include v.mq(pc) {
-          gap: 0.6rem;
-        }
+    }
+
+    /*=====================================================
+  # add css
+  =====================================================*/
+    .mwform-radio-field-text {
+      @include v.mq(sp) {
+        font-size: 0.16rem;
       }
-      .form-item-label {
-        display: contents;
-      }
-      .label-txt {
-        color: #333333;
+      @include v.mq(pc) {
         font-size: 0.18rem;
       }
     }
 
-    &.post,
-    &.pref,
-    &.munic,
-    &.houseNumber {
-      .form-item-ttl {
-        @include v.mq(sp) {
-          font-size: 0.14rem;
-        }
+    .form-item.pref .select,
+    .form-item.fit .select {
+      line-height: 0.5rem;
+      padding: 0 0.12rem;
+    }
+
+    .form-item.wiring label,
+    .form-item.system label,
+    .form-item.maint label {
+      display: flex;
+    }
+
+    .type-radio + span {
+      @include v.mq(sp) {
+        padding-left: 0.4rem;
+      }
+      @include v.mq(pc) {
+        padding: 0 0 0 2.2em;
       }
     }
-  }
-  .privacy {
-    margin: 0.2rem 0 0;
-    .privacy-txt {
+
+    .type-radio + span::before {
+      content: "";
+      position: absolute;
       display: block;
-      font-size: 0.14rem;
-      line-height: 1.4;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      border-radius: 50%;
+      width: 0.25rem;
+      height: 0.25rem;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .type-radio + span::after {
+      content: "";
+      position: absolute;
+      background: #3895ff;
+      border: 1px solid transparent;
+      border-radius: 50%;
+      opacity: 0;
+      width: 0.19rem;
+      height: 0.19rem;
+      top: 50%;
+      left: 0.03333rem;
+      transform: translateY(-50%);
+      padding: 2px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .type-radio:checked + span::after {
+      opacity: 1;
+    }
+
+    .privacy label {
+      @include v.mq(pc) {
+        display: flex;
+      }
+    }
+    .mwform-checkbox-field label,
+    .mwform-radio-field label {
+      @include v.mq(pc) {
+        font-weight: normal;
+        display: flex;
+        margin-bottom: 0;
+        justify-content: center;
+      }
+    }
+    .privacy .mwform-checkbox-field-text {
+      position: relative;
+      display: inline-block;
+    }
+    .privacy .mwform-checkbox-field-text {
+      font-size: 0.16rem;
+      padding-left: 0.3rem;
+      @include v.mq(sp) {
+        margin-top: 0.1rem;
+      }
       @include v.mq(pc) {
         text-align: center;
-        margin-bottom: .12rem;
       }
     }
 
-    .privacy-link {
-      color: #3895ff;
+    .mwform-checkbox-field input {
+      margin-right: 0;
     }
 
-    .privacy-label-txt {
+    .type-checkbox + span::before {
+      content: "";
+      position: absolute;
       display: block;
-      font-size: 0.16rem;
+      background: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.16);
+      width: 0.2rem;
+      height: 0.2rem;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    .type-checkbox + span::after {
+      content: "";
+      position: absolute;
+      background: #3895ff;
+      border: 1px solid transparent;
+      opacity: 0;
+      width: 0.19rem;
+      height: 0.19rem;
+      top: 50%;
+      left: 0.03333rem;
+      transform: translateY(-50%);
+      padding: 2px;
+      transition: all 0.3s ease 0s;
+    }
+
+    .type-checkbox:checked + span::after {
+      opacity: 1;
+    }
+
+    .submit .submit-label {
+      @include v.mq(pc) {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .submit .to-confirm {
+      display: inline-block;
+      color: #ffffff;
+      background: #f73f61;
+      font-weight: bold;
       text-align: center;
-    }
-  }
-
-  .submit {
-    margin: 0.3rem auto 0;
-    @include v.mq(pc) {
-      width: 3.65rem;
-    }
-  }
-
-  /*=====================================================
-  # add css
-  =====================================================*/
-  .mwform-radio-field-text {
-    @include v.mq(sp) {
-      font-size: 0.16rem;
-    }
-    @include v.mq(pc) {
-      font-size: 0.18rem;
-    }
-  }
-
-  .form-item.pref .select,
-  .form-item.fit .select {
-    line-height: 0.5rem;
-    padding: 0 0.12rem;
-  }
-
-  .form-item.wiring label,
-  .form-item.system label,
-  .form-item.maint label {
-    display: flex;
-  }
-
-  .type-radio + span {
-    @include v.mq(sp) {
-      padding-left: 0.4rem;
-    }
-    @include v.mq(pc) {
-      padding: 0 0 0 2.2em;
-    }
-  }
-
-  .type-radio + span::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: 50%;
-    width: 0.25rem;
-    height: 0.25rem;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .type-radio + span::after {
-    content: "";
-    position: absolute;
-    background: #3895ff;
-    border: 1px solid transparent;
-    border-radius: 50%;
-    opacity: 0;
-    width: 0.19rem;
-    height: 0.19rem;
-    top: 50%;
-    left: 0.03333rem;
-    transform: translateY(-50%);
-    padding: 2px;
-    transition: all 0.3s ease 0s;
-  }
-
-  .type-radio:checked + span::after {
-    opacity: 1;
-  }
-
-  .privacy label {
-    @include v.mq(pc) {
-      display: flex;
-    }
-  }
-  .mwform-checkbox-field label,
-  .mwform-radio-field label {
-    @include v.mq(pc) {
-      font-weight: normal;
-      display: flex;
-      margin-bottom: 0;
-      justify-content: center;
-    }
-  }
-  .privacy .mwform-checkbox-field-text {
-    position: relative;
-    display: inline-block;
-  }
-  .privacy .mwform-checkbox-field-text {
-    font-size: 0.16rem;
-    padding-left: 0.3rem;
-    @include v.mq(sp) {
-      margin-top: 0.1rem;
-    }
-    @include v.mq(pc) {
-      text-align: center;
-    }
-  }
-
-  .mwform-checkbox-field input {
-    margin-right: 0;
-  }
-
-  .type-checkbox + span::before {
-    content: "";
-    position: absolute;
-    display: block;
-    background: #fff;
-    border: 1px solid rgba(0, 0, 0, 0.16);
-    width: 0.2rem;
-    height: 0.2rem;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-  }
-
-  .type-checkbox + span::after {
-    content: "";
-    position: absolute;
-    background: #3895ff;
-    border: 1px solid transparent;
-    opacity: 0;
-    width: 0.19rem;
-    height: 0.19rem;
-    top: 50%;
-    left: 0.03333rem;
-    transform: translateY(-50%);
-    padding: 2px;
-    transition: all 0.3s ease 0s;
-  }
-
-  .type-checkbox:checked + span::after {
-    opacity: 1;
-  }
-
-  .submit .submit-label {
-    @include v.mq(pc) {
-      display: flex;
-      justify-content: center;
-    }
-  }
-
-  .submit .to-confirm {
-    display: inline-block;
-    color: #ffffff;
-    background: #f73f61;
-    font-weight: bold;
-    text-align: center;
-    @include v.mq(sp) {
-      font-size: 0.18rem;
-      line-height: 0.6rem;
-      border-radius: 0.52rem;
-      width: 2.95rem;
-      height: 0.6rem;
-    }
-    @include v.mq(pc) {
-      font-size: 0.22rem;
-      line-height: 0.75rem;
-      border-radius: 0.38rem;
-      width: 3.65rem;
-      height: 0.75rem;
-      margin-right: auto;
-      margin-left: auto;
+      @include v.mq(sp) {
+        font-size: 0.18rem;
+        line-height: 0.6rem;
+        border-radius: 0.52rem;
+        width: 2.95rem;
+        height: 0.6rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.22rem;
+        line-height: 0.75rem;
+        border-radius: 0.38rem;
+        width: 3.65rem;
+        height: 0.75rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
 }

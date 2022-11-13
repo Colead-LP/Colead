@@ -1343,41 +1343,311 @@ iframe {
 =====================================================*/
 .contact-bg {
   background: rgb(234, 243, 250);
-  height: 29.17rem;
+}
+@media screen and (max-width: 767px) {
+  .contact-bg {
+    height: 33.22rem;
+    padding-top: 0.49rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-bg {
+    height: 29.17rem;
+    padding-top: 0.79rem;
+  }
 }
 .contact-inner {
-  max-width: 8rem;
+  position: relative;
+}
+@media screen and (max-width: 767px) {
+  .contact-inner {
+    max-width: 8.58rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-inner {
+    max-width: 8rem;
+  }
+}
+.contact-inner-img .square-img {
+  width: 0.6rem;
+  height: 0.27rem;
+  position: absolute;
+  left: 50%;
+  top: 100.6%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (max-width: 767px) {
+  .contact-ttl {
+    margin-bottom: 0.36rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .contact-ttl {
+    margin-bottom: 0.786rem;
+  }
 }
 
 .calc {
   background: url(../img/contact/pc/calc_bg.png) no-repeat center/cover;
   width: 100%;
-  height: 7.4rem;
+  border-top-left-radius: 0.4rem;
+}
+@media screen and (max-width: 767px) {
+  .calc {
+    padding: 0.4rem 0.2rem 0.5rem;
+    height: 8.58rem;
+    margin-top: 0.36rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc {
+    padding: 0.47rem 0.395rem 0.6rem 0.405rem;
+    height: 7.4rem;
+    margin-top: 0.786rem;
+  }
+}
+.calc-ttl {
+  text-align: center;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .calc-ttl {
+    line-height: 0.295rem;
+    font-size: 0.2rem;
+    margin-bottom: 0.14rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-ttl {
+    line-height: 0.24rem;
+    font-size: 0.24rem;
+    margin-bottom: 0.25rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calc-ttl .sp-br {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-ttl .sp-br {
+    display: none;
+  }
 }
 .calc-item {
-  font-size: 0.18rem;
+  display: flex;
+  align-items: center;
+  padding-bottom: 0.2rem;
 }
-.calc-start {
-  display: block;
+@media screen and (max-width: 767px) {
+  .calc-item {
+    padding-top: 0.25rem;
+    width: auto;
+    flex-wrap: wrap;
+  }
+  .calc-item:not(:last-child) {
+    border-bottom: 0.01rem solid #e2e3e5;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-item {
+    padding-top: 0.2rem;
+    border-bottom: 0.01rem solid #e2e3e5;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calc-item-label {
+    font-size: 0.16rem;
+    width: 2.57rem;
+    line-height: 0.16rem;
+    margin-bottom: 0.11rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-item-label {
+    font-size: 0.18rem;
+    width: 3.6rem;
+  }
+}
+.calc-item-label .require {
+  position: relative;
+  display: inline-block;
+  color: #ffffff;
+  background: #c41736;
+  font-size: 0.1rem;
+  line-height: 0.16rem;
   text-align: center;
+  width: 0.42rem;
+  height: 0.16rem;
+}
+@media screen and (max-width: 767px) {
+  .calc-item-label .require {
+    top: -0.02rem;
+    margin-left: 0.12rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-item-label .require {
+    top: -0.02rem;
+    margin-left: 0.305rem;
+  }
+}
+.calc-item .input-number {
+  border: 0.01rem solid #b5b9be;
+  border-radius: 0.03rem;
+  text-align: center;
+  align-items: center;
+  font-size: 0.14rem;
+  color: #707070;
+  height: 0.5rem;
+}
+@media screen and (max-width: 767px) {
+  .calc-item .input-number {
+    width: 2.48rem;
+    margin-right: 0.15rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-item .input-number {
+    width: 3.1rem;
+    margin-right: 0.18rem;
+  }
+}
+.calc-item .unit {
+  align-self: end;
+  font-size: 0.16rem;
+}
+@media screen and (max-width: 767px) {
+  .calc-start {
+    padding: 0.1rem 0 0.57rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-start {
+    padding: 0.39rem 1.775rem 0.57rem;
+  }
 }
 .calc-start-btn {
-  display: inline-block;
   cursor: pointer;
-  width: 3.65rem;
+  display: block;
 }
-.calc-answer-txt, .calc-answer-number, .calc-answer-unit {
-  font-size: 0.2rem;
+.calc-start-btn .img {
+  display: block;
+}
+@media screen and (min-width: 768px) {
+  .calc-start-btn .img {
+    width: 3.65rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calc-answer {
+    line-height: 0.275rem;
+    font-size: 0.22rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-answer {
+    line-height: 0.28rem;
+    font-size: 0.28rem;
+  }
+}
+.calc-answer .border-img {
+  display: block;
+}
+@media screen and (max-width: 767px) {
+  .calc-answer .border-img {
+    margin: 0.245rem 0 0.355rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-answer .border-img {
+    margin: 0.265rem 0 0.305rem;
+  }
+}
+.calc-answer-ttl {
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .calc-answer-ttl {
+    font-size: 0.22rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-answer-ttl {
+    font-size: 0.28rem;
+  }
+}
+@media screen and (max-width: 767px) {
+  .calc-answer-ttl .sp-br2 {
+    display: block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-answer-ttl .sp-br2 {
+    display: none;
+  }
+}
+.calc-box {
+  display: flex;
+}
+@media screen and (max-width: 767px) {
+  .calc-box {
+    flex-wrap: wrap;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-box {
+    align-items: center;
+  }
+}
+.calc-box-txt {
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .calc-box-txt {
+    font-size: 0.2rem;
+    margin-bottom: 0.14rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-box-txt {
+    font-size: 0.22rem;
+    width: 1.54rem;
+  }
+}
+.calc-box-number {
+  height: 0.5rem;
+  background-color: #fff5f7;
+  border: 0.01rem solid #b5b9be;
+  border-radius: 0.03rem;
+  text-align: center;
+  align-items: center;
+  font-size: 0.22rem;
+  font-weight: bold;
+}
+@media screen and (max-width: 767px) {
+  .calc-box-number {
+    width: 2.63rem;
+    margin-right: 0.15rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-box-number {
+    width: 5.16rem;
+    margin-right: 0.35rem;
+  }
+}
+.calc-box-unit {
+  font-size: 0.16rem;
+  align-self: end;
 }
 
 /*=====================================================
 # form-top
 =====================================================*/
-.form-top {
-  /*=====================================================
-  # add css
-  =====================================================*/
-}
 .form-top .confirm {
   display: none;
 }
@@ -1539,6 +1809,11 @@ iframe {
     padding-left: 0.4rem;
   }
 }
+.form-top .form-item {
+  /*=====================================================
+  # add css
+  =====================================================*/
+}
 .form-top .form-item.name .form-item-input {
   display: grid;
   justify-content: space-between;
@@ -1610,95 +1885,95 @@ iframe {
     width: 3.1rem;
   }
 }
-.form-top .form-item.wiring .form-item-ttl, .form-top .form-item.system .form-item-ttl, .form-top .form-item.maint .form-item-ttl {
+.form-top .form-item.dc.wiring .form-item-ttl, .form-top .form-item.dc.system .form-item-ttl, .form-top .form-item.dc.maint .form-item-ttl {
   margin-bottom: 0.14rem;
 }
-.form-top .form-item.wiring .radio-wrap, .form-top .form-item.system .radio-wrap, .form-top .form-item.maint .radio-wrap {
+.form-top .form-item.dc.wiring .radio-wrap, .form-top .form-item.dc.system .radio-wrap, .form-top .form-item.dc.maint .radio-wrap {
   display: flex;
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item.wiring .radio-wrap, .form-top .form-item.system .radio-wrap, .form-top .form-item.maint .radio-wrap {
+  .form-top .form-item.dc.wiring .radio-wrap, .form-top .form-item.dc.system .radio-wrap, .form-top .form-item.dc.maint .radio-wrap {
     gap: 0.8rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item.wiring .radio-wrap, .form-top .form-item.system .radio-wrap, .form-top .form-item.maint .radio-wrap {
+  .form-top .form-item.dc.wiring .radio-wrap, .form-top .form-item.dc.system .radio-wrap, .form-top .form-item.dc.maint .radio-wrap {
     gap: 0.6rem;
   }
 }
-.form-top .form-item.wiring .form-item-label, .form-top .form-item.system .form-item-label, .form-top .form-item.maint .form-item-label {
+.form-top .form-item.dc.wiring .form-item-label, .form-top .form-item.dc.system .form-item-label, .form-top .form-item.dc.maint .form-item-label {
   display: contents;
 }
-.form-top .form-item.wiring .label-txt, .form-top .form-item.system .label-txt, .form-top .form-item.maint .label-txt {
+.form-top .form-item.dc.wiring .label-txt, .form-top .form-item.dc.system .label-txt, .form-top .form-item.dc.maint .label-txt {
   color: #333333;
   font-size: 0.18rem;
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item.post .form-item-ttl, .form-top .form-item.pref .form-item-ttl, .form-top .form-item.munic .form-item-ttl, .form-top .form-item.houseNumber .form-item-ttl {
+  .form-top .form-item.dc.post .form-item-ttl, .form-top .form-item.dc.pref .form-item-ttl, .form-top .form-item.dc.munic .form-item-ttl, .form-top .form-item.dc.houseNumber .form-item-ttl {
     font-size: 0.14rem;
   }
 }
-.form-top .privacy {
+.form-top .form-item .privacy {
   margin: 0.2rem 0 0;
 }
-.form-top .privacy .privacy-txt {
+.form-top .form-item .privacy .privacy-txt {
   display: block;
   font-size: 0.14rem;
   line-height: 1.4;
 }
 @media screen and (min-width: 768px) {
-  .form-top .privacy .privacy-txt {
+  .form-top .form-item .privacy .privacy-txt {
     text-align: center;
     margin-bottom: 0.12rem;
   }
 }
-.form-top .privacy .privacy-link {
+.form-top .form-item .privacy .privacy-link {
   color: #3895ff;
 }
-.form-top .privacy .privacy-label-txt {
+.form-top .form-item .privacy .privacy-label-txt {
   display: block;
   font-size: 0.16rem;
   text-align: center;
 }
-.form-top .submit {
+.form-top .form-item .submit {
   margin: 0.3rem auto 0;
 }
 @media screen and (min-width: 768px) {
-  .form-top .submit {
+  .form-top .form-item .submit {
     width: 3.65rem;
   }
 }
 @media screen and (max-width: 767px) {
-  .form-top .mwform-radio-field-text {
+  .form-top .form-item .mwform-radio-field-text {
     font-size: 0.16rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .mwform-radio-field-text {
+  .form-top .form-item .mwform-radio-field-text {
     font-size: 0.18rem;
   }
 }
-.form-top .form-item.pref .select,
-.form-top .form-item.fit .select {
+.form-top .form-item .form-item.pref .select,
+.form-top .form-item .form-item.fit .select {
   line-height: 0.5rem;
   padding: 0 0.12rem;
 }
-.form-top .form-item.wiring label,
-.form-top .form-item.system label,
-.form-top .form-item.maint label {
+.form-top .form-item .form-item.wiring label,
+.form-top .form-item .form-item.system label,
+.form-top .form-item .form-item.maint label {
   display: flex;
 }
 @media screen and (max-width: 767px) {
-  .form-top .type-radio + span {
+  .form-top .form-item .type-radio + span {
     padding-left: 0.4rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .type-radio + span {
+  .form-top .form-item .type-radio + span {
     padding: 0 0 0 2.2em;
   }
 }
-.form-top .type-radio + span::before {
+.form-top .form-item .type-radio + span::before {
   content: "";
   position: absolute;
   display: block;
@@ -1711,7 +1986,7 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
 }
-.form-top .type-radio + span::after {
+.form-top .form-item .type-radio + span::after {
   content: "";
   position: absolute;
   background: #3895ff;
@@ -1726,45 +2001,45 @@ iframe {
   padding: 2px;
   transition: all 0.3s ease 0s;
 }
-.form-top .type-radio:checked + span::after {
+.form-top .form-item .type-radio:checked + span::after {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .form-top .privacy label {
+  .form-top .form-item .privacy label {
     display: flex;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .mwform-checkbox-field label,
-.form-top .mwform-radio-field label {
+  .form-top .form-item .mwform-checkbox-field label,
+.form-top .form-item .mwform-radio-field label {
     font-weight: normal;
     display: flex;
     margin-bottom: 0;
     justify-content: center;
   }
 }
-.form-top .privacy .mwform-checkbox-field-text {
+.form-top .form-item .privacy .mwform-checkbox-field-text {
   position: relative;
   display: inline-block;
 }
-.form-top .privacy .mwform-checkbox-field-text {
+.form-top .form-item .privacy .mwform-checkbox-field-text {
   font-size: 0.16rem;
   padding-left: 0.3rem;
 }
 @media screen and (max-width: 767px) {
-  .form-top .privacy .mwform-checkbox-field-text {
+  .form-top .form-item .privacy .mwform-checkbox-field-text {
     margin-top: 0.1rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .privacy .mwform-checkbox-field-text {
+  .form-top .form-item .privacy .mwform-checkbox-field-text {
     text-align: center;
   }
 }
-.form-top .mwform-checkbox-field input {
+.form-top .form-item .mwform-checkbox-field input {
   margin-right: 0;
 }
-.form-top .type-checkbox + span::before {
+.form-top .form-item .type-checkbox + span::before {
   content: "";
   position: absolute;
   display: block;
@@ -1776,7 +2051,7 @@ iframe {
   top: 50%;
   transform: translateY(-50%);
 }
-.form-top .type-checkbox + span::after {
+.form-top .form-item .type-checkbox + span::after {
   content: "";
   position: absolute;
   background: #3895ff;
@@ -1790,16 +2065,16 @@ iframe {
   padding: 2px;
   transition: all 0.3s ease 0s;
 }
-.form-top .type-checkbox:checked + span::after {
+.form-top .form-item .type-checkbox:checked + span::after {
   opacity: 1;
 }
 @media screen and (min-width: 768px) {
-  .form-top .submit .submit-label {
+  .form-top .form-item .submit .submit-label {
     display: flex;
     justify-content: center;
   }
 }
-.form-top .submit .to-confirm {
+.form-top .form-item .submit .to-confirm {
   display: inline-block;
   color: #ffffff;
   background: #f73f61;
@@ -1807,7 +2082,7 @@ iframe {
   text-align: center;
 }
 @media screen and (max-width: 767px) {
-  .form-top .submit .to-confirm {
+  .form-top .form-item .submit .to-confirm {
     font-size: 0.18rem;
     line-height: 0.6rem;
     border-radius: 0.52rem;
@@ -1816,7 +2091,7 @@ iframe {
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .submit .to-confirm {
+  .form-top .form-item .submit .to-confirm {
     font-size: 0.22rem;
     line-height: 0.75rem;
     border-radius: 0.38rem;

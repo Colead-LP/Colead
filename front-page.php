@@ -1,3 +1,5 @@
+<?php require("calculate.php") ?>
+
 <!-- .header -->
 <?php get_header(); ?>
 <!-- /.header -->
@@ -224,39 +226,56 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
             </h2>
             <!-- .calc -->
-            <div class="calc">
+            <form class="calc" action="" method="post">
+                <div class="calc-ttl">お持ちの発電所の情報を<br class="sp-br">教えてください。</div>
                 <ul class="calc-list">
                     <li class="calc-item">
-                        <label class="calc-item-label">
+                        <p class="calc-item-label">
                             直近1年の売電金額（税込）<span class="require">必須</span>
-                            <input type="number" name="" class="input-number"><span class="unit">万円</span>
-                        </label>
+                        </p>
+                        <input type="number" name="year_fee" class="input-number">
+                        <span class="unit">万円</span>
                     </li>
                     <li class="calc-item">
-                        <label class="calc-item-label">
-                            <span class="require">必須</span>
-                            土地賃料<input type="number" name="" class="input-number"><span class="unit">万円</span>
-                        </label>
+                        <p class="calc-item-label">
+                            土地賃料<span class="require">必須</span>
+                        </p>
+                        <input type="number" name="rent" class="input-number">
+                        <span class="unit">万円</span>
                     </li>
                     <li class="calc-item">
-                        <label class="calc-item-label">
+                        <p class="calc-item-label">
                             稼働開始年月<span class="require">必須</span>
-                            <input type="number" name="" class="input-number">
-                        </label>
+                        </p>
+                        <!-- <select name="operation_period" class="input-number" value="お選びください"> -->
+                        <?php
+                        echo GetDateSelecter();
+                        ?>
+                        <!-- </select> -->
                     </li>
                 </ul>
                 <div class="calc-start">
-                    <button id="calc_start" class="calc-start-btn">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="">
+                    <button type=submit id="calc_start" class="calc-start-btn">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
                     </button>
                 </div>
+
+                <!-- ここから計算後に表示される -->
                 <div class="calc-answer">
-                    <p class="calc-answer-txt">あなたの太陽光発電所の売却金額はこちら</p>
-                    <p class="calc-answer-txt">概算売却額</p>
-                    <p class="calc-answer-number">22,220,000</p>
-                    <p class="calc-answer-unit">円</p>
+                    <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
+                    <!-- <div class="border"> -->
+                    <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
+                    <!-- </div> -->
+                    <div class="calc-box">
+                        <p class="calc-box-txt">概算売却額</p>
+                        <input class="calc-box-number" name="" value=<?php echo number_format($amount); ?>>
+                        <p class="calc-box-unit">円</p>
+                    </div>
                 </div>
-            </div><!-- /.calc -->
+            </form><!-- /.calc -->
+            <div class="contact-inner-img">
+                <img class="square-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+            </div>
             <!-- .form -->
             <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
             <!-- /.form -->
