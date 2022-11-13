@@ -356,6 +356,11 @@ iframe {
   # add css
   =====================================================*/
 }
+@media screen and (max-width: 767px) {
+  .form-confirm {
+    padding: 0.3rem 0.2rem 0.6rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .form-confirm {
     padding: 0.6rem 0 1rem;
@@ -367,23 +372,26 @@ iframe {
 .form-confirm-ttl {
   color: #333333;
   font-weight: bold;
+  font-size: 0.28rem;
   text-align: center;
   line-height: 1;
 }
-@media screen and (min-width: 768px) {
-  .form-confirm-ttl {
-    font-size: 0.28rem;
-  }
+.form-confirm .form-bg {
+  margin: 0.31rem auto 0;
 }
 @media screen and (min-width: 768px) {
   .form-confirm .form-bg {
     width: 8rem;
-    margin: 0.31rem auto 0;
   }
 }
 .form-confirm .form-inner {
   background: #ffffff;
   border-radius: 0.4rem 0 0 0;
+}
+@media screen and (max-width: 767px) {
+  .form-confirm .form-inner {
+    padding: 0.3rem 0.2rem 0.4rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .form-confirm .form-inner {
@@ -392,9 +400,15 @@ iframe {
 }
 .form-confirm .form-item {
   display: flex;
-  align-items: center;
   font-size: 0.16rem;
+  align-items: center;
   position: relative;
+}
+@media screen and (max-width: 767px) {
+  .form-confirm .form-item {
+    flex-wrap: wrap;
+    padding-bottom: 0.15rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .form-confirm .form-item {
@@ -413,14 +427,27 @@ iframe {
 .form-confirm .form-item.address::after {
   background: #ffffff;
 }
+@media screen and (max-width: 767px) {
+  .form-confirm .form-item:nth-child(n+2), .form-confirm .form-item.address {
+    margin-top: 0.16rem;
+  }
+}
 @media screen and (min-width: 768px) {
   .form-confirm .form-item:nth-child(n+2), .form-confirm .form-item.address {
     margin: 0.155rem 0 0;
   }
 }
 @media screen and (max-width: 767px) {
+  .form-confirm .form-item.pref {
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 767px) {
   .form-confirm .form-item-ttl {
+    font-weight: bold;
     font-size: 0.16rem;
+    width: 1.48rem;
+    margin-right: 0.2rem;
   }
 }
 @media screen and (min-width: 768px) {
