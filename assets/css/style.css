@@ -1392,13 +1392,13 @@ iframe {
 }
 @media screen and (max-width: 767px) {
   .contact-bg {
-    height: 33.22rem;
     padding-top: 0.49rem;
   }
 }
 @media screen and (min-width: 768px) {
   .contact-bg {
     padding-top: 0.79rem;
+    padding-bottom: 1rem;
   }
 }
 .contact-inner {
@@ -1414,14 +1414,6 @@ iframe {
     max-width: 8rem;
   }
 }
-.contact-inner-img .square-img {
-  width: 0.6rem;
-  height: 0.27rem;
-  position: absolute;
-  left: 50%;
-  bottom: 0.9rem;
-  transform: translate(-50%, -50%);
-}
 @media screen and (max-width: 767px) {
   .contact-ttl {
     margin-bottom: 0.36rem;
@@ -1433,7 +1425,25 @@ iframe {
   }
 }
 
+.contact-arrow {
+  display: none;
+  position: absolute;
+  width: 0.6rem;
+  height: 0.27rem;
+  bottom: -0.16rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.contact-arrow.active {
+  display: block;
+}
+.contact-arrow img {
+  vertical-align: top;
+}
+
 .calc {
+  position: relative;
   background: url(../img/contact/pc/calc_bg.png) no-repeat center/cover;
   width: 100%;
   border-top-left-radius: 0.4rem;
@@ -1556,7 +1566,7 @@ iframe {
 @media screen and (min-width: 768px) {
   .calc-item .input-number {
     width: 3.1rem;
-    margin-right: 0.18rem;
+    margin-right: 0.16rem;
   }
 }
 .calc-item .unit {
@@ -1688,6 +1698,22 @@ iframe {
 .calc-box-unit {
   font-size: 0.16rem;
   align-self: end;
+}
+.calc-arrow {
+  display: none;
+  position: absolute;
+  width: 0.6rem;
+  height: 0.27rem;
+  bottom: -0.16rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+}
+.calc-arrow.active {
+  display: block;
+}
+.calc-arrow img {
+  vertical-align: top;
 }
 
 /*=====================================================
@@ -2151,14 +2177,21 @@ iframe {
 }
 
 .addForm {
+  font-weight: bold;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .addForm {
+    font-size: 0.22rem;
+    line-height: 1.6333;
+    margin-top: 0.26rem;
+  }
 }
 @media screen and (min-width: 768px) {
   .addForm {
-    font-weight: bold;
     font-size: 0.26rem;
     line-height: 1.7;
-    margin-top: 0.32rem;
+    margin-top: 0.28rem;
   }
 }
 

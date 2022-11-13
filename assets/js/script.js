@@ -47,6 +47,7 @@ $(function () {
   function slideToggle() {
     $(".js-switch").on("click", function () {
       $(".js-slideToggle").slideToggle();
+      $(".contact-arrow").toggleClass('active');
     });
   }
 
