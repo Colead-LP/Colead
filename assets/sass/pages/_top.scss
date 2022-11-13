@@ -760,20 +760,20 @@
   }
 }
 
-.contact-arrow{
+.contact-arrow {
   display: none;
   position: absolute;
   width: 0.6rem;
   height: 0.27rem;
-  bottom: -.16rem;
+  bottom: -0.16rem;
   left: 50%;
   transform: translateX(-50%);
   z-index: 100;
 
-  &.active{
+  &.active {
     display: block;
   }
-  img{
+  img {
     vertical-align: top;
   }
 }
@@ -990,20 +990,20 @@
     }
   }
 
-  &-arrow{
+  &-arrow {
     display: none;
     position: absolute;
     width: 0.6rem;
     height: 0.27rem;
-    bottom: -.16rem;
+    bottom: -0.16rem;
     left: 50%;
     transform: translateX(-50%);
     z-index: 100;
-  
-    &.active{
+
+    &.active {
       display: block;
     }
-    img{
+    img {
       vertical-align: top;
     }
   }
@@ -1506,27 +1506,38 @@
   }
 }
 
-.addForm {
-  font-weight: bold;
-  text-align: center;
-  @include v.mq(sp) {
-    font-size: .22rem;
-    line-height: 1.6333;
-    margin-top: .26rem;
-  }
-  @include v.mq(pc) {
-    font-size: 0.26rem;
-    line-height: 1.7;
-    margin-top: 0.28rem;
-  }
+.form-top .form-item{
+	position: relative;
 }
 
-.js-slideToggle{
-  display: none;
+.mw_wp_form .error {
+	  display: block;
+	  position: absolute;
+  bottom: -0.18rem;
+  right: 2.78rem;
+	  color: #B70000;
+  font-size: 14%;
 }
+
+.form-top .form-item.name .error,
+.form-top .form-item.houseNumber .error,
+.form-top .form-item.dc .error{
+	bottom: 0;
+}
+
+.form-top .privacy{
+	position : relative;
+}
+
+.form-top .privacy .error{
+	bottom: -.2rem;
+	left: 44%;
+}
+
+
 
 /*=====================================================
-# modal
+# js
 =====================================================*/
 .fixed {
   position: fixed;
@@ -1595,4 +1606,32 @@
 .modal-item {
   font-size: 0.14rem;
   line-height: 1.5;
+}
+
+.addForm {
+  font-weight: bold;
+  text-align: center;
+  @include v.mq(sp) {
+    font-size: 0.22rem;
+    line-height: 1.6333;
+    margin-top: 0.26rem;
+  }
+  @include v.mq(pc) {
+    font-size: 0.26rem;
+    line-height: 1.7;
+    margin-top: 0.28rem;
+  }
+}
+
+.mw_wp_form .error {
+  display: block;
+  position: absolute;
+  bottom: -0.18rem;
+  right: 2.78rem;
+  color: #b70000;
+  font-size: 14%;
+}
+
+.js-slideToggle {
+  display: none;
 }
