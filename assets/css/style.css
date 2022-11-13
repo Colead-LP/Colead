@@ -1393,6 +1393,7 @@ iframe {
 @media screen and (max-width: 767px) {
   .contact-bg {
     padding-top: 0.49rem;
+    padding-bottom: 0.6rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2119,6 +2120,7 @@ iframe {
   display: block;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0.03rem;
   width: 0.2rem;
   height: 0.2rem;
   left: 0;
@@ -2128,15 +2130,15 @@ iframe {
 .form-top .type-checkbox + span::after {
   content: "";
   position: absolute;
-  background: #3895ff;
-  border: 1px solid transparent;
   opacity: 0;
-  width: 0.19rem;
-  height: 0.19rem;
-  top: 50%;
-  left: 0.03333rem;
-  transform: translateY(-50%);
-  padding: 2px;
+  border: 1px solid transparent;
+  top: 0.05rem;
+  left: 0.02rem;
+  width: 0.15rem;
+  height: 0.075rem;
+  border-left: 0.02rem solid #333333;
+  border-bottom: 0.02rem solid #333333;
+  transform: rotate(-45deg);
   transition: all 0.3s ease 0s;
 }
 .form-top .type-checkbox:checked + span::after {
@@ -2183,10 +2185,19 @@ iframe {
 .mw_wp_form .error {
   display: block;
   position: absolute;
-  bottom: -0.18rem;
-  right: 2.78rem;
-  color: #B70000;
+  color: #b70000;
   font-size: 14%;
+  bottom: -0.18rem;
+}
+@media screen and (max-width: 767px) {
+  .mw_wp_form .error {
+    left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mw_wp_form .error {
+    right: 2.78rem;
+  }
 }
 
 .form-top .form-item.name .error,
@@ -2201,7 +2212,16 @@ iframe {
 
 .form-top .privacy .error {
   bottom: -0.2rem;
-  left: 44%;
+}
+@media screen and (max-width: 767px) {
+  .form-top .privacy .error {
+    left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form-top .privacy .error {
+    left: 44%;
+  }
 }
 
 /*=====================================================
@@ -2293,15 +2313,6 @@ iframe {
     line-height: 1.7;
     margin-top: 0.28rem;
   }
-}
-
-.mw_wp_form .error {
-  display: block;
-  position: absolute;
-  bottom: -0.18rem;
-  right: 2.78rem;
-  color: #b70000;
-  font-size: 14%;
 }
 
 .js-slideToggle {
