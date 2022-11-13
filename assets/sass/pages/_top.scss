@@ -736,7 +736,6 @@
       padding-top: 0.49rem;
     }
     @include v.mq(pc) {
-      height: 29.17rem;
       padding-top: 0.79rem;
     }
   }
@@ -1246,6 +1245,10 @@
         }
       }
 
+      .radio-wrap {
+        display: flex;
+      }
+
       &.wiring,
       &.system,
       &.maint {
@@ -1281,197 +1284,270 @@
         }
       }
     }
-    .privacy {
-      margin: 0.2rem 0 0;
-      .privacy-txt {
-        display: block;
-        font-size: 0.14rem;
-        line-height: 1.4;
-        @include v.mq(pc) {
-          text-align: center;
-          margin-bottom: 0.12rem;
-        }
-      }
-
-      .privacy-link {
-        color: #3895ff;
-      }
-
-      .privacy-label-txt {
-        display: block;
-        font-size: 0.16rem;
-        text-align: center;
-      }
-    }
-
-    .submit {
-      margin: 0.3rem auto 0;
-      @include v.mq(pc) {
-        width: 3.65rem;
-      }
-    }
-
-    /*=====================================================
-  # add css
-  =====================================================*/
-    .mwform-radio-field-text {
-      @include v.mq(sp) {
-        font-size: 0.16rem;
-      }
-      @include v.mq(pc) {
-        font-size: 0.18rem;
-      }
-    }
-
-    .form-item.pref .select,
-    .form-item.fit .select {
-      line-height: 0.5rem;
-      padding: 0 0.12rem;
-    }
-
-    .form-item.wiring label,
-    .form-item.system label,
-    .form-item.maint label {
-      display: flex;
-    }
-
-    .type-radio + span {
-      @include v.mq(sp) {
-        padding-left: 0.4rem;
-      }
-      @include v.mq(pc) {
-        padding: 0 0 0 2.2em;
-      }
-    }
-
-    .type-radio + span::before {
-      content: "";
-      position: absolute;
+  }
+  .privacy {
+    margin: 0.2rem 0 0;
+    .privacy-txt {
       display: block;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.16);
-      border-radius: 50%;
-      width: 0.25rem;
-      height: 0.25rem;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .type-radio + span::after {
-      content: "";
-      position: absolute;
-      background: #3895ff;
-      border: 1px solid transparent;
-      border-radius: 50%;
-      opacity: 0;
-      width: 0.19rem;
-      height: 0.19rem;
-      top: 50%;
-      left: 0.03333rem;
-      transform: translateY(-50%);
-      padding: 2px;
-      transition: all 0.3s ease 0s;
-    }
-
-    .type-radio:checked + span::after {
-      opacity: 1;
-    }
-
-    .privacy label {
+      font-size: 0.14rem;
+      line-height: 1.4;
       @include v.mq(pc) {
-        display: flex;
+        text-align: center;
+        margin-bottom: 0.12rem;
       }
     }
-    .mwform-checkbox-field label,
-    .mwform-radio-field label {
-      @include v.mq(pc) {
-        font-weight: normal;
-        display: flex;
-        margin-bottom: 0;
-        justify-content: center;
-      }
+
+    .privacy-link {
+      color: #3895ff;
     }
-    .privacy .mwform-checkbox-field-text {
-      position: relative;
-      display: inline-block;
-    }
-    .privacy .mwform-checkbox-field-text {
+
+    .privacy-label-txt {
+      display: block;
       font-size: 0.16rem;
-      padding-left: 0.3rem;
-      @include v.mq(sp) {
-        margin-top: 0.1rem;
-      }
-      @include v.mq(pc) {
-        text-align: center;
-      }
-    }
-
-    .mwform-checkbox-field input {
-      margin-right: 0;
-    }
-
-    .type-checkbox + span::before {
-      content: "";
-      position: absolute;
-      display: block;
-      background: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.16);
-      width: 0.2rem;
-      height: 0.2rem;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-
-    .type-checkbox + span::after {
-      content: "";
-      position: absolute;
-      background: #3895ff;
-      border: 1px solid transparent;
-      opacity: 0;
-      width: 0.19rem;
-      height: 0.19rem;
-      top: 50%;
-      left: 0.03333rem;
-      transform: translateY(-50%);
-      padding: 2px;
-      transition: all 0.3s ease 0s;
-    }
-
-    .type-checkbox:checked + span::after {
-      opacity: 1;
-    }
-
-    .submit .submit-label {
-      @include v.mq(pc) {
-        display: flex;
-        justify-content: center;
-      }
-    }
-
-    .submit .to-confirm {
-      display: inline-block;
-      color: #ffffff;
-      background: #f73f61;
-      font-weight: bold;
       text-align: center;
-      @include v.mq(sp) {
-        font-size: 0.18rem;
-        line-height: 0.6rem;
-        border-radius: 0.52rem;
-        width: 2.95rem;
-        height: 0.6rem;
-      }
-      @include v.mq(pc) {
-        font-size: 0.22rem;
-        line-height: 0.75rem;
-        border-radius: 0.38rem;
-        width: 3.65rem;
-        height: 0.75rem;
-        margin-right: auto;
-        margin-left: auto;
-      }
     }
   }
+
+  .submit {
+    margin: 0.3rem auto 0;
+    @include v.mq(pc) {
+      width: 3.65rem;
+    }
+  }
+
+  /*=====================================================
+  # add css
+  =====================================================*/
+  .mwform-radio-field-text {
+    @include v.mq(sp) {
+      font-size: 0.16rem;
+    }
+    @include v.mq(pc) {
+      font-size: 0.18rem;
+    }
+  }
+
+  .form-item.pref .select,
+  .form-item.fit .select {
+    line-height: 0.5rem;
+    padding: 0 0.12rem;
+  }
+
+  .form-item.wiring label,
+  .form-item.system label,
+  .form-item.maint label {
+    display: flex;
+  }
+
+  .type-radio + span {
+    @include v.mq(sp) {
+      padding-left: 0.4rem;
+    }
+    @include v.mq(pc) {
+      padding: 0 0 0 2.2em;
+    }
+  }
+
+  .type-radio + span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: 50%;
+    width: 0.25rem;
+    height: 0.25rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .type-radio + span::after {
+    content: "";
+    position: absolute;
+    background: #3895ff;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    opacity: 0;
+    width: 0.19rem;
+    height: 0.19rem;
+    top: 50%;
+    left: 0.03333rem;
+    transform: translateY(-50%);
+    padding: 2px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .type-radio:checked + span::after {
+    opacity: 1;
+  }
+
+  .privacy label {
+    @include v.mq(pc) {
+      display: flex;
+    }
+  }
+  .mwform-checkbox-field label,
+  .mwform-radio-field label {
+    @include v.mq(pc) {
+      font-weight: normal;
+      display: flex;
+      margin-bottom: 0;
+      justify-content: center;
+    }
+  }
+  .privacy .mwform-checkbox-field-text {
+    position: relative;
+    display: inline-block;
+  }
+  .privacy .mwform-checkbox-field-text {
+    font-size: 0.16rem;
+    padding-left: 0.3rem;
+    @include v.mq(sp) {
+      margin-top: 0.1rem;
+    }
+    @include v.mq(pc) {
+      text-align: center;
+    }
+  }
+
+  .mwform-checkbox-field input {
+    margin-right: 0;
+  }
+
+  .type-checkbox + span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    width: 0.2rem;
+    height: 0.2rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  .type-checkbox + span::after {
+    content: "";
+    position: absolute;
+    background: #3895ff;
+    border: 1px solid transparent;
+    opacity: 0;
+    width: 0.19rem;
+    height: 0.19rem;
+    top: 50%;
+    left: 0.03333rem;
+    transform: translateY(-50%);
+    padding: 2px;
+    transition: all 0.3s ease 0s;
+  }
+
+  .type-checkbox:checked + span::after {
+    opacity: 1;
+  }
+
+  .submit .submit-label {
+    @include v.mq(pc) {
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .submit .to-confirm {
+    display: inline-block;
+    color: #ffffff;
+    background: #f73f61;
+    font-weight: bold;
+    text-align: center;
+    @include v.mq(sp) {
+      font-size: 0.18rem;
+      line-height: 0.6rem;
+      border-radius: 0.52rem;
+      width: 2.95rem;
+      height: 0.6rem;
+    }
+    @include v.mq(pc) {
+      font-size: 0.22rem;
+      line-height: 0.75rem;
+      border-radius: 0.38rem;
+      width: 3.65rem;
+      height: 0.75rem;
+      margin-right: auto;
+      margin-left: auto;
+    }
+  }
+}
+
+/*=====================================================
+# modal
+=====================================================*/
+.fixed {
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+}
+
+.content {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 100;
+}
+
+.overlay {
+  width: 100%;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.modal {
+  position: fixed;
+  background: #fff;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  height: 3rem;
+  z-index: 999;
+  overflow: scroll;
+  @include v.mq(sp) {
+    width: 90%;
+  }
+  @include v.mq(pc) {
+    
+  }
+}
+
+.modal-inner{
+  @include v.mq(sp) {
+    padding: .32rem .2rem;
+  }
+  @include v.mq(pc) {
+    padding: .4rem;
+  }
+}
+
+.modal-ttl{
+  font-weight: bold;
+  font-size: .18rem;
+}
+
+.modal-txt {
+  font-size: 0.14rem;
+  line-height: 1.5;
+  margin-top: .2rem;
+
+  .txt__bold{
+    display: block;
+    font-weight: bold;
+  }
+}
+
+.modal-item{
+  font-size: .14rem;
+  line-height: 1.5;
 }
