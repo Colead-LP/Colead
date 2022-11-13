@@ -282,8 +282,7 @@
             </form><!-- /.calc -->
             <div class="js-slideToggle">
                 <p class="addForm">
-                    より正確な金額を知りたい方、売却の相談をご希望の方は
-                    以下よりお問い合わせください
+                    より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
                 </p>
                 <!-- .form -->
                 <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>

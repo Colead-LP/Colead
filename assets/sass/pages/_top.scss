@@ -732,11 +732,11 @@
   &-bg {
     background: rgba(234, 243, 250, 1);
     @include v.mq(sp) {
-      height: 33.22rem;
       padding-top: 0.49rem;
     }
     @include v.mq(pc) {
       padding-top: 0.79rem;
+      padding-bottom: 1rem;
     }
   }
 
@@ -1507,9 +1507,14 @@
 }
 
 .addForm {
+  font-weight: bold;
   text-align: center;
+  @include v.mq(sp) {
+    font-size: .22rem;
+    line-height: 1.6333;
+    margin-top: .26rem;
+  }
   @include v.mq(pc) {
-    font-weight: bold;
     font-size: 0.26rem;
     line-height: 1.7;
     margin-top: 0.28rem;
