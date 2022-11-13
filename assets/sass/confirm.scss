@@ -12,69 +12,204 @@
 # form-confirm
 =====================================================*/
 .form-confirm {
+  @include v.mq(sp) {
+    padding: .3rem .2rem .6rem;
+  }
+  @include v.mq(pc) {
+    padding: .6rem 0 1rem;
+  }
   .top {
     display: none;
   }
 
-  &-ttl{
+  background: #eaf3fa;
+
+  &-ttl {
     color: #333333;
     font-weight: bold;
-    font-size: .28rem;
+    font-size: 0.28rem;
     text-align: center;
     line-height: 1;
   }
 
-  background: #EAF3FA;
-
-  .form-bg{
-    background: url(../img/contact/pc/form_bg.png) no-repeat center / cover;
-    width: 8rem;
-    padding: 0.6rem 0 1rem;
-    margin: .31rem auto 0;
+  .form-bg {
+    margin: 0.31rem auto 0;
+    @include v.mq(pc) {
+      width: 8rem;
+    }
   }
-
-  .form-inner{
+  
+  .form-inner {
     background: #ffffff;
-    padding: .44rem .4rem .5rem;
+    border-radius: .4rem 0 0 0;
+    @include v.mq(sp) {
+      padding: .3rem .2rem .4rem;
+    }
+    @include v.mq(pc) {
+      padding: .44rem .4rem .5rem;
+    }
   }
 
-  .form-item{
+  .form-item {
     display: flex;
+    font-size: 0.16rem;
     align-items: center;
-    
-    &.name{
-      position: relative;
-      padding-bottom: .185rem;
+    position: relative;
+    @include v.mq(sp) {
+      flex-wrap: wrap;
+      padding-bottom: .15rem;
+    }
+    @include v.mq(pc) {
+      padding-bottom: 0.155rem;
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #e2e3e5;
+      width: 100%;
+      height: 1px;
+    }
+
+    &.address{
       &::after{
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        background: #E2E3E5;
-        width: 100%;
-        height: 1px;
+        background: #ffffff;
       }
     }
 
-    &.email{
-      margin-top: .205rem;
+    
+    &:nth-child(n + 2),
+    &.address{
+      @include v.mq(sp) {
+        margin-top: .16rem;
+      }
+      @include v.mq(pc) {
+        margin: .155rem 0 0;
+      }
+    }
+
+    &.pref{
+      @include v.mq(sp) {
+        margin-top: 0;
+      }
     }
   }
 
-  .form-item-ttl{
-    font-size: .18rem;
-    width: 3.6rem;
-  }
-
-  .form-item-label{
-  }
-
-  
-  .name{
-    .form-item-input{
-      display: flex;
+  .form-item-ttl {
+    @include v.mq(sp) {
+      font-weight: bold;
       font-size: .16rem;
+      width: 1.48rem;
+      margin-right: .2rem;
+    }
+    @include v.mq(pc) {
+      font-size: 0.18rem;
+      width: 3.6rem;
     }
   }
 
+  .form-item-label {
+  }
+
+  .name {
+    .form-item-input {
+      display: flex;
+      font-size: 0.16rem;
+    }
+  }
+
+  .privacy{
+    text-align: center;
+    
+    @include v.mq(sp) {
+      font-size: .14rem;
+      margin: .2rem 0 0;
+    }
+    @include v.mq(pc) {
+      font-size: .16rem;
+      margin: .26rem 0 0;
+    }
+
+    label{
+      justify-content: center;
+    }
+  }
+
+  .type-checkbox + span {
+    position: relative;
+    padding-left: .3rem;
+  }
+
+  .type-checkbox + span::before {
+    content: "";
+    position: absolute;
+    display: block;
+    background: #fff;
+    border: 1px solid rgba(0, 0, 0, 0.16);
+    width: .20rem;
+    height: .20rem;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
 }
+
+.type-checkbox + span::after {
+    content: "";
+    position: absolute;
+    background: #3895FF;
+    border: 1px solid transparent;
+    opacity: 0;
+    width: .19rem;
+    height: .19rem;
+    top: 50%;
+    left: .03333rem;
+    transform: translateY(-50%);
+    padding: 2px;
+    transition: all 0.3s ease 0s;
+}
+
+.type-checkbox:checked + span::after {
+    opacity: 1;
+}
+
+  /*=====================================================
+  # add css
+  =====================================================*/
+  .submit{
+    margin: .4rem 0 0;
+  }
+  .submit .submit-label{
+    display: flex;
+    justify-content: center;
+  }
+  
+  .submit .to-confirm{
+    display: inline-block;
+    color: #ffffff;
+    background: #F73F61;
+    font-weight: bold;
+    text-align: center;
+    margin-right: auto;
+    margin-left: auto;
+    @include v.mq(sp) {
+      font-size: .18rem;
+      line-height: .6rem;
+      border-radius: .52rem;
+      width: 2.95rem;
+      height: .6rem;
+    }
+    @include v.mq(pc) {
+      font-size: .22rem;
+      line-height: .75rem;
+      border-radius: .38rem;
+      width: 3.65rem;
+      height: .75rem;
+    }
+  }
+
+  .top {
+    display: none;
+  }
+}
+

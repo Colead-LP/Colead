@@ -15,4 +15,16 @@ $(function () {
     $("body,html").animate({ scrollTop: position }, speed, "swing");
     return false;
   });
+
+  function changeTxt () {
+    let url = location.href;
+    console.log(url);
+
+    // if(url === 'http://localhost:8888/Colead/confirm/' ) {
+    if(url === 'https://itomaru.org/colead/confirm/' ) {
+      let hoge = $('.address .form-item-ttl').text('発電所住所');
+    }
+  }
+
+  changeTxt();
 });
