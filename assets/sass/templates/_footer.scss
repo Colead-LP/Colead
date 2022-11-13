@@ -4,30 +4,59 @@
 /*=====================================================
 # footer
 =====================================================*/
-.footer{
-    color: #fff;
-    &-bg{
-        background: v.$color-bg-footer;
-        padding: .3rem 0 .2rem;
+.footer {
+  color: #fff;
+  &-bg {
+    background: v.$color-bg-footer;
+    @include v.mq(sp) {
+      padding: 0.3rem 0 0.21rem;
     }
-    &-ttl{
-        width: 1.12rem;
-        margin: 0 auto;
+    @include v.mq(pc) {
+      padding: 0.47rem 0 0.31rem;
     }
-    &-txt{
-        margin: .257rem 0 0;
-        .txt{
-            font-weight: Medium;
-            font-size: 0.14rem;
-            line-height: 1;
-            margin: .25rem 0 0;
-            &:nth-child(2){
-                margin: .14rem 0 0;
-            }
+  }
+  &-ttl {
+    margin: 0 auto;
+    @include v.mq(sp) {
+      width: 1.1209rem;
+      height: 0.2821rem;
+    }
+    @include v.mq(pc) {
+      width: 1.9rem;
+      height: 0.4788rem;
+    }
+  }
+  &-txt {
+    .txt {
+      font-weight: Medium;
+      @include v.mq(sp) {
+        font-size: 0.14rem;
+        line-height: 0.15rem;
+        margin: 0.298rem 0 0;
+      }
+      @include v.mq(pc) {
+        font-size: 0.16rem;
+        line-height: 0.18rem;
+        margin: 0.25rem 0 0;
+      }
+      &:nth-child(2) {
+        @include v.mq(sp) {
+          margin: 0.1rem 0 0;
         }
-    .copyright{
-        text-align: center;
-        margin: .4rem 0 0;
+        @include v.mq(pc) {
+          margin: 0.06rem 0 0;
+        }
+      }
     }
-}
+  }
+  .copyright {
+    text-align: center;
+    font-size: 0.1rem;
+    @include v.mq(sp) {
+      margin: 0.42rem 0 0;
+    }
+    @include v.mq(pc) {
+      margin: 0.35rem 0 0;
+    }
+  }
 }

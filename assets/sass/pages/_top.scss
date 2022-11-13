@@ -172,7 +172,7 @@
     &-item {
       &-txt {
         position: relative;
-        font-weight: 500;
+        font-weight: 400;
         @include v.mq(sp) {
           font-size: 0.18rem;
           line-height: 1.6111;
@@ -594,6 +594,7 @@
       .to-calc {
         display: inline;
         color: #3895ff;
+        font-weight: bold;
       }
     }
   }
