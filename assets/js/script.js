@@ -56,9 +56,6 @@ $(function () {
     $(".contact-arrow").toggleClass("active");
   }
 
-  changeTxt();
-  // slideToggle();
-
   function onClick() {
     //値のリセット
     $year_fee = "";
@@ -146,4 +143,7 @@ $(function () {
     }
   }
   
+  changeTxt();
+  slideToggle();
+  onClick();
 });
