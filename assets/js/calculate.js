@@ -7,7 +7,6 @@ function onClick() {
   //buttonがクリックされた時、変数に値を代入する
   $year_fee = Number(document.getElementById("year_fee").value);
   $rent = Number(document.getElementById("rent").value);
-  // $operation_period = document.getElementById("operation_period").value;
   $operation_period = document.querySelector(".operation_period").value;
 
   if (
@@ -29,9 +28,8 @@ function onClick() {
       } else {
         //正しい入力値（計算、画面の引き伸ばし）
         $amount = GetApproximateCost($year_fee, $rent, $operation_period);
-        // console.log($amount);
+        console.log($amount);
         $('.calc-box-number').val($amount);
-        // document.getElementsById("calc_result").value = $amount;
       }
     }
   }
