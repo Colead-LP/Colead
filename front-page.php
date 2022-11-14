@@ -265,35 +265,34 @@
                 </div>
 
                 <!-- ここから計算後に表示される -->
-                <div class="calc-answer">
-                    <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
-                    <!-- <div class="border"> -->
-                    <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
-                    <!-- </div> -->
-                    <div class="calc-box">
-                        <p class="calc-box-txt">概算売却額</p>
-                        <!-- <p class="answer"></p> -->
-                        <input readonly class="calc-box-number" name="amount" id="calc_result">
-                        <p class="calc-box-unit">円</p>
+                <div class="js-slideToggle">
+                    <div class="calc-answer">
+                        <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
+                        <!-- <div class="border"> -->
+                        <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
+                        <!-- </div> -->
+                        <div class="calc-box">
+                            <p class="calc-box-txt">概算売却額</p>
+                            <!-- <p class="answer"></p> -->
+                            <input readonly class="calc-box-number" name="amount" id="calc_result">
+                            <p class="calc-box-unit">円</p>
+                        </div>
+                        <div class="contact-arrow">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+                        </div>
                     </div>
-                    <div class="contact-arrow">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
-                    </div>
-                </div>
             </form><!-- /.calc -->
-            <div class="js-slideToggle">
-                <p class="addForm">
-                    より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
-                </p>
-                <!-- .form -->
-                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
-                <!-- /.form -->
-            </div>
-
+            <p class="addForm">
+                より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
+            </p>
+            <!-- .form -->
+            <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+            <!-- /.form -->
         </div>
+
+    </div>
     </div>
 </section><!-- /.contact -->
-<script src="<?php echo get_template_directory_uri(); ?>/assets/js/calculate.js" type="text/javaScript" charset="utf-8"></script>
 
 <!-- .footer -->
 <?php get_footer();

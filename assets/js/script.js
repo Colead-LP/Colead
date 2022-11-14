@@ -50,16 +50,7 @@ $(function () {
       }
     });
   });
-
-  function slideToggle() {
-    $(".js-switch").on("click", function () {
-      $(".js-slideToggle").slideToggle();
-      $(".contact-arrow").toggleClass("active");
-    });
-  }
-
   changeTxt();
-  slideToggle();
 });
 
 function onClick() {
@@ -97,6 +88,8 @@ function onClick() {
           $operation_period
         ).toLocaleString();
         $(".calc-box-number").val($amount);
+        $(".js-slideToggle").slideDown();
+        $(".contact-arrow").addClass("active");
       }
     }
   }
