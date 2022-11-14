@@ -1,8 +1,12 @@
-<?php require("calculate.php") ?>
+<?php require("calculate.php");
+// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+//     header("Location:http://localhost:8888/Colead/");
+//     exit;
+// }
+?>
 
-<!-- .header -->
-<?php get_header(); ?>
-<!-- /.header -->
+<?php get_header();
+?>
 <!-- .mv -->
 <div class="mv">
     <div class="mv-bg">
@@ -225,21 +229,21 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
             </h2>
             <!-- .calc -->
-            <form class="calc" action="" method="post">
+            <form id="calc" class="calc" action="" method="post">
                 <div class="calc-ttl">お持ちの発電所の情報を<br class="sp-br">教えてください。</div>
                 <ul class="calc-list">
                     <li class="calc-item">
                         <p class="calc-item-label">
                             直近1年の売電金額（税込）<span class="require">必須</span>
                         </p>
-                        <input type="number" name="year_fee" class="input-number">
+                        <input type="number" name="year_fee" id="year_fee" class="input-number" step="1" min="1">
                         <span class="unit">万円</span>
                     </li>
                     <li class="calc-item">
                         <p class="calc-item-label">
                             土地賃料<span class="require">必須</span>
                         </p>
-                        <input type="number" name="rent" class="input-number">
+                        <input type="number" name="rent" id="rent" class="input-number" step="1" min="1">
                         <span class="unit">万円</span>
                     </li>
                     <li class="calc-item">
@@ -254,7 +258,8 @@
                     </li>
                 </ul>
                 <div class="calc-start">
-                    <button type=submit id="calc_start" class="calc-start-btn js-switch">
+                    <!-- <button type="submit" id="calc_start" class="calc-start-btn js-switch"> -->
+                    <button type="button" id="calc_start" class="calc-start-btn js-switch">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
                     </button>
                 </div>
@@ -267,18 +272,17 @@
                     <!-- </div> -->
                     <div class="calc-box">
                         <p class="calc-box-txt">概算売却額</p>
-                        <input class="calc-box-number" name="" value=<?php echo number_format($amount); ?>>
+                        <input class="calc-box-number" name="amount" value=<?php echo number_format($amount); ?>>
                         <p class="calc-box-unit">円</p>
+                    </div>
+                    <div class="contact-arrow">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
                     </div>
                 </div>
             </form><!-- /.calc -->
             <div class="js-slideToggle">
-                <div class="contact-inner-img">
-                    <img class="square-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
-                </div>
                 <p class="addForm">
-                    より正確な金額を知りたい方、売却の相談をご希望の方は
-                    以下よりお問い合わせください
+                    より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
                 </p>
                 <!-- .form -->
                 <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
