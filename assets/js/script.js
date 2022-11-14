@@ -69,28 +69,60 @@ function onClick() {
   $operation_period = "";
 
   //buttonがクリックされた時、変数に値を代入する
-  $year_fee = Number(document.getElementById("year_fee").value);
-  $rent = Number(document.getElementById("rent").value);
-  // $operation_period = document.getElementById("operation_period").value;
-  $operation_period = $("option:selected").val();
+  input_year_fee = Number(document.getElementById("year_fee").value);
+  input_rent = Number(document.getElementById("rent").value);
+  // input_operation_period = document.getElementById("operation_period").value;
+  input_operation_period = $("option:selected").val();
 
-  if (
-    EmptyOrNot($year_fee) == false ||
-    EmptyOrNot($rent) == false ||
-    EmptyOrNot($operation_period) == false
-  ) {
-    //空欄時の処理を記入（ページ内遷移、アラート）
-    return false; //送信ボタン本来の動作をキャンセルします
+  // $value_list = [$year_fee, $rent, $operation_period];
+
+  if (input_year_fee == "") {
+    $(".year_fee").text("未入力です。");
   } else {
-    if (JudgeInteger($year_fee) == false || JudgeInteger($rent) == false) {
-      //自然数以外が入力されている時の処理（ページ内遷移、アラート）
-      return false; //送信ボタン本来の動作をキャンセルします
+    if (Number.isInteger(input_year_fee) == false) {
+      $(".year_fee").text("正しい値を入力してください。");
     } else {
-      if ($year_fee < $rent) {
-        //土地賃料の方が大きくなり、マイナスの値が出る
-        return false; //送信ボタン本来の動作をキャンセルします
+      if (input_year_fee <= 0) {
+        $(".year_fee").text("正しい値を入力してください。");
       } else {
-        //正しい入力値（計算、画面の引き伸ばし）
+        if (input_year_fee < input_rent) {
+          $(".year_fee").text("正しい値を入力してください。");
+        } else {
+          $(".year_fee").text("");
+          $year_fee = input_year_fee;
+        }
+      }
+    }
+  }
+
+  if (input_rent == "") {
+    $(".rent").text("未入力です。");
+  } else {
+    if (Number.isInteger(input_rent) == false) {
+      $(".rent").text("正しい値を入力してください。");
+    } else {
+      if (input_rent <= 0) {
+        $(".rent").text("正しい値を入力してください。");
+      } else {
+        if (input_year_fee < input_rent) {
+          $(".rent").text("正しい値を入力してください。");
+        } else {
+          $(".rent").text("");
+          $rent = input_rent;
+        }
+      }
+    }
+  }
+
+  if (input_operation_period == "") {
+    $(".operation_period").text("未入力です。");
+  } else {
+    $operation_period = input_operation_period;
+  }
+
+  if ($year_fee) {
+    if ($rent) {
+      if ($operation_period) {
         $amount = GetApproximateCost(
           $year_fee,
           $rent,
@@ -98,25 +130,6 @@ function onClick() {
         ).toLocaleString();
         $(".calc-box-number").val($amount);
       }
-    }
-  }
-
-  //自然数、整数、空欄かどうかの関数、yearとrentを判断させる
-  function JudgeInteger($inputNumber) {
-    if (Number.isInteger($inputNumber) == false) {
-      //整数以外が入力されている
-      return false;
-    } else {
-      return true;
-    }
-  }
-
-  //空欄かどうかの関数、全ての変数を代入
-  function EmptyOrNot($inputValue) {
-    if ($inputValue == "") {
-      return false;
-    } else {
-      return true;
     }
   }
 
