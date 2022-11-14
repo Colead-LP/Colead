@@ -50,62 +50,62 @@ $(function () {
       }
     });
   });
-  
-  $('input[name=name_first]').change(function(){
+
+  $("input[name=name_first]").change(function () {
     let name = $(this).val();
-    if(name === ""){
+    if (name === "") {
       $(".name").append('<p class="notval">未入力です</p>');
     } else {
       $(".name .notval").remove();
     }
   });
-  $('input[name=email]').change(function(){
+  $("input[name=email]").change(function () {
     let email = $(this).val();
-    if(email === ""){
+    if (email === "") {
       $(".email").append('<p class="notval">未入力です</p>');
     } else {
       $(".email .notval").remove();
     }
   });
-  $('input[name=zip]').change(function(){
+  $("input[name=zip]").change(function () {
     let zip = $(this).val();
-    if(zip === ""){
+    if (zip === "") {
       $(".post").append('<p class="notval">未入力です</p>');
     } else {
       $(".post .notval").remove();
     }
   });
-  $('input[name=city]').change(function(){
+  $("input[name=city]").change(function () {
     let city = $(this).val();
-    if(city === ""){
+    if (city === "") {
       $(".munic").append('<p class="notval">未入力です</p>');
     } else {
       $(".munic .notval").remove();
     }
   });
-  $('input[name=area]').change(function(){
+  $("input[name=area]").change(function () {
     let area = $(this).val();
-    if(area === ""){
+    if (area === "") {
       $(".houseNumber").append('<p class="notval">未入力です</p>');
     } else {
       $(".houseNumber .notval").remove();
     }
   });
-  $('input[name=dc]').change(function(){
+  $("input[name=dc]").change(function () {
     let dc = $(this).val();
-    if(dc === ""){
+    if (dc === "") {
       $(".dc").append('<p class="notval">未入力です</p>');
     } else {
       $(".dc .notval").remove();
     }
   });
-  
-    const name = $(".input-name-first").val();
-    const email = $(".type-email").val();
-    const post = $("#zip").val();
-    const city = $("#city").val();
-    const houseNumber = $("#area").val();
-    const dc = $("#dc").val();
+
+  const name = $(".input-name-first").val();
+  const email = $(".type-email").val();
+  const post = $("#zip").val();
+  const city = $("#city").val();
+  const houseNumber = $("#area").val();
+  const dc = $("#dc").val();
 
   function onSubmit() {
     $("form").submit(function (e) {
@@ -156,7 +156,7 @@ function onClick() {
 
   //buttonがクリックされた時、変数に値を代入する
   input_year_fee = Number(document.getElementById("year_fee").value);
-  input_rent = Number(document.getElementById("rent").value);
+  input_rent = document.getElementById("rent").value;
   // input_operation_period = document.getElementById("operation_period").value;
   input_operation_period = $("option:selected").val();
 
@@ -181,13 +181,14 @@ function onClick() {
     }
   }
 
-  if (input_rent == "") {
+  if (input_rent == "" && typeof input_rent == "string") {
     $(".rent").text("未入力です。");
   } else {
+    input_rent = Number(input_rent);
     if (Number.isInteger(input_rent) == false) {
       $(".rent").text("正しい値を入力してください。");
     } else {
-      if (input_rent <= 0) {
+      if (input_rent < 0) {
         $(".rent").text("正しい値を入力してください。");
       } else {
         if (input_year_fee < input_rent) {
