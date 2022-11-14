@@ -28,7 +28,9 @@ function onClick() {
       } else {
         //正しい入力値（計算、画面の引き伸ばし）
         $amount = GetApproximateCost($year_fee, $rent, $operation_period);
-        document.getElementsById("calc_result").value = $amount;
+        // console.log($amount);
+        $('.calc-box-number').val($amount);
+        // document.getElementsById("calc_result").value = $amount;
       }
     }
   }

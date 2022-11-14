@@ -272,6 +272,7 @@
                     <!-- </div> -->
                     <div class="calc-box">
                         <p class="calc-box-txt">概算売却額</p>
+                        <!-- <p class="answer"></p> -->
                         <input readonly class="calc-box-number" name="amount" id="calc_result">
                         <p class="calc-box-unit">円</p>
                     </div>
