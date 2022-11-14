@@ -52,7 +52,8 @@ $(function () {
   });
 
   function slideToggle() {
-
+    $(".js-slideToggle").slideToggle();
+    $(".contact-arrow").toggleClass("active");
   }
 
   changeTxt();
@@ -92,8 +93,6 @@ $(function () {
             $operation_period
           ).toLocaleString();
           $(".calc-box-number").val($amount);
-            $(".js-slideToggle").slideToggle();
-            $(".contact-arrow").toggleClass("active");
         }
       }
     }
