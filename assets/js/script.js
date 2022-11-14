@@ -108,6 +108,7 @@ function onClick() {
   if (input_operation_period == "") {
     $(".operation_period").text("未入力です。");
   } else {
+    $(".operation_period").text("");
     $operation_period = input_operation_period;
   }
 
