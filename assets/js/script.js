@@ -50,7 +50,15 @@ $(function () {
       }
     });
   });
+
+  function onSubmit() {
+    $('form').submit(function(){
+      alert('送信しました');
+    });
+  }
+
   changeTxt();
+  onSubmit();
 });
 
 function onClick() {
