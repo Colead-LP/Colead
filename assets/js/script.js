@@ -58,59 +58,6 @@ $(function () {
     });
   }
 
-  $(function () {
-    const form = document.getElementById("calc");
-    const calcSubmit = document.getElementById("calc_start");
-    $(calcSubmit).click(function (e) {
-      e.preventDefault();
-      let $year_fee = $("[name='year_fee']").val();
-      let $rent = $("[name='rent']").val();
-      let $operation_period = $(".operation_period").val();
-      // let $amount = $("[name='amount']").val();
-
-      // var data = [
-      //   {
-      //     year_fee: $year_fee,
-      //   },
-      //   {
-      //     rent: $rent,
-      //   },
-      //   {
-      //     operation_period: $operation_period,
-      //   },
-      // ];
-
-      var data = {
-        year_fee: $year_fee,
-        rent: $year_fee,
-        operation_period: $operation_period,
-      };
-
-      data = JSON.stringify(data);
-      console.log(data);
-
-      $.ajax({
-        type: "POST",
-        url: "",
-        data: {
-          data: data,
-        },
-      })
-        .done(function (data, textStatus, jqXHR) {
-          console.log("成功", data, textStatus);
-          JSON.parse(data);
-        })
-        .fail(function (jqXHR, textStatus, errorThrown) {
-          console.log("失敗");
-        })
-        .always(function () {
-          console.log("処理が終わるとここ通る");
-        });
-    });
-  });
-
-  
-
   changeTxt();
   slideToggle();
 });

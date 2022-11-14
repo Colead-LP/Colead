@@ -7,7 +7,8 @@ function onClick() {
   //buttonがクリックされた時、変数に値を代入する
   $year_fee = Number(document.getElementById("year_fee").value);
   $rent = Number(document.getElementById("rent").value);
-  $operation_period = document.getElementById("operation_period").value;
+  // $operation_period = document.getElementById("operation_period").value;
+  $operation_period = document.querySelector(".operation_period").value;
 
   if (
     EmptyOrNot($year_fee) == false ||
