@@ -1792,10 +1792,23 @@
   @include v.mq(pc) {
     font-size: 0.26rem;
     line-height: 1.7;
-    margin-top: 0.88rem;
+    margin-top: 0.48rem;
   }
 }
 
 .js-slideToggle {
   display: none;
+}
+
+.contact-wrap{
+  @include v.mq(pc) {
+    height: 6.08rem;
+    overflow: hidden;
+    transition: all 1s ease;
+  }
+  &.active{
+    @include v.mq(pc) {
+      height: 10rem;
+    }
+  }
 }

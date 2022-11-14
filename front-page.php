@@ -228,44 +228,45 @@
             <h2 class="contact-ttl">
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
             </h2>
-            <!-- .calc -->
-            <form id="calc" class="calc" action="" method="post">
-                <div class="calc-ttl">お持ちの発電所の情報を<br class="sp-br">教えてください。</div>
-                <ul class="calc-list">
-                    <li class="calc-item">
-                        <p class="calc-item-label">
-                            直近1年の売電金額（税込）<span class="require">必須</span>
-                        </p>
-                        <input type="number" name="year_fee" id="year_fee" class="input-number" step="1" min="1">
-                        <span class="unit">万円</span>
-                    </li>
-                    <li class="calc-item">
-                        <p class="calc-item-label">
-                            土地賃料<span class="require">必須</span>
-                        </p>
-                        <input type="number" name="rent" id="rent" class="input-number" step="1" min="1">
-                        <span class="unit">万円</span>
-                    </li>
-                    <li class="calc-item">
-                        <p class="calc-item-label">
-                            稼働開始年月<span class="require">必須</span>
-                        </p>
-                        <!-- <select name="operation_period" class="input-number" id="operation_period"> -->
-                        <?php
-                        echo GetDateSelecter();
-                        ?>
-                        <!-- </select> -->
-                    </li>
-                </ul>
-                <div class="calc-start">
-                    <!-- <button type="submit" id="calc_start" class="calc-start-btn js-switch"> -->
-                    <button type="button" id="calc_start" class="calc-start-btn js-switch" onclick="onClick()">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
-                    </button>
-                </div>
+            <div class="contact-wrap">
+                <!-- .calc -->
+                <form id="calc" class="calc" action="" method="post">
+                    <div class="calc-ttl">お持ちの発電所の情報を<br class="sp-br">教えてください。</div>
+                    <ul class="calc-list">
+                        <li class="calc-item">
+                            <p class="calc-item-label">
+                                直近1年の売電金額（税込）<span class="require">必須</span>
+                            </p>
+                            <input type="number" name="year_fee" id="year_fee" class="input-number" step="1" min="1">
+                            <span class="unit">万円</span>
+                        </li>
+                        <li class="calc-item">
+                            <p class="calc-item-label">
+                                土地賃料<span class="require">必須</span>
+                            </p>
+                            <input type="number" name="rent" id="rent" class="input-number" step="1" min="1">
+                            <span class="unit">万円</span>
+                        </li>
+                        <li class="calc-item">
+                            <p class="calc-item-label">
+                                稼働開始年月<span class="require">必須</span>
+                            </p>
+                            <!-- <select name="operation_period" class="input-number" id="operation_period"> -->
+                            <?php
+                            echo GetDateSelecter();
+                            ?>
+                            <!-- </select> -->
+                        </li>
+                    </ul>
+                    <div class="calc-start">
+                        <!-- <button type="submit" id="calc_start" class="calc-start-btn js-switch"> -->
+                        <button type="button" id="calc_start" class="calc-start-btn js-switch" onclick="onClick()">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
+                        </button>
+                    </div>
 
-                <!-- ここから計算後に表示される -->
-                <div class="js-slideToggle">
+                    <!-- ここから計算後に表示される -->
+
                     <div class="calc-answer">
                         <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
                         <!-- <div class="border"> -->
@@ -281,16 +282,16 @@
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
                         </div>
                     </div>
-            </form><!-- /.calc -->
-            <p class="addForm">
-                より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
-            </p>
-            <!-- .form -->
-            <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
-            <!-- /.form -->
-        </div>
+                </form><!-- /.calc -->
+                <p class="addForm">
+                    より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
+                </p>
+                <!-- .form -->
+                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+                <!-- /.form -->
 
-    </div>
+            </div>
+        </div>
     </div>
 </section><!-- /.contact -->
 
