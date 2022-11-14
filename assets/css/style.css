@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*=====================================================
 # font
 =====================================================*/
@@ -2227,51 +2228,111 @@ iframe {
 /*=====================================================
 # js
 =====================================================*/
-.fixed {
+.modal-open {
   position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  margin: auto;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 
-.content {
-  display: none;
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  box-sizing: border-box;
   z-index: 100;
 }
 
-.overlay {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.58);
+/*モーダル本体の擬似要素の指定*/
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.modal {
-  position: fixed;
-  background: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  height: 3rem;
-  z-index: 999;
+/*モーダル枠の指定*/
+.modal-body {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal-wrap {
   overflow: scroll;
 }
 @media screen and (max-width: 767px) {
-  .modal {
-    width: 90%;
+  .modal-wrap {
+    height: 5.19rem;
+    margin: 0 auto;
   }
 }
+@media screen and (min-width: 768px) {
+  .modal-wrap {
+    width: 8rem;
+    height: 5rem;
+  }
+}
+
+/*モーダルを閉じるボタンの指定*/
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  right: -40px;
+  width: 0.4rem;
+  height: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-close::before, .modal-close::after {
+  content: "";
+  position: absolute;
+  top: 0.26rem;
+  right: 0;
+  width: 0.2rem;
+  height: 0.02rem;
+  background: #fff;
+}
+.modal-close::before {
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/*モーダル内のコンテンツの指定*/
+.modal-content {
+  background: #fff;
+  text-align: left;
+}
 @media screen and (max-width: 767px) {
-  .modal-inner {
+  .modal-content {
     padding: 0.32rem 0.2rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .modal-inner {
+  .modal-content {
     padding: 0.4rem;
   }
 }

@@ -26,23 +26,30 @@ $(function () {
     }
   }
 
-  function privacyModal() {
-    let scrollPos;
-    $(".privacy-link").on("click", function (e) {
-      e.preventDefault();
-      scrollPos = $(window).scrollTop(); //topからのスクロール位置を格納
-      $(".content").fadeIn(); //モーダルをフェードイン
-      $("body").addClass("fixed").css({ top: -scrollPos }); //背景固定
-      return false; //<a>を無効化
+  $(function(){
+    // 変数に要素を入れる
+    var open = $('.js-pravacy'),
+      close = $('.modal-close'),
+      container = $('.modal-container');
+  
+    //開くボタンをクリックしたらモーダルを表示する
+    open.on('click',function(){	
+      container.addClass('active');
+      return false;
     });
-
-    $(".overlay, .modal__close").click(function () {
-      $(".content").fadeOut(); //モーダルをフェードアウト
-      $("body").removeClass("fixed").css({ top: 0 }); //背景固定を解除
-      $(window).scrollTop(scrollPos); //元の位置までスクロール
-      return false; //<a>を無効化
+  
+    //閉じるボタンをクリックしたらモーダルを閉じる
+    close.on('click',function(){	
+      container.removeClass('active');
     });
-  }
+  
+    //モーダルの外側をクリックしたらモーダルを閉じる
+    $(document).on('click',function(e) {
+      if(!$(e.target).closest('.modal-body').length) {
+        container.removeClass('active');
+      }
+    });
+  });
 
   function slideToggle() {
     $(".js-switch").on("click", function () {
@@ -55,7 +62,7 @@ $(function () {
     const form = document.getElementById("calc");
     const calcSubmit = document.getElementById("calc_start");
     $(calcSubmit).click(function (e) {
-      e.preventDefault;
+      e.preventDefault();
       let $year_fee = $("[name='year_fee']").val();
       let $rent = $("[name='rent']").val();
       let $operation_period = $(".operation_period").val();
@@ -102,7 +109,8 @@ $(function () {
     });
   });
 
+  
+
   changeTxt();
-  privacyModal();
   slideToggle();
 });

@@ -1449,7 +1449,7 @@
     display: block;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.16);
-    border-radius: .03rem;
+    border-radius: 0.03rem;
     width: 0.2rem;
     height: 0.2rem;
     left: 0;
@@ -1549,48 +1549,211 @@
 /*=====================================================
 # js
 =====================================================*/
-.fixed {
-  position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
-}
+// .fixed {
+//   position: fixed;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   z-index: 1;
+// }
 
-.content {
-  display: none;
+// .content {
+//   display: none;
+//   position: fixed;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   height: 100vh;
+//   z-index: 10;
+// }
+
+// .overlay {
+//   position: relative;
+//   width: 100%;
+//   height: 100vh;
+//   background: rgba(0, 0, 0, 0.58);
+//   z-index: 100;
+
+//   .modal-close {
+//     position: absolute;
+//     top: 2rem;
+//     left: 5rem;
+
+//     &::before,
+//     &::after {
+//       content: "";
+//       position: absolute;
+//       background: #fff;
+//       top: 0;
+//       left: 0;
+//       width: 0.2rem;
+//       height: 0.02rem;
+//       z-index: 300;
+//     }
+
+//     &::before {
+//       transform: rotate(45deg);
+//     }
+
+//     &::after {
+//       transform: rotate(-45deg);
+//     }
+//   }
+// }
+
+// .modal {
+//   position: fixed;
+//   background: #fff;
+//   top: 50%;
+//   left: 50%;
+//   transform: translateX(-50%) translateY(-50%);
+//   z-index: 200;
+//   overflow: scroll;
+//   @include v.mq(sp) {
+//     width: 90%;
+//     height: 5.19rem;
+//   }
+//   @include v.mq(pc) {
+//     top: 40%;
+//     width: 8rem;
+//     height: 5rem;
+//     margin: 0 auto;
+//   }
+// }
+
+// .modal-inner {
+//   @include v.mq(sp) {
+//     padding: 0.32rem 0.2rem;
+//   }
+//   @include v.mq(pc) {
+//     padding: 0.4rem;
+//   }
+// }
+
+// .modal-close {
+//   position: absolute;
+//   top: 0;
+//   right: 0;
+//   width: .2rem;
+//   height: .2rem;
+//   &::before,
+//   &::after {
+//     content: "";
+//     position: absolute;
+//     background: #fff;
+//     top: 0;
+//     right: 0;
+//     width: .2rem;
+//     height: .02rem;
+//   }
+
+//   &::before {
+//     transform: rotate(45deg);
+//   }
+
+//   &::after {
+//     transform: rotate(-45deg);
+//   }
+// }
+
+.modal-open {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  margin: auto;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+}
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 50%);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  box-sizing: border-box;
   z-index: 100;
 }
-
-.overlay {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.58);
+/*モーダル本体の擬似要素の指定*/
+// .modal-container:before {
+//   content: "";
+//   display: inline-block;
+//   vertical-align: middle;
+//   height: 100%;
+// }
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
+}
+/*モーダル枠の指定*/
+.modal-body {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-.modal {
-  position: fixed;
-  background: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  height: 3rem;
-  z-index: 999;
+.modal-wrap {
   overflow: scroll;
   @include v.mq(sp) {
-    width: 90%;
+    height: 5.19rem;
+    margin: 0 auto;
   }
   @include v.mq(pc) {
+    width: 8rem;
+    height: 5rem;
   }
 }
 
-.modal-inner {
+/*モーダルを閉じるボタンの指定*/
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  right: -40px;
+  width: 0.4rem;
+  height: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 0.26rem;
+    right: 0;
+    width: 0.2rem;
+    height: 0.02rem;
+    background: #fff;
+  }
+  &::before {
+    transform: rotate(45deg);
+  }
+  &::after {
+    transform: rotate(-45deg);
+  }
+}
+/*モーダル内のコンテンツの指定*/
+.modal-content {
+  background: #fff;
+  text-align: left;
   @include v.mq(sp) {
-    padding: 0.32rem 0.2rem;
+    padding: .32rem .2rem;
   }
   @include v.mq(pc) {
     padding: 0.4rem;
