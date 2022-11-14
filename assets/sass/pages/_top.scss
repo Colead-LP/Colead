@@ -172,7 +172,7 @@
     &-item {
       &-txt {
         position: relative;
-        font-weight: 400;
+        // font-weight: medium;
         @include v.mq(sp) {
           font-size: 0.18rem;
           line-height: 1.6111;
@@ -388,7 +388,7 @@
         background: url(../img/reason/pc/item03.png) no-repeat center / cover;
       }
       .reason-item-img {
-        @include v.mq(sp) {
+        @include v.mq(pc) {
           width: 3.1084rem;
         }
       }
@@ -1703,7 +1703,7 @@
   display: none;
 }
 
-.contact-wrap{
+.contact-wrap {
   overflow: hidden;
   transition: all 1s ease;
   @include v.mq(sp) {
@@ -1712,7 +1712,7 @@
   @include v.mq(pc) {
     height: 6.08rem;
   }
-  &.active{
+  &.active {
     @include v.mq(sp) {
       height: 28.7rem;
     }
