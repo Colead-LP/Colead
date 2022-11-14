@@ -2189,7 +2189,8 @@ iframe {
   position: relative;
 }
 
-.mw_wp_form .error {
+.mw_wp_form .error,
+.notval {
   display: block;
   position: absolute;
   color: #b70000;
@@ -2197,19 +2198,25 @@ iframe {
   bottom: -0.18rem;
 }
 @media screen and (max-width: 767px) {
-  .mw_wp_form .error {
+  .mw_wp_form .error,
+.notval {
     left: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .mw_wp_form .error {
+  .mw_wp_form .error,
+.notval {
     right: 2.78rem;
   }
 }
 
 .form-top .form-item.name .error,
 .form-top .form-item.houseNumber .error,
-.form-top .form-item.dc .error {
+.form-top .form-item.dc .error,
+.form-top .form-item.name .notval,
+.form-top .form-item.houseNumber .notval,
+.form-top .form-item.dc .notval,
+.form-top .form-item.fit .notval {
   bottom: 0;
 }
 
@@ -2231,9 +2238,6 @@ iframe {
   }
 }
 
-/*=====================================================
-# js
-=====================================================*/
 .modal-open {
   position: fixed;
   display: flex;
@@ -2402,7 +2406,7 @@ iframe {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap.active {
-    height: 12rem;
+    height: 28.7rem;
   }
 }
 @media screen and (min-width: 768px) {
