@@ -147,6 +147,7 @@
     display: block;
     background: #fff;
     border: 1px solid rgba(0, 0, 0, 0.16);
+    border-radius: .03rem;
     width: .20rem;
     height: .20rem;
     left: 0;
@@ -155,18 +156,18 @@
 }
 
 .type-checkbox + span::after {
-    content: "";
-    position: absolute;
-    background: #3895FF;
-    border: 1px solid transparent;
-    opacity: 0;
-    width: .19rem;
-    height: .19rem;
-    top: 50%;
-    left: .03333rem;
-    transform: translateY(-50%);
-    padding: 2px;
-    transition: all 0.3s ease 0s;
+  content: "";
+  position: absolute;
+  opacity: 0;
+  border: 1px solid transparent;
+  top: 0.04rem;
+  left: 0.02rem;
+  width: 0.15rem;
+  height: 0.075rem;
+  border-left: 0.02rem solid #333333;
+  border-bottom: 0.02rem solid #333333;
+  transform: rotate(-45deg);
+  transition: all 0.3s ease 0s;
 }
 
 .type-checkbox:checked + span::after {

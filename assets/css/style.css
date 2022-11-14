@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*=====================================================
 # font
 =====================================================*/
@@ -1393,6 +1394,7 @@ iframe {
 @media screen and (max-width: 767px) {
   .contact-bg {
     padding-top: 0.49rem;
+    padding-bottom: 0.6rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2119,6 +2121,7 @@ iframe {
   display: block;
   background: #fff;
   border: 1px solid rgba(0, 0, 0, 0.16);
+  border-radius: 0.03rem;
   width: 0.2rem;
   height: 0.2rem;
   left: 0;
@@ -2128,15 +2131,15 @@ iframe {
 .form-top .type-checkbox + span::after {
   content: "";
   position: absolute;
-  background: #3895ff;
-  border: 1px solid transparent;
   opacity: 0;
-  width: 0.19rem;
-  height: 0.19rem;
-  top: 50%;
-  left: 0.03333rem;
-  transform: translateY(-50%);
-  padding: 2px;
+  border: 1px solid transparent;
+  top: 0.05rem;
+  left: 0.02rem;
+  width: 0.15rem;
+  height: 0.075rem;
+  border-left: 0.02rem solid #333333;
+  border-bottom: 0.02rem solid #333333;
+  transform: rotate(-45deg);
   transition: all 0.3s ease 0s;
 }
 .form-top .type-checkbox:checked + span::after {
@@ -2176,77 +2179,160 @@ iframe {
   }
 }
 
-.addForm {
-  font-weight: bold;
-  text-align: center;
+.form-top .form-item {
+  position: relative;
+}
+
+.mw_wp_form .error {
+  display: block;
+  position: absolute;
+  color: #b70000;
+  font-size: 14%;
+  bottom: -0.18rem;
 }
 @media screen and (max-width: 767px) {
-  .addForm {
-    font-size: 0.22rem;
-    line-height: 1.6333;
-    margin-top: 0.26rem;
+  .mw_wp_form .error {
+    left: 0;
   }
 }
 @media screen and (min-width: 768px) {
-  .addForm {
-    font-size: 0.26rem;
-    line-height: 1.7;
-    margin-top: 0.28rem;
+  .mw_wp_form .error {
+    right: 2.78rem;
   }
 }
 
-.js-slideToggle {
-  display: none;
+.form-top .form-item.name .error,
+.form-top .form-item.houseNumber .error,
+.form-top .form-item.dc .error {
+  bottom: 0;
+}
+
+.form-top .privacy {
+  position: relative;
+}
+
+.form-top .privacy .error {
+  bottom: -0.2rem;
+}
+@media screen and (max-width: 767px) {
+  .form-top .privacy .error {
+    left: 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .form-top .privacy .error {
+    left: 44%;
+  }
 }
 
 /*=====================================================
-# modal
+# js
 =====================================================*/
-.fixed {
+.modal-open {
   position: fixed;
-  left: 0;
-  right: 0;
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 50%;
+  left: 50%;
+  width: 300px;
+  height: 50px;
+  font-weight: bold;
+  color: #fff;
+  background: #000;
+  margin: auto;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
 }
 
-.content {
-  display: none;
+/*モーダル本体の指定 + モーダル外側の背景の指定*/
+.modal-container {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px 20px;
+  overflow: auto;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  box-sizing: border-box;
   z-index: 100;
 }
 
-.overlay {
-  width: 100%;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.58);
+/*モーダル本体の擬似要素の指定*/
+/*モーダル本体に「active」クラス付与した時のスタイル*/
+.modal-container.active {
+  opacity: 1;
+  visibility: visible;
 }
 
-.modal {
-  position: fixed;
-  background: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translateX(-50%) translateY(-50%);
-  height: 3rem;
-  z-index: 999;
+/*モーダル枠の指定*/
+.modal-body {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.modal-wrap {
   overflow: scroll;
 }
 @media screen and (max-width: 767px) {
-  .modal {
-    width: 90%;
+  .modal-wrap {
+    height: 5.19rem;
+    margin: 0 auto;
   }
 }
+@media screen and (min-width: 768px) {
+  .modal-wrap {
+    width: 8rem;
+    height: 5rem;
+  }
+}
+
+/*モーダルを閉じるボタンの指定*/
+.modal-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: -40px;
+  right: -40px;
+  width: 0.4rem;
+  height: 0.4rem;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-close::before, .modal-close::after {
+  content: "";
+  position: absolute;
+  top: 0.26rem;
+  right: 0;
+  width: 0.2rem;
+  height: 0.02rem;
+  background: #fff;
+}
+.modal-close::before {
+  transform: rotate(45deg);
+}
+.modal-close::after {
+  transform: rotate(-45deg);
+}
+
+/*モーダル内のコンテンツの指定*/
+.modal-content {
+  background: #fff;
+  text-align: left;
+}
 @media screen and (max-width: 767px) {
-  .modal-inner {
+  .modal-content {
     padding: 0.32rem 0.2rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .modal-inner {
+  .modal-content {
     padding: 0.4rem;
   }
 }
@@ -2269,6 +2355,29 @@ iframe {
 .modal-item {
   font-size: 0.14rem;
   line-height: 1.5;
+}
+
+.addForm {
+  font-weight: bold;
+  text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .addForm {
+    font-size: 0.22rem;
+    line-height: 1.6333;
+    margin-top: 0.26rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .addForm {
+    font-size: 0.26rem;
+    line-height: 1.7;
+    margin-top: 0.28rem;
+  }
+}
+
+.js-slideToggle {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
