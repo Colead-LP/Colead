@@ -239,6 +239,7 @@
                             </p>
                             <input type="number" name="year_fee" id="year_fee" class="input-number" step="1" min="1">
                             <span class="unit">万円</span>
+                            <span class="year_fee error-txt"></span>
                         </li>
                         <li class="calc-item">
                             <p class="calc-item-label">
@@ -246,6 +247,7 @@
                             </p>
                             <input type="number" name="rent" id="rent" class="input-number" step="1" min="1">
                             <span class="unit">万円</span>
+                              <span class="rent error-txt"></span>
                         </li>
                         <li class="calc-item">
                             <p class="calc-item-label">
@@ -255,6 +257,7 @@
                             <?php
                             echo GetDateSelecter();
                             ?>
+                             <span class="operation_period error-txt"></span>
                             <!-- </select> -->
                         </li>
                     </ul>
