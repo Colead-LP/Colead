@@ -250,7 +250,7 @@
                         <p class="calc-item-label">
                             稼働開始年月<span class="require">必須</span>
                         </p>
-                        <!-- <select name="operation_period" class="input-number" value="お選びください"> -->
+                        <!-- <select name="operation_period" class="input-number" id="operation_period"> -->
                         <?php
                         echo GetDateSelecter();
                         ?>
@@ -259,7 +259,7 @@
                 </ul>
                 <div class="calc-start">
                     <!-- <button type="submit" id="calc_start" class="calc-start-btn js-switch"> -->
-                    <button type="button" id="calc_start" class="calc-start-btn js-switch">
+                    <button type="button" id="calc_start" class="calc-start-btn js-switch" onclick="onClick()">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
                     </button>
                 </div>
@@ -272,7 +272,7 @@
                     <!-- </div> -->
                     <div class="calc-box">
                         <p class="calc-box-txt">概算売却額</p>
-                        <input class="calc-box-number" name="amount" value=<?php echo number_format($amount); ?>>
+                        <input readonly class="calc-box-number" name="amount" id="calc_result">
                         <p class="calc-box-unit">円</p>
                     </div>
                     <div class="contact-arrow">
@@ -292,5 +292,7 @@
         </div>
     </div>
 </section><!-- /.contact -->
+<script src="<?php echo get_template_directory_uri(); ?>/assets/js/calculate.js" type="text/javaScript" charset="utf-8"></script>
+
 <!-- .footer -->
 <?php get_footer();

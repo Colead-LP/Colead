@@ -47,7 +47,7 @@ $(function () {
   function slideToggle() {
     $(".js-switch").on("click", function () {
       $(".js-slideToggle").slideToggle();
-      $(".contact-arrow").toggleClass('active');
+      $(".contact-arrow").toggleClass("active");
     });
   }
 
@@ -74,9 +74,9 @@ $(function () {
       // ];
 
       var data = {
-        year_fee:$year_fee,
-        rent:$year_fee,
-        operation_period:$operation_period,
+        year_fee: $year_fee,
+        rent: $year_fee,
+        operation_period: $operation_period,
       };
 
       data = JSON.stringify(data);
@@ -86,7 +86,7 @@ $(function () {
         type: "POST",
         url: "",
         data: {
-          data: data
+          data: data,
         },
       })
         .done(function (data, textStatus, jqXHR) {
