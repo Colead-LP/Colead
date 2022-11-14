@@ -236,14 +236,14 @@
                         <p class="calc-item-label">
                             直近1年の売電金額（税込）<span class="require">必須</span>
                         </p>
-                        <input type="number" name="year_fee" id="year_fee" class="input-number">
+                        <input type="number" name="year_fee" id="year_fee" class="input-number" step="1" min="1">
                         <span class="unit">万円</span>
                     </li>
                     <li class="calc-item">
                         <p class="calc-item-label">
                             土地賃料<span class="require">必須</span>
                         </p>
-                        <input type="number" name="rent" id="rent" class="input-number">
+                        <input type="number" name="rent" id="rent" class="input-number" step="1" min="1">
                         <span class="unit">万円</span>
                     </li>
                     <li class="calc-item">

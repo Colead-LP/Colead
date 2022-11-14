@@ -43,11 +43,7 @@ function GetApproximateCost($year_fee , $rent , $operation_period){ //概算売�
   return $amount;
 }
 
-?>
-
-
-<?php
-function GetDateSelecter(){
+function GetDateSelecter(){ //optionタグの作成
   $today_year = date("Y"); //本日の年
   $today_month = date("m"); //本日の月
 
@@ -69,6 +65,6 @@ function GetDateSelecter(){
   foreach ($select_list as $sl){; //リスト形式でセレクターを取得
     $result .= '<option class="operation_period" value="'. $sl[0] ."-". $sl[1] .'">'.$sl[0]."月".$sl[1]."日</option>";
   }
-  return '<select name="operation_period" class="input-number"><option value="" selected disable>お選びください</option>'.$result.'</select>';
+  return '<select name="operation_period" class="input-number"><option value="" selected hidden>お選びください</option>'.$result.'</select>';
 }
 ?>

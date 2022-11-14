@@ -411,7 +411,7 @@ iframe {
   .main-inner {
     height: 2.77rem;
     border-top-left-radius: 0.3rem;
-    padding: 0.37rem 0.23rem 0.25rem 0.24rem;
+    padding: 0.37rem 0.23rem 0.4rem 0.24rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -429,12 +429,13 @@ iframe {
   .main-inner_title {
     margin-bottom: 0.25rem;
     font-size: 0.24rem;
+    line-height: 0.3rem;
   }
 }
 @media screen and (min-width: 768px) {
   .main-inner_title {
     font-size: 0.28rem;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.36rem;
   }
 }
 @media screen and (max-width: 767px) {
@@ -446,6 +447,9 @@ iframe {
   .main-inner_title .media-br {
     display: none;
   }
+}
+.main-inner_txt {
+  line-height: 0.29rem;
 }
 @media screen and (max-width: 767px) {
   .main-inner_txt {
