@@ -88,7 +88,7 @@ function onClick() {
           $operation_period
         ).toLocaleString();
         $(".calc-box-number").val($amount);
-        $(".js-slideToggle").slideDown();
+        $(".contact-wrap").addClass("active");
         $(".contact-arrow").addClass("active");
       }
     }
