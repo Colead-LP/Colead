@@ -23,14 +23,15 @@ function onClick() {
     } else {
       if ($year_fee < $rent) {
         //土地賃料の方が大きくなり、マイナスの値が出る
-        alert("C");
         return false; //送信ボタン本来の動作をキャンセルします
       } else {
         //正しい入力値（計算、画面の引き伸ばし）
-        $amount = GetApproximateCost($year_fee, $rent, $operation_period);
-        // console.log($amount);
-        $('.calc-box-number').val($amount);
-        // document.getElementsById("calc_result").value = $amount;
+        $amount = GetApproximateCost(
+          $year_fee,
+          $rent,
+          $operation_period
+        ).toLocaleString();
+        $(".calc-box-number").val($amount);
       }
     }
   }
@@ -75,10 +76,10 @@ function onClick() {
     $remainingMouths = $serviceLife - $progress_month; //耐用年数-経過月数=残存月数
 
     $yield = 0.07; //利回り
-    $grossYield = Math.round(($yield + 12 / $remainingMouths) * 10000) / 10000; //表面利回り算出
-    $cf = $year_fee - $rent; //売上総利益の算出
+    $grossYield = Math.round(($yield + 12 / $remainingMouths) * 1000) / 1000; //表面利回り算出
+    $cf = ($year_fee - $rent) * 10000; //売上総利益の算出
 
-    $amount = Math.round($cf / $grossYield); //roundで千の位まで丸め込み
+    $amount = Math.round($cf / $grossYield / 10000) * 10000; //roundで千の位まで丸め込み
 
     return $amount;
   }
