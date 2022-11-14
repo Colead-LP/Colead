@@ -753,10 +753,7 @@
 
   &-ttl {
     @include v.mq(sp) {
-      margin-bottom: 0.36rem;
-    }
-    @include v.mq(sp) {
-      margin-bottom: 0.786rem;
+      margin-bottom: 0.296rem;
     }
   }
 }
@@ -787,7 +784,6 @@
   @include v.mq(sp) {
     padding: 0.4rem 0.2rem 0.5rem;
     height: 8.58rem;
-    margin-top: 0.36rem;
   }
   @include v.mq(pc) {
     padding: 0.47rem 0.395rem 0.6rem 0.405rem;
@@ -1801,14 +1797,20 @@
 }
 
 .contact-wrap{
+  overflow: hidden;
+  transition: all 1s ease;
+  @include v.mq(sp) {
+    height: 6.05rem;
+  }
   @include v.mq(pc) {
     height: 6.08rem;
-    overflow: hidden;
-    transition: all 1s ease;
   }
   &.active{
+    @include v.mq(sp) {
+      height: 12rem;
+    }
     @include v.mq(pc) {
-      height: 10rem;
+      height: 24.1rem;
     }
   }
 }
