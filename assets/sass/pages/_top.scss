@@ -1508,7 +1508,8 @@
   position: relative;
 }
 
-.mw_wp_form .error {
+.mw_wp_form .error,
+.notval {
   display: block;
   position: absolute;
   color: #b70000;
@@ -1524,7 +1525,11 @@
 
 .form-top .form-item.name .error,
 .form-top .form-item.houseNumber .error,
-.form-top .form-item.dc .error {
+.form-top .form-item.dc .error,
+.form-top .form-item.name .notval,
+.form-top .form-item.houseNumber .notval,
+.form-top .form-item.dc .notval,
+.form-top .form-item.fit .notval {
   bottom: 0;
 }
 
@@ -1541,116 +1546,6 @@
     left: 44%;
   }
 }
-
-/*=====================================================
-# js
-=====================================================*/
-// .fixed {
-//   position: fixed;
-//   left: 0;
-//   right: 0;
-//   width: 100%;
-//   z-index: 1;
-// }
-
-// .content {
-//   display: none;
-//   position: fixed;
-//   top: 0;
-//   left: 0;
-//   width: 100%;
-//   height: 100vh;
-//   z-index: 10;
-// }
-
-// .overlay {
-//   position: relative;
-//   width: 100%;
-//   height: 100vh;
-//   background: rgba(0, 0, 0, 0.58);
-//   z-index: 100;
-
-//   .modal-close {
-//     position: absolute;
-//     top: 2rem;
-//     left: 5rem;
-
-//     &::before,
-//     &::after {
-//       content: "";
-//       position: absolute;
-//       background: #fff;
-//       top: 0;
-//       left: 0;
-//       width: 0.2rem;
-//       height: 0.02rem;
-//       z-index: 300;
-//     }
-
-//     &::before {
-//       transform: rotate(45deg);
-//     }
-
-//     &::after {
-//       transform: rotate(-45deg);
-//     }
-//   }
-// }
-
-// .modal {
-//   position: fixed;
-//   background: #fff;
-//   top: 50%;
-//   left: 50%;
-//   transform: translateX(-50%) translateY(-50%);
-//   z-index: 200;
-//   overflow: scroll;
-//   @include v.mq(sp) {
-//     width: 90%;
-//     height: 5.19rem;
-//   }
-//   @include v.mq(pc) {
-//     top: 40%;
-//     width: 8rem;
-//     height: 5rem;
-//     margin: 0 auto;
-//   }
-// }
-
-// .modal-inner {
-//   @include v.mq(sp) {
-//     padding: 0.32rem 0.2rem;
-//   }
-//   @include v.mq(pc) {
-//     padding: 0.4rem;
-//   }
-// }
-
-// .modal-close {
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   width: .2rem;
-//   height: .2rem;
-//   &::before,
-//   &::after {
-//     content: "";
-//     position: absolute;
-//     background: #fff;
-//     top: 0;
-//     right: 0;
-//     width: .2rem;
-//     height: .02rem;
-//   }
-
-//   &::before {
-//     transform: rotate(45deg);
-//   }
-
-//   &::after {
-//     transform: rotate(-45deg);
-//   }
-// }
 
 .modal-open {
   position: fixed;

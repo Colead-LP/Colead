@@ -50,10 +50,97 @@ $(function () {
       }
     });
   });
+  
+  $('input[name=name_first]').change(function(){
+    let name = $(this).val();
+    if(name === ""){
+      $(".name").append('<p class="notval">未入力です</p>');
+    } else {
+      $(".name .notval").remove();
+    }
+  });
+  $('input[name=email]').change(function(){
+    let email = $(this).val();
+    if(email === ""){
+      $(".email").append('<p class="notval">未入力です</p>');
+    } else {
+      $(".email .notval").remove();
+    }
+  });
+  $('input[name=zip]').change(function(){
+    let zip = $(this).val();
+    if(zip === ""){
+      $(".post").append('<p class="notval">未入力です</p>');
+    } else {
+      $(".post .notval").remove();
+    }
+  });
+  $('input[name=city]').change(function(){
+    let city = $(this).val();
+    if(city === ""){
+      $(".munic").append('<p class="notval">未入力です</p>');
+    } else {
+      $(".munic .notval").remove();
+    }
+  });
+  $('input[name=area]').change(function(){
+    let area = $(this).val();
+    if(area === ""){
+      $(".houseNumber").append('<p class="notval">未入力です</p>');
+    } else {
+      $(".houseNumber .notval").remove();
+    }
+  });
+  $('input[name=dc]').change(function(){
+    let dc = $(this).val();
+    if(dc === ""){
+      $(".dc").append('<p class="notval">未入力です</p>');
+    } else {
+      $(".dc .notval").remove();
+    }
+  });
+  
+    const name = $(".input-name-first").val();
+    const email = $(".type-email").val();
+    const post = $("#zip").val();
+    const city = $("#city").val();
+    const houseNumber = $("#area").val();
+    const dc = $("#dc").val();
 
   function onSubmit() {
-    $('form').submit(function(){
-      alert('送信しました');
+    $("form").submit(function (e) {
+      const top = $(".mw_wp_form").offset().top - 40;
+
+      if (name === "") {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: top }, "slow");
+        $(".name").append('<p class="notval">未入力です</p>');
+      }
+      if (email === "") {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: top }, "slow");
+        $(".email").append('<p class="notval">未入力です</p>');
+      }
+      if (post === "") {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: top }, "slow");
+        $(".post").append('<p class="notval">未入力です</p>');
+      }
+      if (city === "") {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: top }, "slow");
+        $(".munic").append('<p class="notval">未入力です</p>');
+      }
+      if (houseNumber === "") {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: top }, "slow");
+        $(".houseNumber").append('<p class="notval">未入力です</p>');
+      }
+      if (dc === "") {
+        e.preventDefault();
+        $("html,body").animate({ scrollTop: top }, "slow");
+        $(".dc").append('<p class="notval">未入力です</p>');
+      }
     });
   }
 
@@ -71,7 +158,7 @@ function onClick() {
   $year_fee = Number(document.getElementById("year_fee").value);
   $rent = Number(document.getElementById("rent").value);
   // $operation_period = document.getElementById("operation_period").value;
-  $operation_period = $('option:selected').val();
+  $operation_period = $("option:selected").val();
 
   if (
     EmptyOrNot($year_fee) == false ||

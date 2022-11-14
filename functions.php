@@ -24,6 +24,7 @@ function add_my_files()
             //GoogleCDNから読み込む
             wp_enqueue_script('jquery-js', '//ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js' );
             wp_enqueue_script('yubinbango','https://yubinbango.github.io/yubinbango/yubinbango.js',array(),false,true );
+            wp_enqueue_script('validation','https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.js',array(),false,true );
             wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/script.js');
             wp_enqueue_script('calclate-js', get_template_directory_uri() . '/assets/js/calculate.js');
         }
