@@ -51,14 +51,14 @@ $(function () {
     });
   });
   
-  $("form").submit(function (e) {
+  $(".contact form").submit(function (e) {
     const name = $(".input-name-first").val();
     const email = $(".type-email").val();
     const post = $("#zip").val();
     const city = $("#city").val();
     const houseNumber = $("#area").val();
     const dc = $("#dc").val();
-    const privacy = $("#privacy-1");
+    const privacy = $(".privacy-check");
     const top = $(".mw_wp_form").offset().top - 40;
 
     if (
@@ -67,54 +67,20 @@ $(function () {
       post === "" ||
       city === "" ||
       houseNumber === "" ||
-      dc === ""
+      dc === "" ||
+      (!privacy.prop("checked"))
     ) {
       $("html,body").animate({ scrollTop: top }, "slow");
-    }
-
-    if (name === "") {
       e.preventDefault();
       $(".name").append('<p class="notval">未入力です。</p>');
-    } else {
-      return true;
-    }
-    if (email === "") {
-      e.preventDefault();
       $(".email").append('<p class="notval">未入力です。</p>');
-    } else {
-      return true;
-    }
-    if (post === "") {
-      e.preventDefault();
       $(".post").append('<p class="notval">未入力です。</p>');
-    } else {
-      return true;
-    }
-    if (city === "") {
-      e.preventDefault();
       $(".munic").append('<p class="notval">未入力です。</p>');
-    } else {
-      return true;
-    }
-    if (houseNumber === "") {
-      e.preventDefault();
       $(".houseNumber").append('<p class="notval">未入力です。</p>');
-    } else {
-      return true;
-    }
-    if (dc === "") {
-      e.preventDefault();
       $(".dc").append('<p class="notval">未入力です。</p>');
-    } else {
-      return true;
-    }
-    if (privacy.prop("checked")) {
-      console.log('check');
-      return true;
-    } else {
-      console.log('notcheck');
-      e.preventDefault();
       $(".privacy").append('<p class="notval">必須項目です。</p>');
+    } else {
+      return true;
     }
   });
 
