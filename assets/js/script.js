@@ -51,41 +51,41 @@ $(function () {
     });
   });
   
-  $(".contact form").submit(function (e) {
-    const name = $(".input-name-first").val();
-    const email = $(".type-email").val();
-    const post = $("#zip").val();
-    const city = $("#city").val();
-    const houseNumber = $("#area").val();
-    const dc = $("#dc").val();
-    const privacy = $(".privacy-check");
-    const top = $(".mw_wp_form").offset().top - 40;
+//   $(".contact form").submit(function (e) {
+//     const name = $(".input-name-first").val();
+//     const email = $(".type-email").val();
+//     const post = $("#zip").val();
+//     const city = $("#city").val();
+//     const houseNumber = $("#area").val();
+//     const dc = $("#dc").val();
+//     const privacy = $(".privacy-check");
+//     const top = $(".mw_wp_form").offset().top - 40;
 
-    if (
-      name === "" ||
-      email === "" ||
-      post === "" ||
-      city === "" ||
-      houseNumber === "" ||
-      dc === "" ||
-      (!privacy.prop("checked"))
-    ) {
-      $("html,body").animate({ scrollTop: top }, "slow");
-      e.preventDefault();
-      $(".name").append('<p class="notval">未入力です。</p>');
-      $(".email").append('<p class="notval">未入力です。</p>');
-      $(".post").append('<p class="notval">未入力です。</p>');
-      $(".munic").append('<p class="notval">未入力です。</p>');
-      $(".houseNumber").append('<p class="notval">未入力です。</p>');
-      $(".dc").append('<p class="notval">未入力です。</p>');
-      $(".privacy").append('<p class="notval">必須項目です。</p>');
-    } else {
-      return true;
-    }
-  });
+//     if (
+//       name === "" ||
+//       email === "" ||
+//       post === "" ||
+//       city === "" ||
+//       houseNumber === "" ||
+//       dc === "" ||
+//       (!privacy.prop("checked"))
+//     ) {
+//       $("html,body").animate({ scrollTop: top }, "slow");
+//       e.preventDefault();
+//       $(".name").append('<p class="notval">未入力です。</p>');
+//       $(".email").append('<p class="notval">未入力です。</p>');
+//       $(".post").append('<p class="notval">未入力です。</p>');
+//       $(".munic").append('<p class="notval">未入力です。</p>');
+//       $(".houseNumber").append('<p class="notval">未入力です。</p>');
+//       $(".dc").append('<p class="notval">未入力です。</p>');
+//       $(".privacy").append('<p class="notval">必須項目です。</p>');
+//     } else {
+//       return true;
+//     }
+//   });
 
-  changeTxt();
-});
+//   changeTxt();
+// });
 
 function onClick() {
   //値のリセット

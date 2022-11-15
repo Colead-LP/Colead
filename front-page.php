@@ -290,7 +290,7 @@
                     より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
                 </p>
                 <!-- .form -->
-                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+                <?php include 'page-form.php'; ?>
                 <!-- /.form -->
 
             </div>
