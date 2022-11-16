@@ -35,32 +35,6 @@ function add_my_files()
 //アクションフック（wp_enqueue_scripts）への登録
 add_action('wp_enqueue_scripts', 'add_my_files');
 
-// 住所自動入力
-function add_yubinbango_class(){
-    echo <<<EOC
-  <script>
-    jQuery('.mw_wp_form form').addClass('h-adr');
-  </script>
-  EOC;
-  }
-  add_action( 'wp_print_footer_scripts', 'add_yubinbango_class' );
-
-
-function mvwpform_autop_filter()
-{
-    if (class_exists('MW_WP_Form_Admin')) {
-        $mw_wp_form_admin = new MW_WP_Form_Admin();
-        $forms = $mw_wp_form_admin->get_forms();
-        foreach ($forms as $form) {
-            add_filter('mwform_content_wpautop_mw-wp-form-' . $form->ID, '__return_false');
-        }
-    }
-}
-mvwpform_autop_filter();
-
-
-
-
 /*=====================================================
 # form action属性の変更コード test
 

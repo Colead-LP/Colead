@@ -1,8 +1,4 @@
 <?php require("calculate.php");
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     header("Location:http://localhost:8888/Colead/");
-//     exit;
-// }
 ?>
 
 <?php get_header();
