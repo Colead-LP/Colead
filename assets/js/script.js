@@ -50,7 +50,7 @@ $(function () {
       }
     });
   });
-  
+
   $("form").submit(function (e) {
     const name = $(".input-name-first").val();
     const email = $(".type-email").val();
@@ -109,10 +109,10 @@ $(function () {
       return true;
     }
     if (privacy.prop("checked")) {
-      console.log('check');
+      console.log("check");
       return true;
     } else {
-      console.log('notcheck');
+      console.log("notcheck");
       e.preventDefault();
       $(".privacy").append('<p class="notval">必須項目です。</p>');
     }
