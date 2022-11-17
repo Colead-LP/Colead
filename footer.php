@@ -13,6 +13,7 @@
 </footer><!-- /.footer -->
 <?php wp_footer(); ?>
 
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSzDb8jsIuT6iPnqglPOBG2fSNj-H_33k&callback=initMap"></script>
 </body>
 
 </html>

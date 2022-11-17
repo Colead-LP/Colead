@@ -26,14 +26,13 @@ get_header();
                 <div class="form-item-input">
                   <label class="form-item-label">
                     <span class="label-txt top">姓</span>
-                    <input type="text" name="name_first" id="name_first" class="type-text input-name-first" value="
-
-                    
-                    ">
+                    <input type="text" name="name_first" id="name_first" class="type-text input-name-first" value="">
+                    <p id="nameFirst_error_message" class="error_message">入力してください。</p>
                   </label>
                   <label class="form-item-label">
                     <span class="label-txt top">名</span>
                     <input type="text" name="name_last" id="name_last" class="type-text input-name-last" size="" value="">
+                    <p class="error_message">入力してください。</p>
                   </label>
                 </div>
               </li>
@@ -41,9 +40,8 @@ get_header();
                 <p class="form-item-ttl">
                   メールアドレス<span class="require top">必須</span>
                 </p>
-                <input type="email" name="email" id="email" class="type-email" size="60" value="
-
-                ">
+                <input type="email" name="email" id="email" class="type-email" size="60" value="">
+                <p class="error_message"></p>
               </li>
 
             </ul>
@@ -60,6 +58,7 @@ get_header();
               <li class="form-item post top require-item">
                 <p class="form-item-ttl">郵便番号</p>
                 <input type="text" name="zip" id="zip" class="type-number p-postal-code" value="">
+                <p class="error_message">入力してください。</p>
               </li>
               <li class="form-item pref">
                 <p class="form-item-ttl">都道府県</p>
@@ -113,8 +112,9 @@ get_header();
                   <option value="46">鹿児島県</option>
                   <option value="47">沖縄県</option>
                 </select>
+                <p class="error_message">選択してください。</p>
               </li>
-              <li class="form-item munic require-item">
+              <li class="form-item city require-item">
                 <p class="form-item-ttl">市区町村</p>
                 <input type="text" name="city" id="city" class="p-locality p-street-address type-text input-munic" size="" value="">
               </li>
@@ -276,7 +276,7 @@ get_header();
             </div>
             <div class="submit">
               <label class="submit-label">
-                <input type="submit" name="btn_confirm" value="確認する" class="to-confirm">
+                <input id="to_confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm">
               </label>
             </div>
           </div><!-- form-powerPlant -->

@@ -2394,4 +2394,26 @@ iframe {
   }
 }
 
+/*=====================================================
+# valudation
+=====================================================*/
+.success {
+  border: 0.02rem solid green;
+}
+
+.error_message {
+  display: none;
+  font-size: 0.16rem;
+  border: 0.02rem solid red;
+}
+
+/*=====================================================
+# map
+=====================================================*/
+#gmap {
+  width: 100%;
+  height: 3rem;
+  margin: 0 auto;
+}
+
 /*# sourceMappingURL=style.css.map */

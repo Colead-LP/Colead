@@ -16,16 +16,6 @@ $(function () {
     return false;
   });
 
-  function changeTxt() {
-    let url = location.href;
-    console.log(url);
-
-    // if(url === 'http://localhost:8888/Colead/confirm/' ) {
-    if (url === "https://itomaru.org/colead/confirm/") {
-      let hoge = $(".address .form-item-ttl").text("発電所住所");
-    }
-  }
-
   $(function () {
     // 変数に要素を入れる
     var open = $(".js-pravacy"),
@@ -50,41 +40,6 @@ $(function () {
       }
     });
   });
-  
-  // $(".contact form").submit(function (e) {
-  //   const name = $(".input-name-first").val();
-  //   const email = $(".type-email").val();
-  //   const post = $("#zip").val();
-  //   const city = $("#city").val();
-  //   const houseNumber = $("#area").val();
-  //   const dc = $("#dc").val();
-  //   const privacy = $(".privacy-check");
-  //   const top = $(".mw_wp_form").offset().top - 40;
-
-  //   if (
-  //     name === "" ||
-  //     email === "" ||
-  //     post === "" ||
-  //     city === "" ||
-  //     houseNumber === "" ||
-  //     dc === "" ||
-  //     (!privacy.prop("checked"))
-  //   ) {
-  //     $("html,body").animate({ scrollTop: top }, "slow");
-  //     e.preventDefault();
-  //     $(".name").append('<p class="notval">未入力です。</p>');
-  //     $(".email").append('<p class="notval">未入力です。</p>');
-  //     $(".post").append('<p class="notval">未入力です。</p>');
-  //     $(".munic").append('<p class="notval">未入力です。</p>');
-  //     $(".houseNumber").append('<p class="notval">未入力です。</p>');
-  //     $(".dc").append('<p class="notval">未入力です。</p>');
-  //     $(".privacy").append('<p class="notval">必須項目です。</p>');
-  //   } else {
-  //     return true;
-  //   }
-  // });
-
-  changeTxt();
 });
 
 function onClick() {
@@ -190,4 +145,77 @@ function onClick() {
 
     return $amount;
   }
+}
+
+// #formValidation
+// form
+const form = document.getElementById("form");
+// form element
+const name_first = document.getElementById("name_first");
+const name_last = document.getElementById("name_last");
+const email = document.getElementById("email");
+const zip = document.getElementById("zip");
+const pref = document.getElementById("pref");
+// const prefval = pref.value;
+const city = document.getElementById("city");
+const area = document.getElementById("area");
+const fit = document.getElementById("fit");
+// const fitval = fit.value;
+const dc = document.getElementById("dc");
+const privacy = document.getElementById("privacy");
+
+// error message
+const nameFirst_error_message = document.getElementById(
+  "nameFirst_error_message"
+);
+// btn
+const to_confirm = document.getElementById("to_confirm");
+console.log(to_confirm);
+// 初期状態
+// to_confirm.setAttribute("disabled", true);
+
+// event
+// name
+name_first.addEventListener("keyup", (e) => {
+  if (nameExp.test(name_first.value)) {
+    name_first.setAttribute("class", "success");
+    nameFirst_error_message.style.display = "none";
+  } else {
+    name_first.setAttribute("class", "error");
+    nameFirst_error_message.style.display = "block";
+  }
+  console.log(name_first.getAttribute("class").includes("success"));
+  checkSuccess();
+});
+
+// email
+
+// zip
+
+// pref
+
+// city
+
+// area
+
+// fit
+
+// dc
+
+//privacy
+
+//toConfirm
+
+// #map
+
+function initMap() {
+  var mapPosition = new google.maps.LatLng( 35.6882495,139.6856557 );//緯度経度
+  var map = new google.maps.Map(document.getElementById('gmap'), {
+  zoom: 17,//ズーム
+  center: mapPosition
+});
+  var marker = new google.maps.Marker({
+  position: mapPosition,
+  map: map
+  });
 }

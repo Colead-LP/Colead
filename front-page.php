@@ -26,6 +26,7 @@
         </div>
     </div>
 </div><!-- /.mv -->
+<div id="gmap"></div>
 <!-- .solve -->
 <section class="solve">
     <div class="solve-header">
