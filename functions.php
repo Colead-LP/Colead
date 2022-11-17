@@ -13,6 +13,8 @@ function add_my_files()
         wp_enqueue_style('thanks', get_template_directory_uri() . '/assets/css/thanks.css');
     } elseif (is_page('form')) {
         wp_enqueue_style('form', get_template_directory_uri() . '/assets/css/form.css');
+    } elseif (is_page('test')) {
+        wp_enqueue_style('top', get_template_directory_uri() . '/assets/css/style.css');
     }
 
     function custom_print_scripts()
