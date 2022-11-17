@@ -126,11 +126,23 @@ get_header();
                 <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
                 <select name="fit" id="fit" class="select input-fit">
                   <option value="1" selected="selected">
-                    1 </option>
+                    44 </option>
                   <option value="2">
-                    2 </option>
+                    39.6 </option>
                   <option value="3">
-                    3 </option>
+                    35.2 </option>
+                  <option value="4">
+                    31.9 </option>
+                  <option value="5">
+                    29.7 </option>
+                  <option value="6">
+                    26.4 </option>
+                  <option value="7">
+                    23.1 </option>
+                  <option value="8">
+                    19.8 </option>
+                  <option value="9">
+                    15.4 </option>
                 </select>
               </li>
               <li class="form-item dc require-item">
@@ -143,13 +155,13 @@ get_header();
                 <div class="radio-wrap">
                   <span class="mwform-radio-field horizontal-item">
                     <label for="wiring-1">
-                      <input type="radio" name="wiring" value="有" checked="checked" id="wiring-1" class="type-radio input-wiring">
+                      <input type="radio" name="wiring" value="1" checked="checked" id="wiring-1" class="type-radio input-wiring">
                       <span class="mwform-radio-field-text">有</span>
                     </label>
                   </span>
                   <span class="mwform-radio-field horizontal-item">
                     <label for="wiring-2">
-                      <input type="radio" name="wiring" value="無" id="wiring-2" class="type-radio input-wiring">
+                      <input type="radio" name="wiring" value="2" id="wiring-2" class="type-radio input-wiring">
                       <span class="mwform-radio-field-text">無</span>
                     </label>
                   </span>
@@ -160,13 +172,13 @@ get_header();
                 <div class="radio-wrap">
                   <span class="mwform-radio-field horizontal-item">
                     <label for="system-1">
-                      <input type="radio" name="system" value="有" checked="checked" id="system-1" class="type-radio input-system">
+                      <input type="radio" name="system" value="1" checked="checked" id="system-1" class="type-radio input-system">
                       <span class="mwform-radio-field-text">有</span>
                     </label>
                   </span>
                   <span class="mwform-radio-field horizontal-item">
                     <label for="system-2">
-                      <input type="radio" name="system" value="無" id="system-2" class="type-radio input-system">
+                      <input type="radio" name="system" value="2" id="system-2" class="type-radio input-system">
                       <span class="mwform-radio-field-text">無</span>
                     </label>
                   </span>
@@ -177,13 +189,13 @@ get_header();
                 <div class="radio-wrap">
                   <span class="mwform-radio-field">
                     <label for="maint-1">
-                      <input type="radio" name="maint" value="有" checked="checked" id="maint-1" class="type-radio input-maint">
+                      <input type="radio" name="maint" value="1" checked="checked" id="maint-1" class="type-radio input-maint">
                       <span class="mwform-radio-field-text">有</span>
                     </label>
                   </span>
                   <span class="mwform-radio-field">
                     <label for="maint-2">
-                      <input type="radio" name="maint" value="無" id="maint-2" class="type-radio input-maint">
+                      <input type="radio" name="maint" value="2" id="maint-2" class="type-radio input-maint">
                       <span class="mwform-radio-field-text">無</span>
                     </label>
                   </span>

@@ -149,11 +149,23 @@
                             <p>
                                 <?php
                                 if ($_POST['fit'] === '1') {
-                                    echo '1';
+                                    echo '44';
                                 } elseif ($_POST['fit'] === '2') {
-                                    echo '2';
+                                    echo '39.6';
                                 } elseif ($_POST['fit'] === '3') {
-                                    echo '3';
+                                    echo '35.2';
+                                } elseif ($_POST['fit'] === '4') {
+                                    echo '31.9';
+                                } elseif ($_POST['fit'] === '5') {
+                                    echo '29.7';
+                                } elseif ($_POST['fit'] === '6') {
+                                    echo '26.4';
+                                } elseif ($_POST['fit'] === '7') {
+                                    echo '23.1';
+                                } elseif ($_POST['fit'] === '8') {
+                                    echo '19.8';
+                                } elseif ($_POST['fit'] === '9') {
+                                    echo '15.4';
                                 }
                                 ?>
                             </p>
