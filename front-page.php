@@ -1,8 +1,4 @@
 <?php require("calculate.php");
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     header("Location:http://localhost:8888/Colead/");
-//     exit;
-// }
 ?>
 
 <?php get_header();
@@ -30,6 +26,7 @@
         </div>
     </div>
 </div><!-- /.mv -->
+<div id="gmap"></div>
 <!-- .solve -->
 <section class="solve">
     <div class="solve-header">
@@ -290,7 +287,7 @@
                     より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
                 </p>
                 <!-- .form -->
-                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+                <?php include 'page-form.php'; ?>
                 <!-- /.form -->
 
             </div>
