@@ -207,7 +207,6 @@ name_first.addEventListener("keyup", (e) => {
 //toConfirm
 
 // #map
-
 function initMap() {
   var mapPosition = new google.maps.LatLng( 35.6882495,139.6856557 );//緯度経度
   var map = new google.maps.Map(document.getElementById('gmap'), {
