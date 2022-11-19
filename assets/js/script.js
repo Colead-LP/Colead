@@ -40,8 +40,82 @@ $(function () {
       }
     });
   });
+
+  // #formValidation
+  // form element
+  const form = document.getElementById("form");
+
+  if (form) {
+    // エラーを表示する p 要素に付与するクラス名 (エラー用のクラス)
+    const errorClassName = "error";
+
+    //required クラスを指定された要素の集まり
+    const requiredElems = document.querySelectorAll(".required");
+    // 各input要素取得
+    const to_confirm = document.getElementById("toConfirm");
+    const name_first = document.getElementById("name_first");
+    const name_last = document.getElementById("name_last");
+    const email = document.getElementById("email");
+    const zip = document.getElementById("zip");
+    const pref = document.getElementById("pref");
+    // const prefval = pref.value;
+    const city = document.getElementById("city");
+    const area = document.getElementById("area");
+    const fit = document.getElementById("fit");
+    // const fitval = fit.value;
+    const dc = document.getElementById("dc");
+    const privacy = document.getElementById("privacy");
+
+    // エラーメッセージを表示する p 要素を生成して親要素に追加する関数
+    // elem : 対象の要素
+    // errorMessage : 表示するエラーメッセージ
+    const createError = (elem, errorMessage) => {
+      // p 要素を生成
+      const errorP = document.createElement("p");
+      // エラー用のクラスを追加 (設定)
+      errorP.classList.add(errorClassName);
+      // 引数に指定されたエラーメッセージを設定
+      errorP.textContent = errorMessage;
+      // elem の親要素の子要素として追加
+      elem.parentNode.appendChild(errorP);
+    };
+
+    to_confirm.addEventListener("click", (e) => {
+      // エラーを表示する要素を全て取得して削除 (初期化)
+      const errorElems = form.querySelectorAll("." + errorClassName);
+      errorElems.forEach((elem) => {
+        elem.remove();
+      });
+
+      // .required を指定した要素を検証
+      requiredElems.forEach((elem) => {
+        // 値 (value プロパティ) の前後の空白文字を削除
+        const elemValue = elem.value.trim();
+        // 値が空の場合はエラーを表示してフォームの送信を中止
+        if (elemValue.length === 0) {
+          createError(elem, "入力は必須です。");
+          e.preventDefault();
+        }
+      });
+
+      // エラーの最初の要素を取得
+      const errorElem = form.querySelector('.' + errorClassName);
+      // エラーがあればエラーの最初の要素の位置へスクロール
+      if (errorElem) {
+        const rect = errorElem.getBoundingClientRect().top;
+        const offset = window.pageYOffset;
+        const gap = 60;
+        const errorElemTop = rect + offset - gap;
+        window.scrollTo({
+          top: errorElemTop,
+          behavior: "smooth",
+        });
+      }
+    });
+  }
 });
 
+// #計算フォーム
 function onClick() {
   //値のリセット
   $year_fee = "";
@@ -147,72 +221,15 @@ function onClick() {
   }
 }
 
-// #formValidation
-// form
-const form = document.getElementById("form");
-// form element
-const name_first = document.getElementById("name_first");
-const name_last = document.getElementById("name_last");
-const email = document.getElementById("email");
-const zip = document.getElementById("zip");
-const pref = document.getElementById("pref");
-// const prefval = pref.value;
-const city = document.getElementById("city");
-const area = document.getElementById("area");
-const fit = document.getElementById("fit");
-// const fitval = fit.value;
-const dc = document.getElementById("dc");
-const privacy = document.getElementById("privacy");
-
-// error message
-const nameFirst_error_message = document.getElementById(
-  "nameFirst_error_message"
-);
-// btn
-const to_confirm = document.querySelector("#to-confirm");
-// 初期状態
-
-// event
-// name
-name_first.addEventListener("keyup", (e) => {
-  if (name_first.value) {
-    name_first.setAttribute("class", "success");
-    nameFirst_error_message.style.display = "none";
-  } else {
-    name_first.setAttribute("class", "error");
-    nameFirst_error_message.style.display = "block";
-  }
-  console.log(name_first.getAttribute("class").includes("success"));
-  checkSuccess();
-});
-
-// email
-
-// zip
-
-// pref
-
-// city
-
-// area
-
-// fit
-
-// dc
-
-//privacy
-
-//toConfirm
-
 // #map
 function initMap() {
-  var mapPosition = new google.maps.LatLng( 35.6882495,139.6856557 );//緯度経度
-  var map = new google.maps.Map(document.getElementById('gmap'), {
-  zoom: 17,//ズーム
-  center: mapPosition
-});
+  var mapPosition = new google.maps.LatLng(35.6882495, 139.6856557); //緯度経度
+  var map = new google.maps.Map(document.getElementById("gmap"), {
+    zoom: 17, //ズーム
+    center: mapPosition,
+  });
   var marker = new google.maps.Marker({
-  position: mapPosition,
-  map: map
+    position: mapPosition,
+    map: map,
   });
 }

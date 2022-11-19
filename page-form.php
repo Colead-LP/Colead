@@ -6,7 +6,7 @@ include('mail.php');
 ?>
 <h1>お問合せフォーム</h1>
   <!-- #input -->
-  <form action="" method="post" id="form" class="h-adr">
+  <form action="" method="post" id="form" class="h-adr" name="form">
     <span class="p-country-name" style="display:none;">Japan</span>
     <div class="form form-top form-confirm">
       <h3 class="form-confirm-ttl confirm">入力内容の確認</h3>
@@ -21,13 +21,13 @@ include('mail.php');
                 <div class="form-item-input">
                   <label class="form-item-label">
                     <span class="label-txt top">姓</span>
-                    <input type="text" name="name_first" id="name_first" class="type-text input-name-first" value="">
+                    <input type="text" name="name_first" id="name_first" class="type-text input-name-first required" value="">
                     <p id="nameFirst_error_message" class="error_message">入力してください。</p>
                   </label>
                   <label class="form-item-label">
                     <span class="label-txt top">名</span>
-                    <input type="text" name="name_last" id="name_last" class="type-text input-name-last" size="" value="">
-                    <p class="error_message">入力してください。</p>
+                    <input type="text" name="name_last" id="name_last" class="type-text input-name-last required" size="" value="">
+                    <p id="nameLast_error_message" class="error_message">入力してください。</p>
                   </label>
                 </div>
               </li>
@@ -262,15 +262,13 @@ include('mail.php');
                   </div>
                 </div>
               </div>
-              <span class="mwform-checkbox-field horizontal-item">
                 <label for="privacy-1">
                   <input type="checkbox" name="privacy" value="agree" id="privacy" class="privacy-check type-checkbox">
                   <span class="mwform-checkbox-field-text">プライバシーポリシーに同意する。</span>
                 </label>
-              </span>
             </div>
             <div class="submit">
-              <input id="to-confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm">
+              <input type="submit" name="btn_confirm" value="確認する" id="toConfirm" class="to-confirm">
             </div>
           </div><!-- form-powerPlant -->
         </div>
