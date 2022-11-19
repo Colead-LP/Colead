@@ -275,9 +275,7 @@ get_header();
               </span>
             </div>
             <div class="submit">
-              <label class="submit-label">
-                <input id="to_confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm">
-              </label>
+              <input id="to-confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm">
             </div>
           </div><!-- form-powerPlant -->
         </div>

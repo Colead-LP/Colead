@@ -169,15 +169,13 @@ const nameFirst_error_message = document.getElementById(
   "nameFirst_error_message"
 );
 // btn
-const to_confirm = document.getElementById("to_confirm");
-console.log(to_confirm);
+const to_confirm = document.querySelector("#to-confirm");
 // 初期状態
-// to_confirm.setAttribute("disabled", true);
 
 // event
 // name
 name_first.addEventListener("keyup", (e) => {
-  if (nameExp.test(name_first.value)) {
+  if (name_first.value) {
     name_first.setAttribute("class", "success");
     nameFirst_error_message.style.display = "none";
   } else {
