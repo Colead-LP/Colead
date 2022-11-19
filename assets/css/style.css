@@ -1743,20 +1743,20 @@ iframe {
     margin: 0.2rem 0 0;
   }
 }
-.form-top .form-item.name, .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+.form-top .form-item.name, .form-top .form-item.gmap, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  .form-top .form-item.name, .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  .form-top .form-item.name, .form-top .form-item.gmap, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
     padding-bottom: 0.2rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item.name, .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  .form-top .form-item.name, .form-top .form-item.gmap, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
     padding-bottom: 0.185rem;
   }
 }
-.form-top .form-item.name::after, .form-top .form-item.houseNumber::after, .form-top .form-item.fit::after, .form-top .form-item.dc::after, .form-top .form-item.wiring::after, .form-top .form-item.system::after, .form-top .form-item.maint::after, .form-top .form-item.panel::after, .form-top .form-item.pcs::after {
+.form-top .form-item.name::after, .form-top .form-item.gmap::after, .form-top .form-item.fit::after, .form-top .form-item.dc::after, .form-top .form-item.wiring::after, .form-top .form-item.system::after, .form-top .form-item.maint::after, .form-top .form-item.panel::after, .form-top .form-item.pcs::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -1781,12 +1781,12 @@ iframe {
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item.pref, .form-top .form-item.munic, .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  .form-top .form-item.pref, .form-top .form-item.city, .form-top .form-item.houseNumber, .form-top .form-item.gmap, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
     margin-top: 0.2rem;
   }
 }
 @media screen and (min-width: 768px) {
-  .form-top .form-item.houseNumber, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
+  .form-top .form-item.houseNumber, .form-top .form-item.gmap, .form-top .form-item.fit, .form-top .form-item.dc, .form-top .form-item.wiring, .form-top .form-item.system, .form-top .form-item.maint, .form-top .form-item.panel, .form-top .form-item.pcs {
     padding-bottom: 0.205rem;
   }
 }
@@ -1916,6 +1916,11 @@ iframe {
   .form-top .form-item.pref .input-pref {
     width: 2.48rem;
   }
+}
+.form-top .form-item.gmap #gmap {
+  width: 3.6rem;
+  height: 1.5rem;
+  margin: 0 auto;
 }
 .form-top .form-item.dc .unit {
   font-size: 0.16rem;
@@ -2410,10 +2415,5 @@ iframe {
 /*=====================================================
 # map
 =====================================================*/
-#gmap {
-  width: 100%;
-  height: 3rem;
-  margin: 0 auto;
-}
 
 /*# sourceMappingURL=style.css.map */
