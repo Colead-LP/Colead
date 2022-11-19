@@ -40,6 +40,39 @@ $(function () {
       }
     });
   });
+
+  // //文字列住所から緯度経度を取得する
+  // const GetAdressLatLng = (pref, city, area) => {
+  //   //都道府県、市区町村、番地を一つの文字列として連結
+  //   tmp_adress = pref + city + area;
+  //   //geocoderクラスをインスタンス化
+  //   let geocoder = new google.maps.Geocoder();
+  //   geocoder.geocode(
+  //     {
+  //       address: tmp_adress,
+  //       region: "jp",
+  //     },
+  //     function (results, status) {
+  //       if (status == google.maps.GeocoderStatus.OK) {
+  //         //処理
+  //         map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
+  //       }
+  //     }
+  //   );
+  // };
+
+  //イベントリスナー追加用にdocument読み込み時にinput#areaを変数に格納
+  area_value = document.getElementById("area");
+
+  //番地が入力された時に起動するイベントリスナーをinput欄に設定
+  area_value.addEventListener("change", function () {
+    //関数内で利用できるcity.value変数を定義
+    let city_value = document.getElementById("city").value;
+
+    //セレクトボタンで取得した都道府県をjqueryで指定して変数に格納
+    let pref = $("#pref option:selected").text();
+    GetAdressLatLng(pref, city_value, area_value.value);
+  });
 });
 
 function onClick() {
@@ -207,14 +240,37 @@ name_first.addEventListener("keyup", (e) => {
 //toConfirm
 
 // #map
+
+// Initialize and add the map
 function initMap() {
-  var mapPosition = new google.maps.LatLng( 35.6882495,139.6856557 );//緯度経度
-  var map = new google.maps.Map(document.getElementById('gmap'), {
-  zoom: 17,//ズーム
-  center: mapPosition
-});
-  var marker = new google.maps.Marker({
-  position: mapPosition,
-  map: map
-  });
+  //初期位置を設定
+  let latlng = new google.maps.LatLng(35.680865, 139.767036);
+  let opts = {
+    zoom: 15,
+    center: latlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  };
+  map = new google.maps.Map(document.getElementById("gmap"), opts);
+}
+
+//文字列住所から緯度経度を取得する
+//後述のため、関数宣言(function)でGetAdressLatLngを定義
+// const GetAdressLatLng = (pref, city, area) => {
+function GetAdressLatLng(pref, city, area) {
+  //都道府県、市区町村、番地を一つの文字列として連結
+  tmp_adress = pref + city + area;
+  //geocoderクラスをインスタンス化
+  let geocoder = new google.maps.Geocoder();
+  geocoder.geocode(
+    {
+      address: tmp_adress,
+      region: "jp",
+    },
+    function (results, status) {
+      if (status == google.maps.GeocoderStatus.OK) {
+        //処理
+        map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
+      }
+    }
+  );
 }
