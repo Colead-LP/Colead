@@ -2369,20 +2369,6 @@ iframe {
   display: none;
 }
 
-.contact-wrap {
-  overflow: hidden;
-  transition: all 1s ease;
-}
-@media screen and (max-width: 767px) {
-  .contact-wrap {
-    height: 6.05rem;
-  }
-}
-@media screen and (min-width: 768px) {
-  .contact-wrap {
-    height: 6.08rem;
-  }
-}
 @media screen and (max-width: 767px) {
   .contact-wrap.active {
     height: 28.7rem;

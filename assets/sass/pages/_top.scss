@@ -1704,13 +1704,13 @@
 }
 
 .contact-wrap {
-  overflow: hidden;
-  transition: all 1s ease;
+  // overflow: hidden;
+  // transition: all 1s ease;
   @include v.mq(sp) {
-    height: 6.05rem;
+    // height: 6.05rem;
   }
   @include v.mq(pc) {
-    height: 6.08rem;
+    // height: 6.08rem;
   }
   &.active {
     @include v.mq(sp) {
