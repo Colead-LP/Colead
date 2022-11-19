@@ -122,6 +122,11 @@ get_header();
                 <p class="form-item-ttl">番地</p>
                 <input type="text" name="area" id="area" class="p-extended-address type-text input-address" size="" value="">
               </li>
+              <li class="form-item gmap require-item">
+                <p class="form-item-ttl">Google Mapで正確な位置を指定する</p>
+                <div type="text" name="gmap" id="gmap" class="p-extended-gmap input-gmap" size="" value="">
+              </li>
+              <script src="https://cdn.geolonia.com/community-geocoder.js"></script>
               <li class="form-item fit require-item">
                 <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
                 <select name="fit" id="fit" class="select input-fit">
