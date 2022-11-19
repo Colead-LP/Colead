@@ -1731,8 +1731,12 @@
 
 .error_message{
   display: none;
+  color: red;
   font-size: .16rem;
   border: .02rem solid red;
+  &.active{
+    display: block;
+  }
 }
 
 /*=====================================================

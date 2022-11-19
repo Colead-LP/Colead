@@ -2389,8 +2389,12 @@ iframe {
 
 .error_message {
   display: none;
+  color: red;
   font-size: 0.16rem;
   border: 0.02rem solid red;
+}
+.error_message.active {
+  display: block;
 }
 
 /*=====================================================
