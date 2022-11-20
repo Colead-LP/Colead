@@ -138,6 +138,79 @@ $(function () {
         });
       }
     });
+
+    // changeメソッド
+    name_first.addEventListener("change", () => {
+      if(name_first.value){
+        name_first.nextElementSibling.remove();
+      } else {
+        createError(name_first, '入力してください');
+      }
+    });
+    name_last.addEventListener("change", () => {
+      if(name_last.value){
+        name_last.nextElementSibling.remove();
+      } else {
+        createError(name_last, '入力してください');
+      }
+    });
+    email.addEventListener("change", () => {
+      if(email.value){
+        email.nextElementSibling.remove();
+      } else {
+        createError(email, '入力してください');
+      }
+    });
+    zip.addEventListener("change", () => {
+      if(zip.value){
+        zip.nextElementSibling.remove();
+      } else {
+        createError(zip, '入力してください');
+      }
+    });
+    pref.addEventListener("change", () => {
+      if(pref.value){
+        pref.nextElementSibling.remove();
+      } else {
+        createError(pref, '入力してください');
+      }
+    });
+    city.addEventListener("change", () => {
+      if(city.value){
+        city.nextElementSibling.remove();
+      } else {
+        createError(city, '入力してください');
+      }
+    });
+    area.addEventListener("change", () => {
+      if(area.value){
+        area.nextElementSibling.remove();
+      } else {
+        createError(area, '入力してください');
+      }
+    });
+    fit.addEventListener("change", () => {
+      if(fit.value){
+        fit.nextElementSibling.remove();
+      } else {
+        createError(fit, '入力してください');
+      }
+    });
+    dc.addEventListener("change", () => {
+      if(dc.value){
+        dc.nextElementSibling.remove();
+      } else {
+        createError(dc, '入力してください');
+      }
+    });
+    privacy.addEventListener("change", () => {
+      if(privacy.value){
+        const privacyNext = document.querySelector('.privacy_input_txt');
+        privacyNext.nextElementSibling.remove();
+      } else {
+        createError(privacy, '選択してください');
+      }
+    });
   }
 });
 
