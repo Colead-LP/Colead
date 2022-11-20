@@ -6,7 +6,7 @@ include('mail.php');
 ?>
 <h1>お問合せフォーム</h1>
   <!-- #input -->
-  <form action="" method="post" id="form" class="h-adr" name="form">
+  <form action="" method="post" id="form" class="h-adr form" name="form">
     <span class="p-country-name" style="display:none;">Japan</span>
     <div class="form form-top form-confirm">
       <h3 class="form-confirm-ttl confirm">入力内容の確認</h3>
@@ -35,7 +35,7 @@ include('mail.php');
                 <p class="form-item-ttl">
                   メールアドレス<span class="require top">必須</span>
                 </p>
-                <input type="email" name="email" id="email" class="type-email" size="60" value="">
+                <input type="email" name="email" id="email" class="type-email required" size="60" value="">
                 <p class="error_message"></p>
               </li>
 
@@ -52,12 +52,12 @@ include('mail.php');
               </li>
               <li class="form-item post top require-item">
                 <p class="form-item-ttl">郵便番号</p>
-                <input type="text" name="zip" id="zip" class="type-number p-postal-code" value="">
+                <input type="text" name="zip" id="zip" class="type-number p-postal-code required" value="">
                 <p class="error_message">入力してください。</p>
               </li>
               <li class="form-item pref">
                 <p class="form-item-ttl">都道府県</p>
-                <select name="pref" id="pref" class="p-region-id select input-pref">
+                <select name="pref" id="pref" class="p-region-id select input-pref required">
                   <option value="">--</option>
                   <option value="1">北海道</option>
                   <option value="2">青森県</option>
@@ -111,15 +111,15 @@ include('mail.php');
               </li>
               <li class="form-item city require-item">
                 <p class="form-item-ttl">市区町村</p>
-                <input type="text" name="city" id="city" class="p-locality p-street-address type-text input-munic" size="" value="">
+                <input type="text" name="city" id="city" class="p-locality p-street-address type-text input-munic required" size="" value="">
               </li>
               <li class="form-item houseNumber require-item">
                 <p class="form-item-ttl">番地</p>
-                <input type="text" name="area" id="area" class="p-extended-address type-text input-address" size="" value="">
+                <input type="text" name="area" id="area" class="p-extended-address type-text input-address required" size="" value="">
               </li>
               <li class="form-item fit require-item">
                 <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
-                <select name="fit" id="fit" class="select input-fit">
+                <select name="fit" id="fit" class="select input-fit required">
                   <option value="1" selected="selected">
                     44 </option>
                   <option value="2">
@@ -142,7 +142,7 @@ include('mail.php');
               </li>
               <li class="form-item dc require-item">
                 <p class="form-item-ttl">DC容量<span class="require top">必須</span></p>
-                <input type="text" name="dc" id="dc" class="type-number input-dc" size="60" value="">
+                <input type="text" name="dc" id="dc" class="type-number input-dc required" size="60" value="">
                 <span class="unit">KW</span>
               </li>
               <li class="form-item wiring">
@@ -262,8 +262,8 @@ include('mail.php');
                   </div>
                 </div>
               </div>
-                <label for="privacy-1">
-                  <input type="checkbox" name="privacy" value="agree" id="privacy" class="privacy-check type-checkbox">
+                <label class="privacy-wrap">
+                  <input type="checkbox" name="privacy" value="agree" id="privacy" class="privacy-check type-checkbox required">
                   <span class="mwform-checkbox-field-text">プライバシーポリシーに同意する。</span>
                 </label>
             </div>

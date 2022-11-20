@@ -4,7 +4,6 @@
 @use "../templates/header";
 @use "../templates/footer";
 @use "../templates/cta";
-@use "../templates/calculate";
 
 /*=====================================================
 # mv
@@ -1021,7 +1020,7 @@
 /*=====================================================
 # form-top
 =====================================================*/
-.form-top {
+.form {
   .confirm {
     display: none;
   }
@@ -1747,3 +1746,4 @@
   height: 3rem;
   margin: 0 auto;
 }
+

@@ -1,3 +1,4 @@
+// #スムーススクロール
 $(function () {
   // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない）
   $('a[href^="#"]').click(function () {
@@ -16,6 +17,7 @@ $(function () {
     return false;
   });
 
+  // #プライバシーモーダル
   $(function () {
     // 変数に要素を入れる
     var open = $(".js-pravacy"),
@@ -58,11 +60,9 @@ $(function () {
     const email = document.getElementById("email");
     const zip = document.getElementById("zip");
     const pref = document.getElementById("pref");
-    // const prefval = pref.value;
     const city = document.getElementById("city");
     const area = document.getElementById("area");
     const fit = document.getElementById("fit");
-    // const fitval = fit.value;
     const dc = document.getElementById("dc");
     const privacy = document.getElementById("privacy");
 
@@ -80,26 +80,52 @@ $(function () {
       elem.parentNode.appendChild(errorP);
     };
 
-    to_confirm.addEventListener("click", (e) => {
+    form.addEventListener("submit", (e) => {
       // エラーを表示する要素を全て取得して削除 (初期化)
       const errorElems = form.querySelectorAll("." + errorClassName);
       errorElems.forEach((elem) => {
         elem.remove();
       });
 
-      // .required を指定した要素を検証
       requiredElems.forEach((elem) => {
-        // 値 (value プロパティ) の前後の空白文字を削除
-        const elemValue = elem.value.trim();
-        // 値が空の場合はエラーを表示してフォームの送信を中止
-        if (elemValue.length === 0) {
-          createError(elem, "入力は必須です。");
-          e.preventDefault();
+        // ラジオボタンの場合
+        if (elem.tagName === "INPUT" && elem.getAttribute("type") === "radio") {
+          const checkedRadio = elem.parentElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          if (checkedRadio === null) {
+            createError(elem, "いずれか1つを選択してください");
+            e.preventDefault();
+          }
+          // チェックボックスの場合
+        } else if (
+          elem.tagName === "INPUT" &&
+          elem.getAttribute("type") === "checkbox"
+        ) {
+          const checkedCheckbox = elem.parentElement.querySelector(
+            'input[type="checkbox"]:checked'
+          );
+          if (checkedCheckbox === null) {
+            createError(elem, "選択してください。");
+            e.preventDefault();
+          }
+        } else {
+          const elemValue = elem.value.trim();
+          if (elemValue.length === 0) {
+            // セクレトの場合
+            if (elem.tagName === "SELECT") {
+              createError(elem, "選択してください。");
+              // その他
+            } else {
+              createError(elem, "入力してください。");
+            }
+            e.preventDefault();
+          }
         }
       });
 
       // エラーの最初の要素を取得
-      const errorElem = form.querySelector('.' + errorClassName);
+      const errorElem = form.querySelector("." + errorClassName);
       // エラーがあればエラーの最初の要素の位置へスクロール
       if (errorElem) {
         const rect = errorElem.getBoundingClientRect().top;
