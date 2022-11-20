@@ -385,17 +385,24 @@
       }
     }
 
-    .privacy-link {
+    &-link {
       color: #3895ff;
     }
 
     &_input {
+      display: none;
       &_wrap {
+        position: relative;
+        @include v.mq(sp) {
+          margin: 0.12rem 0 0;
+        }
       }
 
       &_label {
-        display: flex;
-        justify-content: center;
+        @include v.mq(pc) {
+          display: flex;
+          justify-content: center;
+        }
       }
 
       &_txt {
@@ -440,6 +447,116 @@
       height: 0.75rem;
       margin-right: auto;
       margin-left: auto;
+    }
+  }
+}
+
+/*=====================================================
+# confirm
+=====================================================*/
+.confirm {
+  &_bg {
+    background: #eaf3fa;
+    
+  }
+
+  &_inner {
+    width: 8rem;
+    padding: 44px 40px 50px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 0.4rem 0 0 0;
+  }
+
+  &_ttl {
+    color: #333333;
+    font-weight: bold;
+    font-size: 0.4rem;
+    text-align: center;
+  }
+
+  &_list {
+  }
+
+  &_item {
+    position: relative;
+    color: #333333;
+    display: grid;
+    grid-template-columns: 3.6rem 3.6rem;
+    padding: 0 0 0.155rem 0;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: #e2e3e5;
+      width: 100%;
+      height: 1px;
+    }
+
+    &:not(:first-child) {
+      margin: 0.155rem 0 0;
+    }
+
+    &_ttl {
+      font-weight: bold;
+      font-size: 0.18rem;
+    }
+    &_txt {
+      font-size: 0.16rem;
+      .__01,
+      .__02 {
+        display: inline;
+      }
+    }
+  }
+
+  .unit {
+    font-size: 0.16rem;
+  }
+
+  .privacy {
+    margin: 0.2rem 0 0;
+    &_label {
+      display: flex;
+      justify-content: center;
+    }
+    &_txt {
+      position: relative;
+      font-size: 0.16rem;
+      padding: 0 0 0 0.3rem;
+    }
+  }
+
+  .submit {
+    margin: 0 auto;
+    @include v.mq(pc) {
+      width: 3.65rem;
+      margin: -0.3rem auto 0;
+    }
+    &_toThanks {
+      display: inline-block;
+      color: #ffffff;
+      background: #f73f61;
+      font-weight: bold;
+      text-align: center;
+      @include v.mq(sp) {
+        font-size: 0.18rem;
+        line-height: 0.6rem;
+        border-radius: 0.52rem;
+        width: 2.95rem;
+        height: 0.6rem;
+      }
+      @include v.mq(pc) {
+        font-size: 0.22rem;
+        line-height: 0.75rem;
+        border-radius: 0.38rem;
+        width: 3.65rem;
+        height: 0.75rem;
+        margin-right: auto;
+        margin-left: auto;
+      }
     }
   }
 }
