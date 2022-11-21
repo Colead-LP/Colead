@@ -384,7 +384,7 @@ function initMap() {
     //TODO:住所不明のため、東京駅をターゲットに指定
     let latlng = new google.maps.LatLng(35.680865, 139.767036);
     let opts = {
-      zoom: 15,
+      zoom: 18,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
@@ -412,7 +412,7 @@ function initMap() {
     const Lng = sessionStorage.getItem("lng");
     const latlng = new google.maps.LatLng(Lat, Lng);
     const opts = {
-      zoom: 15,
+      zoom: 18,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: "disabledefaultui",
