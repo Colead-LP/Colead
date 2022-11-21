@@ -185,6 +185,10 @@ $(function () {
     });
     area.addEventListener("change", () => {
       if (area.value) {
+        //areaの入力欄が変更された時にmapを変更するイベント
+        //セレクトボタンで取得した都道府県をjqueryで指定して変数に格納
+        const pref_value = $("#pref option:selected").text();
+        GetAdressLatLng(pref_value, city.value, area.value);
         area.nextElementSibling.remove();
       } else {
         createError(area, "入力してください");
@@ -264,19 +268,6 @@ $(function () {
       } else {
         createError(privacyConfirm, "選択してください");
       }
-    });
-  }
-  //イベントリスナー追加用にdocument読み込み時にinput#areaを変数に格納
-  if (document.getElementById("area")) {
-    area_value = document.getElementById("area");
-    //番地が入力された時に起動するイベントリスナーをinput欄に設定
-    area_value.addEventListener("change", function () {
-      //関数内で利用できるcity.value変数を定義
-      let city_value = document.getElementById("city").value;
-
-      //セレクトボタンで取得した都道府県をjqueryで指定して変数に格納
-      let pref = $("#pref option:selected").text();
-      GetAdressLatLng(pref, city_value, area_value.value);
     });
   }
 });
@@ -397,6 +388,7 @@ function initMap() {
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       mapTypeControl: false,
+      disableDefaultUI: "disabledefaultui",
     };
     map = new google.maps.Map(document.getElementById("gmap"), opts);
     marker = new google.maps.Marker({
@@ -404,19 +396,27 @@ function initMap() {
       map: map,
       draggable: true,
     });
-  } else {
+    //ピンの位置を変更するたびに中心点を変更するイベントをmapに追加
+    google.maps.event.addListener(marker, "dragend", () => {
+      //ピンの位置の座標を取得
+      const pos = marker.getPosition();
+      const lat = pos.lat(); //緯度
+      const lng = pos.lng(); //経度
+      //mapの中央をピンの座標に移動させる
+      map.panTo(new google.maps.LatLng(pos, 15));
+    });
+  } else if (document.getElementById("gmap-confirm")) {
     //確認画面の処理
     //セッションストレージ内の緯度経度を取得
-    let confirmLatLng = sessionStorage
-      .getItem("latlng")
-      .slice(1, -1)
-      .split(",");
-    const latlng = new google.maps.LatLng(confirmLatLng[0], confirmLatLng[1]);
+    const Lat = sessionStorage.getItem("lat");
+    const Lng = sessionStorage.getItem("lng");
+    const latlng = new google.maps.LatLng(Lat, Lng);
     const opts = {
       zoom: 15,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
-      mapTypeControl: false,
+      disableDefaultUI: "disabledefaultui",
+      gestureHandling: "none",
     };
     const map = new google.maps.Map(
       document.getElementById("gmap-confirm"),
@@ -425,10 +425,14 @@ function initMap() {
     const marker = new google.maps.Marker({
       position: latlng,
       map: map,
-      draggable: true,
     });
     //セッションストレージから緯度経度を削除
-    sessionStorage.removeItem("latlng");
+    sessionStorage.removeItem("lat");
+    sessionStorage.removeItem("lng");
+    //住所取得
+    reverseGeo(Lat, Lng);
+    document.getElementById("lat").value = Lat;
+    document.getElementById("lng").value = Lng;
   }
 }
 
@@ -484,7 +488,28 @@ function GetAdressLatLng(pref, city, area) {
 //buttonを押した時の地図座標を取得
 function GetLatLng() {
   //(緯度,　経度)の形で取得する
-  confirmLatLng = map.getCenter();
+  const LatLng = marker.getPosition();
+  const lat = LatLng.lat(); //緯度
+  const lng = LatLng.lng(); //経度
   //セッションストレージ内に緯度経度を格納
-  sessionStorage.setItem("latlng", confirmLatLng);
+  sessionStorage.setItem("lat", lat);
+  sessionStorage.setItem("lng", lng);
+}
+
+//逆ジオコーディング
+function reverseGeo(lat, lng) {
+  const geoObj = new google.maps.Geocoder();
+  const latlng = new google.maps.LatLng(lat, lng);
+
+  if (geoObj) {
+    geoObj.geocode({ latLng: latlng }, function (results, status) {
+      if (status == "OK") {
+        const tmp = results[0].formatted_address.split("、");
+        document.getElementById("address").value = tmp[1];
+      } else {
+        //TODO:リロード時に値がリセットされてしまう。
+        alert(status);
+      }
+    });
+  }
 }
