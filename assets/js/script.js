@@ -451,7 +451,6 @@ function GetAdressLatLng(pref, city, area) {
         marker.position = results[0].geometry.location;
         // マーカーをセット
         marker.setMap(map);
-        });
       } else if (status == google.maps.GeocoderStatus.ERROR) {
         //googleサーバー側のエラー
         pass;

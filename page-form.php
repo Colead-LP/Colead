@@ -1,9 +1,6 @@
 <?php
 include('mail.php');
 ?>
-<?php
-get_header();
-?>
 <!-- #input -->
 <form action="" method="post" id="form" class="h-adr form" name="form">
   <span class="p-country-name" style="display:none;">Japan</span>
@@ -287,5 +284,3 @@ get_header();
     font-size: .16rem;
   }
 </style>
-<?php
-get_footer();

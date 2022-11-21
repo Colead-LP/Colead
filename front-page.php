@@ -1,8 +1,14 @@
 <?php require("calculate.php");
+require("mail.php");
 ?>
 
 <?php get_header();
 ?>
+<?php if($page_flag = 2): ?>
+<?php include("page-thanks.php"); ?>
+<?php elseif($page_flag = 1): ?>
+<?php include("page-confirm.php"); ?>
+<?php else: ?>
 <!-- .mv -->
 <div class="mv">
     <div class="mv-bg">
@@ -293,6 +299,6 @@
         </div>
     </div>
 </section><!-- /.contact -->
-
+<?php endif; ?>
 <!-- .footer -->
 <?php get_footer();
