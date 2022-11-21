@@ -126,10 +126,7 @@
                 </li>
                 <li class="form-item gmap-confirm">
                     <p class="form-item-ttl">Google Map</p>
-                    <div id="gmap-confirm" class="gmap-confirm" style="
-                            width:3.6rem;
-                            height:1.5rem;
-                            "></div>
+                    <div id="gmap-confirm" class="gmap-confirm"></div>
                 </li>
                 <li class="confirm_item fit">
                     <p class="confirm_item_ttl">FIT単価（税込）</p>

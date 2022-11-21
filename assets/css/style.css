@@ -722,10 +722,6 @@ iframe {
     width: 3.6rem;
   }
 }
-.form .input-gmap {
-  width: 3.6rem;
-  height: 1.5rem;
-}
 @media screen and (min-width: 768px) {
   .form .input-pref,
 .form .input-fit {
@@ -937,31 +933,93 @@ iframe {
 }
 
 /*=====================================================
+# map
+=====================================================*/
+.input-gmap,
+.gmap-confirm {
+  border-radius: 0.03rem;
+}
+@media screen and (max-width: 767px) {
+  .input-gmap,
+.gmap-confirm {
+    width: 2.95rem;
+    height: 1.6rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .input-gmap,
+.gmap-confirm {
+    width: 3.6rem;
+    height: 1.6rem;
+  }
+}
+
+/*=====================================================
 # confirm
 =====================================================*/
 .confirm_bg {
   background: #eaf3fa;
-  padding: 0.6rem 0 1rem;
+}
+@media screen and (max-width: 767px) {
+  .confirm_bg {
+    padding: 0.3rem 0 0.65rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .confirm_bg {
+    padding: 0.6rem 0 1rem;
+  }
 }
 .confirm_inner {
-  width: 8rem;
-  padding: 44px 40px 50px;
   margin: 0.31rem auto 0;
   background: #fff;
-  border-radius: 0.4rem 0 0 0;
+}
+@media screen and (max-width: 767px) {
+  .confirm_inner {
+    width: 3.35rem;
+    padding: 0.3rem 0.2rem 0.4rem;
+    border-radius: 0.3rem 0 0 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .confirm_inner {
+    width: 8rem;
+    padding: 44px 40px 50px;
+    border-radius: 0.4rem 0 0 0;
+  }
 }
 .confirm_ttl {
   color: #333333;
   font-weight: bold;
-  font-size: 0.4rem;
   text-align: center;
+}
+@media screen and (max-width: 767px) {
+  .confirm_ttl {
+    font-size: 0.28rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .confirm_ttl {
+    font-size: 0.4rem;
+  }
 }
 .confirm_item {
   position: relative;
   color: #333333;
   display: grid;
-  grid-template-columns: 3.6rem 3.6rem;
-  padding: 0 0 0.155rem 0;
+}
+@media screen and (max-width: 767px) {
+  .confirm_item {
+    grid-template-columns: repeat(auto-fill, 1.45rem, 1fr);
+    gap: 0.12rem;
+    padding: 0 0 0.15rem 0;
+  }
+}
+@media screen and (min-width: 768px) {
+  .confirm_item {
+    grid-template-columns: 3.6rem 3.6rem;
+    padding: 0 0 0.155rem 0;
+  }
 }
 .confirm_item::after {
   content: "";
