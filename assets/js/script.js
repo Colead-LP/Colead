@@ -41,26 +41,6 @@ $(function () {
     });
   });
 
-  // //文字列住所から緯度経度を取得する
-  // const GetAdressLatLng = (pref, city, area) => {
-  //   //都道府県、市区町村、番地を一つの文字列として連結
-  //   tmp_adress = pref + city + area;
-  //   //geocoderクラスをインスタンス化
-  //   let geocoder = new google.maps.Geocoder();
-  //   geocoder.geocode(
-  //     {
-  //       address: tmp_adress,
-  //       region: "jp",
-  //     },
-  //     function (results, status) {
-  //       if (status == google.maps.GeocoderStatus.OK) {
-  //         //処理
-  //         map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
-  //       }
-  //     }
-  //   );
-  // };
-
   //イベントリスナー追加用にdocument読み込み時にinput#areaを変数に格納
   area_value = document.getElementById("area");
 
@@ -243,14 +223,45 @@ name_first.addEventListener("keyup", (e) => {
 
 // Initialize and add the map
 function initMap() {
-  //初期位置を設定
-  let latlng = new google.maps.LatLng(35.680865, 139.767036);
-  let opts = {
-    zoom: 15,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
-  };
-  map = new google.maps.Map(document.getElementById("gmap"), opts);
+  if (document.getElementById("gmap")) {
+    //初期位置を設定
+    //TODO:住所不明のため、東京駅をターゲットに指定
+    let latlng = new google.maps.LatLng(35.680865, 139.767036);
+    let opts = {
+      zoom: 15,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+    };
+    map = new google.maps.Map(document.getElementById("gmap"), opts);
+    marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      draggable: true,
+    });
+  } else {
+    //確認画面の処理
+    //セッションストレージ内の緯度経度を取得
+    const confirmLagLng = sessionStorage.getItem("latlng");
+    console.log(confirmLagLng);
+    const latlng = new google.maps.LatLng(confirmLatLng);
+    const opts = {
+      zoom: 15,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+    };
+    const map = new google.maps.Map(
+      document.getElementById("gmap-confirm"),
+      opts
+    );
+    const marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      draggable: true,
+    });
+    sessionStorage.removeItem("latlng");
+  }
 }
 
 //文字列住所から緯度経度を取得する
@@ -268,9 +279,25 @@ function GetAdressLatLng(pref, city, area) {
     },
     function (results, status) {
       if (status == google.maps.GeocoderStatus.OK) {
-        //処理
+        //markerの削除
+        marker.setMap(null);
+        //map.panToで、指定座標までマップ表示を移動させる
         map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
+        // ポジションを変更
+        marker.position = results[0].geometry.location;
+        // マーカーをセット
+        marker.setMap(map);
       }
     }
   );
+}
+
+//buttonを押した時の地図座標を取得
+function GetLatLng() {
+  //TODO:必須項目全てが埋まっている時という条件式の追加
+
+  //(緯度,　経度)の形で取得する
+  confirmLagLng = map.getCenter();
+  //セッションストレージ内に緯度経度を格納
+  sessionStorage.setItem("latlng", confirmLagLng);
 }

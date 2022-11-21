@@ -189,6 +189,11 @@ get_header();
                   </span>
                 </div>
               </li>
+              <div class="submit">
+                <label class="submit-label">
+                  <input id="to_confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm" onclick="GetLatLng()">
+                </label>
+              </div>
               <li class="form-item maint">
                 <p class="form-item-ttl">直近1年でのメンテナンス</p>
                 <div class="radio-wrap">
@@ -198,6 +203,7 @@ get_header();
                       <span class="mwform-radio-field-text">有</span>
                     </label>
                   </span>
+                  
                   <span class="mwform-radio-field">
                     <label for="maint-2">
                       <input type="radio" name="maint" value="2" id="maint-2" class="type-radio input-maint">
@@ -279,11 +285,11 @@ get_header();
                 </label>
               </span>
             </div>
-            <div class="submit">
+            <!-- <div class="submit">
               <label class="submit-label">
                 <input id="to_confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm">
               </label>
-            </div>
+            </div> -->
           </div><!-- form-powerPlant -->
         </div>
       </div>

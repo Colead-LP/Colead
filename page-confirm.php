@@ -144,6 +144,13 @@
                                 ?>
                             </p>
                         </li>
+                        <li class="form-item gmap-confirm require-item">
+                            <p class="form-item-ttl">Google Map</p>
+                            <div id="gmap-confirm" class="gmap-confirm" style="
+                            width:3.6rem;
+                            height:1.5rem;
+                            "></div>
+                        </li>
                         <li class="form-item fit require-item">
                             <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
                             <p>
