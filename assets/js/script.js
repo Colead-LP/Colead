@@ -266,7 +266,6 @@ function initMap() {
 
 //文字列住所から緯度経度を取得する
 //後述のため、関数宣言(function)でGetAdressLatLngを定義
-// const GetAdressLatLng = (pref, city, area) => {
 function GetAdressLatLng(pref, city, area) {
   //都道府県、市区町村、番地を一つの文字列として連結
   tmp_adress = pref + city + area;
@@ -274,10 +273,12 @@ function GetAdressLatLng(pref, city, area) {
   let geocoder = new google.maps.Geocoder();
   geocoder.geocode(
     {
-      address: tmp_adress,
-      region: "jp",
+      address: tmp_adress, //住所
+      language: "jp", //サーチ結果の優先する言語。
+      region: "jp", //サーチ用のトップレベルドメインの国コード。
     },
     function (results, status) {
+      alert(results[1]);
       if (status == google.maps.GeocoderStatus.OK) {
         //markerの削除
         marker.setMap(null);
@@ -287,6 +288,28 @@ function GetAdressLatLng(pref, city, area) {
         marker.position = results[0].geometry.location;
         // マーカーをセット
         marker.setMap(map);
+        });
+      } else if (status == google.maps.GeocoderStatus.ERROR) {
+        //googleサーバー側のエラー
+        pass;
+      } else if (status == google.maps.GeocoderStatus.INVALID_REQUEST) {
+        //サーバーサイド（こちら側）のミス
+        pass;
+      } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+        //短期間での過剰なアクセス
+        pass;
+      } else if (status == google.maps.GeocoderStatus.REQUEST_DENIED) {
+        //Webページでジオコードが拒否された
+        pass;
+      } else if (status == google.maps.GeocoderStatus.UNKNOWN_ERROR) {
+        //googleサーバー側のエラー
+        pass;
+      } else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+        //処理自体は通るけど、googlemapで特定できない場所の住所が入っている
+        pass;
+      } else {
+        //上記以外、バージョン確認
+        alert("Geocode 取得に失敗しました reason: " + status);
       }
     }
   );

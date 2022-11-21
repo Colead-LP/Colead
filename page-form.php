@@ -287,7 +287,7 @@ get_header();
             </div>
             <!-- <div class="submit">
               <label class="submit-label">
-                <input id="to_confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm">
+                <input id="to_confirm" type="submit" name="btn_confirm" value="確認する" class="to-confirm" onclick="checkLatLng()">
               </label>
             </div> -->
           </div><!-- form-powerPlant -->
