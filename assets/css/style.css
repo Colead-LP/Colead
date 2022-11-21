@@ -931,11 +931,12 @@ iframe {
 =====================================================*/
 .confirm_bg {
   background: #eaf3fa;
+  padding: 0.6rem 0 1rem;
 }
 .confirm_inner {
   width: 8rem;
   padding: 44px 40px 50px;
-  margin: 0 auto;
+  margin: 0.31rem auto 0;
   background: #fff;
   border-radius: 0.4rem 0 0 0;
 }
@@ -982,6 +983,7 @@ iframe {
   margin: 0.2rem 0 0;
 }
 .confirm .privacy_label {
+  position: relative;
   display: flex;
   justify-content: center;
 }

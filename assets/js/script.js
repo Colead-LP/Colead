@@ -141,74 +141,127 @@ $(function () {
 
     // changeメソッド
     name_first.addEventListener("change", () => {
-      if(name_first.value){
+      if (name_first.value) {
         name_first.nextElementSibling.remove();
       } else {
-        createError(name_first, '入力してください');
+        createError(name_first, "入力してください");
       }
     });
     name_last.addEventListener("change", () => {
-      if(name_last.value){
+      if (name_last.value) {
         name_last.nextElementSibling.remove();
       } else {
-        createError(name_last, '入力してください');
+        createError(name_last, "入力してください");
       }
     });
     email.addEventListener("change", () => {
-      if(email.value){
+      if (email.value) {
         email.nextElementSibling.remove();
       } else {
-        createError(email, '入力してください');
+        createError(email, "入力してください");
       }
     });
     zip.addEventListener("change", () => {
-      if(zip.value){
+      if (zip.value) {
         zip.nextElementSibling.remove();
       } else {
-        createError(zip, '入力してください');
+        createError(zip, "入力してください");
       }
     });
     pref.addEventListener("change", () => {
-      if(pref.value){
+      if (pref.value) {
         pref.nextElementSibling.remove();
       } else {
-        createError(pref, '入力してください');
+        createError(pref, "入力してください");
       }
     });
     city.addEventListener("change", () => {
-      if(city.value){
+      if (city.value) {
         city.nextElementSibling.remove();
       } else {
-        createError(city, '入力してください');
+        createError(city, "入力してください");
       }
     });
     area.addEventListener("change", () => {
-      if(area.value){
+      if (area.value) {
         area.nextElementSibling.remove();
       } else {
-        createError(area, '入力してください');
+        createError(area, "入力してください");
       }
     });
     fit.addEventListener("change", () => {
-      if(fit.value){
+      if (fit.value) {
         fit.nextElementSibling.remove();
       } else {
-        createError(fit, '入力してください');
+        createError(fit, "入力してください");
       }
     });
     dc.addEventListener("change", () => {
-      if(dc.value){
+      if (dc.value) {
         dc.nextElementSibling.remove();
       } else {
-        createError(dc, '入力してください');
+        createError(dc, "入力してください");
       }
     });
     privacy.addEventListener("change", () => {
-      if(privacy.value){
-        const privacyNext = document.querySelector('.privacy_input_txt');
+      if (privacy.value) {
+        const privacyNext = document.querySelector(".privacy_input_txt");
         privacyNext.nextElementSibling.remove();
       } else {
-        createError(privacy, '選択してください');
+        createError(privacy, "選択してください");
+      }
+    });
+  }
+
+  // #validation confirm
+  const formConfirm = document.querySelector(".confirm");
+
+  if (formConfirm) {
+    formConfirm.addEventListener("submit", (e) => {
+      const errorClassName = "error";
+
+      const errorElems = formConfirm.querySelectorAll("." + errorClassName);
+      errorElems.forEach((elem) => {
+        elem.remove();
+      });
+
+      const createError = (elem, errorMessage) => {
+        // p 要素を生成
+        const errorP = document.createElement("p");
+        // エラー用のクラスを追加 (設定)
+        errorP.classList.add(errorClassName);
+        // 引数に指定されたエラーメッセージを設定
+        errorP.textContent = errorMessage;
+        // elem の親要素の子要素として追加
+        elem.parentNode.appendChild(errorP);
+      };
+
+      const requiredElems = document.querySelectorAll(".required");
+
+      requiredElems.forEach((elem) => {
+        if (
+          elem.tagName === "INPUT" &&
+          elem.getAttribute("type") === "checkbox"
+        ) {
+          const checkedCheckbox = elem.parentElement.querySelector(
+            'input[type="checkbox"]:checked'
+          );
+          if (checkedCheckbox === null) {
+            createError(elem, "選択してください");
+            e.preventDefault();
+          }
+        }
+      });
+    });
+
+    const privacyConfirm = document.getElementById("submit_privacy");
+
+    privacyConfirm.addEventListener("change", () => {
+      if (privacyConfirm.value) {
+        const privacyConfirmNext = document.querySelector(".privacy_txt");
+        privacyConfirmNext.nextElementSibling.remove();
+      } else {
+        createError(privacyConfirm, "選択してください");
       }
     });
   }

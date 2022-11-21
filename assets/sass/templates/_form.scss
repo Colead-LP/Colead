@@ -457,13 +457,13 @@
 .confirm {
   &_bg {
     background: #eaf3fa;
-    
+    padding: .6rem 0 1rem;
   }
 
   &_inner {
     width: 8rem;
     padding: 44px 40px 50px;
-    margin: 0 auto;
+    margin: .31rem auto 0;
     background: #fff;
     border-radius: 0.4rem 0 0 0;
   }
@@ -519,6 +519,7 @@
   .privacy {
     margin: 0.2rem 0 0;
     &_label {
+      position: relative;
       display: flex;
       justify-content: center;
     }
