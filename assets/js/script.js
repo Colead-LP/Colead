@@ -137,6 +137,7 @@ $(function () {
           behavior: "smooth",
         });
       }
+      GetLatLng();
     });
 
     // changeメソッド
@@ -266,17 +267,18 @@ $(function () {
     });
   }
   //イベントリスナー追加用にdocument読み込み時にinput#areaを変数に格納
-  area_value = document.getElementById("area");
+  if (document.getElementById("area")) {
+    area_value = document.getElementById("area");
+    //番地が入力された時に起動するイベントリスナーをinput欄に設定
+    area_value.addEventListener("change", function () {
+      //関数内で利用できるcity.value変数を定義
+      let city_value = document.getElementById("city").value;
 
-  //番地が入力された時に起動するイベントリスナーをinput欄に設定
-  area_value.addEventListener("change", function () {
-    //関数内で利用できるcity.value変数を定義
-    let city_value = document.getElementById("city").value;
-
-    //セレクトボタンで取得した都道府県をjqueryで指定して変数に格納
-    let pref = $("#pref option:selected").text();
-    GetAdressLatLng(pref, city_value, area_value.value);
-  });
+      //セレクトボタンで取得した都道府県をjqueryで指定して変数に格納
+      let pref = $("#pref option:selected").text();
+      GetAdressLatLng(pref, city_value, area_value.value);
+    });
+  }
 });
 
 function onClick() {
@@ -405,9 +407,11 @@ function initMap() {
   } else {
     //確認画面の処理
     //セッションストレージ内の緯度経度を取得
-    const confirmLagLng = sessionStorage.getItem("latlng");
-    console.log(confirmLagLng);
-    const latlng = new google.maps.LatLng(confirmLatLng);
+    let confirmLatLng = sessionStorage
+      .getItem("latlng")
+      .slice(1, -1)
+      .split(",");
+    const latlng = new google.maps.LatLng(confirmLatLng[0], confirmLatLng[1]);
     const opts = {
       zoom: 15,
       center: latlng,
@@ -479,10 +483,8 @@ function GetAdressLatLng(pref, city, area) {
 
 //buttonを押した時の地図座標を取得
 function GetLatLng() {
-  //TODO:必須項目全てが埋まっている時という条件式の追加
-
   //(緯度,　経度)の形で取得する
-  confirmLagLng = map.getCenter();
+  confirmLatLng = map.getCenter();
   //セッションストレージ内に緯度経度を格納
-  sessionStorage.setItem("latlng", confirmLagLng);
+  sessionStorage.setItem("latlng", confirmLatLng);
 }
