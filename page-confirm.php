@@ -124,7 +124,7 @@
                         ?>
                     </p>
                 </li>
-                <li class="form-item gmap-confirm require-item">
+                <li class="form-item gmap-confirm">
                     <p class="form-item-ttl">Google Map</p>
                     <div id="gmap-confirm" class="gmap-confirm" style="
                             width:3.6rem;
