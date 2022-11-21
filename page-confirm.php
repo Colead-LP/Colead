@@ -124,7 +124,7 @@
                         ?>
                     </p>
                 </li>
-                <li class="form-item gmap-confirm require-item">
+                <li class="form-item gmap-confirm">
                     <p class="form-item-ttl">Google Map</p>
                     <div id="gmap-confirm" class="gmap-confirm" style="
                             width:3.6rem;
@@ -222,6 +222,9 @@
     <input type="hidden" name="pref" value="<?php echo $_POST['pref']; ?>">
     <input type="hidden" name="city" value="<?php echo $_POST['city']; ?>">
     <input type="hidden" name="area" value="<?php echo $_POST['area']; ?>">
+    <input type="hidden" id="lat" name="lat" value=""> <!--緯度-->
+    <input type="hidden" id="lng" name="lng" value=""> <!--経度-->
+    <input type="hidden" id="address" name="address" value=""> <!--googlemapで指定された住所-->
     <input type="hidden" name="fit" value="<?php echo $_POST['fit']; ?>">
     <input type="hidden" name="dc" value="<?php echo $_POST['dc']; ?>">
     <input type="hidden" name="wiring" value="<?php echo $_POST['wiring']; ?>">
