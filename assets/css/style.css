@@ -2409,36 +2409,72 @@ iframe {
   background: #fff;
   border: solid 0.03rem red;
   box-sizing: border-box;
-  left: -0.26rem;
-  top: -0.36rem;
   border-radius: 0.03rem;
+}
+@media screen and (max-width: 767px) {
+  .error {
+    top: 0.4rem;
+    left: -0.06rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .error {
+    top: -0.36rem;
+    left: -0.26rem;
+  }
 }
 .error::before {
   content: "";
   position: absolute;
-  bottom: -0.18rem;
   left: 50%;
   transform: translateX(-50%);
-  border: 0.12rem solid transparent;
-  border-top: 0.12rem solid #fff;
   z-index: 2;
+}
+@media screen and (max-width: 767px) {
+  .error::before {
+    top: -0.18rem;
+    border: 0.12rem solid transparent;
+    border-bottom: 0.12rem solid #fff;
+  }
+}
+@media screen and (min-width: 768px) {
+  .error::before {
+    bottom: -0.18rem;
+    border: 0.12rem solid transparent;
+    border-top: 0.12rem solid #fff;
+  }
 }
 .error::after {
   content: "";
   position: absolute;
-  bottom: -0.205rem;
   left: 50%;
   transform: translateX(-50%);
-  border: 0.1rem solid transparent;
-  border-top: 0.1rem solid red;
   z-index: 1;
+}
+@media screen and (max-width: 767px) {
+  .error::after {
+    top: -0.205rem;
+    border: 0.1rem solid transparent;
+    border-bottom: 0.1rem solid red;
+  }
+}
+@media screen and (min-width: 768px) {
+  .error::after {
+    bottom: -0.205rem;
+    border: 0.1rem solid transparent;
+    border-top: 0.1rem solid red;
+  }
 }
 
 .privacy .error {
   left: 50%;
   transform: translateX(-50%);
 }
-
+@media screen and (max-width: 767px) {
+  .privacy .error {
+    top: -0.205rem;
+  }
+}
 /*=====================================================
 # map
 =====================================================*/
