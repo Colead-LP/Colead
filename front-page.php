@@ -1,14 +1,14 @@
-<?php require("calculate.php");
-require("mail.php");
+<?php
+require("calculate.php");
+include('mail.php');
 ?>
 
-<?php get_header();
-?>
-<?php if($page_flag = 2): ?>
-<?php include("page-thanks.php"); ?>
-<?php elseif($page_flag = 1): ?>
-<?php include("page-confirm.php"); ?>
-<?php else: ?>
+<?php get_header();?>
+<?php if ($page_flag === 1) : ?>
+  <?php include('page-confirm.php'); ?>
+<?php elseif ($page_flag === 2) : ?>
+  <?php include('page-thanks.php'); ?>
+<?php else : ?>
 <!-- .mv -->
 <div class="mv">
     <div class="mv-bg">
