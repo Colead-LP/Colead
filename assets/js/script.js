@@ -265,9 +265,20 @@ $(function () {
       }
     });
   }
+  //イベントリスナー追加用にdocument読み込み時にinput#areaを変数に格納
+  area_value = document.getElementById("area");
+
+  //番地が入力された時に起動するイベントリスナーをinput欄に設定
+  area_value.addEventListener("change", function () {
+    //関数内で利用できるcity.value変数を定義
+    let city_value = document.getElementById("city").value;
+
+    //セレクトボタンで取得した都道府県をjqueryで指定して変数に格納
+    let pref = $("#pref option:selected").text();
+    GetAdressLatLng(pref, city_value, area_value.value);
+  });
 });
 
-// #計算フォーム
 function onClick() {
   //値のリセット
   $year_fee = "";
@@ -373,15 +384,106 @@ function onClick() {
   }
 }
 
-// #map
+// Initialize and add the map
 function initMap() {
-  var mapPosition = new google.maps.LatLng(35.6882495, 139.6856557); //緯度経度
-  var map = new google.maps.Map(document.getElementById("gmap"), {
-    zoom: 17, //ズーム
-    center: mapPosition,
-  });
-  var marker = new google.maps.Marker({
-    position: mapPosition,
-    map: map,
-  });
+  if (document.getElementById("gmap")) {
+    //初期位置を設定
+    //TODO:住所不明のため、東京駅をターゲットに指定
+    let latlng = new google.maps.LatLng(35.680865, 139.767036);
+    let opts = {
+      zoom: 15,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+    };
+    map = new google.maps.Map(document.getElementById("gmap"), opts);
+    marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      draggable: true,
+    });
+  } else {
+    //確認画面の処理
+    //セッションストレージ内の緯度経度を取得
+    const confirmLagLng = sessionStorage.getItem("latlng");
+    console.log(confirmLagLng);
+    const latlng = new google.maps.LatLng(confirmLatLng);
+    const opts = {
+      zoom: 15,
+      center: latlng,
+      mapTypeId: google.maps.MapTypeId.ROADMAP,
+      mapTypeControl: false,
+    };
+    const map = new google.maps.Map(
+      document.getElementById("gmap-confirm"),
+      opts
+    );
+    const marker = new google.maps.Marker({
+      position: latlng,
+      map: map,
+      draggable: true,
+    });
+    sessionStorage.removeItem("latlng");
+  }
+}
+
+//文字列住所から緯度経度を取得する
+//後述のため、関数宣言(function)でGetAdressLatLngを定義
+function GetAdressLatLng(pref, city, area) {
+  //都道府県、市区町村、番地を一つの文字列として連結
+  tmp_adress = pref + city + area;
+  //geocoderクラスをインスタンス化
+  let geocoder = new google.maps.Geocoder();
+  geocoder.geocode(
+    {
+      address: tmp_adress, //住所
+      language: "jp", //サーチ結果の優先する言語。
+      region: "jp", //サーチ用のトップレベルドメインの国コード。
+    },
+    function (results, status) {
+      alert(results[1]);
+      if (status == google.maps.GeocoderStatus.OK) {
+        //markerの削除
+        marker.setMap(null);
+        //map.panToで、指定座標までマップ表示を移動させる
+        map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
+        // ポジションを変更
+        marker.position = results[0].geometry.location;
+        // マーカーをセット
+        marker.setMap(map);
+        });
+      } else if (status == google.maps.GeocoderStatus.ERROR) {
+        //googleサーバー側のエラー
+        pass;
+      } else if (status == google.maps.GeocoderStatus.INVALID_REQUEST) {
+        //サーバーサイド（こちら側）のミス
+        pass;
+      } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+        //短期間での過剰なアクセス
+        pass;
+      } else if (status == google.maps.GeocoderStatus.REQUEST_DENIED) {
+        //Webページでジオコードが拒否された
+        pass;
+      } else if (status == google.maps.GeocoderStatus.UNKNOWN_ERROR) {
+        //googleサーバー側のエラー
+        pass;
+      } else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+        //処理自体は通るけど、googlemapで特定できない場所の住所が入っている
+        pass;
+      } else {
+        //上記以外、バージョン確認
+        alert("Geocode 取得に失敗しました reason: " + status);
+      }
+    }
+  );
+}
+
+//buttonを押した時の地図座標を取得
+function GetLatLng() {
+  //TODO:必須項目全てが埋まっている時という条件式の追加
+
+  //(緯度,　経度)の形で取得する
+  confirmLagLng = map.getCenter();
+  //セッションストレージ内に緯度経度を格納
+  sessionStorage.setItem("latlng", confirmLagLng);
 }
