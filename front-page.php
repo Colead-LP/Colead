@@ -32,7 +32,6 @@ include('mail.php');
         </div>
     </div>
 </div><!-- /.mv -->
-<div id="gmap"></div>
 <!-- .solve -->
 <section class="solve">
     <div class="solve-header">
@@ -300,7 +299,6 @@ include('mail.php');
         </div>
     </div>
 </section><!-- /.contact -->
-
 <?php endif; ?>
 <!-- .footer -->
 <?php get_footer();
