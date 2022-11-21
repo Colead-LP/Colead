@@ -1,3 +1,4 @@
+// #スムーススクロール
 $(function () {
   // #で始まるa要素をクリックした場合に処理（"#"←ダブルクォーテンションで囲むのを忘れずに。忘れるとjQueryのバージョンによっては動かない）
   $('a[href^="#"]').click(function () {
@@ -16,16 +17,7 @@ $(function () {
     return false;
   });
 
-  function changeTxt() {
-    let url = location.href;
-    console.log(url);
-
-    // if(url === 'http://localhost:8888/Colead/confirm/' ) {
-    if (url === "https://itomaru.org/colead/confirm/") {
-      let hoge = $(".address .form-item-ttl").text("発電所住所");
-    }
-  }
-
+  // #プライバシーモーダル
   $(function () {
     // 変数に要素を入れる
     var open = $(".js-pravacy"),
@@ -50,43 +42,232 @@ $(function () {
       }
     });
   });
-  
-  $(".contact form").submit(function (e) {
-    const name = $(".input-name-first").val();
-    const email = $(".type-email").val();
-    const post = $("#zip").val();
-    const city = $("#city").val();
-    const houseNumber = $("#area").val();
-    const dc = $("#dc").val();
-    const privacy = $(".privacy-check");
-    const top = $(".mw_wp_form").offset().top - 40;
 
-    if (
-      name === "" ||
-      email === "" ||
-      post === "" ||
-      city === "" ||
-      houseNumber === "" ||
-      dc === "" ||
-      (!privacy.prop("checked"))
-    ) {
-      $("html,body").animate({ scrollTop: top }, "slow");
-      e.preventDefault();
-      $(".name").append('<p class="notval">未入力です。</p>');
-      $(".email").append('<p class="notval">未入力です。</p>');
-      $(".post").append('<p class="notval">未入力です。</p>');
-      $(".munic").append('<p class="notval">未入力です。</p>');
-      $(".houseNumber").append('<p class="notval">未入力です。</p>');
-      $(".dc").append('<p class="notval">未入力です。</p>');
-      $(".privacy").append('<p class="notval">必須項目です。</p>');
-    } else {
-      return true;
-    }
-  });
+  // #formValidation
+  // form element
+  const form = document.getElementById("form");
 
-  changeTxt();
+  if (form) {
+    // エラーを表示する p 要素に付与するクラス名 (エラー用のクラス)
+    const errorClassName = "error";
+
+    //required クラスを指定された要素の集まり
+    const requiredElems = document.querySelectorAll(".required");
+    // 各input要素取得
+    const to_confirm = document.getElementById("toConfirm");
+    const name_first = document.getElementById("name_first");
+    const name_last = document.getElementById("name_last");
+    const email = document.getElementById("email");
+    const zip = document.getElementById("zip");
+    const pref = document.getElementById("pref");
+    const city = document.getElementById("city");
+    const area = document.getElementById("area");
+    const fit = document.getElementById("fit");
+    const dc = document.getElementById("dc");
+    const privacy = document.getElementById("privacy");
+
+    // エラーメッセージを表示する p 要素を生成して親要素に追加する関数
+    // elem : 対象の要素
+    // errorMessage : 表示するエラーメッセージ
+    const createError = (elem, errorMessage) => {
+      // p 要素を生成
+      const errorP = document.createElement("p");
+      // エラー用のクラスを追加 (設定)
+      errorP.classList.add(errorClassName);
+      // 引数に指定されたエラーメッセージを設定
+      errorP.textContent = errorMessage;
+      // elem の親要素の子要素として追加
+      elem.parentNode.appendChild(errorP);
+    };
+
+    form.addEventListener("submit", (e) => {
+      // エラーを表示する要素を全て取得して削除 (初期化)
+      const errorElems = form.querySelectorAll("." + errorClassName);
+      errorElems.forEach((elem) => {
+        elem.remove();
+      });
+
+      requiredElems.forEach((elem) => {
+        // ラジオボタンの場合
+        if (elem.tagName === "INPUT" && elem.getAttribute("type") === "radio") {
+          const checkedRadio = elem.parentElement.querySelector(
+            'input[type="radio"]:checked'
+          );
+          if (checkedRadio === null) {
+            createError(elem, "いずれか1つを選択してください");
+            e.preventDefault();
+          }
+          // チェックボックスの場合
+        } else if (
+          elem.tagName === "INPUT" &&
+          elem.getAttribute("type") === "checkbox"
+        ) {
+          const checkedCheckbox = elem.parentElement.querySelector(
+            'input[type="checkbox"]:checked'
+          );
+          if (checkedCheckbox === null) {
+            createError(elem, "選択してください。");
+            e.preventDefault();
+          }
+        } else {
+          const elemValue = elem.value.trim();
+          if (elemValue.length === 0) {
+            // セクレトの場合
+            if (elem.tagName === "SELECT") {
+              createError(elem, "選択してください。");
+              // その他
+            } else {
+              createError(elem, "入力してください。");
+            }
+            e.preventDefault();
+          }
+        }
+      });
+
+      // エラーの最初の要素を取得
+      const errorElem = form.querySelector("." + errorClassName);
+      // エラーがあればエラーの最初の要素の位置へスクロール
+      if (errorElem) {
+        const rect = errorElem.getBoundingClientRect().top;
+        const offset = window.pageYOffset;
+        const gap = 60;
+        const errorElemTop = rect + offset - gap;
+        window.scrollTo({
+          top: errorElemTop,
+          behavior: "smooth",
+        });
+      }
+    });
+
+    // changeメソッド
+    name_first.addEventListener("change", () => {
+      if (name_first.value) {
+        name_first.nextElementSibling.remove();
+      } else {
+        createError(name_first, "入力してください");
+      }
+    });
+    name_last.addEventListener("change", () => {
+      if (name_last.value) {
+        name_last.nextElementSibling.remove();
+      } else {
+        createError(name_last, "入力してください");
+      }
+    });
+    email.addEventListener("change", () => {
+      if (email.value) {
+        email.nextElementSibling.remove();
+      } else {
+        createError(email, "入力してください");
+      }
+    });
+    zip.addEventListener("change", () => {
+      if (zip.value) {
+        zip.nextElementSibling.remove();
+      } else {
+        createError(zip, "入力してください");
+      }
+    });
+    pref.addEventListener("change", () => {
+      if (pref.value) {
+        pref.nextElementSibling.remove();
+      } else {
+        createError(pref, "入力してください");
+      }
+    });
+    city.addEventListener("change", () => {
+      if (city.value) {
+        city.nextElementSibling.remove();
+      } else {
+        createError(city, "入力してください");
+      }
+    });
+    area.addEventListener("change", () => {
+      if (area.value) {
+        area.nextElementSibling.remove();
+      } else {
+        createError(area, "入力してください");
+      }
+    });
+    fit.addEventListener("change", () => {
+      if (fit.value) {
+        fit.nextElementSibling.remove();
+      } else {
+        createError(fit, "入力してください");
+      }
+    });
+    dc.addEventListener("change", () => {
+      if (dc.value) {
+        dc.nextElementSibling.remove();
+      } else {
+        createError(dc, "入力してください");
+      }
+    });
+    privacy.addEventListener("change", () => {
+      if (privacy.value) {
+        const privacyNext = document.querySelector(".privacy_input_txt");
+        privacyNext.nextElementSibling.remove();
+      } else {
+        createError(privacy, "選択してください");
+      }
+    });
+  }
+
+  // #validation confirm
+  const formConfirm = document.querySelector(".confirm");
+
+  if (formConfirm) {
+    formConfirm.addEventListener("submit", (e) => {
+      const errorClassName = "error";
+
+      const errorElems = formConfirm.querySelectorAll("." + errorClassName);
+      errorElems.forEach((elem) => {
+        elem.remove();
+      });
+
+      const createError = (elem, errorMessage) => {
+        // p 要素を生成
+        const errorP = document.createElement("p");
+        // エラー用のクラスを追加 (設定)
+        errorP.classList.add(errorClassName);
+        // 引数に指定されたエラーメッセージを設定
+        errorP.textContent = errorMessage;
+        // elem の親要素の子要素として追加
+        elem.parentNode.appendChild(errorP);
+      };
+
+      const requiredElems = document.querySelectorAll(".required");
+
+      requiredElems.forEach((elem) => {
+        if (
+          elem.tagName === "INPUT" &&
+          elem.getAttribute("type") === "checkbox"
+        ) {
+          const checkedCheckbox = elem.parentElement.querySelector(
+            'input[type="checkbox"]:checked'
+          );
+          if (checkedCheckbox === null) {
+            createError(elem, "選択してください");
+            e.preventDefault();
+          }
+        }
+      });
+    });
+
+    const privacyConfirm = document.getElementById("submit_privacy");
+
+    privacyConfirm.addEventListener("change", () => {
+      if (privacyConfirm.value) {
+        const privacyConfirmNext = document.querySelector(".privacy_txt");
+        privacyConfirmNext.nextElementSibling.remove();
+      } else {
+        createError(privacyConfirm, "選択してください");
+      }
+    });
+  }
 });
 
+// #計算フォーム
 function onClick() {
   //値のリセット
   $year_fee = "";
@@ -190,4 +371,17 @@ function onClick() {
 
     return $amount;
   }
+}
+
+// #map
+function initMap() {
+  var mapPosition = new google.maps.LatLng(35.6882495, 139.6856557); //緯度経度
+  var map = new google.maps.Map(document.getElementById("gmap"), {
+    zoom: 17, //ズーム
+    center: mapPosition,
+  });
+  var marker = new google.maps.Marker({
+    position: mapPosition,
+    map: map,
+  });
 }

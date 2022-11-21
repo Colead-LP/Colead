@@ -16,7 +16,7 @@
     @include v.mq(pc) {
       background: url(../img/cta/pc/bg.jpg) no-repeat center / cover;
       height: 4rem;
-      padding: 0.39rem 0 0;
+      padding: 0.45rem 0 0;
     }
   }
   &-txt {
@@ -40,7 +40,7 @@
         }
         @include v.mq(pc) {
           font-size: 0.4rem;
-          margin: 0.2rem;
+          margin: .2rem 0 0;
         }
       }
       &__s {
@@ -76,14 +76,14 @@
     }
     @include v.mq(pc) {
       width: 2.7871rem;
-      margin: -0.5rem auto 0;
+      margin: .25rem auto 0;
     }
   }
   &-btn {
     @include v.mq(sp) {
     }
     @include v.mq(pc) {
-      @include m.to_simulation(-0.23rem);
+      @include m.to_simulation(.25rem);
       display: block;
     }
   }

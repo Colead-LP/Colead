@@ -1,12 +1,14 @@
-<?php require("calculate.php");
-// if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-//     header("Location:http://localhost:8888/Colead/");
-//     exit;
-// }
+<?php
+require("calculate.php");
+include('mail.php');
 ?>
 
-<?php get_header();
-?>
+<?php get_header();?>
+<?php if ($page_flag === 1) : ?>
+  <?php include('page-confirm.php'); ?>
+<?php elseif ($page_flag === 2) : ?>
+  <?php include('page-thanks.php'); ?>
+<?php else : ?>
 <!-- .mv -->
 <div class="mv">
     <div class="mv-bg">
@@ -30,6 +32,7 @@
         </div>
     </div>
 </div><!-- /.mv -->
+<div id="gmap"></div>
 <!-- .solve -->
 <section class="solve">
     <div class="solve-header">
@@ -290,7 +293,7 @@
                     より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
                 </p>
                 <!-- .form -->
-                <?php echo do_shortcode('[mwform_formkey key="24"]'); ?>
+                <?php include 'page-form.php'; ?>
                 <!-- /.form -->
 
             </div>
@@ -298,5 +301,6 @@
     </div>
 </section><!-- /.contact -->
 
+<?php endif; ?>
 <!-- .footer -->
 <?php get_footer();
