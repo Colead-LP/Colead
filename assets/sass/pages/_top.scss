@@ -1018,6 +1018,56 @@
 }
 
 /*=====================================================
+# thanks
+=====================================================*/
+.thanks {
+  background: #eaf3fa;
+  @include v.mq(sp) {
+    padding: .2rem 0 .45rem;
+  }
+  @include v.mq(pc) {
+    padding: 0.8rem;
+  }
+  &_inner {
+    margin: 0 auto;
+    background: #fff;
+    @include v.mq(sp) {
+      width: 3.35rem;
+      padding: .3rem .2rem .4rem;
+      border-radius: 0.3rem 0 0 0;
+    }
+    @include v.mq(pc) {
+      width: 8rem;
+      padding: 0.4rem 0.4rem 0.5rem;
+      border-radius: 0.4rem 0 0 0;
+    }
+  }
+
+  &_ttl {
+    text-align: center;
+    font-weight: bold;
+    @include v.mq(sp) {
+      font-size: .24rem;
+    }
+    @include v.mq(pc) {
+      font-size: 0.28rem;
+    }
+  }
+
+  &_txt {
+    text-align: center;
+    line-height: 1.75;
+    @include v.mq(sp) {
+      margin: .21rem 0 0;
+      font-size: .16rem;
+    }
+    @include v.mq(pc) {
+      margin: 0.31rem 0 0;
+      font-size: 0.16rem;
+    }
+  }
+}
+/*=====================================================
 # Js
 =====================================================*/
 /*=====================================================
