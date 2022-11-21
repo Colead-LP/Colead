@@ -423,6 +423,7 @@ function initMap() {
       map: map,
       draggable: true,
     });
+    //セッションストレージから緯度経度を削除
     sessionStorage.removeItem("latlng");
   }
 }
@@ -441,7 +442,6 @@ function GetAdressLatLng(pref, city, area) {
       region: "jp", //サーチ用のトップレベルドメインの国コード。
     },
     function (results, status) {
-      alert(results[1]);
       if (status == google.maps.GeocoderStatus.OK) {
         //markerの削除
         marker.setMap(null);
