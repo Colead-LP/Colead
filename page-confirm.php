@@ -124,6 +124,13 @@
                         ?>
                     </p>
                 </li>
+                <li class="form-item gmap-confirm require-item">
+                    <p class="form-item-ttl">Google Map</p>
+                    <div id="gmap-confirm" class="gmap-confirm" style="
+                            width:3.6rem;
+                            height:1.5rem;
+                            "></div>
+                </li>
                 <li class="confirm_item fit">
                     <p class="confirm_item_ttl">FIT単価（税込）</p>
                     <p class="confirm_item_txt">
@@ -195,9 +202,7 @@
                     <p class="confirm_item_ttl">PCSメーカー</p>
                     <p class="confirm_item_txt"><?php echo $_POST['pcs']; ?></p>
                 </li>
-
             </ul>
-
             <div class="privacy">
                 <label class="privacy_label">
                     <input type="checkbox" name="submit_privacy" id="submit_privacy" class="type-checkbox privacy_input required"><span class="privacy_txt">プライバシーポリシーに同意する。</span>

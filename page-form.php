@@ -2,7 +2,7 @@
 include('mail.php');
 ?>
 <?php
-// get_header();
+get_header();
 ?>
 <!-- #input -->
 <form action="" method="post" id="form" class="h-adr form" name="form">
@@ -122,6 +122,11 @@ include('mail.php');
               <input type="text" name="area" id="area" class="p-extended-address type-text input-address required" size="" value="">
             </div>
           </li>
+          <li class="form-item gmap require-item">
+            <p class="form-item-ttl">Google Mapで正確な位置を指定する</p>
+            <div type="text" name="gmap" id="gmap" class="p-extended-gmap input-gmap" size="" value="">
+          </li>
+          <script src="https://cdn.geolonia.com/community-geocoder.js"></script>
           <li class="form-item fit require-item">
             <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
             <div class="input_wrap">
@@ -210,7 +215,7 @@ include('mail.php');
           </p>
           <div class="privacy_input_wrap">
             <label class="privacy_input_label">
-                <input type="checkbox" name="privacy" value="agree" id="privacy" class="privacy_input privacy-check type-checkbox required">
+              <input type="checkbox" name="privacy" value="agree" id="privacy" class="privacy_input privacy-check type-checkbox required">
               <span class="privacy_input_txt">プライバシーポリシーに同意する。</span>
             </label>
           </div>
@@ -283,4 +288,4 @@ include('mail.php');
   }
 </style>
 <?php
-// get_footer();
+get_footer();
