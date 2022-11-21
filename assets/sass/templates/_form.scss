@@ -240,10 +240,10 @@
       width: 3.6rem;
     }
   }
-  .input-gmap {
-    width: 3.6rem;
-    height: 1.5rem;
-  }
+  // .input-gmap {
+  //   width: 3.6rem;
+  //   height: 1.5rem;
+  // }
 
   .input-pref,
   .input-fit {
@@ -463,27 +463,61 @@
 }
 
 /*=====================================================
+# map
+=====================================================*/
+.input-gmap,
+.gmap-confirm{
+  border-radius: .03rem;
+  @include v.mq(sp) {
+    width: 2.95rem;
+    height: 1.6rem;
+  }
+  @include v.mq(pc) {
+    width: 3.6rem;
+    height: 1.6rem;
+  }
+}
+
+/*=====================================================
 # confirm
 =====================================================*/
 .confirm {
   &_bg {
     background: #eaf3fa;
-    padding: 0.6rem 0 1rem;
+    @include v.mq(sp) {
+      padding: .3rem 0 .65rem;
+    }
+    @include v.mq(pc) {
+      padding: 0.6rem 0 1rem;
+    }
   }
 
   &_inner {
-    width: 8rem;
-    padding: 44px 40px 50px;
     margin: 0.31rem auto 0;
     background: #fff;
-    border-radius: 0.4rem 0 0 0;
+    @include v.mq(sp) {
+      width: 3.35rem;
+      padding: .3rem .2rem .4rem;
+      border-radius: .3rem 0 0 0;
+    }
+    @include v.mq(pc) {
+      width: 8rem;
+      padding: 44px 40px 50px;
+      border-radius: 0.4rem 0 0 0;
+    }
   }
 
   &_ttl {
     color: #333333;
     font-weight: bold;
-    font-size: 0.4rem;
     text-align: center;
+    @include v.mq(sp) {
+      font-size: .28rem;
+    }
+    @include v.mq(pc) {
+      font-size: 0.4rem;
+      
+    }
   }
 
   &_list {
@@ -493,8 +527,19 @@
     position: relative;
     color: #333333;
     display: grid;
-    grid-template-columns: 3.6rem 3.6rem;
-    padding: 0 0 0.155rem 0;
+
+    @include v.mq(sp) {
+      // grid-template-columns: 1.45rem 1fr;
+      grid-template-columns: repeat(auto-fill,(1.45rem, 1fr));
+      // gap: .2rem;
+      gap: .12rem;
+      padding: 0 0 0.15rem 0;
+    }
+    
+    @include v.mq(pc) {
+      grid-template-columns: 3.6rem 3.6rem;
+      padding: 0 0 0.155rem 0;
+    }
 
     &::after {
       content: "";

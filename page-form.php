@@ -121,7 +121,7 @@ include('mail.php');
           </li>
           <li class="form-item gmap require-item">
             <p class="form-item-ttl">Google Mapで正確な位置を指定する</p>
-            <div type="text" id="gmap" class="p-extended-gmap input-gmap" size="" value="">
+            <div type="text" id="gmap" class="p-extended-gmap input-gmap" size="" value=""></div>
             <input type="hidden" name="gmap" id="js-gmap" value="">
           </li>
           <script src="https://cdn.geolonia.com/community-geocoder.js"></script>
