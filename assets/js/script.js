@@ -41,26 +41,6 @@ $(function () {
     });
   });
 
-  // //文字列住所から緯度経度を取得する
-  // const GetAdressLatLng = (pref, city, area) => {
-  //   //都道府県、市区町村、番地を一つの文字列として連結
-  //   tmp_adress = pref + city + area;
-  //   //geocoderクラスをインスタンス化
-  //   let geocoder = new google.maps.Geocoder();
-  //   geocoder.geocode(
-  //     {
-  //       address: tmp_adress,
-  //       region: "jp",
-  //     },
-  //     function (results, status) {
-  //       if (status == google.maps.GeocoderStatus.OK) {
-  //         //処理
-  //         map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
-  //       }
-  //     }
-  //   );
-  // };
-
   //イベントリスナー追加用にdocument読み込み時にinput#areaを変数に格納
   area_value = document.getElementById("area");
 
@@ -244,18 +224,32 @@ name_first.addEventListener("keyup", (e) => {
 // Initialize and add the map
 function initMap() {
   //初期位置を設定
+  //（TODO）：緯度、経度は設定確認
   let latlng = new google.maps.LatLng(35.680865, 139.767036);
   let opts = {
-    zoom: 15,
-    center: latlng,
-    mapTypeId: google.maps.MapTypeId.ROADMAP,
+    zoom: 15, //マップの寄りを指定
+    center: latlng, //マップの中央を指定
+    mapTypeId: google.maps.MapTypeId.ROADMAP, //マップのタイプを3つから指定、今回は建物込みのROADMAP
   };
+
+  //変数mapに（配置場所、オプション）を渡してインスタンス化
   map = new google.maps.Map(document.getElementById("gmap"), opts);
+  //マーカーのインスタンス化
+  let marker = new google.maps.Marker({
+    position: latlng,
+    draggable: true,
+    map: map,
+  });
+  //マーカーのドロップ（ドラッグ終了）時のイベント
+  google.maps.event.addListener(marker, "dragend", function (e) {
+    //イベントの引数eの、プロパティ.latLngがmarkerの緯度経度。
+    alert(e.latLng.lat());
+    alert(e.latLng.lng());
+  });
 }
 
 //文字列住所から緯度経度を取得する
 //後述のため、関数宣言(function)でGetAdressLatLngを定義
-// const GetAdressLatLng = (pref, city, area) => {
 function GetAdressLatLng(pref, city, area) {
   //都道府県、市区町村、番地を一つの文字列として連結
   tmp_adress = pref + city + area;
@@ -263,14 +257,48 @@ function GetAdressLatLng(pref, city, area) {
   let geocoder = new google.maps.Geocoder();
   geocoder.geocode(
     {
-      address: tmp_adress,
-      region: "jp",
+      address: tmp_adress, //住所
+      language: "jp", //サーチ結果の優先する言語。
+      region: "jp", //サーチ用のトップレベルドメインの国コード。
     },
     function (results, status) {
+      alert(results[1]);
       if (status == google.maps.GeocoderStatus.OK) {
         //処理
         map.panTo(new google.maps.LatLng(results[0].geometry.location, 15));
+        let marker = new google.maps.Marker({
+          position: results[0].geometry.location,
+          draggable: true,
+          map: map,
+        });
+      } else if (status == google.maps.GeocoderStatus.ERROR) {
+        //googleサーバー側のエラー
+        pass;
+      } else if (status == google.maps.GeocoderStatus.INVALID_REQUEST) {
+        //サーバーサイド（こちら側）のミス
+        pass;
+      } else if (status == google.maps.GeocoderStatus.OVER_QUERY_LIMIT) {
+        //短期間での過剰なアクセス
+        pass;
+      } else if (status == google.maps.GeocoderStatus.REQUEST_DENIED) {
+        //Webページでジオコードが拒否された
+        pass;
+      } else if (status == google.maps.GeocoderStatus.UNKNOWN_ERROR) {
+        //googleサーバー側のエラー
+        pass;
+      } else if (status == google.maps.GeocoderStatus.ZERO_RESULTS) {
+        //処理自体は通るけど、googlemapで特定できない場所の住所が入っている
+        pass;
+      } else {
+        //上記以外、バージョン確認
+        alert("Geocode 取得に失敗しました reason: " + status);
       }
     }
   );
+}
+
+function CheckLatLng() {
+  pos = marker.getPositon();
+  lat = pos.lat();
+  lng = pos.lng();
 }
