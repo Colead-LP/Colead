@@ -1177,20 +1177,6 @@ iframe {
   }
 }
 
-::placeholder {
-  color: #b5b9be;
-}
-
-/* 旧Edge対応 */
-::-ms-input-placeholder {
-  color: #b5b9be;
-}
-
-/* IE対応 */
-:-ms-input-placeholder {
-  color: #b5b9be;
-}
-
 /*=====================================================
 # valudation
 =====================================================*/
@@ -1265,6 +1251,10 @@ iframe {
   }
 }
 
+.privacy {
+  /* 旧Edge対応 */
+  /* IE対応 */
+}
 .privacy .error {
   left: 50%;
   transform: translateX(-50%);
@@ -1274,6 +1264,16 @@ iframe {
     top: 0.295rem;
   }
 }
+.privacy ::placeholder {
+  color: #b5b9be;
+}
+.privacy ::-ms-input-placeholder {
+  color: #b5b9be;
+}
+.privacy :-ms-input-placeholder {
+  color: #b5b9be;
+}
+
 /*=====================================================
 # mv
 =====================================================*/
