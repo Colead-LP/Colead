@@ -943,7 +943,7 @@ iframe {
   .input-gmap,
 .gmap-confirm {
     width: 2.95rem;
-    height: 1.6rem;
+    height: 1.5rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1035,7 +1035,7 @@ iframe {
 }
 .confirm_item_ttl {
   font-weight: bold;
-  font-size: 0.18rem;
+  font-size: 0.16rem;
 }
 .confirm_item_txt {
   font-size: 0.16rem;
@@ -1568,10 +1568,8 @@ iframe {
     background: url(../img/reason/pc/item03.png) no-repeat center/cover;
   }
 }
-@media screen and (min-width: 768px) {
-  .reason-item:nth-child(3) .reason-item-img {
-    width: 3.1084rem;
-  }
+.reason-item:nth-child(3) .reason-item-img {
+  width: 3.1084rem;
 }
 @media screen and (max-width: 767px) {
   .reason-item:nth-child(4) {
