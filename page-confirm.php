@@ -1,3 +1,5 @@
+<?php
+?>
 <!-- #confirm -->
 <form method="post" action="" class="confirm">
     <div class="confirm_bg">
@@ -213,7 +215,7 @@
     </div>
     </div>
     <input type="hidden" name="name_first" value="<?php echo $_POST['name_first']; ?>">
-    <input type="hidden" name="name_first" value="<?php echo $_POST['name_last']; ?>">
+    <input type="hidden" name="name_last" value="<?php echo $_POST['name_last']; ?>">
     <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
     <input type="hidden" name="zip" value="<?php echo $_POST['zip']; ?>">
     <input type="hidden" name="pref" value="<?php echo $_POST['pref']; ?>">
@@ -229,4 +231,5 @@
     <input type="hidden" name="maint" value="<?php echo $_POST['maint']; ?>">
     <input type="hidden" name="panel" value="<?php echo $_POST['panel']; ?>">
     <input type="hidden" name="pcs" value="<?php echo $_POST['pcs']; ?>">
+    <?php var_dump($_POST); ?>
 </form>

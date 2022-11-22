@@ -9,7 +9,11 @@ if (!empty($_POST['btn_confirm'])) { //
   //  #メール送信機能
   // #ユーザー自動返信メール
   // 変数とタイムゾーンを初期化
+  mb_language("Japanese");
+  mb_internal_encoding("UTF-8");
+
   $header = null;
+  $email = "xxxxxx@example.com";
   $auto_reply_subject = null;
   $auto_reply_text = null;
   $admin_reply_subject = null;
@@ -18,18 +22,17 @@ if (!empty($_POST['btn_confirm'])) { //
 
   // ヘッダー情報
   $header = "MIME-Version: 1.0\n";
-  $header .= "From: 株式会社Colead <x.yusuke.x@icloud.com>\n";
-  $header .= "Replay-to: 株式会社Colead <x.yusuke.x@iclouc.com>\n";
+  $header .= "From: $email\n";
+  $header .= "Replay-to: $email\n";
 
   // 件名を設定
   $auto_reply_subject = 'お問い合わせありがとうございます。';
 
   // 本文を設定
-  $auto_reply_text = "この度は、お問い合わせいただき誠にありがとうございます。\n\n";
-  $auto_reply_text .= "自動返信メールです。\n\n";
+  $auto_reply_text = "この度は、お問い合わせいただき誠にありがとうございます。\n";
   $auto_reply_text .= "お問い合わせ日時 : " . date("Y/m/d H:i") . "\n";
-  $auto_reply_text .= "氏名 : " . $_POST['name_first'] . $_POST['name_last'] . "\n";
-  $auto_reply_text .= "メールアドレス : " . $_POST['email'] . "\n";
+  $auto_reply_text .= "氏名 : " . $_POST["name_first"] . $_POST["name_last"] . "\n";
+  $auto_reply_text .= "メールアドレス : " . $_POST['email'] . "\n\n";
   if ($_POST['pref'] === '1') {
     $auto_reply_text .= "発電所住所 : " . "北海道" . $_POST['city'] . $_POST['area'] . "\n";
   } elseif ($_POST['pref'] === '2') {
@@ -167,17 +170,16 @@ if (!empty($_POST['btn_confirm'])) { //
     $auto_reply_text .= 'PCSメーカー : ' . $_POST['pcs'] . "\n";
   }
 
-  mb_send_mail($_POST['email'], $auto_reply_subject, $auto_reply_text);
+  mb_send_mail($_POST['email'], $auto_reply_subject, $auto_reply_text, $header);
 
   // #運営者側へ自動返信メール
   // 件名
   $admin_reply_subject = "お問い合わせを受け付けました。";
 
   // 本文
-  $admin_reply_text = "運会者側へ自動返信メールです。";
-  $admin_reply_text .= "お問合せ日時 : " . date("Y/m/d H:i") . "\n";
-  $admin_reply_text .= "氏名 : " . $_POST['name_first'] . $_POST['name_last'] . "\n";
-  $admin_reply_text .= "メールアドレス : " . $_POST['email'] . "\n";
+  $admin_reply_text .= "お問合せ日時 : " . date("Y/m/d H:i") . "\n\n";
+  $admin_reply_text .= "氏名 : " . $_POST["name_first"] . $_POST["name_last"] . "\n";
+  $admin_reply_text .= "メールアドレス : " . $_POST['email'] . "\n\n";
   if ($_POST['pref'] === '1') {
     $admin_reply_text .= "発電所住所 : " . "北海道" . $_POST['city'] . $_POST['area'] . "\n";
   } elseif ($_POST['pref'] === '2') {
@@ -273,6 +275,7 @@ if (!empty($_POST['btn_confirm'])) { //
   } elseif ($_POST['pref'] === '47') {
     $admin_reply_text .= "発電所住所 : " . "沖縄県" . $_POST['city'] . $_POST['area'] . "\n";
   }
+  $admin_reply_text .= "住所の詳細 : " . "https://www.google.co.jp/maps?q=" . $_POST["lat"] . "," . $_POST["lng"] . "\n\n";
   if ($_POST['fit'] === '1') {
     $admin_reply_text .= 'fit単価（税込） : ' . '44円' . "\n";
   } elseif ($_POST['fit'] === '2') {
@@ -314,6 +317,7 @@ if (!empty($_POST['btn_confirm'])) { //
   if ($_POST['pcs']) {
     $admin_reply_text .= 'PCSメーカー : ' . $_POST['pcs'] . "\n";
   }
+
 
 
   mb_send_mail('postscape.shigeta@gmail.com', $admin_reply_subject, $admin_reply_text, $header);

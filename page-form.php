@@ -3,6 +3,10 @@ include('mail.php');
 ?>
 <!-- #input -->
 <form action="" method="post" id="form" class="h-adr form" name="form">
+  <input type="hidden" id="lat" name="lat" value="">
+  <!--緯度-->
+  <input type="hidden" id="lng" name="lng" value="">
+  <!--経度-->
   <span class="p-country-name" style="display:none;">Japan</span>
   <div class="form-bg">
     <div class="form-inner">
