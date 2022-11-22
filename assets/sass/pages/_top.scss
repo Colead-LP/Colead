@@ -1076,20 +1076,20 @@
 }
 
 .contact-wrap {
-  // overflow: hidden;
-  // transition: all 1s ease;
+  overflow: hidden;
+  transition: all 1s ease;
   @include v.mq(sp) {
-    // height: 6.05rem;
+    height: 6.05rem;
   }
   @include v.mq(pc) {
-    // height: 6.08rem;
+    height: 6.08rem;
   }
   &.active {
     @include v.mq(sp) {
-      height: 28.7rem;
+      height: 31.1rem;
     }
     @include v.mq(pc) {
-      height: 24.1rem;
+      height: 26.6rem;
     }
   }
 }
@@ -1228,79 +1228,4 @@
 .modal-item {
   font-size: 0.14rem;
   line-height: 1.5;
-}
-/*=====================================================
-# valudation
-=====================================================*/
-.input_wrap {
-  position: relative;
-}
-
-.error {
-  position: absolute;
-  display: inline-block;
-  padding: 0.03rem;
-  max-width: 100%;
-  color: red;
-  font-size: 0.12rem;
-  background: #fff;
-  border: solid 0.03rem red;
-  box-sizing: border-box;
-  border-radius: 0.03rem;
-  @include v.mq(sp) {
-    top: 0.4rem;
-    left: -0.06rem;
-  }
-  @include v.mq(pc) {
-    top: -0.36rem;
-    left: -0.26rem;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    @include v.mq(sp) {
-      top: -0.18rem;
-      border: 0.12rem solid transparent;
-      border-bottom: 0.12rem solid #fff;
-    }
-    @include v.mq(pc) {
-      bottom: -0.18rem;
-      border: 0.12rem solid transparent;
-      border-top: 0.12rem solid #fff;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    @include v.mq(sp) {
-      top: -0.205rem;
-      border: 0.1rem solid transparent;
-      border-bottom: 0.1rem solid red;
-    }
-    @include v.mq(pc) {
-      bottom: -0.205rem;
-      border: 0.1rem solid transparent;
-      border-top: 0.1rem solid red;
-    }
-  }
-}
-
-.privacy {
-  .error {
-    left: 50%;
-    transform: translateX(-50%);
-    @include v.mq(sp) {
-      top: -0.205rem;
-    }
-    @include v.mq(pc) {
-    }
-  }
 }
