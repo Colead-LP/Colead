@@ -36,7 +36,7 @@ include('mail.php');
               メールアドレス<span class="require top">必須</span>
             </p>
             <div class="input_wrap">
-              <input type="email" name="email" id="email" class="type-email required" size="60" value="" placeholder="abc@mail.com" >
+              <input type="email" name="email" id="email" class="type-email required" size="60" value="" placeholder="abc@mail.com">
             </div>
           </li>
         </ul>
@@ -157,10 +157,12 @@ include('mail.php');
           </li>
           <li class="form-item dc require-item">
             <p class="form-item-ttl">DC容量<span class="require top">必須</span></p>
-            <div class="input_wrap">
-              <input type="text" name="dc" id="dc" class="type-number input-dc required" size="60" value="">
+            <div class="wrap">
+              <div class="input_wrap">
+                <input type="text" name="dc" id="dc" class="type-number input-dc required" size="60" value="">
+              </div>
+              <span class="unit">KW</span>
             </div>
-            <span class="unit">KW</span>
           </li>
           <li class="form-item wiring">
             <p class="form-item-ttl">配線図</p>
@@ -223,7 +225,9 @@ include('mail.php');
           </div>
         </div>
         <div class="submit">
-          <input type="submit" name="btn_confirm" value="確認する" id="toConfirm" class="to-confirm">
+          <div class="submit_wrap">
+            <input type="submit" name="btn_confirm" value="確認する" id="toConfirm" class="to-confirm">
+          </div>
         </div>
         <!-- #modal -->
         <div class="modal-container">

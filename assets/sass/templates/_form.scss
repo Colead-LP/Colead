@@ -78,6 +78,13 @@
   opacity: 1;
 }
 
+.type-text,.type-email,.type-number{
+  color: #333;
+  &::placeholder{
+    color: #B5B9BE;
+  }
+}
+
 /*=====================================================
 # form
 =====================================================*/
@@ -187,6 +194,13 @@
     &.pcs {
       @include v.mq(pc) {
         padding-bottom: 0.205rem;
+      }
+    }
+
+    &.dc{
+      .wrap{
+        display: flex;
+        align-items: flex-end;
       }
     }
   }
@@ -421,20 +435,34 @@
   }
 
   .submit {
-    margin: 0.3rem auto 0;
+    margin: 0.4rem auto 0;
     @include v.mq(pc) {
       width: 3.65rem;
     }
-  }
 
-  .submit .submit-label {
-    @include v.mq(pc) {
-      display: flex;
-      justify-content: center;
+    &_wrap{
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 47%;
+        right: .4rem;
+        transform-origin: 50% -50%;
+        width: .115rem;
+        height: .115rem;
+        // background: #fff;
+        border-top: .03rem solid #fff;
+        border-right: .03rem solid #fff;
+        transform: rotate(45deg);
+        z-index: 10;
+      }
     }
   }
 
   .submit .to-confirm {
+    position: relative;
     display: inline-block;
     color: #ffffff;
     background: #f73f61;
@@ -534,6 +562,7 @@
 
     @include v.mq(pc) {
       grid-template-columns: 3.6rem 3.6rem;
+      align-items: center;
       padding: 0 0 0.155rem 0;
     }
 
@@ -562,6 +591,25 @@
         display: inline;
       }
     }
+
+    &.map{
+      width: 100%;
+      @include v.mq(sp) {
+        padding: 0 0 2.05rem;
+      }
+      @include v.mq(pc) {
+        padding: 0 0 1.65rem;
+      }
+      .gmap-confirm{
+        height: 1.5rem;
+        @include v.mq(sp) {
+          width: 2.95rem;
+        }
+        @include v.mq(pc) {
+          width: 3.5rem;
+        }
+      }
+    }
   }
 
   .unit {
@@ -584,9 +632,32 @@
 
   .submit {
     margin: 0 auto;
+    @include v.mq(sp) {
+      margin: .4rem 0 0;
+    }
     @include v.mq(pc) {
+      font-size: .18rem;
       width: 3.65rem;
-      margin: -0.3rem auto 0;
+      margin: .4rem auto 0;
+    }
+        &_wrap{
+      position: relative;
+
+      &::before{
+        content: "";
+        position: absolute;
+        display: inline-block;
+        top: 47%;
+        right: .4rem;
+        transform-origin: 50% -50%;
+        width: .115rem;
+        height: .115rem;
+        // background: #fff;
+        border-top: .03rem solid #fff;
+        border-right: .03rem solid #fff;
+        transform: rotate(45deg);
+        z-index: 10;
+      }
     }
     &_toThanks {
       display: inline-block;
@@ -613,7 +684,80 @@
     }
   }
 }
+/*=====================================================
+# valudation
+=====================================================*/
+.input_wrap {
+  position: relative;
+}
 
+.error {
+  position: absolute;
+  display: inline-block;
+  padding: 0.03rem;
+  max-width: 100%;
+  color: red;
+  font-size: 0.12rem;
+  background: #fff;
+  border: solid 0.03rem red;
+  box-sizing: border-box;
+  border-radius: 0.03rem;
+  @include v.mq(sp) {
+    top: 0.4rem;
+    left: -0.06rem;
+  }
+  @include v.mq(pc) {
+    top: -0.36rem;
+    left: -0.26rem;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    @include v.mq(sp) {
+      top: -0.18rem;
+      border: 0.12rem solid transparent;
+      border-bottom: 0.12rem solid #fff;
+    }
+    @include v.mq(pc) {
+      bottom: -0.18rem;
+      border: 0.12rem solid transparent;
+      border-top: 0.12rem solid #fff;
+    }
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+    @include v.mq(sp) {
+      top: -0.205rem;
+      border: 0.1rem solid transparent;
+      border-bottom: 0.1rem solid red;
+    }
+    @include v.mq(pc) {
+      bottom: -0.205rem;
+      border: 0.1rem solid transparent;
+      border-top: 0.1rem solid red;
+    }
+  }
+}
+
+.privacy {
+  .error {
+    left: 50%;
+    transform: translateX(-50%);
+    @include v.mq(sp) {
+      top: .295rem;
+    }
+    @include v.mq(pc) {
+    }
+  }
 ::placeholder {
   color: #b5b9be;
 }

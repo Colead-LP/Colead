@@ -14,20 +14,20 @@ include('mail.php');
     <div class="mv-bg">
         <div class="mv-inner inner">
             <div class="mv-txt">
-                <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/sp/mv-ttl01.png" alt=""></p>
-                <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/pc/mv-ttl01.png" alt=""></p>
-                <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/sp/mv-ttl02.png" alt=""></p>
-                <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/mv/pc/mv-ttl02.png" alt=""></p>
+                <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_01.png" alt=""></p>
+                <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_01.png" alt=""></p>
+                <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_02.png" alt=""></p>
+                <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_02.png" alt=""></p>
             </div>
             <div class="mv-label">
                 <p class="label">手数料無料</p>
                 <p class="label">買取実績多数</p>
             </div>
             <div class="mv-btn sp">
-                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.btn.to_simulation.png" alt="無料金額シミュレーションボタン"></a>
             </div>
             <div class="mv-btn pc">
-                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/common/pc/btn.to-simulation.png" alt="無料金額シミュレーションボタン"></a>
+                <a href="#contact" class="btn to-calc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.btn.to_simulation.png" alt="無料金額シミュレーションボタン"></a>
             </div>
         </div>
     </div>
@@ -55,8 +55,8 @@ include('mail.php');
                         </li>
                     </ul>
                     <div class="solve-header-img">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/header-img.png" alt="">
-                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/header-img.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_header_img.png" alt="">
+                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_header_img.png" alt="">
                     </div>
                 </div>
             </div>
@@ -66,14 +66,14 @@ include('mail.php');
         <div class="solve-footer-bg">
             <div class="solve-footer-inner inner">
                 <h3 class="solve-footer-ttl">
-                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/footer-ttl.png" alt="">
-                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/footer-ttl.png" alt="">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_ttl.png" alt="">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_ttl.png" alt="">
                 </h3>
                 <p class="solve-footer-txt">スムーズな売却でストレスフリー。</p>
                 <p class="solve-footer-txt">太陽光発電の買取なら<ruby>Colead<rt>コリード</rt></ruby>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
                 <div class="solve-footer-graph">
-                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/sp/footer-graph.png" alt="">
-                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/solve/pc/footer-graph.png" alt="">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_graph.png" alt="">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_graph.png" alt="">
                 </div>
             </div>
         </div>
