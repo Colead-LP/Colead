@@ -722,6 +722,10 @@ iframe {
     width: 3.6rem;
   }
 }
+.form .input-pref,
+.form .input-fit {
+  color: #b5b9be;
+}
 @media screen and (min-width: 768px) {
   .form .input-pref,
 .form .input-fit {
@@ -2130,7 +2134,6 @@ iframe {
   text-align: center;
   align-items: center;
   font-size: 0.14rem;
-  color: #707070;
   height: 0.5rem;
 }
 @media screen and (max-width: 767px) {
@@ -2144,6 +2147,9 @@ iframe {
     width: 3.1rem;
     margin-right: 0.16rem;
   }
+}
+.calc-item #selected_item {
+  color: #b5b9be;
 }
 .calc-item .unit {
   align-self: end;
