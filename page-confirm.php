@@ -124,9 +124,9 @@
                         ?>
                     </p>
                 </li>
-                <li class="form-item gmap-confirm">
-                    <p class="form-item-ttl">Google Map</p>
-                    <div id="gmap-confirm" class="gmap-confirm"></div>
+                <li class="confirm_item gmap-confirm">
+                    <p class="confirm_item_ttl">Google Map</p>
+                    <div id="gmap-confirm" class="gmap-confirm confirm_item_txt"></div>
                 </li>
                 <li class="confirm_item fit">
                     <p class="confirm_item_ttl">FIT単価（税込）</p>
@@ -151,7 +151,7 @@
                         } elseif ($_POST['fit'] === '9') {
                             echo '15.4';
                         }
-                        ?>
+                        ?><span class="unit">円</span>
                     </p>
                 </li>
                 <li class="confirm_item dc">
