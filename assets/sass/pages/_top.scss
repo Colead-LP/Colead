@@ -13,10 +13,10 @@
   &-bg {
     width: 100%;
     @include v.mq(sp) {
-      background: url(../img/mv/sp/mv-bg.jpg) no-repeat center / cover;
+      background: url(../img/sp.mv_bg.jpg) no-repeat center / cover;
     }
     @include v.mq(pc) {
-      background: url(../img/mv/pc/mv-bg.jpg) no-repeat center / cover;
+      background: url(../img/pc.mv_bg.jpg) no-repeat center / cover;
       height: 7.09rem;
     }
   }
@@ -75,7 +75,7 @@
       letter-spacing: 0.04em;
       text-align: center;
       @include v.mq(sp) {
-        background: url(../img/mv/sp/mv-label.png) no-repeat center / cover;
+        background: url(../img/sp.mv_label.png) no-repeat center / cover;
         font-size: 0.16rem;
         line-height: 1.4;
         padding: 0.08rem 0;
@@ -83,7 +83,7 @@
         height: 0.4rem;
       }
       @include v.mq(pc) {
-        background: url(../img/mv/pc/mv-label.png) no-repeat center / cover;
+        background: url(../img/pc.mv_label.png) no-repeat center / cover;
         font-size: 0.2rem;
         line-height: 2.6;
         width: 2.7rem;
@@ -109,11 +109,11 @@
     &-bg {
       width: 100%;
       @include v.mq(sp) {
-        background: url(../img/solve/sp/header-bg.png) no-repeat center / cover;
+        background: url(../img/sp.solve_header_bg.png) no-repeat center / cover;
         height: 5.72rem;
       }
       @include v.mq(pc) {
-        background: url(../img/solve/pc/header-bg.png) no-repeat center / cover;
+        background: url(../img/pc.solve_header_bg.png) no-repeat center / cover;
         height: 5.12rem;
       }
     }
@@ -185,7 +185,7 @@
         &::before {
           content: "";
           position: absolute;
-          background: url(../img/solve/common/header-txtParts.png) no-repeat
+          background: url(../img/solve_header_txtParts.png) no-repeat
             center / cover;
           top: 0.06rem;
           left: 0;
@@ -212,7 +212,7 @@
         position: absolute;
         z-index: -1;
         @include v.mq(sp) {
-          background: url(../img/solve/sp/footer-bg.png) no-repeat center /
+          background: url(../img/sp.solve_footer_bg.png) no-repeat center /
             cover;
           top: 1.56rem;
           left: 0;
@@ -220,7 +220,7 @@
           height: 0.99rem;
         }
         @include v.mq(pc) {
-          background: url(../img/solve/pc/footer-bg.png) no-repeat center /
+          background: url(../img/pc.solve_footer_bg.png) no-repeat center /
             cover;
           top: 0.1rem;
           left: 50%;

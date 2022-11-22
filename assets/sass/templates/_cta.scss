@@ -9,12 +9,12 @@
   &-bg {
     width: 100%;
     @include v.mq(sp) {
-      background: url(../img/cta/sp/bg.jpg) no-repeat center / cover;
+      background: url(../img/sp.cta_bg.jpg) no-repeat center / cover;
       height: 2.73rem;
       padding: 0.32rem 0 0.28rem;
     }
     @include v.mq(pc) {
-      background: url(../img/cta/pc/bg.jpg) no-repeat center / cover;
+      background: url(../img/pc.cta_bg.jpg) no-repeat center / cover;
       height: 4rem;
       padding: 0.45rem 0 0;
     }
