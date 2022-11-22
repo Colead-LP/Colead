@@ -20,13 +20,13 @@ include('mail.php');
               <label class="form-item-label">
                 <span class="label-txt top">姓</span>
                 <div class="input_wrap">
-                  <input type="text" name="name_first" id="name_first" class="type-text input-name-first required" value="">
+                  <input type="text" name="name_first" id="name_first" class="type-text input-name-first required" value="" placeholder="山田">
                 </div>
               </label>
               <label class="form-item-label">
                 <span class="label-txt top">名</span>
                 <div class="input_wrap">
-                  <input type="text" name="name_last" id="name_last" class="type-text input-name-last required" size="" value="">
+                  <input type="text" name="name_last" id="name_last" class="type-text input-name-last required" size="" value="" placeholder="太郎">
                 </div>
               </label>
             </div>
@@ -36,7 +36,7 @@ include('mail.php');
               メールアドレス<span class="require top">必須</span>
             </p>
             <div class="input_wrap">
-              <input type="email" name="email" id="email" class="type-email required" size="60" value="">
+              <input type="email" name="email" id="email" class="type-email required" size="60" value="" placeholder="abc@mail.com" >
             </div>
           </li>
         </ul>
@@ -53,14 +53,14 @@ include('mail.php');
           <li class="form-item post top require-item">
             <p class="form-item-ttl">郵便番号</p>
             <div class="input_wrap">
-              <input type="text" name="zip" id="zip" class="type-number p-postal-code required" value="">
+              <input type="text" name="zip" id="zip" class="type-number p-postal-code required" value="" placeholder="0001122">
             </div>
           </li>
           <li class="form-item pref">
             <p class="form-item-ttl">都道府県</p>
             <div class="input_wrap">
               <select name="pref" id="pref" class="p-region-id select input-pref required">
-                <option value="">--------　お選びください　--------</option>
+                <option value="">--------  お選びください　--------</option>
                 <option value="1">北海道</option>
                 <option value="2">青森県</option>
                 <option value="3">岩手県</option>
@@ -133,7 +133,7 @@ include('mail.php');
             <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
             <div class="input_wrap">
               <select name="fit" id="fit" class="select input-fit required">
-                <option value="" selected>--------　お選びください　--------</option>
+                <option value="" selected>--------  お選びください　--------</option>
                 <option value="1">
                   44 </option>
                 <option value="2">
