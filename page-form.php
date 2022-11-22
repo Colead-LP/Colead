@@ -60,7 +60,7 @@ include('mail.php');
             <p class="form-item-ttl">都道府県</p>
             <div class="input_wrap">
               <select name="pref" id="pref" class="p-region-id select input-pref required">
-                <option value="">--------　お選びください　--------</option>
+                <option value="">--------  お選びください　--------</option>
                 <option value="1">北海道</option>
                 <option value="2">青森県</option>
                 <option value="3">岩手県</option>
@@ -133,7 +133,7 @@ include('mail.php');
             <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
             <div class="input_wrap">
               <select name="fit" id="fit" class="select input-fit required">
-                <option value="" selected>--------　お選びください　--------</option>
+                <option value="" selected>--------  お選びください　--------</option>
                 <option value="1">
                   44 </option>
                 <option value="2">

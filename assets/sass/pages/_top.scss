@@ -866,7 +866,6 @@
       text-align: center;
       align-items: center;
       font-size: 0.14rem;
-      color: #707070;
       height: 0.5rem;
       @include v.mq(sp) {
         width: 2.48rem;
@@ -876,6 +875,9 @@
         width: 3.1rem;
         margin-right: 0.16rem;
       }
+    }
+    #selected_item {
+      color: #b5b9be;
     }
     .unit {
       align-self: end;
