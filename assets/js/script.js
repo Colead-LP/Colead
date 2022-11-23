@@ -181,8 +181,8 @@ $(function () {
     });
     pref.addEventListener("change", () => {
       if (pref.value) {
-        pref.nextElementSibling.remove();
         pref.parentNode.classList.add("active");
+        pref.nextElementSibling.remove();
       } else {
         createError(pref, "入力してください");
       }
