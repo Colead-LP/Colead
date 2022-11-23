@@ -61,6 +61,12 @@ $(function () {
     } else {
     }
   });
+  zip.addEventListener("change", () => {
+    if (pref.value) {
+      pref.parentNode.classList.add("active");
+    } else {
+    }
+  });
 
   // #formValidation
   // form element
