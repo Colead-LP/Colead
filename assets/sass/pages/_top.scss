@@ -300,12 +300,12 @@
   &-bg {
     width: 100%;
     @include v.mq(sp) {
-      background: url(../img/reason/sp/bg.png) no-repeat center / cover;
+      background: url(../img/sp.reason_bg.png) no-repeat center / cover;
       height: 21.89rem;
       padding: 0.61rem 0 0.85rem;
     }
     @include v.mq(pc) {
-      background: url(../img/reason/pc/bg.jpg) no-repeat center / cover;
+      background: url(../img/pc.reason_bg.jpg) no-repeat center / cover;
       height: 12.74rem;
       padding: 0.85rem 0 1rem;
     }
@@ -348,12 +348,12 @@
     }
     &:nth-child(1) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item01.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_01.png) no-repeat center / cover;
         height: 4.34rem;
         padding: 0.34rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item01.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_01.png) no-repeat center / cover;
       }
       .reason-item-img {
         @include v.mq(sp) {
@@ -366,12 +366,12 @@
     }
     &:nth-child(2) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item02.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_02.png) no-repeat center / cover;
         height: 5.21rem;
         padding: 0.54rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item02.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_02.png) no-repeat center / cover;
       }
       .reason-item-img {
         width: 2.4573rem;
@@ -379,12 +379,12 @@
     }
     &:nth-child(3) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item03.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_03.png) no-repeat center / cover;
         height: 4.34rem;
         padding: 0.46rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item03.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_03.png) no-repeat center / cover;
       }
       .reason-item-img {
         width: 3.1084rem;
@@ -392,12 +392,12 @@
     }
     &:nth-child(4) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item04.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_04.png) no-repeat center / cover;
         height: 4.63rem;
         padding: 0.39rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item04.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_04.png) no-repeat center / cover;
       }
       .reason-item-img {
         width: 2.4547rem;
@@ -528,7 +528,7 @@
         @include v.mq(pc) {
           content: "";
           position: absolute;
-          background: url(../img/flow/pc/item-shape.png) no-repeat center /
+          background: url(../img/pc.flow_shape.png) no-repeat center /
             cover;
           width: 0.08rem;
           height: 3.54rem;
@@ -542,7 +542,7 @@
         @include v.mq(sp) {
           content: "";
           position: absolute;
-          background: url(../img/flow/sp/item-shape.png) no-repeat center /
+          background: url(../img/sp.flow_shape.png) no-repeat center /
             cover;
           top: -0.35rem;
           left: 0;
@@ -677,7 +677,7 @@
         font-size: 0.2rem;
       }
       &::before {
-        background: url(../img/faq/common/q.png) no-repeat center / cover;
+        background: url(../img/faq_q.png) no-repeat center / cover;
         width: 0.25rem;
         height: 0.3rem;
         @include v.mq(sp) {
@@ -699,7 +699,7 @@
         margin: 0.315rem 0 0;
       }
       &::before {
-        background: url(../img/faq/common/a.png) no-repeat center / cover;
+        background: url(../img/faq_a.png) no-repeat center / cover;
         width: 0.25rem;
         height: 0.29rem;
         @include v.mq(sp) {
@@ -775,7 +775,7 @@
 
 .calc {
   position: relative;
-  background: url(../img/contact/pc/calc_bg.png) no-repeat center / cover;
+  background: url(../img/calc_bg.png) no-repeat center / cover;
   width: 100%;
   border-top-left-radius: 0.4rem;
   @include v.mq(sp) {
@@ -1096,10 +1096,10 @@
   }
   &.active {
     @include v.mq(sp) {
-      height: 31.1rem;
+      height: 30.8rem;
     }
     @include v.mq(pc) {
-      height: 26.6rem;
+      height: 26.9rem;
     }
   }
 }
