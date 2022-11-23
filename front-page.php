@@ -295,7 +295,7 @@ include('mail.php');
                         より正確な金額を知りたい方、<span class="sp-br"></span>売却の相談をご希望の方は<span class="sp-br"></span>以下よりお問い合わせください
                     </p>
                     <!-- .form -->
-                    <?php include 'page-form.php'; ?>
+                    <?php include 'form.php'; ?>
                     <!-- /.form -->
 
                 </div>

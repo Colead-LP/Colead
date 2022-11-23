@@ -341,7 +341,7 @@
     @include v.mq(pc) {
       width: 4.75rem;
       height: 4.52rem;
-      padding: 0.3rem 0.3rem 0 0.3rem;
+      padding: 0.5rem 0.3rem 0 0.3rem;
     }
     &:nth-child(n + 2) {
       @include v.mq(sp) {

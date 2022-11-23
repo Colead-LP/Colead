@@ -1770,7 +1770,7 @@ iframe {
   .reason-item {
     width: 4.75rem;
     height: 4.52rem;
-    padding: 0.3rem 0.3rem 0 0.3rem;
+    padding: 0.5rem 0.3rem 0 0.3rem;
   }
 }
 @media screen and (max-width: 767px) {
