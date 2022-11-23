@@ -85,6 +85,48 @@
   }
 }
 
+.select_wrap{
+  position: relative;
+  &::after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: .4rem;
+    transform: translateY(-50%) rotate(45deg);
+    width: .06rem;
+    height: .06rem;
+    border-right: 1px solid #707070;
+    border-bottom: 1px solid #707070;
+  }
+  &::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 16%;
+    transform: translateY(-50%);
+    width: 1.81rem;
+    height: .2rem;
+    background: url("../img/form_select_txt.png") no-repeat center / cover;
+    pointer-events: none;
+  }
+  &.active{
+    &::before{
+      background: none;
+    }
+  }
+}
+
+.pref_select_wrap,
+.fit_select_wrap{
+  &::before{
+    left: 8%;
+  }
+
+  &::after{
+    right: 8%;
+  }
+}
+
 /*=====================================================
 # form
 =====================================================*/

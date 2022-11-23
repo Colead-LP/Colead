@@ -21,6 +21,6 @@ function GetDateSelecter(){ //optionタグの作成
   foreach ($select_list as $sl){; //リスト形式でセレクターを取得
     $result .= '<option class="selected_item" value="'. $sl[0] ."-". $sl[1] .'">'.$sl[0]."/".$sl[1]."</option>";
   }
-  return '<select name="selected_item" class="input-number" id="selected_item"><option class="selected_item" value="" selected hidden>--------  お選びください  --------</option>'.$result.'</select>';
+  return '<select name="selected_item" class="input-number select" id="selected_item" required><option class="selected_item" value="" selected hidden></option>'.$result.'</select>';
 }
 ?>

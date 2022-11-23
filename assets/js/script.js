@@ -43,6 +43,25 @@ $(function () {
     });
   });
 
+  selected_item.addEventListener("change", () => {
+    if (selected_item.value) {
+      selected_item.parentNode.classList.add("active");
+    } else {
+    }
+  });
+  pref.addEventListener("change", () => {
+    if (pref.value) {
+      pref.parentNode.classList.add("active");
+    } else {
+    }
+  });
+  fit.addEventListener("change", () => {
+    if (fit.value) {
+      fit.parentNode.classList.add("active");
+    } else {
+    }
+  });
+
   // #formValidation
   // form element
   const form = document.getElementById("form");
