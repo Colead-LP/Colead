@@ -861,13 +861,16 @@
       }
     }
     .input-number {
+      padding-left: .12rem;
       border: 0.01rem solid #b5b9be;
       border-radius: 0.03rem;
-      text-align: center;
       align-items: center;
       font-size: 0.14rem;
-      color: #707070;
+      color: #333333;
       height: 0.5rem;
+      &:invalid{
+        color: #707070;
+      }
       @include v.mq(sp) {
         width: 2.48rem;
         margin-right: 0.15rem;
@@ -875,6 +878,10 @@
       @include v.mq(pc) {
         width: 3.1rem;
         margin-right: 0.16rem;
+      }
+      &.select{
+        text-align: left;
+        padding-left: .12rem;
       }
     }
     .unit {
