@@ -291,9 +291,3 @@ include('mail.php');
     </div>
   </div>
 </form>
-
-<style>
-  body {
-    font-size: .16rem;
-  }
-</style>

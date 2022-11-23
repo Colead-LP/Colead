@@ -18,7 +18,7 @@ body {
   @include v.mq(sp) {
     font-size: 0.1rem;
   }
-  @include v.mq(sp) {
+  @include v.mq(pc) {
     font-size: 0.1rem;
   }
 }

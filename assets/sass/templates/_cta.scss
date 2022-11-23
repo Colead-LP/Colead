@@ -19,6 +19,12 @@
       padding: 0.45rem 0 0;
     }
   }
+
+  &-inner{
+    @include v.mq(sp) {
+      padding: 0 .1rem;
+    }
+  }
   &-txt {
     color: #fff;
     font-weight: bold;
@@ -27,7 +33,7 @@
       line-height: 1;
       &:nth-child(1) {
         @include v.mq(sp) {
-          font-size: 0.18rem;
+          font-size: 0.22rem;
         }
         @include v.mq(pc) {
           font-size: 0.38rem;
@@ -35,7 +41,7 @@
       }
       &:nth-child(2) {
         @include v.mq(sp) {
-          font-size: 0.19rem;
+          font-size: 0.24rem;
           margin: 0.08rem;
         }
         @include v.mq(pc) {
@@ -53,7 +59,7 @@
       }
       &__m {
         @include v.mq(sp) {
-          font-size: 0.17rem;
+          font-size: 0.21rem;
         }
         @include v.mq(pc) {
           font-size: 0.37rem;
@@ -61,7 +67,7 @@
       }
       &__l {
         @include v.mq(sp) {
-          font-size: 0.21rem;
+          font-size: 0.26rem;
         }
         @include v.mq(pc) {
           font-size: 0.42rem;
@@ -72,7 +78,7 @@
   &-logo {
     @include v.mq(sp) {
       width: 1.54rem;
-      margin: 0.23rem auto 0.122rem;
+      margin: 0.15rem auto 0.122rem;
     }
     @include v.mq(pc) {
       width: 2.7871rem;
@@ -81,6 +87,7 @@
   }
   &-btn {
     @include v.mq(sp) {
+      display: block
     }
     @include v.mq(pc) {
       @include m.to_simulation(.25rem);

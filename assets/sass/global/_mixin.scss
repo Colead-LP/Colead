@@ -3,8 +3,8 @@
 
 @mixin to_simulation ($top){
   @include v.mq(sp) {
-    width: 100vw;
-    margin-left: calc(-50vw + 50%);
+    width: calc(100% + .3rem);
+    margin: 0 -.15rem;
     margin-top: $top;
   }
   @include v.mq(pc) {

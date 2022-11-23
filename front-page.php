@@ -98,7 +98,7 @@ include('mail.php');
                         </div>
                         <h3 class="reason-item-ttl">直接買取だから現金化までが<span class="sp-br"></span>スピーディ。<span class="pc-br"></span>
                             手数料も0円</h3>
-                        <p class="reason-item-txt">弊社は仲介業者ではなく、太陽光発電事業者として自社買取を行います。
+                        <p class="reason-item-txt">弊社は仲介業者ではなく、太陽光発電事業者として自社買取を行います。<span class="br"></span>
                             そのため、<span class="txt__underline">発電所の購入完了までの時間が非常に短い</span>ことが大きな特徴です。</p>
                     </li>
                     <li class="reason-item">
@@ -108,7 +108,7 @@ include('mail.php');
                         </div>
                         <h3 class="reason-item-ttl">太陽光投資のプロがワンストップ<span class="sp-br"></span>で対応。<span class="pc-br"></span>
                             手続きもスムーズ</h3>
-                        <p class="reason-item-txt">弊社では開発に関与した太陽光発電所が合計10MWを超える実務実績を保有しております。<span class="txt__underline"> 発電所売買に関するノウハウを基に担当者が即断即決で進めるため、意思決定が速いこと</span>が特徴です。
+                        <p class="reason-item-txt">弊社では開発に関与した太陽光発電所が合計10MWを超える実務実績を保有しております。<span class="txt__underline"> 発電所売買に関するノウハウを基に担当者が即断即決で進めるため、意思決定が速いこと</span>が特徴です。<span class="sp-br"></span>
                             初めて発電所を売却される方も丁寧にリードいたします。</p>
                     </li>
                     <li class="reason-item">
@@ -126,7 +126,7 @@ include('mail.php');
                         </div>
                         <h3 class="reason-item-ttl">全国の発電所が買取対象。<span class="br"></span>
                             現地調査も対応</h3>
-                        <p class="reason-item-txt">抑制エリアでも喜んで購入いたします。また、<span class="txt__underline">他の査定会社に購入を断られた発電所でも購入の可能性はあります。</span>
+                        <p class="reason-item-txt">抑制エリアでも喜んで購入いたします。また、<span class="txt__underline">他の査定会社に購入を断られた発電所でも購入の可能性はあります。</span><span class="sp-br"></span>
                             本当に売却できるか悩ましい発電所であっても、是非一度お声がけください。</p>
                     </li>
                 </ul>
@@ -276,9 +276,10 @@ include('mail.php');
 
                         <div class="calc-answer">
                             <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
-                            <!-- <div class="border"> -->
-                            <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_border_line.png" alt="">
-                            <!-- </div> -->
+                            <div class="border_wrap">
+                                <img class="border sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.contact_border_line.png" alt="">
+                                <img class="border pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_border_line.png" alt="">
+                            </div>
                             <div class="calc-box">
                                 <p class="calc-box-txt">概算売却額</p>
                                 <!-- <p class="answer"></p> -->
