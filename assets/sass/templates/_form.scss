@@ -87,27 +87,40 @@
 
 .select_wrap{
   position: relative;
+  @include v.mq(sp) {
+    width: 2.48rem;
+  }
   &::after{
     content: "";
     position: absolute;
     top: 50%;
-    right: .4rem;
     transform: translateY(-50%) rotate(45deg);
     width: .06rem;
     height: .06rem;
     border-right: 1px solid #707070;
     border-bottom: 1px solid #707070;
+    @include v.mq(sp) {
+      right: .2rem;
+    }
+    @include v.mq(pc) {
+      right: .4rem;
+    }
   }
   &::before{
     content: "";
     position: absolute;
     top: 50%;
-    left: 16%;
     transform: translateY(-50%);
     width: 1.81rem;
     height: .2rem;
     background: url("../img/form_select_txt.png") no-repeat center / cover;
     pointer-events: none;
+    @include v.mq(sp) {
+      left: 8%;
+    }
+    @include v.mq(pc) {
+      left: 16%;
+    }
   }
   &.active{
     &::before{
@@ -388,7 +401,7 @@
         }
         @include v.mq(pc) {
           align-self: end;
-          margin: 0 0 0 auto;
+          margin: 0 0 0 .25rem;
         }
       }
 

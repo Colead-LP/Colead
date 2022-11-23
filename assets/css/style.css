@@ -600,27 +600,50 @@ iframe {
 .select_wrap {
   position: relative;
 }
+@media screen and (max-width: 767px) {
+  .select_wrap {
+    width: 2.48rem;
+  }
+}
 .select_wrap::after {
   content: "";
   position: absolute;
   top: 50%;
-  right: 0.4rem;
   transform: translateY(-50%) rotate(45deg);
   width: 0.06rem;
   height: 0.06rem;
   border-right: 1px solid #707070;
   border-bottom: 1px solid #707070;
 }
+@media screen and (max-width: 767px) {
+  .select_wrap::after {
+    right: 0.2rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .select_wrap::after {
+    right: 0.4rem;
+  }
+}
 .select_wrap::before {
   content: "";
   position: absolute;
   top: 50%;
-  left: 16%;
   transform: translateY(-50%);
   width: 1.81rem;
   height: 0.2rem;
   background: url("../img/form_select_txt.png") no-repeat center/cover;
   pointer-events: none;
+}
+@media screen and (max-width: 767px) {
+  .select_wrap::before {
+    left: 8%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .select_wrap::before {
+    left: 16%;
+  }
 }
 .select_wrap.active::before {
   background: none;
@@ -868,7 +891,7 @@ iframe {
 @media screen and (min-width: 768px) {
   .form .form-item.dc .unit {
     align-self: end;
-    margin: 0 0 0 auto;
+    margin: 0 0 0 0.25rem;
   }
 }
 @media screen and (max-width: 767px) {
