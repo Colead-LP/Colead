@@ -5,9 +5,9 @@ include('mail.php');
 
 <?php get_header(); ?>
 <?php if ($page_flag === 1) : ?>
-    <?php include('page-confirm.php'); ?>
+    <?php include('confirm.php'); ?>
 <?php elseif ($page_flag === 2) : ?>
-    <?php include('page-thanks.php'); ?>
+    <?php include('thanks.php'); ?>
 <?php else : ?>
     <!-- .mv -->
     <div class="mv">
