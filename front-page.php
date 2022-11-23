@@ -1,6 +1,6 @@
 <?php
-require("calculate.php");
 include('mail.php');
+require("calculate.php");
 ?>
 
 <?php get_header(); ?>
