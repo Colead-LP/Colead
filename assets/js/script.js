@@ -43,30 +43,15 @@ $(function () {
     });
   });
 
-  selected_item.addEventListener("change", () => {
-    if (selected_item.value) {
-      selected_item.parentNode.classList.add("active");
-    } else {
-    }
-  });
-  pref.addEventListener("change", () => {
-    if (pref.value) {
-      pref.parentNode.classList.add("active");
-    } else {
-    }
-  });
-  fit.addEventListener("change", () => {
-    if (fit.value) {
-      fit.parentNode.classList.add("active");
-    } else {
-    }
-  });
-  zip.addEventListener("change", () => {
-    if (pref.value) {
-      pref.parentNode.classList.add("active");
-    } else {
-    }
-  });
+  const calc = document.getElementById("calc");
+  if (calc) {
+    selected_item.addEventListener("change", () => {
+      if (selected_item.value) {
+        selected_item.parentNode.classList.add("active");
+      } else {
+      }
+    });
+  }
 
   // #formValidation
   // form element
@@ -189,14 +174,15 @@ $(function () {
     });
     zip.addEventListener("change", () => {
       if (zip.value) {
+        pref.parentNode.classList.add("active");
         zip.nextElementSibling.remove();
       } else {
-        createError(zip, "入力してください");
       }
     });
     pref.addEventListener("change", () => {
       if (pref.value) {
         pref.nextElementSibling.remove();
+        pref.parentNode.classList.add("active");
       } else {
         createError(pref, "入力してください");
       }
@@ -221,6 +207,7 @@ $(function () {
     });
     fit.addEventListener("change", () => {
       if (fit.value) {
+        fit.parentNode.classList.add("active");
         fit.nextElementSibling.remove();
       } else {
         createError(fit, "入力してください");
