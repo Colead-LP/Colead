@@ -13,16 +13,19 @@
   &-bg {
     width: 100%;
     @include v.mq(sp) {
+      height: 6.07rem;
+      padding: .7rem 0 .99rem;
       background: url(../img/sp.mv_bg.jpg) no-repeat center / cover;
     }
     @include v.mq(pc) {
-      background: url(../img/pc.mv_bg.jpg) no-repeat center / cover;
       height: 7.09rem;
+      padding: 1rem 0 .89rem;
+      background: url(../img/pc.mv_bg.jpg) no-repeat center / cover;
     }
   }
   &-inner {
     @include v.mq(sp) {
-      padding: 0.69rem 0.2rem 0.89rem;
+      padding: 0 .2rem;
     }
   }
   &-txt {
@@ -31,7 +34,6 @@
     line-height: 1;
     text-align: center;
     @include v.mq(pc) {
-      padding: 0.6rem 0 0;
     }
     .txt {
       &.txt01 {
@@ -49,7 +51,7 @@
       &.txt02 {
         @include v.mq(sp) {
           width: 3.3rem;
-          margin: 0 auto;
+          margin: -0.12rem auto;
         }
         @include v.mq(pc) {
           width: 9.91rem;
@@ -62,7 +64,7 @@
     display: flex;
     @include v.mq(sp) {
       justify-content: space-between;
-      margin: 0.2rem 0 0;
+      margin: 0.25rem 0 0;
     }
     @include v.mq(pc) {
       justify-content: center;
@@ -96,7 +98,7 @@
       @include m.to_simulation(1.2rem);
     }
     @include v.mq(pc) {
-      @include m.to_simulation(1.3rem);
+      @include m.to_simulation(1.47rem);
     }
   }
 }
@@ -166,12 +168,12 @@
         margin: 0.27rem 0 0;
       }
       @include v.mq(pc) {
+        row-gap: .2rem;
       }
     }
     &-item {
       &-txt {
         position: relative;
-        // font-weight: medium;
         @include v.mq(sp) {
           font-size: 0.18rem;
           line-height: 1.6111;
@@ -532,7 +534,7 @@
             cover;
           width: 0.08rem;
           height: 3.54rem;
-          top: 0.1rem;
+          top: 0;
           left: -0.5rem;
         }
       }
@@ -559,7 +561,6 @@
         top: 0;
       }
       @include v.mq(pc) {
-        top: -0.55rem;
       }
     }
     &-img {
@@ -570,13 +571,11 @@
       }
     }
     &-ttl {
+      margin: 0.2rem 0 0;
       font-weight: bold;
       font-size: 0.2rem;
       text-align: center;
       line-height: 1;
-      @include v.mq(sp) {
-        margin: 0.2rem 0 0;
-      }
     }
     &-txt {
       font-size: 0.16rem;
@@ -608,7 +607,7 @@
       padding: 0.55rem 0 0.6rem;
     }
     @include v.mq(pc) {
-      height: 8.9rem;
+      height: 8.6rem;
       padding: 0.92rem 0 1.01rem;
     }
   }
@@ -933,6 +932,15 @@
       font-size: 0.28rem;
     }
     .border {
+      &_wrap{
+        width: 100%;
+        @include v.mq(sp) {
+          margin: 0.1rem 0 0.24rem;
+        }
+        @include v.mq(pc) {
+          margin: .18rem 0 .27rem;
+        }
+      }
       &-img {
         display: block;
         @include v.mq(sp) {
@@ -1096,7 +1104,7 @@
   }
   &.active {
     @include v.mq(sp) {
-      height: 30.8rem;
+      height: 31rem;
     }
     @include v.mq(pc) {
       height: 26.9rem;
@@ -1110,7 +1118,7 @@
   @include v.mq(sp) {
     font-size: 0.22rem;
     line-height: 1.6333;
-    margin-top: 0.26rem;
+    margin-top: 0.46rem;
   }
   @include v.mq(pc) {
     font-size: 0.26rem;

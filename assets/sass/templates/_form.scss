@@ -429,6 +429,17 @@
         @include v.mq(pc) {
           gap: 0.6rem;
         }
+
+        label{
+          span{
+            @include v.mq(sp) {
+              font-size: .16rem;
+            }
+            @include v.mq(pc) {
+              font-size: .18rem;
+            }
+          }
+        }
       }
       .form-item-label {
         display: contents;
@@ -485,6 +496,12 @@
       &_txt {
         position: relative;
         padding: 0 0 0 0.3rem;
+        @include v.mq(sp) {
+          font-size: .14rem;
+        }
+        @include v.mq(pc) {
+          font-size: .16rem;
+        }
       }
     }
   }
@@ -590,13 +607,8 @@
   &_ttl {
     color: #333333;
     font-weight: bold;
+    font-size: 0.28rem;
     text-align: center;
-    @include v.mq(sp) {
-      font-size: 0.28rem;
-    }
-    @include v.mq(pc) {
-      font-size: 0.4rem;
-    }
   }
 
   &_list {
