@@ -3,6 +3,10 @@ include('mail.php');
 ?>
 <!-- #input -->
 <form action="" method="post" id="form" class="h-adr form" name="form">
+  <input type="hidden" id="lat" name="lat" value="">
+  <!--緯度-->
+  <input type="hidden" id="lng" name="lng" value="">
+  <!--経度-->
   <span class="p-country-name" style="display:none;">Japan</span>
   <div class="form-bg">
     <div class="form-inner">
@@ -16,13 +20,13 @@ include('mail.php');
               <label class="form-item-label">
                 <span class="label-txt top">姓</span>
                 <div class="input_wrap">
-                  <input type="text" name="name_first" id="name_first" class="type-text input-name-first required" value="">
+                  <input type="text" name="name_first" id="name_first" class="type-text input-name-first required" value="" placeholder="山田">
                 </div>
               </label>
               <label class="form-item-label">
                 <span class="label-txt top">名</span>
                 <div class="input_wrap">
-                  <input type="text" name="name_last" id="name_last" class="type-text input-name-last required" size="" value="">
+                  <input type="text" name="name_last" id="name_last" class="type-text input-name-last required" size="" value="" placeholder="太郎">
                 </div>
               </label>
             </div>
@@ -32,7 +36,7 @@ include('mail.php');
               メールアドレス<span class="require top">必須</span>
             </p>
             <div class="input_wrap">
-              <input type="email" name="email" id="email" class="type-email required" size="60" value="">
+              <input type="email" name="email" id="email" class="type-email required" size="60" value="" placeholder="abc@mail.com">
             </div>
           </li>
         </ul>
@@ -49,62 +53,64 @@ include('mail.php');
           <li class="form-item post top require-item">
             <p class="form-item-ttl">郵便番号</p>
             <div class="input_wrap">
-              <input type="text" name="zip" id="zip" class="type-number p-postal-code required" value="">
+              <input type="text" name="zip" id="zip" class="type-number p-postal-code required" value="" placeholder="0001122">
             </div>
           </li>
           <li class="form-item pref">
             <p class="form-item-ttl">都道府県</p>
             <div class="input_wrap">
-              <select name="pref" id="pref" class="p-region-id select input-pref required">
-                <option value="">--------　お選びください　--------</option>
-                <option value="1">北海道</option>
-                <option value="2">青森県</option>
-                <option value="3">岩手県</option>
-                <option value="4">宮城県</option>
-                <option value="5">秋田県</option>
-                <option value="6">山形県</option>
-                <option value="7">福島県</option>
-                <option value="8">茨城県</option>
-                <option value="9">栃木県</option>
-                <option value="10">群馬県</option>
-                <option value="11">埼玉県</option>
-                <option value="12">千葉県</option>
-                <option value="13">東京都</option>
-                <option value="14">神奈川県</option>
-                <option value="15">新潟県</option>
-                <option value="16">富山県</option>
-                <option value="17">石川県</option>
-                <option value="18">福井県</option>
-                <option value="19">山梨県</option>
-                <option value="20">長野県</option>
-                <option value="21">岐阜県</option>
-                <option value="22">静岡県</option>
-                <option value="23">愛知県</option>
-                <option value="24">三重県</option>
-                <option value="25">滋賀県</option>
-                <option value="26">京都府</option>
-                <option value="27">大阪府</option>
-                <option value="28">兵庫県</option>
-                <option value="29">奈良県</option>
-                <option value="30">和歌山県</option>
-                <option value="31">鳥取県</option>
-                <option value="32">島根県</option>
-                <option value="33">岡山県</option>
-                <option value="34">広島県</option>
-                <option value="35">山口県</option>
-                <option value="36">徳島県</option>
-                <option value="37">香川県</option>
-                <option value="38">愛媛県</option>
-                <option value="39">高知県</option>
-                <option value="40">福岡県</option>
-                <option value="41">佐賀県</option>
-                <option value="42">長崎県</option>
-                <option value="43">熊本県</option>
-                <option value="44">大分県</option>
-                <option value="45">宮崎県</option>
-                <option value="46">鹿児島県</option>
-                <option value="47">沖縄県</option>
-              </select>
+              <div class="select_wrap pref_select_wrap">
+                <select name="pref" id="pref" class="p-region-id select input-pref required" required>
+                  <option value="" disabled selected style="display: none;"></option>
+                  <option value="1">北海道</option>
+                  <option value="2">青森県</option>
+                  <option value="3">岩手県</option>
+                  <option value="4">宮城県</option>
+                  <option value="5">秋田県</option>
+                  <option value="6">山形県</option>
+                  <option value="7">福島県</option>
+                  <option value="8">茨城県</option>
+                  <option value="9">栃木県</option>
+                  <option value="10">群馬県</option>
+                  <option value="11">埼玉県</option>
+                  <option value="12">千葉県</option>
+                  <option value="13">東京都</option>
+                  <option value="14">神奈川県</option>
+                  <option value="15">新潟県</option>
+                  <option value="16">富山県</option>
+                  <option value="17">石川県</option>
+                  <option value="18">福井県</option>
+                  <option value="19">山梨県</option>
+                  <option value="20">長野県</option>
+                  <option value="21">岐阜県</option>
+                  <option value="22">静岡県</option>
+                  <option value="23">愛知県</option>
+                  <option value="24">三重県</option>
+                  <option value="25">滋賀県</option>
+                  <option value="26">京都府</option>
+                  <option value="27">大阪府</option>
+                  <option value="28">兵庫県</option>
+                  <option value="29">奈良県</option>
+                  <option value="30">和歌山県</option>
+                  <option value="31">鳥取県</option>
+                  <option value="32">島根県</option>
+                  <option value="33">岡山県</option>
+                  <option value="34">広島県</option>
+                  <option value="35">山口県</option>
+                  <option value="36">徳島県</option>
+                  <option value="37">香川県</option>
+                  <option value="38">愛媛県</option>
+                  <option value="39">高知県</option>
+                  <option value="40">福岡県</option>
+                  <option value="41">佐賀県</option>
+                  <option value="42">長崎県</option>
+                  <option value="43">熊本県</option>
+                  <option value="44">大分県</option>
+                  <option value="45">宮崎県</option>
+                  <option value="46">鹿児島県</option>
+                  <option value="47">沖縄県</option>
+                </select>
+              </div>
             </div>
           </li>
           <li class="form-item city require-item">
@@ -128,35 +134,39 @@ include('mail.php');
           <li class="form-item fit require-item">
             <p class="form-item-ttl">FIT単価（税込）<span class="require top">必須</span></p>
             <div class="input_wrap">
-              <select name="fit" id="fit" class="select input-fit required">
-                <option value="" selected>--------　お選びください　--------</option>
-                <option value="1">
-                  44 </option>
-                <option value="2">
-                  39.6 </option>
-                <option value="3">
-                  35.2 </option>
-                <option value="4">
-                  31.9 </option>
-                <option value="5">
-                  29.7 </option>
-                <option value="6">
-                  26.4 </option>
-                <option value="7">
-                  23.1 </option>
-                <option value="8">
-                  19.8 </option>
-                <option value="9">
-                  15.4 </option>
-              </select>
+              <div class="select_wrap fit_select_wrap">
+                <select name="fit" id="fit" class="select input-fit required" required>
+                  <option value="" disabled selected style="display: none;"></option>
+                  <option value="1">
+                    44 </option>
+                  <option value="2">
+                    39.6 </option>
+                  <option value="3">
+                    35.2 </option>
+                  <option value="4">
+                    31.9 </option>
+                  <option value="5">
+                    29.7 </option>
+                  <option value="6">
+                    26.4 </option>
+                  <option value="7">
+                    23.1 </option>
+                  <option value="8">
+                    19.8 </option>
+                  <option value="9">
+                    15.4 </option>
+                </select>
+              </div>
             </div>
           </li>
           <li class="form-item dc require-item">
             <p class="form-item-ttl">DC容量<span class="require top">必須</span></p>
-            <div class="input_wrap">
-              <input type="text" name="dc" id="dc" class="type-number input-dc required" size="60" value="">
+            <div class="wrap">
+              <div class="input_wrap">
+                <input type="text" name="dc" id="dc" class="type-number input-dc required" size="60" value="">
+              </div>
+              <span class="unit">KW</span>
             </div>
-            <span class="unit">KW</span>
           </li>
           <li class="form-item wiring">
             <p class="form-item-ttl">配線図</p>
@@ -219,7 +229,9 @@ include('mail.php');
           </div>
         </div>
         <div class="submit">
-          <input type="submit" name="btn_confirm" value="確認する" id="toConfirm" class="to-confirm">
+          <div class="submit_wrap">
+            <input type="submit" name="btn_confirm" value="確認する" id="toConfirm" class="to-confirm">
+          </div>
         </div>
         <!-- #modal -->
         <div class="modal-container">

@@ -43,6 +43,25 @@ $(function () {
     });
   });
 
+  selected_item.addEventListener("change", () => {
+    if (selected_item.value) {
+      selected_item.parentNode.classList.add("active");
+    } else {
+    }
+  });
+  pref.addEventListener("change", () => {
+    if (pref.value) {
+      pref.parentNode.classList.add("active");
+    } else {
+    }
+  });
+  fit.addEventListener("change", () => {
+    if (fit.value) {
+      fit.parentNode.classList.add("active");
+    } else {
+    }
+  });
+
   // #formValidation
   // form element
   const form = document.getElementById("form");
@@ -270,6 +289,14 @@ $(function () {
       }
     });
   }
+  //selectタグの初期表示のみ色を灰色に変える
+  $("select").each(function (i, elem) {
+    $(elem).on("change", function () {
+      if ($(this).val()) {
+        $(this).css("color", "#000000");
+      }
+    });
+  });
 });
 
 function onClick() {

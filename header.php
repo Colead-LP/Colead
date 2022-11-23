@@ -15,8 +15,8 @@
         <div class="header-bg">
             <div class="header-inner inner">
                 <h1 class="header-logo">
-                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/logo.svg" alt="Colead">
-                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/common/sp/logo.svg" alt="Colead">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Colead">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Colead">
                 </h1>
                 <p class="header-txt">
                     太陽光発電所の<br>

@@ -13,10 +13,10 @@
   &-bg {
     width: 100%;
     @include v.mq(sp) {
-      background: url(../img/mv/sp/mv-bg.jpg) no-repeat center / cover;
+      background: url(../img/sp.mv_bg.jpg) no-repeat center / cover;
     }
     @include v.mq(pc) {
-      background: url(../img/mv/pc/mv-bg.jpg) no-repeat center / cover;
+      background: url(../img/pc.mv_bg.jpg) no-repeat center / cover;
       height: 7.09rem;
     }
   }
@@ -75,7 +75,7 @@
       letter-spacing: 0.04em;
       text-align: center;
       @include v.mq(sp) {
-        background: url(../img/mv/sp/mv-label.png) no-repeat center / cover;
+        background: url(../img/sp.mv_label.png) no-repeat center / cover;
         font-size: 0.16rem;
         line-height: 1.4;
         padding: 0.08rem 0;
@@ -83,7 +83,7 @@
         height: 0.4rem;
       }
       @include v.mq(pc) {
-        background: url(../img/mv/pc/mv-label.png) no-repeat center / cover;
+        background: url(../img/pc.mv_label.png) no-repeat center / cover;
         font-size: 0.2rem;
         line-height: 2.6;
         width: 2.7rem;
@@ -109,11 +109,11 @@
     &-bg {
       width: 100%;
       @include v.mq(sp) {
-        background: url(../img/solve/sp/header-bg.png) no-repeat center / cover;
+        background: url(../img/sp.solve_header_bg.png) no-repeat center / cover;
         height: 5.72rem;
       }
       @include v.mq(pc) {
-        background: url(../img/solve/pc/header-bg.png) no-repeat center / cover;
+        background: url(../img/pc.solve_header_bg.png) no-repeat center / cover;
         height: 5.12rem;
       }
     }
@@ -185,7 +185,7 @@
         &::before {
           content: "";
           position: absolute;
-          background: url(../img/solve/common/header-txtParts.png) no-repeat
+          background: url(../img/solve_header_txtParts.png) no-repeat
             center / cover;
           top: 0.06rem;
           left: 0;
@@ -212,7 +212,7 @@
         position: absolute;
         z-index: -1;
         @include v.mq(sp) {
-          background: url(../img/solve/sp/footer-bg.png) no-repeat center /
+          background: url(../img/sp.solve_footer_bg.png) no-repeat center /
             cover;
           top: 1.56rem;
           left: 0;
@@ -220,7 +220,7 @@
           height: 0.99rem;
         }
         @include v.mq(pc) {
-          background: url(../img/solve/pc/footer-bg.png) no-repeat center /
+          background: url(../img/pc.solve_footer_bg.png) no-repeat center /
             cover;
           top: 0.1rem;
           left: 50%;
@@ -300,12 +300,12 @@
   &-bg {
     width: 100%;
     @include v.mq(sp) {
-      background: url(../img/reason/sp/bg.png) no-repeat center / cover;
+      background: url(../img/sp.reason_bg.png) no-repeat center / cover;
       height: 21.89rem;
       padding: 0.61rem 0 0.85rem;
     }
     @include v.mq(pc) {
-      background: url(../img/reason/pc/bg.jpg) no-repeat center / cover;
+      background: url(../img/pc.reason_bg.jpg) no-repeat center / cover;
       height: 12.74rem;
       padding: 0.85rem 0 1rem;
     }
@@ -348,12 +348,12 @@
     }
     &:nth-child(1) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item01.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_01.png) no-repeat center / cover;
         height: 4.34rem;
         padding: 0.34rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item01.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_01.png) no-repeat center / cover;
       }
       .reason-item-img {
         @include v.mq(sp) {
@@ -366,12 +366,12 @@
     }
     &:nth-child(2) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item02.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_02.png) no-repeat center / cover;
         height: 5.21rem;
         padding: 0.54rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item02.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_02.png) no-repeat center / cover;
       }
       .reason-item-img {
         width: 2.4573rem;
@@ -379,27 +379,25 @@
     }
     &:nth-child(3) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item03.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_03.png) no-repeat center / cover;
         height: 4.34rem;
         padding: 0.46rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item03.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_03.png) no-repeat center / cover;
       }
       .reason-item-img {
-        @include v.mq(pc) {
-          width: 3.1084rem;
-        }
+        width: 3.1084rem;
       }
     }
     &:nth-child(4) {
       @include v.mq(sp) {
-        background: url(../img/reason/sp/item04.png) no-repeat center / cover;
+        background: url(../img/sp.reason_item_04.png) no-repeat center / cover;
         height: 4.63rem;
         padding: 0.39rem 0 0;
       }
       @include v.mq(pc) {
-        background: url(../img/reason/pc/item04.png) no-repeat center / cover;
+        background: url(../img/pc.reason_item_04.png) no-repeat center / cover;
       }
       .reason-item-img {
         width: 2.4547rem;
@@ -530,7 +528,7 @@
         @include v.mq(pc) {
           content: "";
           position: absolute;
-          background: url(../img/flow/pc/item-shape.png) no-repeat center /
+          background: url(../img/pc.flow_shape.png) no-repeat center /
             cover;
           width: 0.08rem;
           height: 3.54rem;
@@ -544,7 +542,7 @@
         @include v.mq(sp) {
           content: "";
           position: absolute;
-          background: url(../img/flow/sp/item-shape.png) no-repeat center /
+          background: url(../img/sp.flow_shape.png) no-repeat center /
             cover;
           top: -0.35rem;
           left: 0;
@@ -679,7 +677,7 @@
         font-size: 0.2rem;
       }
       &::before {
-        background: url(../img/faq/common/q.png) no-repeat center / cover;
+        background: url(../img/faq_q.png) no-repeat center / cover;
         width: 0.25rem;
         height: 0.3rem;
         @include v.mq(sp) {
@@ -701,7 +699,7 @@
         margin: 0.315rem 0 0;
       }
       &::before {
-        background: url(../img/faq/common/a.png) no-repeat center / cover;
+        background: url(../img/faq_a.png) no-repeat center / cover;
         width: 0.25rem;
         height: 0.29rem;
         @include v.mq(sp) {
@@ -777,7 +775,7 @@
 
 .calc {
   position: relative;
-  background: url(../img/contact/pc/calc_bg.png) no-repeat center / cover;
+  background: url(../img/calc_bg.png) no-repeat center / cover;
   width: 100%;
   border-top-left-radius: 0.4rem;
   @include v.mq(sp) {
@@ -863,13 +861,16 @@
       }
     }
     .input-number {
+      padding-left: .12rem;
       border: 0.01rem solid #b5b9be;
       border-radius: 0.03rem;
-      text-align: center;
       align-items: center;
       font-size: 0.14rem;
-      color: #707070;
+      color: #333333;
       height: 0.5rem;
+      &:invalid{
+        color: #707070;
+      }
       @include v.mq(sp) {
         width: 2.48rem;
         margin-right: 0.15rem;
@@ -878,6 +879,13 @@
         width: 3.1rem;
         margin-right: 0.16rem;
       }
+      &.select{
+        text-align: left;
+        padding-left: .12rem;
+      }
+    }
+    #selected_item {
+      color: #b5b9be;
     }
     .unit {
       align-self: end;
@@ -1023,7 +1031,7 @@
 .thanks {
   background: #eaf3fa;
   @include v.mq(sp) {
-    padding: .2rem 0 .45rem;
+    padding: 0.2rem 0 0.45rem;
   }
   @include v.mq(pc) {
     padding: 0.8rem;
@@ -1033,7 +1041,7 @@
     background: #fff;
     @include v.mq(sp) {
       width: 3.35rem;
-      padding: .3rem .2rem .4rem;
+      padding: 0.3rem 0.2rem 0.4rem;
       border-radius: 0.3rem 0 0 0;
     }
     @include v.mq(pc) {
@@ -1047,7 +1055,7 @@
     text-align: center;
     font-weight: bold;
     @include v.mq(sp) {
-      font-size: .24rem;
+      font-size: 0.24rem;
     }
     @include v.mq(pc) {
       font-size: 0.28rem;
@@ -1058,8 +1066,8 @@
     text-align: center;
     line-height: 1.75;
     @include v.mq(sp) {
-      margin: .21rem 0 0;
-      font-size: .16rem;
+      margin: 0.21rem 0 0;
+      font-size: 0.16rem;
     }
     @include v.mq(pc) {
       margin: 0.31rem 0 0;
@@ -1078,20 +1086,20 @@
 }
 
 .contact-wrap {
-  // overflow: hidden;
-  // transition: all 1s ease;
+  overflow: hidden;
+  transition: all 1s ease;
   @include v.mq(sp) {
-    // height: 6.05rem;
+    height: 6.05rem;
   }
   @include v.mq(pc) {
-    // height: 6.08rem;
+    height: 6.08rem;
   }
   &.active {
     @include v.mq(sp) {
-      height: 28.7rem;
+      height: 30.8rem;
     }
     @include v.mq(pc) {
-      height: 24.1rem;
+      height: 26.9rem;
     }
   }
 }
@@ -1230,79 +1238,4 @@
 .modal-item {
   font-size: 0.14rem;
   line-height: 1.5;
-}
-/*=====================================================
-# valudation
-=====================================================*/
-.input_wrap {
-  position: relative;
-}
-
-.error {
-  position: absolute;
-  display: inline-block;
-  padding: 0.03rem;
-  max-width: 100%;
-  color: red;
-  font-size: 0.12rem;
-  background: #fff;
-  border: solid 0.03rem red;
-  box-sizing: border-box;
-  border-radius: 0.03rem;
-  @include v.mq(sp) {
-    top: 0.4rem;
-    left: -0.06rem;
-  }
-  @include v.mq(pc) {
-    top: -0.36rem;
-    left: -0.26rem;
-  }
-
-  &::before {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 2;
-    @include v.mq(sp) {
-      top: -0.18rem;
-      border: 0.12rem solid transparent;
-      border-bottom: 0.12rem solid #fff;
-    }
-    @include v.mq(pc) {
-      bottom: -0.18rem;
-      border: 0.12rem solid transparent;
-      border-top: 0.12rem solid #fff;
-    }
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 1;
-    @include v.mq(sp) {
-      top: -0.205rem;
-      border: 0.1rem solid transparent;
-      border-bottom: 0.1rem solid red;
-    }
-    @include v.mq(pc) {
-      bottom: -0.205rem;
-      border: 0.1rem solid transparent;
-      border-top: 0.1rem solid red;
-    }
-  }
-}
-
-.privacy {
-  .error {
-    left: 50%;
-    transform: translateX(-50%);
-    @include v.mq(sp) {
-      top: -0.205rem;
-    }
-    @include v.mq(pc) {
-    }
-  }
 }

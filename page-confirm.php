@@ -1,3 +1,5 @@
+<?php
+?>
 <!-- #confirm -->
 <form method="post" action="" class="confirm">
     <div class="confirm_bg">
@@ -124,9 +126,9 @@
                         ?>
                     </p>
                 </li>
-                <li class="form-item gmap-confirm">
-                    <p class="form-item-ttl">Google Map</p>
-                    <div id="gmap-confirm" class="gmap-confirm"></div>
+                <li class="confirm_item gmap-confirm map">
+                    <p class="confirm_item_ttl">Google Map</p>
+                    <div id="gmap-confirm" class="gmap-confirm confirm_item_txt"></div>
                 </li>
                 <li class="confirm_item fit">
                     <p class="confirm_item_ttl">FIT単価（税込）</p>
@@ -151,7 +153,7 @@
                         } elseif ($_POST['fit'] === '9') {
                             echo '15.4';
                         }
-                        ?>
+                        ?><span class="unit">円</span>
                     </p>
                 </li>
                 <li class="confirm_item dc">
@@ -206,22 +208,27 @@
                 </label>
             </div>
             <div class="submit">
-                <input type="submit" name="btn_submit" value="送信する" class="submit_toThanks">
+                <div class="submit_wrap">
+                    <input type="submit" name="btn_submit" value="送信する" class="submit_toThanks type-submit">
+                </div>
             </div>
         </div>
     </div><!-- form-powerPlant -->
     </div>
     </div>
     <input type="hidden" name="name_first" value="<?php echo $_POST['name_first']; ?>">
-    <input type="hidden" name="name_first" value="<?php echo $_POST['name_last']; ?>">
+    <input type="hidden" name="name_last" value="<?php echo $_POST['name_last']; ?>">
     <input type="hidden" name="email" value="<?php echo $_POST['email']; ?>">
     <input type="hidden" name="zip" value="<?php echo $_POST['zip']; ?>">
     <input type="hidden" name="pref" value="<?php echo $_POST['pref']; ?>">
     <input type="hidden" name="city" value="<?php echo $_POST['city']; ?>">
     <input type="hidden" name="area" value="<?php echo $_POST['area']; ?>">
-    <input type="hidden" id="lat" name="lat" value=""> <!--緯度-->
-    <input type="hidden" id="lng" name="lng" value=""> <!--経度-->
-    <input type="hidden" id="address" name="address" value=""> <!--googlemapで指定された住所-->
+    <input type="hidden" id="lat" name="lat" value="">
+    <!--緯度-->
+    <input type="hidden" id="lng" name="lng" value="">
+    <!--経度-->
+    <input type="hidden" id="address" name="address" value="">
+    <!--googlemapで指定された住所-->
     <input type="hidden" name="fit" value="<?php echo $_POST['fit']; ?>">
     <input type="hidden" name="dc" value="<?php echo $_POST['dc']; ?>">
     <input type="hidden" name="wiring" value="<?php echo $_POST['wiring']; ?>">

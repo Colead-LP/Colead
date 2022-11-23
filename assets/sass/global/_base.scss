@@ -92,6 +92,10 @@ iframe {
     box-shadow: none;
     outline: none;
   }
+
+  &::placeholder{
+    color: #B5B9BE;
+  }
 }
 
 .type-textarea {
@@ -180,20 +184,21 @@ iframe {
     box-shadow: none;
     outline: none;
   }
+
+  &::placeholder{
+    color: #B5B9BE;
+  }
 }
 
 .type-submit {
   display: inline-block;
   color: #fff;
-  font-size: 1em;
   background-color: rgba(0, 0, 0, 0.32);
   background-image: none;
   border: none;
   border-radius: 0;
   text-decoration: none;
   cursor: pointer;
-  margin: 0 0 1em;
-  padding: 0.6em 2em;
   &:hover,
   &:focus {
     outline: none;
@@ -237,7 +242,8 @@ iframe {
   border: 1px solid #b5b9be;
   border-radius: 0.03rem;
   height: .5rem;
-  padding: 0.15rem;
+  line-height: .5rem;
+  padding: 0 0 0 0.15rem;
 }
 
 .input-number {
