@@ -87,14 +87,14 @@ include('mail.php');
         <div class="reason-bg">
             <div class="reason-inner inner">
                 <h2 class="reason-ttl">
-                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/ttl.png" alt="">
-                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/ttl.png" alt="">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_ttl.png" alt="">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_ttl.png" alt="">
                 </h2>
                 <ul class="reason-list">
                     <li class="reason-item">
                         <div class="reason-item-img">
-                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item01-img.png" alt="">
-                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item01-img.png" alt="">
+                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_item01_img.png" alt="">
+                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_item01_img.png" alt="">
                         </div>
                         <h3 class="reason-item-ttl">直接買取だから現金化までが<span class="sp-br"></span>スピーディ。<span class="pc-br"></span>
                             手数料も0円</h3>
@@ -103,8 +103,8 @@ include('mail.php');
                     </li>
                     <li class="reason-item">
                         <div class="reason-item-img">
-                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item02-img.png" alt="" i>
-                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item02-img.png" alt="">
+                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_item02_img.png" alt="" i>
+                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_item02_img.png" alt="">
                         </div>
                         <h3 class="reason-item-ttl">太陽光投資のプロがワンストップ<span class="sp-br"></span>で対応。<span class="pc-br"></span>
                             手続きもスムーズ</h3>
@@ -113,16 +113,16 @@ include('mail.php');
                     </li>
                     <li class="reason-item">
                         <div class="reason-item-img">
-                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item03-img.png" alt="">
-                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item03-img.png" alt="">
+                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_item03_img.png" alt="">
+                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_item03_img.png" alt="">
                         </div>
                         <h3 class="reason-item-ttl">低圧から高圧まで即時購入可能<span class="sp-br"></span>な<span class="pc-br"></span>豊富な資金を保有</h3>
                         <p class="reason-item-txt">弊社では<span class="txt__underline">基本的に現金にて発電所を購入</span>いたします。銀行融資の進捗状況によって購入が遅れるといった事態はございません。</p>
                     </li>
                     <li class="reason-item">
                         <div class="reason-item-img">
-                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/sp/item04-img.png" alt="">
-                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/reason/pc/item04-img.png" alt="">
+                            <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_item04_img.png" alt="">
+                            <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_item04_img.png" alt="">
                         </div>
                         <h3 class="reason-item-ttl">全国の発電所が買取対象。<span class="br"></span>
                             現地調査も対応</h3>
@@ -142,46 +142,46 @@ include('mail.php');
             <div class="flow-inner inner">
                 <div class="flow-ttl">
                     <h2 class="flow-ttl__ja">買取までの流れ</h2>
-                    <p class="flow-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/sp/bg.png" alt=""></p>
-                    <p class="flow-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/pc/bg.png" alt=""></p>
+                    <p class="flow-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.flow_bg.png" alt=""></p>
+                    <p class="flow-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.flow_bg.png" alt=""></p>
                 </div>
                 <ul class="flow-list">
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item01.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_01.png" alt=""></div>
                         <div class="flow-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item01-img.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_01_img.png" alt="">
                         </div>
                         <h3 class="flow-item-ttl">簡易査定</h3>
                         <p class="flow-item-txt">まずは<a class="to-calc" href="#contact">簡易査定</a>。30秒で概算の査定額が分かります。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item02.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_02.png" alt=""></div>
                         <div class="flow-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item02-img.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_02_img.png" alt="">
                         </div>
                         <h3 class="flow-item-ttl">お問い合わせ</h3>
                         <p class="flow-item-txt">価格の目線が合う方はお問い合わせください。追加の資料を頂くことでより精緻な金額を査定させていただきます。過去の売電金額によっては初期査定額よりも価格が上がることも。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item03.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_03.png" alt=""></div>
                         <div class="flow-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item03-img.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_03_img.png" alt="">
                         </div>
                         <h3 class="flow-item-ttl">現地調査</h3>
                         <p class="flow-item-txt">最短日程にて現地調査。担当者が現地訪問し、発電所の状況を確認+売主及び地主とご面談させていただきます。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item04.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_04.png" alt=""></div>
                         <div class="flow-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item04-img.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_04_img.png" alt="">
                         </div>
                         <h3 class="flow-item-ttl">売買金額のご提示</h3>
                         <p class="flow-item-txt">合意次第、契約書の確認＆締結。その後、ID・電力会社契約・土地所有権/地上権の名義変更に必要な書類をやり取りします。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item05.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_05.png" alt=""></div>
                         <div class="flow-item-img">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow/common/item05-img.png" alt="">
+                            <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_05_img.png" alt="">
                         </div>
                         <h3 class="flow-item-ttl">決済</h3>
                         <p class="flow-item-txt">司法書士による土地に関する登記申請時に決済いたします。</p>
@@ -196,8 +196,8 @@ include('mail.php');
             <div class="faq-inner inner">
                 <div class="faq-ttl">
                     <h2 class="faq-ttl__ja">よくあるご質問</h2>
-                    <p class="faq-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/faq/sp/ttl__en.png" alt=""></p>
-                    <p class="faq-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/faq/pc/ttl__en.png" alt=""></p>
+                    <p class="faq-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.faq_ttl__en.png" alt=""></p>
+                    <p class="faq-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.faq_ttl__en.png" alt=""></p>
                 </div>
                 <ul class="faq-list">
                     <li class="faq-item">
@@ -228,7 +228,7 @@ include('mail.php');
         <div class="contact-bg">
             <div class="contact-inner inner">
                 <h2 class="contact-ttl">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/h2.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_h2.png" alt="">
                 </h2>
                 <div class="contact-wrap">
                     <!-- .calc -->
@@ -268,7 +268,7 @@ include('mail.php');
                         <div class="calc-start">
                             <!-- <button type="submit" id="calc_start" class="calc-start-btn js-switch"> -->
                             <button type="button" id="calc_start" class="calc-start-btn js-switch" onclick="onClick()">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/calc_btn.png" alt="" class="img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/calc_btn.png" alt="" class="img">
                             </button>
                         </div>
 
@@ -277,7 +277,7 @@ include('mail.php');
                         <div class="calc-answer">
                             <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
                             <!-- <div class="border"> -->
-                            <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/border_line.png" alt="">
+                            <img class="border-img" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_border_line.png" alt="">
                             <!-- </div> -->
                             <div class="calc-box">
                                 <p class="calc-box-txt">概算売却額</p>
@@ -286,7 +286,7 @@ include('mail.php');
                                 <p class="calc-box-unit">円</p>
                             </div>
                             <div class="contact-arrow">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact/pc/square.png" alt="">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_square.png" alt="">
                             </div>
                         </div>
                     </form><!-- /.calc -->
