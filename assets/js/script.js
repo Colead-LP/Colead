@@ -289,6 +289,14 @@ $(function () {
       }
     });
   }
+  //selectタグの初期表示のみ色を灰色に変える
+  $("select").each(function (i, elem) {
+    $(elem).on("change", function () {
+      if ($(this).val()) {
+        $(this).css("color", "#000000");
+      }
+    });
+  });
 });
 
 function onClick() {

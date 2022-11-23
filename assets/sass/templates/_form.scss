@@ -299,6 +299,7 @@
 
   .input-pref,
   .input-fit {
+    color: #b5b9be;
     @include v.mq(pc) {
       width: 2.4rem;
     }
@@ -725,7 +726,6 @@
     }
   }
 }
-
 /*=====================================================
 # valudation
 =====================================================*/
@@ -800,4 +800,14 @@
     @include v.mq(pc) {
     }
   }
+::placeholder {
+  color: #b5b9be;
+}
+/* 旧Edge対応 */
+::-ms-input-placeholder {
+  color: #b5b9be;
+}
+/* IE対応 */
+:-ms-input-placeholder {
+  color: #b5b9be;
 }
