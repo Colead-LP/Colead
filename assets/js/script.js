@@ -432,7 +432,7 @@ function initMap() {
     const Lng = sessionStorage.getItem("lng");
     const latlng = new google.maps.LatLng(Lat, Lng);
     const opts = {
-      zoom: 18,
+      zoom: 15,
       center: latlng,
       mapTypeId: google.maps.MapTypeId.ROADMAP,
       disableDefaultUI: "disabledefaultui",

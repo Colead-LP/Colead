@@ -14,10 +14,10 @@ require("calculate.php");
         <div class="mv-bg">
             <div class="mv-inner inner">
                 <div class="mv-txt">
-                    <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_01.png" alt=""></p>
-                    <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_01.png" alt=""></p>
-                    <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_02.png" alt=""></p>
-                    <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_02.png" alt=""></p>
+                    <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_01.svg" alt=""></p>
+                    <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_01.svg" alt=""></p>
+                    <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_02.svg" alt=""></p>
+                    <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_02.svg" alt=""></p>
                 </div>
                 <div class="mv-label">
                     <p class="label">手数料無料</p>
@@ -239,7 +239,7 @@ require("calculate.php");
                                 <p class="calc-item-label">
                                     直近1年の売電金額（税込）<span class="require">必須</span>
                                 </p>
-                                <input type="number" name="year_fee" id="year_fee" class="input-number">
+                                <input type="text" name="year_fee" id="year_fee" class="input-number">
                                 <span class="unit">万円</span>
                                 <span class="year_fee error-txt"></span>
                             </li>

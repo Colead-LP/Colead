@@ -290,6 +290,9 @@ iframe {
     max-width: 10rem;
   }
 }
+.header_link {
+  display: block;
+}
 @media screen and (max-width: 767px) {
   .header-logo {
     width: 1.21rem;
@@ -510,7 +513,7 @@ iframe {
 }
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .cta-btn {
-    width: 4.8rem;
+    width: 5.2rem;
     margin-top: 0.25rem;
     margin-right: auto;
     margin-left: auto;
@@ -1061,14 +1064,14 @@ iframe {
   .input-gmap,
 .gmap-confirm {
     width: 2.95rem;
-    height: 1.5rem;
+    height: 1.8rem;
   }
 }
 @media screen and (min-width: 768px) {
   .input-gmap,
 .gmap-confirm {
     width: 3.6rem;
-    height: 1.6rem;
+    height: 1.9rem;
   }
 }
 
@@ -1164,7 +1167,8 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .confirm_item.map {
-    padding: 0 0 1.65rem;
+    margin: 0.08rem 0;
+    padding: 0 0 0.08rem;
   }
 }
 .confirm_item.map .gmap-confirm {
@@ -1177,7 +1181,7 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .confirm_item.map .gmap-confirm {
-    width: 3.5rem;
+    width: 3.04rem;
   }
 }
 .confirm .unit {
@@ -1185,16 +1189,25 @@ iframe {
 }
 .confirm .privacy {
   margin: 0.2rem 0 0;
-}
-.confirm .privacy_label {
-  position: relative;
-  display: flex;
-  justify-content: center;
+  text-align: center;
 }
 .confirm .privacy_txt {
   position: relative;
+  display: inline;
   font-size: 0.16rem;
   padding: 0 0 0 0.3rem;
+}
+.confirm .privacy_txt::before {
+  content: "";
+  position: absolute;
+  top: 0.05rem;
+  left: 0;
+  transform: rotate(-45deg);
+  border: 1px solid transparent;
+  width: 0.14rem;
+  height: 0.078rem;
+  border-left: 0.03rem solid #333333;
+  border-bottom: 0.03rem solid #333333;
 }
 .confirm .submit {
   margin: 0 auto;
@@ -1401,13 +1414,13 @@ iframe {
 @media screen and (max-width: 767px) {
   .mv-txt .txt.txt02 {
     width: 3.3rem;
-    margin: -0.12rem auto;
+    margin: 0.05rem auto;
   }
 }
 @media screen and (min-width: 768px) {
   .mv-txt .txt.txt02 {
-    width: 9.91rem;
-    margin: -0.22rem auto 0;
+    width: 10rem;
+    margin: 0.1rem auto 0;
   }
 }
 .mv-label {
@@ -1423,7 +1436,7 @@ iframe {
   .mv-label {
     justify-content: center;
     gap: 0.6rem;
-    margin: 0.26rem 0 0;
+    margin: 0.45rem 0 0;
   }
 }
 .mv-label .label {
@@ -1446,7 +1459,7 @@ iframe {
   .mv-label .label {
     background: url(../img/pc.mv_label.png) no-repeat center/cover;
     font-size: 0.2rem;
-    line-height: 2.6;
+    line-height: 2.8;
     width: 2.7rem;
     height: 0.56rem;
   }
@@ -1460,7 +1473,7 @@ iframe {
 }
 @media screen and (max-width: 767px) and (min-width: 768px) {
   .mv-btn {
-    width: 4.8rem;
+    width: 5.2rem;
     margin-top: 1.2rem;
     margin-right: auto;
     margin-left: auto;
@@ -1469,6 +1482,11 @@ iframe {
 @media screen and (max-width: 767px) {
   .mv-btn .btn {
     display: inline-block;
+  }
+}
+@media screen and (min-width: 768px) {
+  .mv-btn {
+    width: 5.2rem;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 767px) {
@@ -1480,7 +1498,7 @@ iframe {
 }
 @media screen and (min-width: 768px) and (min-width: 768px) {
   .mv-btn {
-    width: 4.8rem;
+    width: 5.2rem;
     margin-top: 1.47rem;
     margin-right: auto;
     margin-left: auto;
@@ -2146,19 +2164,18 @@ iframe {
   }
 }
 .faq-item-q::before {
+  top: 0;
   background: url(../img/faq_q.png) no-repeat center/cover;
   width: 0.25rem;
-  height: 0.3rem;
+  height: 0.35rem;
 }
 @media screen and (max-width: 767px) {
   .faq-item-q::before {
     left: 0;
-    top: 0.02rem;
   }
 }
 @media screen and (min-width: 768px) {
   .faq-item-q::before {
-    top: 0.05rem;
     left: 0.09rem;
   }
 }
@@ -2176,19 +2193,18 @@ iframe {
   }
 }
 .faq-item-a::before {
+  top: 0;
   background: url(../img/faq_a.png) no-repeat center/cover;
   width: 0.25rem;
-  height: 0.29rem;
+  height: 0.35rem;
 }
 @media screen and (max-width: 767px) {
   .faq-item-a::before {
-    top: 0.035rem;
     left: 0;
   }
 }
 @media screen and (min-width: 768px) {
   .faq-item-a::before {
-    top: 0.02rem;
     left: 0.09rem;
   }
 }
@@ -2653,12 +2669,12 @@ iframe {
 }
 @media screen and (max-width: 767px) {
   .contact-wrap.active {
-    height: 31rem;
+    height: 31.5rem;
   }
 }
 @media screen and (min-width: 768px) {
   .contact-wrap.active {
-    height: 26.9rem;
+    height: 27.2rem;
   }
 }
 

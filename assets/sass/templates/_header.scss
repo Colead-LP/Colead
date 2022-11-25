@@ -28,6 +28,9 @@
       max-width: 10rem;
     }
   }
+  &_link{
+    display: block;
+  }
   &-logo {
     @include v.mq(sp) {
       width: 1.21rem;

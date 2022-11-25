@@ -51,11 +51,11 @@
       &.txt02 {
         @include v.mq(sp) {
           width: 3.3rem;
-          margin: -0.12rem auto;
+          margin: 0.05rem auto;
         }
         @include v.mq(pc) {
-          width: 9.91rem;
-          margin: -0.22rem auto 0;
+          width: 10rem;
+          margin: .1rem auto 0;
         }
       }
     }
@@ -69,7 +69,7 @@
     @include v.mq(pc) {
       justify-content: center;
       gap: 0.6rem;
-      margin: 0.26rem 0 0;
+      margin: 0.45rem 0 0;
     }
     .label {
       color: v.$color-txt-strong;
@@ -87,7 +87,7 @@
       @include v.mq(pc) {
         background: url(../img/pc.mv_label.png) no-repeat center / cover;
         font-size: 0.2rem;
-        line-height: 2.6;
+        line-height: 2.8;
         width: 2.7rem;
         height: 0.56rem;
       }
@@ -99,6 +99,7 @@
     }
     @include v.mq(pc) {
       @include m.to_simulation(1.47rem);
+      width: 5.2rem;
     }
   }
 }
@@ -676,15 +677,14 @@
         font-size: 0.2rem;
       }
       &::before {
+        top: 0;
         background: url(../img/faq_q.png) no-repeat center / cover;
         width: 0.25rem;
-        height: 0.3rem;
+        height: 0.35rem;
         @include v.mq(sp) {
           left: 0;
-          top: 0.02rem;
         }
         @include v.mq(pc) {
-          top: 0.05rem;
           left: 0.09rem;
         }
       }
@@ -698,15 +698,14 @@
         margin: 0.315rem 0 0;
       }
       &::before {
+        top: 0;
         background: url(../img/faq_a.png) no-repeat center / cover;
         width: 0.25rem;
-        height: 0.29rem;
+        height: 0.35rem;
         @include v.mq(sp) {
-          top: 0.035rem;
           left: 0;
         }
         @include v.mq(pc) {
-          top: 0.02rem;
           left: 0.09rem;
         }
       }
@@ -1104,10 +1103,10 @@
   }
   &.active {
     @include v.mq(sp) {
-      height: 31rem;
+      height: 31.5rem;
     }
     @include v.mq(pc) {
-      height: 26.9rem;
+      height: 27.2rem;
     }
   }
 }
