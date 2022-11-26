@@ -433,6 +433,8 @@
       }
       .txt__underline {
         text-decoration: underline #ffe3e8 solid 0.1rem;
+        -webkit-text-decoration: underline #ffe3e8 solid 0.1rem;
+        text-decoration-thickness: .1rem;
         @include v.mq(sp) {
           text-underline-offset: -0.04rem;
         }
@@ -1177,7 +1179,7 @@
 .modal-wrap {
   overflow: scroll;
   @include v.mq(sp) {
-    height: 5.19rem;
+    height: 3.8rem;
     margin: 0 auto;
   }
   @include v.mq(pc) {
@@ -1243,6 +1245,8 @@
 }
 
 .modal-item {
+  padding-left: .12rem;
   font-size: 0.14rem;
   line-height: 1.5;
+  text-indent: -1em;
 }

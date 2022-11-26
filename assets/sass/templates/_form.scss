@@ -219,8 +219,9 @@
 
     &.gmap {
       @include v.mq(pc) {
-        margin-top: 0.155rem;
+        margin-top: 0.05rem;
         margin-bottom: 0.155rem;
+        padding-bottom: .25rem;
       }
     }
 

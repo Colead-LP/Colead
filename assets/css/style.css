@@ -742,8 +742,9 @@ iframe {
 }
 @media screen and (min-width: 768px) {
   .form .form-item.gmap {
-    margin-top: 0.155rem;
+    margin-top: 0.05rem;
     margin-bottom: 0.155rem;
+    padding-bottom: 0.25rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -1899,6 +1900,8 @@ iframe {
 }
 .reason-item-txt .txt__underline {
   text-decoration: underline #ffe3e8 solid 0.1rem;
+  -webkit-text-decoration: underline #ffe3e8 solid 0.1rem;
+  text-decoration-thickness: 0.1rem;
 }
 @media screen and (max-width: 767px) {
   .reason-item-txt .txt__underline {
@@ -2753,7 +2756,7 @@ iframe {
 }
 @media screen and (max-width: 767px) {
   .modal-wrap {
-    height: 5.19rem;
+    height: 3.8rem;
     margin: 0 auto;
   }
 }
@@ -2824,8 +2827,10 @@ iframe {
 }
 
 .modal-item {
+  padding-left: 0.12rem;
   font-size: 0.14rem;
   line-height: 1.5;
+  text-indent: -1em;
 }
 
 /*# sourceMappingURL=style.css.map */
