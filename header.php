@@ -14,10 +14,12 @@
     <header class="header">
         <div class="header-bg">
             <div class="header-inner inner">
-                <h1 class="header-logo">
-                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Colead">
-                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Colead">
-                </h1>
+                <a href="<?php home_url(); ?>" class="header_link">
+                    <h1 class="header-logo">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Colead">
+                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/logo.svg" alt="Colead">
+                    </h1>
+                </a>
                 <p class="header-txt">
                     太陽光発電所の<br>
                     スピード買取ならコリード

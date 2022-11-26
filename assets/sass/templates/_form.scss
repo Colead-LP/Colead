@@ -219,8 +219,9 @@
 
     &.gmap {
       @include v.mq(pc) {
-        margin-top: 0.155rem;
+        margin-top: 0.05rem;
         margin-bottom: 0.155rem;
+        padding-bottom: .25rem;
       }
     }
 
@@ -567,11 +568,11 @@
   border-radius: 0.03rem;
   @include v.mq(sp) {
     width: 2.95rem;
-    height: 1.5rem;
+    height: 1.8rem;
   }
   @include v.mq(pc) {
     width: 3.6rem;
-    height: 1.6rem;
+    height: 1.9rem;
   }
 }
 
@@ -665,7 +666,8 @@
         padding: 0 0 2.05rem;
       }
       @include v.mq(pc) {
-        padding: 0 0 1.65rem;
+        margin: .08rem 0;
+        padding: 0 0 .08rem;
       }
       .gmap-confirm{
         height: 1.5rem;
@@ -673,7 +675,7 @@
           width: 2.95rem;
         }
         @include v.mq(pc) {
-          width: 3.5rem;
+          width: 3.04rem;
         }
       }
     }
@@ -685,15 +687,29 @@
 
   .privacy {
     margin: 0.2rem 0 0;
-    &_label {
-      position: relative;
-      display: flex;
-      justify-content: center;
-    }
+    text-align: center;
+    // &_label {
+    //   position: relative;
+    //   display: flex;
+    //   justify-content: center;
+    // }
     &_txt {
       position: relative;
+      display: inline;
       font-size: 0.16rem;
       padding: 0 0 0 0.3rem;
+      &::before{
+        content: "";
+        position: absolute;
+        top: .05rem;
+        left: 0;
+        transform: rotate(-45deg);
+        border: 1px solid transparent;
+        width: 0.14rem;
+        height: 0.078rem;
+        border-left: 0.03rem solid #333333;
+        border-bottom: 0.03rem solid #333333;
+      }
     }
   }
 
