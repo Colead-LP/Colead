@@ -14,10 +14,10 @@ require("calculate.php");
         <div class="mv-bg">
             <div class="mv-inner inner">
                 <div class="mv-txt">
-                    <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_01.svg" alt=""></p>
-                    <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_01.svg" alt=""></p>
-                    <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_02.svg" alt=""></p>
-                    <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_02.svg" alt=""></p>
+                    <p class="txt txt01 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_01.svg" alt="最短1週間でお振込みが可能"></p>
+                    <p class="txt txt01 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_01.svg" alt="最短1週間でお振込みが可能"></p>
+                    <p class="txt txt02 sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.mv_ttl_02.svg" alt="太陽光発電所のスピード買取"></p>
+                    <p class="txt txt02 pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.mv_ttl_02.svg" alt="太陽光発電所のスピード買取"></p>
                 </div>
                 <div class="mv-label">
                     <p class="label">手数料無料</p>
@@ -66,14 +66,14 @@ require("calculate.php");
             <div class="solve-footer-bg">
                 <div class="solve-footer-inner inner">
                     <h3 class="solve-footer-ttl">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_ttl.png" alt="">
-                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_ttl.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_ttl.png" alt="最短1週間で決済可能">
+                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_ttl.png" alt="最短1週間で決済可能">
                     </h3>
                     <p class="solve-footer-txt">スムーズな売却でストレスフリー。</p>
                     <p class="solve-footer-txt">太陽光発電の買取なら<ruby>Colead<rt>コリード</rt></ruby>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
                     <div class="solve-footer-graph">
-                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_graph.png" alt="">
-                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_graph.png" alt="">
+                        <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_graph.png" alt="入金までにかかる期間">
+                        <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_graph.png" alt="入金までにかかる期間">
                     </div>
                 </div>
             </div>
@@ -87,8 +87,8 @@ require("calculate.php");
         <div class="reason-bg">
             <div class="reason-inner inner">
                 <h2 class="reason-ttl">
-                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_ttl.png" alt="">
-                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_ttl.png" alt="">
+                    <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.reason_ttl.png" alt="選ばれる4つの理由">
+                    <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.reason_ttl.png" alt="選ばれる4つの理由">
                 </h2>
                 <ul class="reason-list">
                     <li class="reason-item">
@@ -142,12 +142,12 @@ require("calculate.php");
             <div class="flow-inner inner">
                 <div class="flow-ttl">
                     <h2 class="flow-ttl__ja">買取までの流れ</h2>
-                    <p class="flow-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.flow_bg.png" alt=""></p>
-                    <p class="flow-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.flow_bg.png" alt=""></p>
+                    <p class="flow-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.flow_bg.png" alt="FLOW"></p>
+                    <p class="flow-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.flow_bg.png" alt="FLOW"></p>
                 </div>
                 <ul class="flow-list">
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_01.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_01.png" alt="STEP01"></div>
                         <div class="flow-item-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_01_img.png" alt="">
                         </div>
@@ -155,7 +155,7 @@ require("calculate.php");
                         <p class="flow-item-txt">まずは<a class="to-calc" href="#contact">簡易査定</a>。30秒で概算の査定額が分かります。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_02.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_02.png" alt="STEP02"></div>
                         <div class="flow-item-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_02_img.png" alt="">
                         </div>
@@ -163,7 +163,7 @@ require("calculate.php");
                         <p class="flow-item-txt">価格の目線が合う方はお問い合わせください。追加の資料を頂くことでより精緻な金額を査定させていただきます。過去の売電金額によっては初期査定額よりも価格が上がることも。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_03.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_03.png" alt="STEP03"></div>
                         <div class="flow-item-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_03_img.png" alt="">
                         </div>
@@ -171,7 +171,7 @@ require("calculate.php");
                         <p class="flow-item-txt">最短日程にて現地調査。担当者が現地訪問し、発電所の状況を確認+売主及び地主とご面談させていただきます。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_04.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_04.png" alt="STEP04"></div>
                         <div class="flow-item-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_04_img.png" alt="">
                         </div>
@@ -179,7 +179,7 @@ require("calculate.php");
                         <p class="flow-item-txt">合意次第、契約書の確認＆締結。その後、ID・電力会社契約・土地所有権/地上権の名義変更に必要な書類をやり取りします。</p>
                     </li>
                     <li class="flow-item">
-                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_05.png" alt=""></div>
+                        <div class="flow-item-step"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_05.png" alt="STEP05"></div>
                         <div class="flow-item-img">
                             <img src="<?php echo get_template_directory_uri(); ?>/assets/img/flow_item_05_img.png" alt="">
                         </div>
@@ -196,8 +196,8 @@ require("calculate.php");
             <div class="faq-inner inner">
                 <div class="faq-ttl">
                     <h2 class="faq-ttl__ja">よくあるご質問</h2>
-                    <p class="faq-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.faq_ttl__en.png" alt=""></p>
-                    <p class="faq-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.faq_ttl__en.png" alt=""></p>
+                    <p class="faq-ttl__en sp"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.faq_ttl__en.png" alt="FAQ"></p>
+                    <p class="faq-ttl__en pc"><img src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.faq_ttl__en.png" alt="FAQ"></p>
                 </div>
                 <ul class="faq-list">
                     <li class="faq-item">
@@ -228,7 +228,7 @@ require("calculate.php");
         <div class="contact-bg">
             <div class="contact-inner inner">
                 <h2 class="contact-ttl">
-                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_h2.png" alt="">
+                    <img src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_h2.png" alt="30秒で結果が分かる！無料金額シミュレーション">
                 </h2>
                 <div class="contact-wrap">
                     <!-- .calc -->
@@ -255,20 +255,17 @@ require("calculate.php");
                                 <p class="calc-item-label">
                                     稼働開始年月<span class="require">必須</span>
                                 </p>
-                                <!-- <select name="operation_period" class="input-number" id="operation_period"> -->
                                 <div class="select_wrap">
                                     <?php
                                     echo GetDateSelecter();
                                     ?>
                                 </div>
                                 <span class="operation_period error-txt"></span>
-                                <!-- </select> -->
                             </li>
                         </ul>
                         <div class="calc-start">
-                            <!-- <button type="submit" id="calc_start" class="calc-start-btn js-switch"> -->
                             <button type="button" id="calc_start" class="calc-start-btn js-switch" onclick="onClick()">
-                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/calc_btn.png" alt="" class="img">
+                                <img src="<?php echo get_template_directory_uri(); ?>/assets/img/calc_btn.png" alt="シミュレーションを開始する" class="img">
                             </button>
                         </div>
 
@@ -282,7 +279,6 @@ require("calculate.php");
                             </div>
                             <div class="calc-box">
                                 <p class="calc-box-txt">概算売却額</p>
-                                <!-- <p class="answer"></p> -->
                                 <input readonly class="calc-box-number" name="amount" id="calc_result">
                                 <p class="calc-box-unit">円</p>
                             </div>
