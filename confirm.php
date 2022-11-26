@@ -203,9 +203,10 @@
                 </li>
             </ul>
             <div class="privacy">
-                <label class="privacy_label">
+                <!-- <label class="privacy_label">
                     <input type="checkbox" name="submit_privacy" id="submit_privacy" class="type-checkbox privacy_input required"><span class="privacy_txt">プライバシーポリシーに同意する。</span>
-                </label>
+                </label> -->
+                <p class="privacy_txt">プライバシーポリシーに同意する。</p>
             </div>
             <div class="submit">
                 <div class="submit_wrap">
