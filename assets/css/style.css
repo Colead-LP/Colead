@@ -1899,9 +1899,10 @@ iframe {
   }
 }
 .reason-item-txt .txt__underline {
-  text-decoration: underline #ffe3e8 solid 0.1rem;
-  -webkit-text-decoration: underline #ffe3e8 solid 0.1rem;
+  text-decoration: underline;
+  text-decoration-color: #ffe3e8;
   text-decoration-thickness: 0.1rem;
+  text-decoration-skip-ink: none;
 }
 @media screen and (max-width: 767px) {
   .reason-item-txt .txt__underline {
@@ -2253,6 +2254,12 @@ iframe {
 @media screen and (max-width: 767px) {
   .contact-ttl {
     margin-bottom: 0.296rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .contact-ttl {
+    width: 7.4rem;
+    margin: 0 auto;
   }
 }
 

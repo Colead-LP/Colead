@@ -432,14 +432,18 @@
         margin: 0.16rem 0 0;
       }
       .txt__underline {
-        text-decoration: underline #ffe3e8 solid 0.1rem;
-        -webkit-text-decoration: underline #ffe3e8 solid 0.1rem;
+        // text-decoration: underline #ffe3e8 solid .1rem;
+        // -webkit-text-decoration: underline #ffe3e8 solid .1rem;
+        // text-decoration-thickness: .1rem;
+        text-decoration: underline;
+        text-decoration-color: #ffe3e8;
         text-decoration-thickness: .1rem;
+        text-decoration-skip-ink: none;
         @include v.mq(sp) {
-          text-underline-offset: -0.04rem;
+          text-underline-offset: -.04rem;
         }
         @include v.mq(pc) {
-          text-underline-offset: -0.02rem;
+          text-underline-offset: -.02rem;
         }
       }
     }
@@ -751,6 +755,10 @@
   &-ttl {
     @include v.mq(sp) {
       margin-bottom: 0.296rem;
+    }
+    @include v.mq(pc) {
+      width: 7.4rem;
+      margin: 0 auto;
     }
   }
 }
