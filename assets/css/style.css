@@ -1415,7 +1415,7 @@ iframe {
 @media screen and (max-width: 767px) {
   .mv-txt .txt.txt02 {
     width: 3.3rem;
-    margin: 0.05rem auto;
+    margin: 0.2rem auto;
   }
 }
 @media screen and (min-width: 768px) {
@@ -2172,6 +2172,7 @@ iframe {
   background: url(../img/faq_q.png) no-repeat center/cover;
   width: 0.25rem;
   height: 0.35rem;
+  transform: scale(0.9);
 }
 @media screen and (max-width: 767px) {
   .faq-item-q::before {
@@ -2201,6 +2202,7 @@ iframe {
   background: url(../img/faq_a.png) no-repeat center/cover;
   width: 0.25rem;
   height: 0.35rem;
+  transform: scale(0.9);
 }
 @media screen and (max-width: 767px) {
   .faq-item-a::before {

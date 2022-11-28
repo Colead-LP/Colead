@@ -51,7 +51,7 @@
       &.txt02 {
         @include v.mq(sp) {
           width: 3.3rem;
-          margin: 0.05rem auto;
+          margin: 0.2rem auto;
         }
         @include v.mq(pc) {
           width: 10rem;
@@ -687,6 +687,7 @@
         background: url(../img/faq_q.png) no-repeat center / cover;
         width: 0.25rem;
         height: 0.35rem;
+        transform: scale(0.9);
         @include v.mq(sp) {
           left: 0;
         }
@@ -708,6 +709,7 @@
         background: url(../img/faq_a.png) no-repeat center / cover;
         width: 0.25rem;
         height: 0.35rem;
+        transform: scale(0.9);
         @include v.mq(sp) {
           left: 0;
         }
