@@ -129,6 +129,12 @@
   }
 }
 
+.calc_select_wrap{
+  &::before{
+    left: 10%;
+  }
+}
+
 .pref_select_wrap,
 .fit_select_wrap{
   &::before{
