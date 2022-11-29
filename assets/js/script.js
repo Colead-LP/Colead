@@ -45,12 +45,27 @@ $(function () {
 
   const calc = document.getElementById("calc");
   if (calc) {
+    const rent = document.getElementById("rent");
     selected_item.addEventListener("change", () => {
       if (selected_item.value) {
         selected_item.parentNode.classList.add("active");
       } else {
       }
     });
+    rent.addEventListener("input", () => {
+      if(rent.value) {
+        rent.parentElement.classList.add("active");
+      } else {
+        rent.parentElement.classList.remove("active");
+      }
+    });
+    // rent.addEventListener("change", () => {
+    //   if(rent.value) {
+    //     rent.parentElement.classList.add("active");
+    //   } else {
+    //     rent.parentElement.classList.remove("active");
+    //   }
+    // });
   }
 
   // #formValidation

@@ -2365,7 +2365,8 @@ iframe {
 @media screen and (min-width: 768px) {
   .calc-item-label {
     font-size: 0.18rem;
-    width: 4rem;
+    width: 3.6rem;
+    margin: 0 0.4rem 0 0;
   }
 }
 .calc-item-label .require {
@@ -2591,6 +2592,12 @@ iframe {
 }
 .calc-arrow img {
   vertical-align: top;
+}
+.calc .input-rent_wrap {
+  background: url("../img/contact_rent_placeholder.svg") no-repeat 0.12rem/2.31rem 0.25rem;
+}
+.calc .input-rent_wrap.active {
+  background: none;
 }
 .calc .input-rent::placeholder {
   color: #B5B9BE;
