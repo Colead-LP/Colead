@@ -11,7 +11,7 @@
             </div>
             <a href="#contact" class="cta-btn btn">
                 <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.btn.to_simulation.png" alt="無料金額シミュレーション">
-                <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.btn.to_simulation.png" alt="無料金額シミュレーション">">
+                <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.btn.to_simulation.png" alt="無料金額シミュレーション">
             </a>
         </div>
     </div>
