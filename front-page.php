@@ -247,7 +247,7 @@ require("calculate.php");
                                 <p class="calc-item-label">
                                     土地賃料<span class="require">必須</span>
                                 </p>
-                                <input type="text" name="rent" id="rent" class="input-number">
+                                <input type="text" name="rent" id="rent" class="input-number input-rent" placeholder="＊土地売買の場合は0とご入力ください">
                                 <span class="unit">万円</span>
                                 <span class="rent error-txt"></span>
                             </li>
@@ -255,7 +255,7 @@ require("calculate.php");
                                 <p class="calc-item-label">
                                     稼働開始年月<span class="require">必須</span>
                                 </p>
-                                <div class="select_wrap">
+                                <div class="select_wrap calc_select_wrap">
                                     <?php
                                     echo GetDateSelecter();
                                     ?>

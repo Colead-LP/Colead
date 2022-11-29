@@ -294,9 +294,9 @@ $(function () {
 
 function onClick() {
   //値のリセット
-  $year_fee = "";
-  $rent = "";
-  $operation_period = "";
+  input_year_fee = "";
+  input_rent = "";
+  input_operation_period = "";
 
   //buttonがクリックされた時、変数に値を代入する
   input_year_fee = Number(document.getElementById("year_fee").value);
@@ -325,17 +325,16 @@ function onClick() {
     }
   }
 
-  if (input_rent == "" && typeof input_rent == "string") {
+  if (input_rent == "") {
     $(".rent").text("未入力です。");
   } else {
-    input_rent = Number(input_rent);
-    if (Number.isInteger(input_rent) == false) {
+    if (Number.isInteger(Number(input_rent)) == false) {
       $(".rent").text("正しい値を入力してください。");
     } else {
-      if (input_rent < 0) {
+      if (Number(input_rent) < 0) {
         $(".rent").text("正しい値を入力してください。");
       } else {
-        if (input_year_fee < input_rent) {
+        if (input_year_fee < Number(input_rent)) {
           $(".rent").text("正しい値を入力してください。");
         } else {
           $(".rent").text("");
@@ -353,7 +352,7 @@ function onClick() {
   }
 
   if ($year_fee) {
-    if ($rent) {
+    if ($rent != null) {
       if ($operation_period) {
         $amount = GetApproximateCost(
           $year_fee,
