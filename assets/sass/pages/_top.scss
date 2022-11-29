@@ -790,7 +790,6 @@
   border-top-left-radius: 0.4rem;
   @include v.mq(sp) {
     padding: 0.4rem 0.2rem 0.5rem;
-    height: 8.58rem;
   }
   @include v.mq(pc) {
     padding: 0.47rem 0.395rem 0.6rem 0.405rem;
@@ -848,7 +847,7 @@
       }
       @include v.mq(pc) {
         font-size: 0.18rem;
-        width: 3.6rem;
+        width: 4rem;
       }
       .require {
         position: relative;
@@ -886,7 +885,7 @@
         margin-right: 0.15rem;
       }
       @include v.mq(pc) {
-        width: 3.1rem;
+        width: 2.48rem;
         margin-right: 0.16rem;
       }
       &.select{
@@ -1040,6 +1039,18 @@
     }
     img {
       vertical-align: top;
+    }
+  }
+
+  .input-rent{
+    &::placeholder{
+      color: #B5B9BE;
+      @include v.mq(sp) {
+        font-size: .125rem;
+      }
+      @include v.mq(pc) {
+        font-size: .13rem;
+      }
     }
   }
 }
