@@ -374,6 +374,17 @@ function onClick() {
           $rent,
           $operation_period
         ).toLocaleString();
+        // const result = document.getElementById("calc_answer");
+        // const rect = result.getBoundingClientRect().bottom;
+        // const offset = window.pageYOffset;
+        // const gap = 10;
+        // const resultTop = rect + offset - gap;
+        // window.scrollTo({
+        //   top: resultTop,
+        //   behavior: "smooth",
+        // });
+        const targetTop = $('#target').offset().top - 15;
+        $("html").animate({scrollTop: targetTop});
         $(".calc-box-number").val($amount);
         $(".contact-wrap").addClass("active");
         $(".contact-arrow").addClass("active");
