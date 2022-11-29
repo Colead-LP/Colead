@@ -847,7 +847,8 @@
       }
       @include v.mq(pc) {
         font-size: 0.18rem;
-        width: 4rem;
+        width: 3.6rem;
+        margin: 0 .4rem 0 0;
       }
       .require {
         position: relative;
@@ -882,7 +883,7 @@
       }
       @include v.mq(sp) {
         width: 2.48rem;
-        margin-right: 0.15rem;
+        margin-right: 0.11rem;
       }
       @include v.mq(pc) {
         width: 2.48rem;
@@ -1043,6 +1044,12 @@
   }
 
   .input-rent{
+    &_wrap{
+      background: url("../img/contact_rent_placeholder.svg") no-repeat .12rem / 2.31rem .25rem;
+      &.active{
+        background: none;
+      }
+    }
     &::placeholder{
       color: #B5B9BE;
       @include v.mq(sp) {
