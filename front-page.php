@@ -274,7 +274,7 @@ require("calculate.php");
 
                         <!-- ここから計算後に表示される -->
 
-                        <div class="calc-answer">
+                        <div id="target" class="calc-answer">
                             <p class="calc-answer-ttl">あなたの太陽光発電所の<br class="sp-br2">売却金額はこちら</p>
                             <div class="border_wrap">
                                 <img class="border sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.contact_border_line.png" alt="">
