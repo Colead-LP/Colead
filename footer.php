@@ -14,7 +14,7 @@
 <?php wp_footer(); ?>
 
 <!-- <script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSzDb8jsIuT6iPnqglPOBG2fSNj-H_33k&callback=initMap&v=weekly"></script> -->
-<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCSzDb8jsIuT6iPnqglPOBG2fSNj-H_33k&callback=initMap&v=weekly"></script>
+<script async src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA2dNnHlGr8XzzYJabK38s07BQf967YT3k&callback=initMap&v=weekly"></script>
 </body>
 
 </html>
