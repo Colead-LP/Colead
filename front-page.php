@@ -70,7 +70,7 @@ require("calculate.php");
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_ttl.png" alt="最短1週間で決済可能">
                     </h3>
                     <p class="solve-footer-txt">スムーズな売却でストレスフリー。</p>
-                    <p class="solve-footer-txt">太陽光発電の買取なら<ruby>Colead<rt>コリード</rt></ruby>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
+                    <p class="solve-footer-txt">太陽光発電所の買取なら<ruby>Colead<rt>コリード</rt></ruby>にご相談ください。<span class="pc-br"></span>自社で買い取るのでスピーディ。<span class="pc-br"></span>太陽光発電事業に精通したプロフェッショナルがワンストップで対応するので手続きもスムーズです。</p>
                     <div class="solve-footer-graph">
                         <img class="sp" src="<?php echo get_template_directory_uri(); ?>/assets/img/sp.solve_footer_graph.png" alt="入金までにかかる期間">
                         <img class="pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/pc.solve_footer_graph.png" alt="入金までにかかる期間">
@@ -281,7 +281,7 @@ require("calculate.php");
                                 <img class="border pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_border_line.png" alt="">
                             </div>
                             <div class="calc-box">
-                                <p class="calc-box-txt">概算売却額</p>
+                                <p class="calc-box-txt">概算売却額（税込）</p>
                                 <input readonly class="calc-box-number" name="amount" id="calc_result">
                                 <p class="calc-box-unit">円</p>
                             </div>

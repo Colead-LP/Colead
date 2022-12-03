@@ -12,7 +12,7 @@ if (!empty($_POST['btn_confirm'])) { //
   mb_internal_encoding("UTF-8");
 
   $header = null;
-  $email = "xxxxxx@example.com";
+  $email = "info@co-lead.jp";
   $auto_reply_subject = null;
   $auto_reply_text = null;
   $admin_reply_subject = null;
@@ -25,10 +25,12 @@ if (!empty($_POST['btn_confirm'])) { //
   $header .= "Replay-to: $email\n";
 
   // 件名を設定
-  $auto_reply_subject = 'お問い合わせありがとうございます。';
+  $auto_reply_subject = '【太陽光発電所買取のColead】お問い合わせありがとうございます。';
 
   // 本文を設定
-  $auto_reply_text = "この度は、お問い合わせいただき誠にありがとうございます。\n";
+  $auto_reply_text .= "この度は、お問い合わせいただき誠にありがとうございます。\n";
+  $auto_reply_text .= "下記の通りお問い合わせを受け付けました。\n";
+  $auto_reply_text .= "------------------------------\n";
   $auto_reply_text .= "お問い合わせ日時 : " . date("Y/m/d H:i") . "\n";
   $auto_reply_text .= "氏名 : " . $_POST["name_first"] . $_POST["name_last"] . "\n";
   $auto_reply_text .= "メールアドレス : " . $_POST['email'] . "\n\n";
@@ -168,15 +170,22 @@ if (!empty($_POST['btn_confirm'])) { //
   if ($_POST['pcs']) {
     $auto_reply_text .= 'PCSメーカー : ' . $_POST['pcs'] . "\n";
   }
+  $auto_reply_text .= "------------------------------" . "\n";
+  $auto_reply_text .= "内容を確認後、担当者より折り返しご連絡をいたします。\n";
+  $auto_reply_text .= "今しばらくお待ちください。\n";
+  $auto_reply_text .= "※このメールは送信専用のアドレスから送信されています。\n";
+
 
   mb_send_mail($_POST['email'], $auto_reply_subject, $auto_reply_text, $header);
 
   // #運営者側へ自動返信メール
   // 件名
-  $admin_reply_subject = "お問い合わせを受け付けました。";
+  $admin_reply_subject = "【太陽光発電所買取】お問い合わせがありました。";
 
   // 本文
-  $admin_reply_text .= "お問合せ日時 : " . date("Y/m/d H:i") . "\n\n";
+  $admin_reply_text .= "下記の内容でお問い合わせがありました。" . "\n";
+  $admin_reply_text .= "ご確認のうえご対応をお願いいたします。" . "\n";
+  $admin_reply_text .= "------------------------------" . "\n";
   $admin_reply_text .= "氏名 : " . $_POST["name_first"] . $_POST["name_last"] . "\n";
   $admin_reply_text .= "メールアドレス : " . $_POST['email'] . "\n\n";
   if ($_POST['pref'] === '1') {
@@ -316,8 +325,10 @@ if (!empty($_POST['btn_confirm'])) { //
   if ($_POST['pcs']) {
     $admin_reply_text .= 'PCSメーカー : ' . $_POST['pcs'] . "\n";
   }
+  $admin_reply_text .= "------------------------------" . "\n";
 
 
 
-  mb_send_mail('postscape.shigeta@gmail.com', $admin_reply_subject, $admin_reply_text, $header);
+
+  mb_send_mail('info@co-lead.jp', $admin_reply_subject, $admin_reply_text, $header);
 }
