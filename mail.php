@@ -12,7 +12,9 @@ if (!empty($_POST['btn_confirm'])) { //
   mb_internal_encoding("UTF-8");
 
   $header = null;
-  $email = "info@co-lead.jp";
+  $from = "Colead <info@co-lead.jp>";
+  $from_mail = "info@co-lead.jp";
+  $from_name = "Colead";
   $auto_reply_subject = null;
   $auto_reply_text = null;
   $admin_reply_subject = null;
@@ -20,9 +22,16 @@ if (!empty($_POST['btn_confirm'])) { //
   date_default_timezone_set('Asia/Tokyo');
 
   // ヘッダー情報
-  $header = "MIME-Version: 1.0\n";
-  $header .= "From: $email\n";
-  $header .= "Replay-to: $email\n";
+  $header .= "MIME-Version: 1.0\n";
+  $header .= "Return-Path: " . $from_mail . " \r\n";
+  $header .= "From: " . $from . " \r\n";
+  $header .= "Sender: " . $from . " \r\n";
+  $header .= "Reply-To: " . $from_mail . " \r\n";
+  $header .= "Organization: " . $from_name . " \r\n";
+  $header .= "X-Sender: " . $from_mail . " \r\n";
+  $header .= "X-Priority: 3 \r\n";
+
+
 
   // 件名を設定
   $auto_reply_subject = '【太陽光発電所買取のColead】お問い合わせありがとうございます。';
@@ -329,6 +338,9 @@ if (!empty($_POST['btn_confirm'])) { //
 
 
 
+  // main
+  //mb_send_mail('info@co-lead.jp', $admin_reply_subject, $admin_reply_text, $header);
 
-  mb_send_mail('info@co-lead.jp', $admin_reply_subject, $admin_reply_text, $header);
+  // develop
+  mb_send_mail('postscape.shigeta@gmail.com', $admin_reply_subject, $admin_reply_text, $header);
 }

@@ -1000,6 +1000,14 @@
         font-size: 0.22rem;
         width: 2.24rem;
       }
+      .txt__small{
+        @include v.mq(sp) {
+          font-size: .17rem;
+        }
+        @include v.mq(pc) {
+          font-size: .19rem;
+        }
+      }
     }
     &-number {
       height: 0.5rem;
@@ -1013,6 +1021,7 @@
       @include v.mq(sp) {
         width: 2.63rem;
         margin-right: 0.15rem;
+
       }
       @include v.mq(pc) {
         width: 5.16rem;
