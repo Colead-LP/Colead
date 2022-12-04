@@ -281,7 +281,7 @@ require("calculate.php");
                                 <img class="border pc" src="<?php echo get_template_directory_uri(); ?>/assets/img/contact_border_line.png" alt="">
                             </div>
                             <div class="calc-box">
-                                <p class="calc-box-txt">概算売却額（税込）</p>
+                                <p class="calc-box-txt">概算売却額<span class="txt__small">（税込）</span></p>
                                 <input readonly class="calc-box-number" name="amount" id="calc_result">
                                 <p class="calc-box-unit">円</p>
                             </div>

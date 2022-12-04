@@ -2551,6 +2551,16 @@ iframe {
     width: 2.24rem;
   }
 }
+@media screen and (max-width: 767px) {
+  .calc-box-txt .txt__small {
+    font-size: 0.17rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .calc-box-txt .txt__small {
+    font-size: 0.19rem;
+  }
+}
 .calc-box-number {
   height: 0.5rem;
   background-color: #fff5f7;
