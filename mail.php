@@ -339,8 +339,8 @@ if (!empty($_POST['btn_confirm'])) { //
 
 
   // main
-  //mb_send_mail('info@co-lead.jp', $admin_reply_subject, $admin_reply_text, $header);
+  mb_send_mail('info@co-lead.jp', $admin_reply_subject, $admin_reply_text, $header);
 
   // develop
-  mb_send_mail('postscape.shigeta@gmail.com', $admin_reply_subject, $admin_reply_text, $header);
+  // mb_send_mail('postscape.shigeta@gmail.com', $admin_reply_subject, $admin_reply_text, $header);
 }
